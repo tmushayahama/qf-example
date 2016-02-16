@@ -1,0 +1,10 @@
+﻿/* 
+                      qfretouch VARIABLES
+
+*/
+$BREAKPOINTS: ( //Will define more as needed, but wanted to match the bootstrap 
+    'qfretouch-lg': (min-width: 1200px),
+    'qfretouch-md': (min-width: 992px) and (max-width: 1199px),
+    'qfretouch-sm': (min-width: 768px) and (max-width: 991px),
+    'qfretouch-xs': (max-width: 767px)
+);
