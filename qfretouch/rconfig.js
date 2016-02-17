@@ -21,6 +21,7 @@ requirejs.config({
   'angular-gestures': '../bower_components/angular-gestures/gestures',
   'angular-validator': '../bower_components/angular-validator/dist/angular-validator',
   'angular-validator-rules': '../bower_components/angular-validator/dist/angular-validator-rules',
+  'angular-aside': '../../bower_components/angular-aside/dist/js/angular-aside',
   //Quickform
   'qf-builder': '../qf-lib/qf-builder',
   'qf-components': '../qf-lib/qf-builder-components',
@@ -44,6 +45,7 @@ requirejs.config({
   'angular-gestures': {deps: ['angular', 'hammerjs']},
   'angular-validator': {deps: ['angular']},
   'angular-validator-rules': {deps: ['angular']},
+  'angular-aside': {deps: ['angular', 'angular-animate']},
   'qf-builder': {deps: ['angular', 'angular-validator', 'angular-validator-rules']},
   'qf-components': {deps: ['angular', ]},
  },

@@ -15,6 +15,7 @@ define([
  'angular-gestures',
  'angular-validator',
  'angular-validator-rules',
+ 'angular-aside',
  'qf-builder',
  'qf-components',
  'app/module',
@@ -42,7 +43,7 @@ define([
    // $locationProvider.html5Mode(true);
    $ocLazyLoadProvider.config({
     debug: true,
-    loadedModules: ['qfretouch'],
+    loadedModules: ['qfretouch', 'qfretouch.app'],
     asyncLoader: require
    });
 
