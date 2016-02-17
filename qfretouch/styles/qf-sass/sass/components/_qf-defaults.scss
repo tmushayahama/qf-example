@@ -1,0 +1,55 @@
+
+@import "compass/css3";
+
+
+.qf-component {
+ padding: 10px;
+ cursor: move;
+ input { cursor: move; }
+ label { cursor: move; }
+ select { cursor: move; }
+ textarea { cursor: move; }
+}
+.qf-form-object-editable {
+ padding: 10px;
+}
+.qf-form-object-editable.qf-draggable {
+ cursor: move;
+ input { cursor: move; }
+ label { cursor: pointer; }
+ select { cursor: move; }
+ textarea { cursor: move; }
+}
+.qf-form-object-editable.empty {
+ cursor: default;
+ margin: 6px;
+ height: 80px;
+ border:dashed 1px #aaa;
+ background-color: #eee;
+}
+
+.qf-draggable.dragging {
+ background-color: #ffffff;
+ position: absolute;
+ z-index: 800;
+ @include box-shadow(#666 0 0 20px);
+}
+
+.qf-required:after {
+ color: #b94a48;
+ content: ' *';
+}
+
+.qf-builder {
+ min-height: 250px;
+}
+
+
+.popover {
+ .control-label {
+  text-align: left;
+ }
+ form {
+  width: 240px;
+ }
+}

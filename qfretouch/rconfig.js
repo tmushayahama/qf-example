@@ -19,9 +19,11 @@ requirejs.config({
   'xeditable': '../bower_components/angular-xeditable/dist/js/xeditable',
   'hammerjs': '../bower_components/hammerjs/hammer',
   'angular-gestures': '../bower_components/angular-gestures/gestures',
+  'angular-validator': '../bower_components/angular-validator/dist/angular-validator',
+  'angular-validator-rules': '../bower_components/angular-validator/dist/angular-validator-rules',
   //Quickform
-  'qf-components': '../qf/qf-components',
-  'qf-builder': '../qf/qf-builder',
+  'qf-builder': '../qf-lib/qf-builder',
+  'qf-components': '../qf-lib/qf-builder-components',
  },
  shim: {
   'angular': {'exports': 'angular', deps: ['jquery']},
@@ -40,8 +42,10 @@ requirejs.config({
   //'moment': { exports: 'moment' },
   'hammerjs': {deps: ['angular']},
   'angular-gestures': {deps: ['angular', 'hammerjs']},
-  'qf-components': {deps: ['angular']},
-  'qf-builder': {deps: ['angular']},
+  'angular-validator': {deps: ['angular']},
+  'angular-validator-rules': {deps: ['angular']},
+  'qf-builder': {deps: ['angular', 'angular-validator', 'angular-validator-rules']},
+  'qf-components': {deps: ['angular', ]},
  },
  priority: [
   'jquery',
@@ -49,7 +53,6 @@ requirejs.config({
   'angular',
  ],
 });
-
 
 requirejs([
  'angular',
