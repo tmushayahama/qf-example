@@ -1,5 +1,5 @@
 <div class="modal-body"
-     hm-swipe-left="previewFormModalCtrl.close()">
+     hm-swipe-left="previewFormCtrl.close()">
  <div class="row">
   <h2>Form</h2>
   <hr/>
@@ -16,7 +16,10 @@
     Show scope
    </label>
   </div>
-  <pre ng-if="isShowScope">{{input}}</pre>
+  <pre ng-if="isShowScope">{{input| json}}</pre>
+  <div ng-click="previewFormCtrl.close()" class="btn btn-primary">
+   Close
+  </div>
  </div>
 </div>
 <!-- ------------------------------- MODALS --------------------------->

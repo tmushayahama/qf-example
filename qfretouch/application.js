@@ -43,7 +43,7 @@ define([
    // $locationProvider.html5Mode(true);
    $ocLazyLoadProvider.config({
     debug: true,
-    loadedModules: ['qfretouch', 'qfretouch.app'],
+    loadedModules: ['qfretouch'],
     asyncLoader: require
    });
 
