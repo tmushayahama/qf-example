@@ -11,18 +11,21 @@ var appCtrl = function (
         $log,
         localStorageService,
         $timeout,
-        $uibModal
+        $uibModal,
+        $aside,
+        FormManager
         //qfretouchAuth,
         ) {
  var vm = this;
 
 
  vm.previewForm = function () {
-  var modalInstance = $uibModal.open({
+  var modalInstance = $aside.open({
    templateUrl: 'preview-form-modal.html',
    controller: 'PreviewFormModalCtrl as previewFormCtrl',
    size: 'lg',
-   backdrop: 'static',
+   placement: 'right',
+   //backdrop: 'static',
   });
 
   modalInstance.result.then(function (searchCriteria) {
@@ -81,6 +84,8 @@ appCtrl.$inject = [
  'localStorageService',
  '$timeout',
  '$uibModal',
+ '$aside',
+ 'FormManager'
 ];
 
 angular.module("qfretouch").controller('AppCtrl', appCtrl);

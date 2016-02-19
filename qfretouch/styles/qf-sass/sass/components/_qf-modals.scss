@@ -1,0 +1,721 @@
+﻿/*DR MODALS*/
+.modal {
+ .modal-header {
+  @include position(absolute, 0 0 0 0);
+  padding: 4px 5px;
+  height: 30px;
+  background-image: none;
+  background-color: $primary-color;
+  border-: 1px solid $secondary-color;
+  -webkit-box-shadow: 0 10px 6px -6px #CCC;
+  -moz-box-shadow: 0 10px 6px -6px #CCC;
+  box-shadow: 0 10px 6px -6px #CCC;
+  z-index: 1;
+
+  .dr-close {
+   margin: -4px -5px 0 0;
+   padding: 3px 10px;
+   background-color: #f26969;
+   color: #FFF;
+  }
+
+  .dr-header-menu-icon {
+   color: #DDD;
+
+   &:hover {
+    color: #EEE;
+   }
+  }
+
+  .dr-title {
+   color: #FFF;
+   margin-left: 10px;
+   padding: 0;
+   font-size: 1.0em;
+
+   a {
+    color: #EEE;
+
+    &:hover {
+     color: #FFF;
+    }
+   }
+  }
+ }
+}
+
+
+.modal-document {
+ @include position(absolute, 20px 20px 30px 20px);
+ width: auto;
+ margin: 0;
+
+ .dr-modal-menu-dropdown {
+  a {
+   color: #555;
+
+   &:hover {
+    color: #222;
+   }
+  }
+ }
+
+ .modal-content {
+  @include position(absolute, 0 0 0 0);
+  border: none;
+  -moz-border-radius: 0;
+  border-radius: 0;
+  -webkit-box-shadow: inherit;
+  -moz-box-shadow: inherit;
+  -o-box-shadow: inherit;
+  box-shadow: inherit;
+ }
+
+ .modal-subheader {
+  @include position(absolute, 31px 0 null 0);
+  padding: 0 5px 0 10px;
+  height: 33px;
+  background-color: #DDD;
+  border-bottom: #BBB solid 1px;
+
+  .dr-icon-btn {
+   padding: 3px 8px;
+
+   &:hover {
+    background-color: rgba($secondary-color, 0.2);
+   }
+
+   img {
+    height: 20px;
+   }
+  }
+
+  .dr-icon-btn.dr-separator {
+   border-right: #BBB solid 1px;
+  }
+ }
+
+ .modal-body {
+  @include position(absolute, 64px 0 31px 0);
+ }
+
+ .modal-footer {
+  @include position(absolute, null 0 0 0);
+  background-color: rgba($primary-color, 0.7);
+  color: #EEE;
+  height: 30px;
+  padding: 0;
+
+  a {
+   color: #EEE;
+
+   &:hover {
+    color: #FFF;
+   }
+  }
+ }
+}
+
+
+.modal-move-folder {
+ .modal-content {
+  width: 350px;
+  border: none;
+  -moz-border-radius: 0;
+  border-radius: 0;
+  -webkit-box-shadow: inherit;
+  -moz-box-shadow: inherit;
+  -o-box-shadow: inherit;
+  box-shadow: inherit;
+ }
+
+ .modal-body {
+  padding: 40px 10px !important;
+
+  .dr-header {
+   height: 95px;
+   border-bottom: #BBB solid 1px;
+   background-color: #FFF;
+  }
+
+  .dr-body {
+   height: 300px;
+   background-color: #FFF;
+   overflow: auto;
+  }
+ }
+
+ .modal-footer {
+  padding: 5px 10px;
+  background-color: #F2F2F2;
+  height: 40px;
+ }
+}
+
+.modal-upload {
+ @include position(absolute, 20px 100px 30px 100px);
+ width: auto;
+ margin: 0;
+
+ .modal-content {
+  @include position(absolute, 0 0 0 0);
+  border: none;
+  -moz-border-radius: 0;
+  border-radius: 0;
+  -webkit-box-shadow: inherit;
+  -moz-box-shadow: inherit;
+  -o-box-shadow: inherit;
+  box-shadow: inherit;
+ }
+
+ .modal-header {
+
+  .dr-title {
+   margin-left: -10px;
+  }
+ }
+
+ .modal-subheader {
+  @include position(absolute, 31px 0 null 0);
+  padding: 0 5px 0 10px;
+  height: 33px;
+  background-color: #DDD;
+  border-bottom: #BBB solid 1px;
+
+  .dr-icon-btn {
+   padding: 3px 8px;
+
+   &:hover {
+    background-color: rgba($secondary-color, 0.2);
+   }
+
+   img {
+    height: 20px;
+   }
+  }
+
+  .dr-icon-btn.dr-separator {
+   border-right: #BBB solid 1px;
+  }
+ }
+
+ .modal-body {
+  @include position(absolute, 64px 0 31px 0);
+
+  input[type="file"] {
+   display: none;
+  }
+
+  .custom-file-upload {
+   background-color: #FFF;
+   border: 1px solid #ccc;
+   display: inline-block;
+   padding: 6px 12px;
+   cursor: pointer;
+  }
+
+
+  .dr-select-file {
+   margin-top: 20px;
+   border: #CCC solid 1px;
+   padding: 10px;
+
+   .dr-drop-zone {
+    text-align: center;
+    height: 200px;
+    padding-top: 50px;
+    border: #AAA dashed 4px;
+
+    .dr-title {
+     font-size: 2.5em;
+     color: #999;
+    }
+
+    .dr-description {
+     font-size: 1.0em;
+     color: #656565;
+    }
+   }
+  }
+ }
+
+
+ .modal-footer {
+  @include position(absolute, null 0 0 0);
+  background-color: rgba($primary-color, 0.7);
+  color: #EEE;
+  height: 30px;
+  padding: 0;
+
+  a {
+   color: #EEE;
+
+   &:hover {
+    color: #FFF;
+   }
+  }
+ }
+}
+
+.modal-search {
+ @include position(absolute, 20px 100px 30px 100px);
+ width: auto;
+ margin: 0;
+
+ .modal-content {
+  @include position(absolute, 0 0 0 0);
+  border: none;
+  -moz-border-radius: 0;
+  border-radius: 0;
+  -webkit-box-shadow: inherit;
+  -moz-box-shadow: inherit;
+  -o-box-shadow: inherit;
+  box-shadow: inherit;
+ }
+
+ .modal-body {
+  @include position(absolute, 31px 0 51px 0);
+ }
+
+ .modal-footer {
+  @include position(absolute, null 0 0 0);
+  height: 50px;
+ }
+}
+
+.modal-md {
+
+ .modal-body {
+  //@include position(absolute, 31px 0 51px 0);
+  margin-top: 31px;
+  padding: 20px 10px !important;
+ }
+
+ .modal-footer {
+  padding: 5px 10px;
+  background-color: #F2F2F2;
+  height: 40px;
+ }
+}
+
+/*!
+ * angular-aside - v1.3.2
+ * https://github.com/dbtek/angular-aside
+ * 2015-11-17
+ * Copyright (c) 2015 İsmail Demirbilek
+ * License: MIT
+ */
+
+/*!
+Animate.css - http://daneden.me/animate
+Licensed under the MIT license - http://opensource.org/licenses/MIT
+
+Copyright (c) 2014 Daniel Eden
+*/
+
+@-webkit-keyframes fadeInLeft {
+ 0% {
+  opacity: 0;
+  -webkit-transform: translate3d(-100%, 0, 0);
+  transform: translate3d(-100%, 0, 0);
+ }
+
+ 100% {
+  opacity: 1;
+  -webkit-transform: none;
+  transform: none;
+ }
+}
+
+@keyframes fadeInLeft {
+ 0% {
+  opacity: 0;
+  -webkit-transform: translate3d(-100%, 0, 0);
+  -ms-transform: translate3d(-100%, 0, 0);
+  transform: translate3d(-100%, 0, 0);
+ }
+
+ 100% {
+  opacity: 1;
+  -webkit-transform: none;
+  -ms-transform: none;
+  transform: none;
+ }
+}
+
+.fadeInLeft {
+ -webkit-animation-name: fadeInLeft;
+ animation-name: fadeInLeft;
+}
+
+@-webkit-keyframes fadeInRight {
+ 0% {
+  opacity: 0;
+  -webkit-transform: translate3d(100%, 0, 0);
+  transform: translate3d(100%, 0, 0);
+ }
+
+ 100% {
+  opacity: 1;
+  -webkit-transform: none;
+  transform: none;
+ }
+}
+
+@keyframes fadeInRight {
+ 0% {
+  opacity: 0;
+  -webkit-transform: translate3d(100%, 0, 0);
+  -ms-transform: translate3d(100%, 0, 0);
+  transform: translate3d(100%, 0, 0);
+ }
+
+ 100% {
+  opacity: 1;
+  -webkit-transform: none;
+  -ms-transform: none;
+  transform: none;
+ }
+}
+
+.fadeInRight {
+ -webkit-animation-name: fadeInRight;
+ animation-name: fadeInRight;
+}
+
+@-webkit-keyframes fadeInTop {
+ 0% {
+  opacity: 0;
+  -webkit-transform: translate3d(0, -100%, 0);
+  transform: translate3d(0, -100%, 0);
+ }
+
+ 100% {
+  opacity: 1;
+  -webkit-transform: none;
+  transform: none;
+ }
+}
+
+@keyframes fadeInTop {
+ 0% {
+  opacity: 0;
+  -webkit-transform: translate3d(0, -100%, 0);
+  -ms-transform: translate3d(0, -100%, 0);
+  transform: translate3d(0, -100%, 0);
+ }
+
+ 100% {
+  opacity: 1;
+  -webkit-transform: none;
+  -ms-transform: none;
+  transform: none;
+ }
+}
+
+.fadeInTop {
+ -webkit-animation-name: fadeInTop;
+ animation-name: fadeInTop;
+}
+
+@-webkit-keyframes fadeInBottom {
+ 0% {
+  opacity: 0;
+  -webkit-transform: translate3d(0, 100%, 0);
+  transform: translate3d(0, 100%, 0);
+ }
+
+ 100% {
+  opacity: 1;
+  -webkit-transform: none;
+  transform: none;
+ }
+}
+
+@keyframes fadeInBottom {
+ 0% {
+  opacity: 0;
+  -webkit-transform: translate3d(0, 100%, 0);
+  -ms-transform: translate3d(0, 100%, 0);
+  transform: translate3d(0, 100%, 0);
+ }
+
+ 100% {
+  opacity: 1;
+  -webkit-transform: none;
+  -ms-transform: none;
+  transform: none;
+ }
+}
+
+.fadeInBottom {
+ -webkit-animation-name: fadeInBottom;
+ animation-name: fadeInBottom;
+}
+
+@-webkit-keyframes fadeOutLeft {
+ 0% {
+  opacity: 1;
+ }
+
+ 100% {
+  opacity: 0;
+  -webkit-transform: translate3d(-100%, 0, 0);
+  transform: translate3d(-100%, 0, 0);
+ }
+}
+
+@keyframes fadeOutLeft {
+ 0% {
+  opacity: 1;
+ }
+
+ 100% {
+  opacity: 0;
+  -webkit-transform: translate3d(-100%, 0, 0);
+  transform: translate3d(-100%, 0, 0);
+ }
+}
+
+.fadeOutLeft {
+ -webkit-animation-name: fadeOutLeft;
+ animation-name: fadeOutLeft;
+}
+
+@-webkit-keyframes fadeOutRight {
+ 0% {
+  opacity: 1;
+ }
+
+ 100% {
+  opacity: 0;
+  -webkit-transform: translate3d(100%, 0, 0);
+  transform: translate3d(100%, 0, 0);
+ }
+}
+
+@keyframes fadeOutRight {
+ 0% {
+  opacity: 1;
+ }
+
+ 100% {
+  opacity: 0;
+  -webkit-transform: translate3d(100%, 0, 0);
+  transform: translate3d(100%, 0, 0);
+ }
+}
+
+.fadeOutRight {
+ -webkit-animation-name: fadeOutRight;
+ animation-name: fadeOutRight;
+}
+
+@-webkit-keyframes fadeOutUp {
+ 0% {
+  opacity: 1;
+ }
+
+ 100% {
+  opacity: 0;
+  -webkit-transform: translate3d(0, -100%, 0);
+  transform: translate3d(0, -100%, 0);
+ }
+}
+
+@keyframes fadeOutUp {
+ 0% {
+  opacity: 1;
+ }
+
+ 100% {
+  opacity: 0;
+  -webkit-transform: translate3d(0, -100%, 0);
+  transform: translate3d(0, -100%, 0);
+ }
+}
+
+.fadeOutUp {
+ -webkit-animation-name: fadeOutUp;
+ animation-name: fadeOutUp;
+}
+
+
+@-webkit-keyframes fadeOutDown {
+ 0% {
+  opacity: 1;
+ }
+
+ 100% {
+  opacity: 0;
+  -webkit-transform: translate3d(0, 100%, 0);
+  transform: translate3d(0, 100%, 0);
+ }
+}
+
+@keyframes fadeOutDown {
+ 0% {
+  opacity: 1;
+ }
+
+ 100% {
+  opacity: 0;
+  -webkit-transform: translate3d(0, 100%, 0);
+  transform: translate3d(0, 100%, 0);
+ }
+}
+
+.fadeOutDown {
+ -webkit-animation-name: fadeOutDown;
+ animation-name: fadeOutDown;
+}
+/* Common */
+
+.ng-aside {
+ overflow-y: auto;
+ overflow-x: hidden;
+}
+
+.ng-aside .modal-dialog {
+ position: absolute;
+ margin: 0;
+ padding: 0;
+}
+
+.ng-aside.fade .modal-dialog {
+ -o-transition: none;
+ -moz-transition: none;
+ -ms-transition: none;
+ -webkit-transition: none;
+ transition: none;
+ /*CSS transforms*/
+ -o-transform: none;
+ -moz-transform: none;
+ -ms-transform: none;
+ -webkit-transform: none;
+ transform: none;
+}
+
+.ng-aside .modal-dialog .modal-content {
+ overflow-y: auto;
+ overflow-x: hidden;
+ border: none;
+ border-radius: 0;
+}
+
+/* Horizontal */
+
+.ng-aside.horizontal {
+ height: 100%;
+}
+
+.ng-aside.horizontal .modal-dialog .modal-content {
+ height: 100%;
+}
+
+.ng-aside.horizontal .modal-dialog {
+ position: absolute;
+ top: 0;
+ height: 100%;
+}
+
+.modal-open .ng-aside.horizontal.left .modal-dialog {
+ animation: fadeOutLeft 250ms;
+ -webkit-animation: fadeOutLeft 250ms;
+ -moz-animation: fadeOutLeft 250ms;
+ -o-animation: fadeOutLeft 250ms;
+ -ms-animation: fadeOutLeft 250ms;
+}
+
+.ng-aside.horizontal.left.in .modal-dialog {
+ animation: fadeInLeft 400ms;
+ -webkit-animation: fadeInLeft 400ms;
+ -moz-animation: fadeInLeft 400ms;
+ -o-animation: fadeInLeft 400ms;
+ -ms-animation: fadeInLeft 400ms;
+}
+
+.ng-aside.horizontal.left .modal-dialog {
+ left: 0;
+}
+
+.ng-aside.horizontal.right .modal-dialog {
+ animation: fadeOutRight 400ms;
+ -webkit-animation: fadeOutRight 400ms;
+ -moz-animation: fadeOutRight 400ms;
+ -o-animation: fadeOutRight 400ms;
+ -ms-animation: fadeOutRight 400ms;
+}
+
+.ng-aside.horizontal.right.in .modal-dialog {
+ animation: fadeInRight 250ms;
+ -webkit-animation: fadeInRight 250ms;
+}
+
+.ng-aside.horizontal.right .modal-dialog {
+ right: 0;
+}
+
+/* Vertical */
+
+.ng-aside.vertical {
+ width: 100% !important;
+ overflow: hidden;
+}
+
+.ng-aside.vertical .modal-dialog {
+ left: 0;
+ right: 0;
+ width: 100% !important;
+}
+
+.ng-aside.vertical .modal-dialog .modal-content {
+ max-height: 400px;
+}
+
+.ng-aside.vertical.top .modal-dialog {
+ animation: fadeOutUp 250ms;
+ -webkit-animation: fadeOutUp 250ms;
+ -webkit-animation: fadeOutUp 250ms;
+ -moz-animation: fadeOutUp 250ms;
+ -o-animation: fadeOutUp 250ms;
+ -ms-animation: fadeOutUp 250ms;
+}
+
+.ng-aside.vertical.top.in .modal-dialog {
+ animation: fadeInTop 250ms;
+ -webkit-animation: fadeInTop 250ms;
+ -webkit-animation: fadeInTop 250ms;
+ -moz-animation: fadeInTop 250ms;
+ -o-animation: fadeInTop 250ms;
+ -ms-animation: fadeInTop 250ms;
+}
+
+.ng-aside.vertical.bottom .modal-dialog {
+ animation: fadeOutDown 250ms;
+ -webkit-animation: fadeOutDown 250ms;
+ -webkit-animation: fadeOutDown 250ms;
+ -moz-animation: fadeOutDown 250ms;
+ -o-animation: fadeOutDown 250ms;
+ -ms-animation: fadeOutDown 250ms;
+}
+.ng-aside.vertical.bottom.in .modal-dialog {
+ animation: fadeInBottom 250ms;
+ -webkit-animation: fadeInBottom 250ms;
+ -webkit-animation: fadeInBottom 250ms;
+ -moz-animation: fadeInBottom 250ms;
+ -o-animation: fadeInBottom 250ms;
+ -ms-animation: fadeInBottom 250ms;
+}
+
+.ng-aside.vertical.bottom .modal-dialog {
+ bottom: 0;
+}
+
+.ng-aside.vertical.top .modal-dialog {
+ top: 0;
+}
+
+.ng-aside.vertical .modal-dialog .modal-content {
+ width: 100%;
+}

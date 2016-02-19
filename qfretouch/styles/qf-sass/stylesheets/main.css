@@ -12075,7 +12075,7 @@ button.close {
 }
 
 /*DR MODALS*/
-/* line 3, ../sass/components/_dr-modals.scss */
+/* line 3, ../sass/components/_qf-modals.scss */
 .modal .modal-header {
   position: absolute;
   top: 0;
@@ -12086,44 +12086,44 @@ button.close {
   height: 30px;
   background-image: none;
   background-color: #508380;
-  border-bottom: 1px solid #558C89;
+  border-: 1px solid #558C89;
   -webkit-box-shadow: 0 10px 6px -6px #CCC;
   -moz-box-shadow: 0 10px 6px -6px #CCC;
   box-shadow: 0 10px 6px -6px #CCC;
   z-index: 1;
 }
-/* line 15, ../sass/components/_dr-modals.scss */
+/* line 15, ../sass/components/_qf-modals.scss */
 .modal .modal-header .dr-close {
   margin: -4px -5px 0 0;
   padding: 3px 10px;
   background-color: #f26969;
   color: #FFF;
 }
-/* line 22, ../sass/components/_dr-modals.scss */
+/* line 22, ../sass/components/_qf-modals.scss */
 .modal .modal-header .dr-header-menu-icon {
   color: #DDD;
 }
-/* line 25, ../sass/components/_dr-modals.scss */
+/* line 25, ../sass/components/_qf-modals.scss */
 .modal .modal-header .dr-header-menu-icon:hover {
   color: #EEE;
 }
-/* line 30, ../sass/components/_dr-modals.scss */
+/* line 30, ../sass/components/_qf-modals.scss */
 .modal .modal-header .dr-title {
   color: #FFF;
   margin-left: 10px;
   padding: 0;
   font-size: 1.0em;
 }
-/* line 36, ../sass/components/_dr-modals.scss */
+/* line 36, ../sass/components/_qf-modals.scss */
 .modal .modal-header .dr-title a {
   color: #EEE;
 }
-/* line 39, ../sass/components/_dr-modals.scss */
+/* line 39, ../sass/components/_qf-modals.scss */
 .modal .modal-header .dr-title a:hover {
   color: #FFF;
 }
 
-/* line 48, ../sass/components/_dr-modals.scss */
+/* line 48, ../sass/components/_qf-modals.scss */
 .modal-document {
   position: absolute;
   top: 20px;
@@ -12133,15 +12133,15 @@ button.close {
   width: auto;
   margin: 0;
 }
-/* line 54, ../sass/components/_dr-modals.scss */
+/* line 54, ../sass/components/_qf-modals.scss */
 .modal-document .dr-modal-menu-dropdown a {
   color: #555;
 }
-/* line 57, ../sass/components/_dr-modals.scss */
+/* line 57, ../sass/components/_qf-modals.scss */
 .modal-document .dr-modal-menu-dropdown a:hover {
   color: #222;
 }
-/* line 63, ../sass/components/_dr-modals.scss */
+/* line 63, ../sass/components/_qf-modals.scss */
 .modal-document .modal-content {
   position: absolute;
   top: 0;
@@ -12156,7 +12156,7 @@ button.close {
   -o-box-shadow: inherit;
   box-shadow: inherit;
 }
-/* line 74, ../sass/components/_dr-modals.scss */
+/* line 74, ../sass/components/_qf-modals.scss */
 .modal-document .modal-subheader {
   position: absolute;
   top: 31px;
@@ -12167,23 +12167,23 @@ button.close {
   background-color: #DDD;
   border-bottom: #BBB solid 1px;
 }
-/* line 81, ../sass/components/_dr-modals.scss */
+/* line 81, ../sass/components/_qf-modals.scss */
 .modal-document .modal-subheader .dr-icon-btn {
   padding: 3px 8px;
 }
-/* line 84, ../sass/components/_dr-modals.scss */
+/* line 84, ../sass/components/_qf-modals.scss */
 .modal-document .modal-subheader .dr-icon-btn:hover {
   background-color: rgba(85, 140, 137, 0.2);
 }
-/* line 88, ../sass/components/_dr-modals.scss */
+/* line 88, ../sass/components/_qf-modals.scss */
 .modal-document .modal-subheader .dr-icon-btn img {
   height: 20px;
 }
-/* line 93, ../sass/components/_dr-modals.scss */
+/* line 93, ../sass/components/_qf-modals.scss */
 .modal-document .modal-subheader .dr-icon-btn.dr-separator {
   border-right: #BBB solid 1px;
 }
-/* line 98, ../sass/components/_dr-modals.scss */
+/* line 98, ../sass/components/_qf-modals.scss */
 .modal-document .modal-body {
   position: absolute;
   top: 64px;
@@ -12191,7 +12191,7 @@ button.close {
   bottom: 31px;
   left: 0;
 }
-/* line 102, ../sass/components/_dr-modals.scss */
+/* line 102, ../sass/components/_qf-modals.scss */
 .modal-document .modal-footer {
   position: absolute;
   right: 0;
@@ -12202,16 +12202,16 @@ button.close {
   height: 30px;
   padding: 0;
 }
-/* line 109, ../sass/components/_dr-modals.scss */
+/* line 109, ../sass/components/_qf-modals.scss */
 .modal-document .modal-footer a {
   color: #EEE;
 }
-/* line 112, ../sass/components/_dr-modals.scss */
+/* line 112, ../sass/components/_qf-modals.scss */
 .modal-document .modal-footer a:hover {
   color: #FFF;
 }
 
-/* line 121, ../sass/components/_dr-modals.scss */
+/* line 121, ../sass/components/_qf-modals.scss */
 .modal-move-folder .modal-content {
   width: 350px;
   border: none;
@@ -12222,30 +12222,30 @@ button.close {
   -o-box-shadow: inherit;
   box-shadow: inherit;
 }
-/* line 132, ../sass/components/_dr-modals.scss */
+/* line 132, ../sass/components/_qf-modals.scss */
 .modal-move-folder .modal-body {
   padding: 40px 10px !important;
 }
-/* line 135, ../sass/components/_dr-modals.scss */
+/* line 135, ../sass/components/_qf-modals.scss */
 .modal-move-folder .modal-body .dr-header {
   height: 95px;
   border-bottom: #BBB solid 1px;
   background-color: #FFF;
 }
-/* line 141, ../sass/components/_dr-modals.scss */
+/* line 141, ../sass/components/_qf-modals.scss */
 .modal-move-folder .modal-body .dr-body {
   height: 300px;
   background-color: #FFF;
   overflow: auto;
 }
-/* line 148, ../sass/components/_dr-modals.scss */
+/* line 148, ../sass/components/_qf-modals.scss */
 .modal-move-folder .modal-footer {
   padding: 5px 10px;
   background-color: #F2F2F2;
   height: 40px;
 }
 
-/* line 155, ../sass/components/_dr-modals.scss */
+/* line 155, ../sass/components/_qf-modals.scss */
 .modal-upload {
   position: absolute;
   top: 20px;
@@ -12255,7 +12255,7 @@ button.close {
   width: auto;
   margin: 0;
 }
-/* line 160, ../sass/components/_dr-modals.scss */
+/* line 160, ../sass/components/_qf-modals.scss */
 .modal-upload .modal-content {
   position: absolute;
   top: 0;
@@ -12270,11 +12270,11 @@ button.close {
   -o-box-shadow: inherit;
   box-shadow: inherit;
 }
-/* line 173, ../sass/components/_dr-modals.scss */
+/* line 173, ../sass/components/_qf-modals.scss */
 .modal-upload .modal-header .dr-title {
   margin-left: -10px;
 }
-/* line 178, ../sass/components/_dr-modals.scss */
+/* line 178, ../sass/components/_qf-modals.scss */
 .modal-upload .modal-subheader {
   position: absolute;
   top: 31px;
@@ -12285,23 +12285,23 @@ button.close {
   background-color: #DDD;
   border-bottom: #BBB solid 1px;
 }
-/* line 185, ../sass/components/_dr-modals.scss */
+/* line 185, ../sass/components/_qf-modals.scss */
 .modal-upload .modal-subheader .dr-icon-btn {
   padding: 3px 8px;
 }
-/* line 188, ../sass/components/_dr-modals.scss */
+/* line 188, ../sass/components/_qf-modals.scss */
 .modal-upload .modal-subheader .dr-icon-btn:hover {
   background-color: rgba(85, 140, 137, 0.2);
 }
-/* line 192, ../sass/components/_dr-modals.scss */
+/* line 192, ../sass/components/_qf-modals.scss */
 .modal-upload .modal-subheader .dr-icon-btn img {
   height: 20px;
 }
-/* line 197, ../sass/components/_dr-modals.scss */
+/* line 197, ../sass/components/_qf-modals.scss */
 .modal-upload .modal-subheader .dr-icon-btn.dr-separator {
   border-right: #BBB solid 1px;
 }
-/* line 202, ../sass/components/_dr-modals.scss */
+/* line 202, ../sass/components/_qf-modals.scss */
 .modal-upload .modal-body {
   position: absolute;
   top: 64px;
@@ -12309,11 +12309,11 @@ button.close {
   bottom: 31px;
   left: 0;
 }
-/* line 205, ../sass/components/_dr-modals.scss */
+/* line 205, ../sass/components/_qf-modals.scss */
 .modal-upload .modal-body input[type="file"] {
   display: none;
 }
-/* line 209, ../sass/components/_dr-modals.scss */
+/* line 209, ../sass/components/_qf-modals.scss */
 .modal-upload .modal-body .custom-file-upload {
   background-color: #FFF;
   border: 1px solid #ccc;
@@ -12321,30 +12321,30 @@ button.close {
   padding: 6px 12px;
   cursor: pointer;
 }
-/* line 218, ../sass/components/_dr-modals.scss */
+/* line 218, ../sass/components/_qf-modals.scss */
 .modal-upload .modal-body .dr-select-file {
   margin-top: 20px;
   border: #CCC solid 1px;
   padding: 10px;
 }
-/* line 223, ../sass/components/_dr-modals.scss */
+/* line 223, ../sass/components/_qf-modals.scss */
 .modal-upload .modal-body .dr-select-file .dr-drop-zone {
   text-align: center;
   height: 200px;
   padding-top: 50px;
   border: #AAA dashed 4px;
 }
-/* line 229, ../sass/components/_dr-modals.scss */
+/* line 229, ../sass/components/_qf-modals.scss */
 .modal-upload .modal-body .dr-select-file .dr-drop-zone .dr-title {
   font-size: 2.5em;
   color: #999;
 }
-/* line 234, ../sass/components/_dr-modals.scss */
+/* line 234, ../sass/components/_qf-modals.scss */
 .modal-upload .modal-body .dr-select-file .dr-drop-zone .dr-description {
   font-size: 1.0em;
   color: #656565;
 }
-/* line 243, ../sass/components/_dr-modals.scss */
+/* line 243, ../sass/components/_qf-modals.scss */
 .modal-upload .modal-footer {
   position: absolute;
   right: 0;
@@ -12355,16 +12355,16 @@ button.close {
   height: 30px;
   padding: 0;
 }
-/* line 250, ../sass/components/_dr-modals.scss */
+/* line 250, ../sass/components/_qf-modals.scss */
 .modal-upload .modal-footer a {
   color: #EEE;
 }
-/* line 253, ../sass/components/_dr-modals.scss */
+/* line 253, ../sass/components/_qf-modals.scss */
 .modal-upload .modal-footer a:hover {
   color: #FFF;
 }
 
-/* line 260, ../sass/components/_dr-modals.scss */
+/* line 260, ../sass/components/_qf-modals.scss */
 .modal-search {
   position: absolute;
   top: 20px;
@@ -12374,7 +12374,7 @@ button.close {
   width: auto;
   margin: 0;
 }
-/* line 265, ../sass/components/_dr-modals.scss */
+/* line 265, ../sass/components/_qf-modals.scss */
 .modal-search .modal-content {
   position: absolute;
   top: 0;
@@ -12389,7 +12389,7 @@ button.close {
   -o-box-shadow: inherit;
   box-shadow: inherit;
 }
-/* line 276, ../sass/components/_dr-modals.scss */
+/* line 276, ../sass/components/_qf-modals.scss */
 .modal-search .modal-body {
   position: absolute;
   top: 31px;
@@ -12397,7 +12397,7 @@ button.close {
   bottom: 51px;
   left: 0;
 }
-/* line 280, ../sass/components/_dr-modals.scss */
+/* line 280, ../sass/components/_qf-modals.scss */
 .modal-search .modal-footer {
   position: absolute;
   right: 0;
@@ -12406,16 +12406,433 @@ button.close {
   height: 50px;
 }
 
-/* line 288, ../sass/components/_dr-modals.scss */
+/* line 288, ../sass/components/_qf-modals.scss */
 .modal-md .modal-body {
   margin-top: 31px;
   padding: 20px 10px !important;
 }
-/* line 294, ../sass/components/_dr-modals.scss */
+/* line 294, ../sass/components/_qf-modals.scss */
 .modal-md .modal-footer {
   padding: 5px 10px;
   background-color: #F2F2F2;
   height: 40px;
+}
+
+/*!
+ * angular-aside - v1.3.2
+ * https://github.com/dbtek/angular-aside
+ * 2015-11-17
+ * Copyright (c) 2015 İsmail Demirbilek
+ * License: MIT
+ */
+/*!
+Animate.css - http://daneden.me/animate
+Licensed under the MIT license - http://opensource.org/licenses/MIT
+
+Copyright (c) 2014 Daniel Eden
+*/
+@-webkit-keyframes fadeInLeft {
+  0% {
+    opacity: 0;
+    -webkit-transform: translate3d(-100%, 0, 0);
+    transform: translate3d(-100%, 0, 0);
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: none;
+    transform: none;
+  }
+}
+@keyframes fadeInLeft {
+  0% {
+    opacity: 0;
+    -webkit-transform: translate3d(-100%, 0, 0);
+    -ms-transform: translate3d(-100%, 0, 0);
+    transform: translate3d(-100%, 0, 0);
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: none;
+    -ms-transform: none;
+    transform: none;
+  }
+}
+/* line 346, ../sass/components/_qf-modals.scss */
+.fadeInLeft {
+  -webkit-animation-name: fadeInLeft;
+  animation-name: fadeInLeft;
+}
+
+@-webkit-keyframes fadeInRight {
+  0% {
+    opacity: 0;
+    -webkit-transform: translate3d(100%, 0, 0);
+    transform: translate3d(100%, 0, 0);
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: none;
+    transform: none;
+  }
+}
+@keyframes fadeInRight {
+  0% {
+    opacity: 0;
+    -webkit-transform: translate3d(100%, 0, 0);
+    -ms-transform: translate3d(100%, 0, 0);
+    transform: translate3d(100%, 0, 0);
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: none;
+    -ms-transform: none;
+    transform: none;
+  }
+}
+/* line 381, ../sass/components/_qf-modals.scss */
+.fadeInRight {
+  -webkit-animation-name: fadeInRight;
+  animation-name: fadeInRight;
+}
+
+@-webkit-keyframes fadeInTop {
+  0% {
+    opacity: 0;
+    -webkit-transform: translate3d(0, -100%, 0);
+    transform: translate3d(0, -100%, 0);
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: none;
+    transform: none;
+  }
+}
+@keyframes fadeInTop {
+  0% {
+    opacity: 0;
+    -webkit-transform: translate3d(0, -100%, 0);
+    -ms-transform: translate3d(0, -100%, 0);
+    transform: translate3d(0, -100%, 0);
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: none;
+    -ms-transform: none;
+    transform: none;
+  }
+}
+/* line 416, ../sass/components/_qf-modals.scss */
+.fadeInTop {
+  -webkit-animation-name: fadeInTop;
+  animation-name: fadeInTop;
+}
+
+@-webkit-keyframes fadeInBottom {
+  0% {
+    opacity: 0;
+    -webkit-transform: translate3d(0, 100%, 0);
+    transform: translate3d(0, 100%, 0);
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: none;
+    transform: none;
+  }
+}
+@keyframes fadeInBottom {
+  0% {
+    opacity: 0;
+    -webkit-transform: translate3d(0, 100%, 0);
+    -ms-transform: translate3d(0, 100%, 0);
+    transform: translate3d(0, 100%, 0);
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: none;
+    -ms-transform: none;
+    transform: none;
+  }
+}
+/* line 451, ../sass/components/_qf-modals.scss */
+.fadeInBottom {
+  -webkit-animation-name: fadeInBottom;
+  animation-name: fadeInBottom;
+}
+
+@-webkit-keyframes fadeOutLeft {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+    -webkit-transform: translate3d(-100%, 0, 0);
+    transform: translate3d(-100%, 0, 0);
+  }
+}
+@keyframes fadeOutLeft {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+    -webkit-transform: translate3d(-100%, 0, 0);
+    transform: translate3d(-100%, 0, 0);
+  }
+}
+/* line 480, ../sass/components/_qf-modals.scss */
+.fadeOutLeft {
+  -webkit-animation-name: fadeOutLeft;
+  animation-name: fadeOutLeft;
+}
+
+@-webkit-keyframes fadeOutRight {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+    -webkit-transform: translate3d(100%, 0, 0);
+    transform: translate3d(100%, 0, 0);
+  }
+}
+@keyframes fadeOutRight {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+    -webkit-transform: translate3d(100%, 0, 0);
+    transform: translate3d(100%, 0, 0);
+  }
+}
+/* line 509, ../sass/components/_qf-modals.scss */
+.fadeOutRight {
+  -webkit-animation-name: fadeOutRight;
+  animation-name: fadeOutRight;
+}
+
+@-webkit-keyframes fadeOutUp {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+    -webkit-transform: translate3d(0, -100%, 0);
+    transform: translate3d(0, -100%, 0);
+  }
+}
+@keyframes fadeOutUp {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+    -webkit-transform: translate3d(0, -100%, 0);
+    transform: translate3d(0, -100%, 0);
+  }
+}
+/* line 538, ../sass/components/_qf-modals.scss */
+.fadeOutUp {
+  -webkit-animation-name: fadeOutUp;
+  animation-name: fadeOutUp;
+}
+
+@-webkit-keyframes fadeOutDown {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+    -webkit-transform: translate3d(0, 100%, 0);
+    transform: translate3d(0, 100%, 0);
+  }
+}
+@keyframes fadeOutDown {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+    -webkit-transform: translate3d(0, 100%, 0);
+    transform: translate3d(0, 100%, 0);
+  }
+}
+/* line 568, ../sass/components/_qf-modals.scss */
+.fadeOutDown {
+  -webkit-animation-name: fadeOutDown;
+  animation-name: fadeOutDown;
+}
+
+/* Common */
+/* line 574, ../sass/components/_qf-modals.scss */
+.ng-aside {
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+
+/* line 579, ../sass/components/_qf-modals.scss */
+.ng-aside .modal-dialog {
+  position: absolute;
+  margin: 0;
+  padding: 0;
+}
+
+/* line 585, ../sass/components/_qf-modals.scss */
+.ng-aside.fade .modal-dialog {
+  -o-transition: none;
+  -moz-transition: none;
+  -ms-transition: none;
+  -webkit-transition: none;
+  transition: none;
+  /*CSS transforms*/
+  -o-transform: none;
+  -moz-transform: none;
+  -ms-transform: none;
+  -webkit-transform: none;
+  transform: none;
+}
+
+/* line 599, ../sass/components/_qf-modals.scss */
+.ng-aside .modal-dialog .modal-content {
+  overflow-y: auto;
+  overflow-x: hidden;
+  border: none;
+  border-radius: 0;
+}
+
+/* Horizontal */
+/* line 608, ../sass/components/_qf-modals.scss */
+.ng-aside.horizontal {
+  height: 100%;
+}
+
+/* line 612, ../sass/components/_qf-modals.scss */
+.ng-aside.horizontal .modal-dialog .modal-content {
+  height: 100%;
+}
+
+/* line 616, ../sass/components/_qf-modals.scss */
+.ng-aside.horizontal .modal-dialog {
+  position: absolute;
+  top: 0;
+  height: 100%;
+}
+
+/* line 622, ../sass/components/_qf-modals.scss */
+.modal-open .ng-aside.horizontal.left .modal-dialog {
+  animation: fadeOutLeft 250ms;
+  -webkit-animation: fadeOutLeft 250ms;
+  -moz-animation: fadeOutLeft 250ms;
+  -o-animation: fadeOutLeft 250ms;
+  -ms-animation: fadeOutLeft 250ms;
+}
+
+/* line 630, ../sass/components/_qf-modals.scss */
+.ng-aside.horizontal.left.in .modal-dialog {
+  animation: fadeInLeft 400ms;
+  -webkit-animation: fadeInLeft 400ms;
+  -moz-animation: fadeInLeft 400ms;
+  -o-animation: fadeInLeft 400ms;
+  -ms-animation: fadeInLeft 400ms;
+}
+
+/* line 638, ../sass/components/_qf-modals.scss */
+.ng-aside.horizontal.left .modal-dialog {
+  left: 0;
+}
+
+/* line 642, ../sass/components/_qf-modals.scss */
+.ng-aside.horizontal.right .modal-dialog {
+  animation: fadeOutRight 400ms;
+  -webkit-animation: fadeOutRight 400ms;
+  -moz-animation: fadeOutRight 400ms;
+  -o-animation: fadeOutRight 400ms;
+  -ms-animation: fadeOutRight 400ms;
+}
+
+/* line 650, ../sass/components/_qf-modals.scss */
+.ng-aside.horizontal.right.in .modal-dialog {
+  animation: fadeInRight 250ms;
+  -webkit-animation: fadeInRight 250ms;
+}
+
+/* line 655, ../sass/components/_qf-modals.scss */
+.ng-aside.horizontal.right .modal-dialog {
+  right: 0;
+}
+
+/* Vertical */
+/* line 661, ../sass/components/_qf-modals.scss */
+.ng-aside.vertical {
+  width: 100% !important;
+  overflow: hidden;
+}
+
+/* line 666, ../sass/components/_qf-modals.scss */
+.ng-aside.vertical .modal-dialog {
+  left: 0;
+  right: 0;
+  width: 100% !important;
+}
+
+/* line 672, ../sass/components/_qf-modals.scss */
+.ng-aside.vertical .modal-dialog .modal-content {
+  max-height: 400px;
+}
+
+/* line 676, ../sass/components/_qf-modals.scss */
+.ng-aside.vertical.top .modal-dialog {
+  animation: fadeOutUp 250ms;
+  -webkit-animation: fadeOutUp 250ms;
+  -webkit-animation: fadeOutUp 250ms;
+  -moz-animation: fadeOutUp 250ms;
+  -o-animation: fadeOutUp 250ms;
+  -ms-animation: fadeOutUp 250ms;
+}
+
+/* line 685, ../sass/components/_qf-modals.scss */
+.ng-aside.vertical.top.in .modal-dialog {
+  animation: fadeInTop 250ms;
+  -webkit-animation: fadeInTop 250ms;
+  -webkit-animation: fadeInTop 250ms;
+  -moz-animation: fadeInTop 250ms;
+  -o-animation: fadeInTop 250ms;
+  -ms-animation: fadeInTop 250ms;
+}
+
+/* line 694, ../sass/components/_qf-modals.scss */
+.ng-aside.vertical.bottom .modal-dialog {
+  animation: fadeOutDown 250ms;
+  -webkit-animation: fadeOutDown 250ms;
+  -webkit-animation: fadeOutDown 250ms;
+  -moz-animation: fadeOutDown 250ms;
+  -o-animation: fadeOutDown 250ms;
+  -ms-animation: fadeOutDown 250ms;
+}
+
+/* line 702, ../sass/components/_qf-modals.scss */
+.ng-aside.vertical.bottom.in .modal-dialog {
+  animation: fadeInBottom 250ms;
+  -webkit-animation: fadeInBottom 250ms;
+  -webkit-animation: fadeInBottom 250ms;
+  -moz-animation: fadeInBottom 250ms;
+  -o-animation: fadeInBottom 250ms;
+  -ms-animation: fadeInBottom 250ms;
+}
+
+/* line 711, ../sass/components/_qf-modals.scss */
+.ng-aside.vertical.bottom .modal-dialog {
+  bottom: 0;
+}
+
+/* line 715, ../sass/components/_qf-modals.scss */
+.ng-aside.vertical.top .modal-dialog {
+  top: 0;
+}
+
+/* line 719, ../sass/components/_qf-modals.scss */
+.ng-aside.vertical .modal-dialog .modal-content {
+  width: 100%;
 }
 
 /*DR TABLE*/

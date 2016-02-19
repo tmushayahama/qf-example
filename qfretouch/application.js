@@ -32,6 +32,7 @@ define([
   'xeditable',
   'angular-gestures',
   'validator.rules',
+  'ngAside',
   'builder',
   'builder.components',
   'qfretouch.app',

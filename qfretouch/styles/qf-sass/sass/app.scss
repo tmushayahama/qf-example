@@ -17,7 +17,7 @@
 
 /* DR COMPONENTS */
 @import "components/dr-buttons.scss";
-@import "components/dr-modals.scss";
+@import "components/qf-modals.scss";
 @import "components/dr-tables.scss";
 @import "components/dr-spinners.scss";
 @import "components/qf-defaults.scss";
@@ -42,7 +42,7 @@ h1, h2, h3, h4, h5, h6, p {
  color: rgba($primary-color, 0.5);
 }
 
-.dr-fa-faded { 
+.dr-fa-faded {
  color: #999;
 }
 

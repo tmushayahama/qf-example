@@ -22,6 +22,7 @@ define(['angular',
                  serie: true,
                  name: 'qfretouch.app',
                  files: [
+                  'qfretouch/app/services/FormManager.js',
                   'qfretouch/app/controllers/modals/PreviewFormModalCtrl.js',
                   'qfretouch/app/controllers/AppCtrl.js',
                  ]
