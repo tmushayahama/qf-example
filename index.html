@@ -34,24 +34,6 @@
 
  </head>
  <body>
-  <nav class="qf-navbar" role="navigation">
-   <form class="col-lg-4">
-    <div class="form-group">
-     <input type="text" class="form-control qf-form-name-input" ng-model="$root.formName"
-            placeholder="Form Name">
-    </div>
-   </form>
-   <div class="qf-flex-container col-lg-8">
-    <div class="qf-container btn-group col-lg-4">
-     <a ng-click="$root.saveForm()" class="col-lg-6 qf-nav-btn btn btn-link">
-      <i class="fa fa-save"></i> Save
-     </a>
-     <a ng-click="$root.previewForm()" class="col-lg-6 qf-nav-btn btn btn-link">
-      <i class="fa fa-eye"></i> Preview
-     </a>
-    </div>
-   </div>
-  </nav>
   <div data-ui-view="root" data-autoscroll="false"></div>
   <script src="bower_components/underscore/underscore-min.js"></script>
   <script src="bower_components/requirejs/require.js" data-main="qfretouch/rconfig"></script>

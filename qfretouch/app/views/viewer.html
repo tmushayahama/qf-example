@@ -1,0 +1,19 @@
+<nav class="qf-navbar text-center" role="navigation">
+ <div class="qf-flex-container col-lg-12">
+  <div class="qf-container col-lg-4">
+   {{viewerCtrl.formContent.formName}}
+  </div>
+ </div>
+</nav>
+<div class="qf-flex-container qf-designer-container col-lg-12 col-md-12 col-sm-12 col-xs-12">
+ <div class="qf-container col-lg-6 col-md-8 col-sm-11 col-xs-12 panel panel-default">
+  <h2 class="qf-form-description">
+   {{viewerCtrl.formContent.formDescription}}
+  </h2>
+  <form>
+  </form>
+ </div>
+</div>
+<script type="text/ng-template" id="summary-form-modal.html">
+ <div ng-include="'qfretouch/app/views/modals/summary-form-modal.html'"></div>
+</script>

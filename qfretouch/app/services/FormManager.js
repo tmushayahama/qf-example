@@ -35,6 +35,18 @@
            return deferred.resolve(data);
           };
 
+          FormManager.prototype.buildForm = function (formData) {
+           var self = this;
+           var deferred = $q.defer();
+           self.error = '';
+           $http.post(config.apiModel.form + "save", formData).success(function (data) {
+            self.deferredHandler(data, deferred);
+           }).error(function (data) {
+            self.deferredHandler(data, deferred, 'Unknown error');
+           });
+           return deferred.promise;
+          };
+
           FormManager.prototype.getForm = function (formData) {
            var self = this;
            var deferred = $q.defer();

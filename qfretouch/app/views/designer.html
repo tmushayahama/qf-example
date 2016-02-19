@@ -1,12 +1,36 @@
 
+<nav class="qf-navbar" role="navigation">
+ <form class="col-lg-4">
+  <div class="form-group">
+   <input type="text" class="form-control qf-form-name-input" ng-model="$root.formName"
+          placeholder="Form Name">
+  </div>
+ </form>
+ <div class="qf-flex-container col-lg-8">
+  <div class="qf-container btn-group col-lg-4">
+   <a ng-click="designerCtrl.saveForm()" class="col-lg-6 qf-nav-btn btn btn-link">
+    <i class="fa fa-save"></i> Save
+   </a>
+   <a ng-click="designerCtrl.previewForm()" class="col-lg-6 qf-nav-btn btn btn-link">
+    <i class="fa fa-eye"></i> Preview
+   </a>
+  </div>
+ </div>
+</nav>
+
 <div class="qf-component-nav col-lg-4 col-md-4 col-sm-4 col-xs-4" role="navigation">
  <div qf-components></div>
 </div>
 <div ui-view="apps" class="qf-flex-container qf-designer-container col-lg-offset-4 col-md-offset-4 col-sm-offset-4 col-xs-offset-4 col-lg-8 col-md-8 col-sm-8 col-xs-8">
  <div class="qf-container  col-lg-8 col-md-10 col-sm-11 col-xs-11 panel panel-default">
-  <div class="panel-heading">
-   <h3 class="panel-title">Builder</h3>
-  </div>
+  <form class="row qf-form-properties">
+   <div class="form-group col-lg-12">
+    <input type="text" class="form-control qf-input-underline qf-title-input" ng-model="designerCtrl.formName"
+           placeholder="Form Name">
+    <textarea class="form-control qf-input-underline qf-description-input" ng-model="designerCtrl.formDescription"
+              placeholder="Form Description" rows="1"></textarea>
+   </div>
+  </form>
   <div qf-builder="default"></div>
   <div ng-if="false" class="panel-footer">
    <div ng-click="appCtrl.previewForm()" class="btn btn-default">

@@ -18,12 +18,13 @@ var designerCtrl = function (
         ) {
  var vm = this;
 
- $rootScope.formName = "Untitled Form";
+ vm.formName = "Untitled Form";
 
- $rootScope.previewForm = function () {
+ vm.previewForm = function () {
   var modalInstance = $aside.open({
    templateUrl: 'preview-form-modal.html',
    controller: 'PreviewFormModalCtrl as previewFormCtrl',
+   scope: $scope,
    size: 'lg',
    placement: 'right',
    //backdrop: 'static',

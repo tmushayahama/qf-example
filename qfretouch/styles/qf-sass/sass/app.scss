@@ -52,6 +52,13 @@ body {
 .footer {
  height:50px
 }
+.qf-input-underline {
+ border: none;
+ border-bottom: #AAA solid 2px;
+}
+.qf-component {
+ padding: 15px 10px 15px 10px;
+}
 
 .qf-component-nav {
  @include position(fixed, 51px null 0 0);
@@ -97,12 +104,39 @@ body {
   clear: both;
  }
 }
-
+.qf-form-properties {
+ padding: 20px 10px;
+ .qf-title-input {
+  height: 40px;
+  font-size: 25px;
+  margin-bottom: 10px;
+ }
+ .qf-description-input {
+  font-size: 14px;
+ }
+}
 .qf-builder {
  height: 100%;
  overflow-x: hidden;
  overflow-y: auto;
  -webkit-overflow-scrolling: touch;
+}
+
+.qf-form-preview {
+ padding: 15px 10px;
+ height: 100%;
+ overflow-x: hidden;
+ overflow-y: auto;
+ -webkit-overflow-scrolling: touch;
+ .qf-form-properties {
+  padding: 10px 0px;
+  .qf-title {
+   font-size: 30px;
+  }
+  .qf-description {
+   font-size: 18px;
+  }
+ }
 }
 
 
