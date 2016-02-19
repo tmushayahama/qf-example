@@ -1,5 +1,5 @@
 'use strict';
-var appCtrl = function (
+var builderCtrl = function (
         config,
         $builder,
         $validator,
@@ -71,7 +71,7 @@ var appCtrl = function (
 };
 
 
-appCtrl.$inject = [
+builderCtrl.$inject = [
  'config',
  '$builder',
  '$validator',
@@ -88,4 +88,4 @@ appCtrl.$inject = [
  'FormManager'
 ];
 
-angular.module("qfretouch").controller('AppCtrl', appCtrl);
+angular.module("qfretouch").controller('BuilderCtrl', builderCtrl);

@@ -2,13 +2,13 @@
 <div class="qf-component-nav col-lg-4 col-md-4 col-sm-4 col-xs-4" role="navigation">
  <div qf-components></div>
 </div>
-<div ui-view="apps" class="qf-flex-container col-lg-offset-4 col-md-offset-4 col-sm-offset-4 col-xs-offset-4 col-lg-8 col-md-8 col-sm-8 col-xs-8">
- <div class="qf-container col-lg-8 col-md-10 col-sm-11 col-xs-11 panel panel-default">
+<div ui-view="apps" class="qf-flex-container qf-designer-container col-lg-offset-4 col-md-offset-4 col-sm-offset-4 col-xs-offset-4 col-lg-8 col-md-8 col-sm-8 col-xs-8">
+ <div class="qf-container  col-lg-8 col-md-10 col-sm-11 col-xs-11 panel panel-default">
   <div class="panel-heading">
    <h3 class="panel-title">Builder</h3>
   </div>
   <div qf-builder="default"></div>
-  <div class="panel-footer">
+  <div ng-if="false" class="panel-footer">
    <div ng-click="appCtrl.previewForm()" class="btn btn-default">
     Preview Form
    </div>

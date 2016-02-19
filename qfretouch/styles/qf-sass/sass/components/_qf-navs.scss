@@ -1,0 +1,32 @@
+.qf-navbar {
+ @include position(fixed, 0 0 null 0);
+ background-color: #FFF;
+ border-bottom: $primary-color 2px solid;
+ height: 50px;
+ border-radius: 0;
+ color: #F2F2F2;
+ .qf-form-name-input {
+  height: 47px;
+  border: none;
+  font-size: 18px;
+ }
+ .qf-nav-btn {
+  height: 47px;
+  padding: 10px 15px;
+  font-size: 15px;
+  color: $primary-color;
+ }
+}
+
+.navbar-xs .navbar-brand {
+ padding: 2px 8px;
+ font-size: 14px;
+ line-height: 14px;
+}
+
+.navbar-xs .navbar-nav > li > a {
+ border-right: 1px solid #ddd;
+ padding-top: 2px;
+ padding-bottom: 2px;
+ line-height: 16px
+}

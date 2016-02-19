@@ -10,12 +10,12 @@ define(['angular',
  module.config(['$stateProvider',
   function ($stateProvider) {
    $stateProvider
-           .state('app', {
-            url: '/app',
+           .state('designer', {
+            url: '/designer',
             views: {
              "root": {
-              templateUrl: 'qfretouch/app/views/app.html',
-              controller: 'AppCtrl as appCtrl',
+              templateUrl: 'qfretouch/app/views/designer.html',
+              controller: 'DesignerCtrl as designerCtrl',
               resolve: {
                load: function ($ocLazyLoad) {
                 return $ocLazyLoad.load({
@@ -24,7 +24,7 @@ define(['angular',
                  files: [
                   'qfretouch/app/services/FormManager.js',
                   'qfretouch/app/controllers/modals/PreviewFormModalCtrl.js',
-                  'qfretouch/app/controllers/AppCtrl.js',
+                  'qfretouch/app/controllers/DesignerCtrl.js',
                  ]
                 });
                }
