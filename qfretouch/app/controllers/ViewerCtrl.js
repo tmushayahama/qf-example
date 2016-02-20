@@ -22,14 +22,21 @@ var viewerCtrl = function (
  vm.formId = $stateParams.formId;
  vm.formContent;
 
+ //remove this part
+ vm.formContent =
+         {
+          formName: "Untitled Form",
+          formDescription: "A sample Form"
+         };
+
  vm.formManager.getForm(vm.formId).then(function (data) {
   vm.formContent = data;
  });
 
- vm.previewForm = function () {
+ vm.viewFormSummary = function () {
   var modalInstance = $aside.open({
    templateUrl: 'form-summary-modal.html',
-   controller: 'FormSummaryModalCtrl as previewFormCtrl',
+   controller: 'FormSummaryModalCtrl as formSummaryModalCtrl',
    size: 'lg',
    placement: 'right',
    //backdrop: 'static',

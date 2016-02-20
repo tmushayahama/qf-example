@@ -52,6 +52,11 @@ body {
 .footer {
  height:50px
 }
+.qf-viewer-heading {
+ margin-top: 10px;
+ color: #555;
+ font-size: 25px;
+}
 .qf-input-underline {
  border: none;
  border-bottom: #AAA solid 2px;
@@ -62,7 +67,7 @@ body {
 
 .qf-component-nav {
  @include position(fixed, 51px null 0 0);
- background-color: #EEE;
+ background-color: #F2F2F2;
  border-right: #999 1px solid;
  overflow-x: hidden;
  overflow-y: auto;
@@ -74,8 +79,8 @@ body {
  }
 }
 .qf-designer-container {
- @include position(fixed, 51px 0 0 null);
- background-color: #F2F2F2;
+ @include position(fixed, 61px 0 10px null);
+ background-color: #FFF;
  overflow-x: hidden;
  overflow-y: auto;
  -webkit-overflow-scrolling: touch;
@@ -104,22 +109,35 @@ body {
   clear: both;
  }
 }
-.qf-form-properties {
- padding: 20px 10px;
- .qf-title-input {
-  height: 40px;
-  font-size: 25px;
-  margin-bottom: 10px;
- }
- .qf-description-input {
-  font-size: 14px;
- }
-}
-.qf-builder {
+
+.qf-builder-container {
+ border: rgba($primary-color, 0.6) dashed 2px;
  height: 100%;
- overflow-x: hidden;
- overflow-y: auto;
- -webkit-overflow-scrolling: touch;
+ background-color: #FFF;
+ .qf-form-properties {
+  @include position(absolute, 0 0 null 0);
+  background-color: #FCFCFC;
+  height: 100px;
+  padding: 5px 20px;
+  border-bottom: rgba($primary-color, 0.9) solid 3px;
+  .qf-title-input {
+   background-color: transparent;
+   height: 40px;
+   font-size: 25px;
+   margin-bottom: 5px;
+  }
+  .qf-description-input {
+   background-color: transparent;
+   font-size: 14px;
+  }
+ }
+ .qf-builder {
+  @include position(absolute, 101px 0 0 0);
+  padding: 10px 10px;
+  overflow-x: hidden;
+  overflow-y: auto;
+  -webkit-overflow-scrolling: touch;
+ }
 }
 
 .qf-form-preview {

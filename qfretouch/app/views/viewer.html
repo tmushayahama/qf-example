@@ -1,16 +1,24 @@
 <nav class="qf-navbar text-center" role="navigation">
  <div class="qf-flex-container col-lg-12">
   <div class="qf-container col-lg-4">
-   {{viewerCtrl.formContent.formName}}
+   <h3 class="qf-viewer-heading">
+    {{viewerCtrl.formContent.formName}}
+   </h3>
   </div>
  </div>
 </nav>
 <div class="qf-flex-container qf-designer-container col-lg-12 col-md-12 col-sm-12 col-xs-12">
  <div class="qf-container col-lg-6 col-md-8 col-sm-11 col-xs-12 panel panel-default">
-  <h2 class="qf-form-description">
+  <p class="qf-form-description">
    {{viewerCtrl.formContent.formDescription}}
-  </h2>
-  <form>
+  </p>
+  <form class="form-horizontal">
+   <div ng-model="input" qf-form="default" qf-default="defaultValue"></div>
+   <div class="form-group">
+    <div class="col-md-8 col-md-offset-4">
+     <input type="submit" ng-click="submit()" class="btn btn-default"/>
+    </div>
+   </div>
   </form>
  </div>
 </div>
