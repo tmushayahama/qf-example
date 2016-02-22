@@ -25,7 +25,7 @@ var designerCtrl = function (
    templateUrl: 'preview-form-modal.html',
    controller: 'PreviewFormModalCtrl as previewFormCtrl',
    scope: $scope,
-   size: 'lg',
+   size: 'preview-form',
    placement: 'right',
    //backdrop: 'static',
   });

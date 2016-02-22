@@ -1,15 +1,17 @@
 
 <div class="modal-header gb-modal-header row">
- <a class="btn btn-link col-lg-1 col-md-2 col-sm-2 col-xs-2" ng-click="previewFormCtrl.close()">
-  >>
- </a>
- <div class="qf-modal-title col-lg-11 col-md-10 col-sm-10 col-xs-10">
+ <div class="col-lg-1 col-md-2 col-sm-2 col-xs-2" ng-click="previewFormCtrl.close()">
+  <a class="btn btn-primary qf-close qf-left">
+   >>
+  </a>
+ </div>
+ <div class="qfs-title col-lg-11 col-md-10 col-sm-10 col-xs-10">
   <p class="qf-ellipsis">
    {{designerCtrl.formName}}
   </p>
  </div>
 </div>
-<div class="modal-body" hm-swipe-left="previewFormCtrl.close()">
+<div class="modal-body" hm-swipe-right="previewFormCtrl.close()">
  <div class="qf-form-preview row">
   <div class="qf-form-properties">
    <p class="qf-description">
@@ -18,11 +20,6 @@
   </div>
   <form class="form-horizontal">
    <div ng-model="input" qf-form="default" qf-default="defaultValue"></div>
-   <div class="form-group">
-    <div class="col-md-8 col-md-offset-4">
-     <input type="submit" ng-click="submit()" class="btn btn-default"/>
-    </div>
-   </div>
   </form>
   <div class="checkbox">
    <label><input type="checkbox" ng-model="isShowScope" ng-init="isShowScope = true" />
@@ -34,8 +31,19 @@
  </div>
 </div>
 <div class="modal-footer">
- <div ng-click="previewFormCtrl.close()" class="btn btn-primary">
-  Close
+ <div class="qf-flex-container">
+  <div class="qf-container btn-group col-lg-8 col-md-8 col-sm-8 col-xs-8">
+   <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
+    <a class="btn btn-default qf-full" ng-click="previewFormCtrl.close()" >
+     Close
+    </a>
+   </div>
+   <div  class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
+    <a class="btn btn-primary qf-full" ng-click="previewFormCtrl.close()" >
+     Test Submit
+    </a>
+   </div>
+  </div>
  </div>
 </div>
 <!-- ------------------------------- MODALS --------------------------->

@@ -16,7 +16,7 @@
 @import "../../bourbon/_bourbon.scss";
 
 /* DR COMPONENTS */
-@import "components/dr-buttons.scss";
+@import "components/qf-buttons.scss";
 @import "components/qf-modals.scss";
 @import "components/qf-navs.scss";
 @import "components/dr-spinners.scss";
@@ -26,7 +26,7 @@
 @import "_app-mixins";
 
 [ng\:cloak],
-[ng-cloak],
+[ng-cloak], 
 [data-ng-cloak],
 [x-ng-cloak], .ng-cloak, .x-ng-cloak {
  display: none !important;
@@ -146,6 +146,7 @@ body {
    font-size: 14px;
   }
  }
+
  .qf-builder {
   @include position(absolute, 101px 0 0 0);
   padding: 10px 10px;
@@ -169,6 +170,10 @@ body {
   .qf-description {
    font-size: 18px;
   }
+ }
+ .qf-form-object {
+  padding: 15px 10px 15px 10px;
+  border-bottom: #BBB solid 2px;
  }
 }
 
