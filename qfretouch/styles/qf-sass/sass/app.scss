@@ -25,6 +25,21 @@
 @import "components/dr-slider.scss";
 @import "_app-mixins";
 
+[ng\:cloak],
+[ng-cloak],
+[data-ng-cloak],
+[x-ng-cloak], .ng-cloak, .x-ng-cloak {
+ display: none !important;
+}
+
+div[class*="col-"],
+li[class*="col-"]{
+ padding: 0;
+}
+textarea {
+ resize: none;
+}
+
 h1, h2, h3, h4, h5, h6, p {
  padding: 0;
 }
@@ -183,6 +198,8 @@ form img {
 
 /*------OVERRIDES------*/
 .form-horizontal .control-label {
+ padding: 5px 10px 10px 0px;
+	font-weight: normal;
  text-align: left;
 }
 h3 {
@@ -194,11 +211,6 @@ h3 {
 }
 .form-horizontal .form-group {
 	margin: 0;
-}
-.form-horizontal .control-label {
-	padding-top: 0;
-	padding-right: 0;
-	font-weight: normal;
 }
 
 /*------FB TOOLS------*/
