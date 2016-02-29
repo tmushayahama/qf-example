@@ -1,10 +1,9 @@
 
 <nav class="qf-navbar" role="navigation">
  <form class="col-lg-2 col-md-3 col-sm-4 col-xs-4">
-  <div class="form-group">
-   <input type="text" class="form-control qf-form-name-input" ng-model="designerCtrl.formName"
-          placeholder="Form Name">
-  </div>
+  <md-input-container class="md-block" md-no-float>
+   <input type="text" class="qf-form-name-input" ng-model="designerCtrl.formName"   placeholder="Form Name">
+  </md-input-container>
  </form>
  <div class="qf-flex-container col-lg-10 col-md-9 col-sm-8 col-xs-8">
   <div class="qf-container btn-group col-lg-4 col-md-4 col-sm-4 col-xs-4">
@@ -25,10 +24,13 @@
  <div class="qf-container qf-builder-container col-lg-5 col-md-6 col-sm-11 col-xs-11">
   <form class="row qf-form-properties">
    <div class="form-group col-lg-12 col-md-12 col-sm-12 col-xs-12 qf-padding-none">
-    <input type="text" class="form-control qf-input-underline qf-title-input" ng-model="designerCtrl.formName"
-           placeholder="Form Name">
-    <textarea class="form-control qf-input-underline qf-description-input" ng-model="designerCtrl.formDescription"
-              placeholder="Form Description" rows="1"></textarea>
+    <md-input-container class="md-block">
+     <input type="text" class="qf-title-input" ng-model="designerCtrl.formName"  placeholder="Form Name">
+    </md-input-container>
+    <md-input-container class="md-block">
+     <input type="text" class="qf-description-input" ng-model="designerCtrl.formDescription"
+            placeholder="Form Description">
+    </md-input-container>
    </div>
   </form>
   <div qf-builder="default"></div>
@@ -43,5 +45,6 @@
  </div>
 </div>
 <script type="text/ng-template" id="preview-form-modal.html">
- <div ng-include="'qfretouch/app/views/modals/preview-form-modal.html'"></div>
+ <div ng-include="'qfretouch/app/views/preview-form-modal.html'"></div>
 </script>
+

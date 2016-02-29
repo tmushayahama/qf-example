@@ -26,11 +26,24 @@
 @import "_app-mixins";
 
 [ng\:cloak],
-[ng-cloak], 
+[ng-cloak],
 [data-ng-cloak],
 [x-ng-cloak], .ng-cloak, .x-ng-cloak {
  display: none !important;
 }
+
+
+md-input-container.md-input-focused .md-input {
+ transition: border-color ease 0.28s;
+ border-color: $primary-color!important;
+ border-bottom-width: 3px;
+}
+
+.md-button {
+ min-height: 20px;
+ min-width: 22px;
+}
+
 
 div[class*="col-"],
 li[class*="col-"]{
@@ -132,9 +145,12 @@ body {
  .qf-form-properties {
   @include position(absolute, 0 0 null 0);
   background-color: #FCFCFC;
-  height: 100px;
-  padding: 5px 20px;
-  border-bottom: rgba($primary-color, 0.9) solid 3px;
+  height: 130px;
+  padding: 20px 20px 5px 20px;
+  md-input-container {
+   margin: 0px;
+  }
+  border-bottom: #DDD solid 1px;
   .qf-title-input {
    background-color: transparent;
    height: 40px;
@@ -148,7 +164,7 @@ body {
  }
 
  .qf-builder {
-  @include position(absolute, 101px 0 0 0);
+  @include position(absolute, 131px 0 0 0);
   padding: 10px 10px;
   overflow-x: hidden;
   overflow-y: auto;

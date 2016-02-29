@@ -1,16 +1,19 @@
 .qf-navbar {
  @include position(fixed, 0 0 null 0);
  background-color: #FFF;
- border-bottom: $primary-color 2px solid;
+ box-sizing: border-box;
+ border-bottom: 1px solid #ccc;
+ -webkit-box-shadow: inset 0px 1px 1px rgba(0, 0, 0, .3);
+ -moz-box-shadow: inset 0px 1px 1px rgba(0, 0, 0, .3);
+ box-shadow: inset 0px 1px 1px rgba(0, 0, 0, .3);
  height: 50px;
  border-radius: 0;
- color: #F2F2F2;
+ color: #555;
+ md-input-container {
+  margin: 0px;
+ }
  .qf-form-name-input {
-  width: auto;
-  min-width: 100px;
-  max-width: 300px;
   height: 47px;
-  border: none;
   font-size: 18px;
  }
  .qf-nav-btn {

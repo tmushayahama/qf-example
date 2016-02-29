@@ -22,9 +22,9 @@ define(['angular',
                  serie: true,
                  name: 'qfretouch.app',
                  files: [
-                  'qfretouch/app/services/FormManager.js',
-                  'qfretouch/app/controllers/modals/PreviewFormModalCtrl.js',
-                  'qfretouch/app/controllers/DesignerCtrl.js',
+                  'qfretouch/app/services/form.srv.js',
+                  'qfretouch/app/controllers/preview-form-modal.ctrl.js',
+                  'qfretouch/app/controllers/designer.ctrl.js',
                  ]
                 });
                }
@@ -44,9 +44,9 @@ define(['angular',
                  serie: true,
                  name: 'qfretouch.app',
                  files: [
-                  'qfretouch/app/services/FormManager.js',
-                  'qfretouch/app/controllers/modals/FormSummaryModalCtrl.js',
-                  'qfretouch/app/controllers/ViewerCtrl.js',
+                  'qfretouch/app/services/form.srv.js',
+                  'qfretouch/app/controllers/modals/form-summary-modal.ctrl.js',
+                  'qfretouch/app/controllers/viewer.ctrl.js',
                  ]
                 });
                }
