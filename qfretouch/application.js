@@ -18,9 +18,11 @@ define([
  'angular-aside',
  'angular-aria',
  'angular-material',
+ 'signature-pad',
  'qf-builder',
  'qf-components',
  'app/module',
+ 'common/module'
 ], function (angular) {
 
  var qfretouch = angular.module('qfretouch', [
@@ -39,6 +41,7 @@ define([
   'builder',
   'builder.components',
   'qfretouch.app',
+  'qfretouch.common'
  ]);
  // var app = angular.module('mainModule', ['ui.router', 'oc.lazyLoad']);
  qfretouch.config(['$ocLazyLoadProvider', 'localStorageServiceProvider', '$stateProvider', '$urlRouterProvider', '$httpProvider', '$authProvider', '$locationProvider', '$provide', 'hammerDefaultOptsProvider',
@@ -121,30 +124,8 @@ define([
 
   });
 
-  $builder.registerComponent('sampleInput', {
-   group: 'Default',
-   label: 'Sample',
-   description: 'From html template',
-   placeholder: 'placeholder',
-   required: false,
-   validationOptions: [
-    {
-     label: 'none',
-     rule: '/.*/'
-    }, {
-     label: 'number',
-     rule: '[number]'
-    }, {
-     label: 'email',
-     rule: '[email]'
-    }, {
-     label: 'url',
-     rule: '[url]'
-    }
-   ],
-   templateUrl: 'qfretouch/common/views/templates/template.html',
-   popoverTemplateUrl: 'qfretouch/common/views/templates/popoverTemplate.html'
-  });
+
+
   return $builder.registerComponent('name', {
    group: 'Combination',
    label: 'Name',

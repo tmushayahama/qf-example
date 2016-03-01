@@ -9,6 +9,12 @@
  height: 50px;
  border-radius: 0;
  color: #555;
+ .qf-action-btns {
+  .md-icon-button {
+   font-size: 20px;
+   line-height: 30px;
+  }
+ }
  md-input-container {
   margin: 0px;
  }
@@ -22,17 +28,4 @@
   font-size: 15px;
   color: $primary-color;
  }
-}
-
-.navbar-xs .navbar-brand {
- padding: 2px 8px;
- font-size: 14px;
- line-height: 14px;
-}
-
-.navbar-xs .navbar-nav > li > a {
- border-right: 1px solid #ddd;
- padding-top: 2px;
- padding-bottom: 2px;
- line-height: 16px
 }

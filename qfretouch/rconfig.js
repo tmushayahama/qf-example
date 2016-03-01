@@ -24,9 +24,10 @@ requirejs.config({
   'angular-aside': '../bower_components/angular-aside/dist/js/angular-aside',
   'angular-aria': '../bower_components/angular-aria/angular-aria',
   'angular-material': '../bower_components/angular-material/angular-material',
+  'signature-pad': '../lib/js/signature-pad',
   //Quickform
   'qf-builder': '../qf-lib/qf-builder',
-  'qf-components': '../qf-lib/qf-builder-components',
+  'qf-components': '../components/quickform-components',
  },
  shim: {
   'angular': {'exports': 'angular', deps: ['jquery']},
@@ -50,6 +51,7 @@ requirejs.config({
   'angular-aside': {deps: ['angular', 'angular-animate']},
   'angular-aria': {deps: ['angular']},
   'angular-material': {deps: ['angular', 'angular-aria', 'angular-animate']},
+  'signature-pad': {deps: ['angular']},
   'qf-builder': {deps: ['angular', 'angular-validator', 'angular-validator-rules']},
   'qf-components': {deps: ['angular', ]},
  },

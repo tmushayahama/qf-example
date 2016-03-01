@@ -1,0 +1,8 @@
+<label for="{{formName + index}}"  ng-class="{'qf-required':required}">
+ {{label}}
+</label>
+<input type='hidden' ng-model="inputText" validator-required="{{required}}" validator-group="{{formName}}"/>
+<md-checkbox ng-model="isChecked" aria-label="check"
+             ng-repeat="item in options track by $index">
+ {{item}}
+</md-checkbox>

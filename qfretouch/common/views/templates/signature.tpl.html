@@ -1,0 +1,10 @@
+
+
+<md-input-container class="md-block">
+ <label for="{{formName + index}}" ng-class="{'qf-required':required}">{{label}}</label>
+ <signature-pad id="{{formName + index}}" class="qf-signature" accept="accept" clear="clear"></signature-pad>
+ <div class="hint">
+  {{description}}
+ </div>
+ <md-button ng-click="clear()">Clear signature</md-button>
+</md-input-container>
