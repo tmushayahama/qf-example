@@ -47,6 +47,7 @@ var designerCtrl = function (
   required: true,
   editable: false
  });
+
  checkbox = $builder.addFormObject('default', {
   id: 'checkbox',
   component: 'checkbox',
@@ -55,7 +56,7 @@ var designerCtrl = function (
   options: ['Dog', 'Cat']
  });
  $builder.addFormObject('default', {
-  component: 'sampleInput'
+  component: 'textInput'
  });
  $scope.form = $builder.forms['default'];
  $scope.input = [];

@@ -3,8 +3,9 @@
   {{label}}
  </label>
  <input type='hidden' ng-model="inputText" validator-required="{{required}}" validator-group="{{formName}}"/>
- <md-checkbox ng-model="isChecked" aria-label="check" class="md-primary col-lg-12"
-              ng-repeat="item in options track by $index">
-  {{item}}
- </md-checkbox>
-</div>
+ <md-radio-group ng-model="data.group1">
+  <md-radio-button ng-model="isChecked" aria-label="check" class="md-primary col-lg-12"
+                   ng-repeat="item in options track by $index">
+   {{item}}
+  </md-radio-button>
+ </md-radio-group>
