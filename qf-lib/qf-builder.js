@@ -163,7 +163,8 @@ angular.module('builder.controller', ['builder.provider']).controller('qfFormObj
    return $scope.$parent.input.splice($scope.$index, 1, input);
   };
  }
-]);angular.module('builder.directive', ['builder.provider', 'builder.controller', 'builder.drag', 'validator']).directive('qfBuilder', [
+]);
+angular.module('builder.directive', ['builder.provider', 'builder.controller', 'builder.drag', 'validator']).directive('qfBuilder', [
  '$injector', function ($injector) {
   var $builder, $drag;
   $builder = $injector.get('$builder');
@@ -173,7 +174,9 @@ angular.module('builder.controller', ['builder.provider']).controller('qfFormObj
    scope: {
     qfBuilder: '='
    },
-   template: "<div class='form-horizontal'>\n    <div class='qf-form-object-editable' ng-repeat=\"object in formObjects\"\n        qf-form-object-editable=\"object\"></div>\n</div>",
+   templateUrl: function (element, attrs) {
+    return attrs.templateUrl;
+   },
    link: function (scope, element, attrs) {
     var base, beginMove, name;
     scope.formName = attrs.qfBuilder;
@@ -412,7 +415,9 @@ angular.module('builder.controller', ['builder.provider']).controller('qfFormObj
 ]).directive('qfComponents', function () {
  return {
   restrict: 'A',
-  template: "<ul ng-if=\"groups.length > 1\" class=\"nav nav-tabs nav-justified\">\n    <li ng-repeat=\"group in groups\" ng-class=\"{active:activeGroup==group}\">\n        <a href='#' ng-click=\"selectGroup($event, group)\">{{group}}</a>\n    </li>\n</ul>\n<div class='form-horizontal'>\n    <div class='qf-component' ng-repeat=\"component in components\"\n        qf-component=\"component\"></div>\n</div>",
+  templateUrl: function (element, attrs) {
+   return attrs.templateUrl;
+  },
   controller: 'qfComponentsController'
  };
 }).directive('qfComponent', [

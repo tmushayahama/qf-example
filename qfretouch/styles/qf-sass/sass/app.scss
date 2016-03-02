@@ -58,9 +58,13 @@ md-input-container.md-input-focused .md-input {
  height: 100px!important;
  width: 100%!important;
  border-bottom: #777 solid 3px;
+ canvas {
+  height: 100px!important;
+  width: 100%!important;
+ }
 }
 
-.tooltip.qf-tooltip-1 .tooltip-inner { 
+.tooltip.qf-tooltip-1 .tooltip-inner {
  padding: 5px;
  background-color: #F2F2F2;
  border: rgba($primary-color, 0.5) solid 1px;
@@ -226,14 +230,6 @@ body {
 
 form img {
 	max-height: 100px;
-}
-
-.qf-signature {
- height: 50px;
-}
-
-.qf-signature img {
- width: 100%;
 }
 
 /*------OVERRIDES------*/

@@ -1,0 +1,10 @@
+<md-input-container class="md-block">
+ <label for="{{formName + index}}" ng-class="{'qf-required':required}">{{label}}</label>
+ <input type="text" ng-model="inputText" validator-required="{{required}}" validator-group="{{formName}}" id="{{formName + index}}" class=""/>
+ <div class="hint">
+  {{description}}
+ </div>
+ <div ng-messages="userForm.postalCode.$error" role="alert">
+  <div ng-message="required" class="my-message">required.</div>
+ </div>
+</md-input-container>

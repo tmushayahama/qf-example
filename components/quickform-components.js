@@ -26,6 +26,31 @@ angular.module('builder.components', ['builder', 'validator.rules']).config([
    popoverTemplateUrl: 'qfretouch/common/views/templates/popover.tpl.html'
   });
 
+  $builderProvider.registerComponent('datePicker', {
+   group: 'Default',
+   label: 'Date',
+   description: 'when is this happening',
+   placeholder: '',
+   required: false,
+   validationOptions: [
+    {
+     label: 'none',
+     rule: '/.*/'
+    }, {
+     label: 'number',
+     rule: '[number]'
+    }, {
+     label: 'email',
+     rule: '[email]'
+    }, {
+     label: 'url',
+     rule: '[url]'
+    }
+   ],
+   templateUrl: 'qfretouch/common/views/templates/datepicker.tpl.html',
+   popoverTemplateUrl: 'qfretouch/common/views/templates/popover.tpl.html'
+  });
+
   $builderProvider.registerComponent('checkbox', {
    group: 'Default',
    label: 'Checkbox',
@@ -85,6 +110,7 @@ angular.module('builder.components', ['builder', 'validator.rules']).config([
    templateUrl: 'qfretouch/common/views/templates/checkbox.tpl.html',
    popoverTemplate: "<form>\n    <div class=\"form-group\">\n        <label class='control-label'>Label</label>\n        <input type='text' ng-model=\"label\" validator=\"[required]\" class='form-control'/>\n    </div>\n    <div class=\"form-group\">\n        <label class='control-label'>Description</label>\n        <input type='text' ng-model=\"description\" class='form-control'/>\n    </div>\n    <div class=\"form-group\">\n        <label class='control-label'>Options</label>\n        <textarea class=\"form-control\" rows=\"3\" ng-model=\"optionsText\"/>\n    </div>\n\n    <hr/>\n    <div class='form-group'>\n        <input type='submit' ng-click=\"popover.save($event)\" class='btn btn-primary' value='Save'/>\n        <input type='button' ng-click=\"popover.cancel($event)\" class='btn btn-default' value='Cancel'/>\n        <input type='button' ng-click=\"popover.remove($event)\" class='btn btn-danger' value='Delete'/>\n    </div>\n</form>"
   });
+
   return $builderProvider.registerComponent('select', {
    group: 'Default',
    label: 'Select',

@@ -47,7 +47,7 @@ define(['angular',
                  files: [
                   'qfretouch/common/directives/signature.drv.js',
                   'qfretouch/app/services/form.srv.js',
-                  'qfretouch/app/controllers/modals/form-summary-modal.ctrl.js',
+                  'qfretouch/app/controllers/form-summary-modal.ctrl.js',
                   'qfretouch/app/controllers/viewer.ctrl.js',
                  ]
                 });
