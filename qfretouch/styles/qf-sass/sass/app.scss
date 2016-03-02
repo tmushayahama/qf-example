@@ -60,6 +60,15 @@ md-input-container.md-input-focused .md-input {
  border-bottom: #777 solid 3px;
 }
 
+.tooltip.qf-tooltip-1 .tooltip-inner { 
+ padding: 5px;
+ background-color: #F2F2F2;
+ border: rgba($primary-color, 0.5) solid 1px;
+ box-shadow: 0 6px 12px rgba(0,0,0,.175);
+ color: #777;
+ z-index: 10000;
+}
+
 div[class*="col-"],
 li[class*="col-"]{
  padding: 0;

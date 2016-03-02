@@ -1,5 +1,6 @@
 .qf-navbar {
  @include position(fixed, 0 0 null 0);
+ z-index: 1;
  background-color: #FFF;
  box-sizing: border-box;
  border-bottom: 1px solid #ccc;

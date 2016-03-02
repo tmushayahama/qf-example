@@ -8,10 +8,12 @@
  <div class="qf-flex-container col-lg-10 col-md-9 col-sm-8 col-xs-8">
 
   <div class="qf-container qf-action-btns">
-   <md-button ng-click="designerCtrl.saveForm()" class="md-icon-button" aria-label="save">
+   <md-button ng-click="designerCtrl.saveForm()" class="md-icon-button" aria-label="save" tooltip-class="qf-tooltip-1"
+              tooltip-placement="bottom" uib-tooltip="Save Form"  tooltip-popup-delay="500">
     <i class="fa fa-save"></i>
    </md-button>
-   <md-button ng-click="designerCtrl.previewForm()" class="md-icon-button" aria-label="preview">
+   <md-button ng-click="designerCtrl.previewForm()" class="md-icon-button" aria-label="preview" tooltip-class="qf-tooltip-1"
+              tooltip-placement="bottom" uib-tooltip="Preview Form"  tooltip-popup-delay="500">
     <i class="fa fa-eye"></i>
    </md-button>
   </div>
@@ -19,7 +21,6 @@
 </nav>
 
 <div class="qf-component-nav col-lg-2 col-md-3 col-sm-4 col-xs-4" role="navigation">
-
  <div qf-components></div>
 </div>
 <div class="qf-flex-container qf-designer-container col-lg-offset-2 col-md-offset-3 col-sm-offset-4 col-xs-offset-4 col-lg-10 col-md-9 col-sm-8 col-xs-8">
