@@ -1,28 +1,30 @@
 
 <nav class="qf-navbar" role="navigation">
- <form class="col-lg-2 col-md-3 col-sm-4 col-xs-4">
-  <md-input-container class="md-block" md-no-float>
-   <input type="text" class="qf-form-name-input" ng-model="designerCtrl.formName"   placeholder="Form Name">
-  </md-input-container>
- </form>
- <div class="qf-flex-container col-lg-10 col-md-9 col-sm-8 col-xs-8">
-  <div class="qf-container qf-action-btns">
-   <md-button ng-click="designerCtrl.saveForm()" class="md-icon-button" aria-label="save" tooltip-class="qf-tooltip-1"
-              tooltip-placement="bottom" uib-tooltip="Save Form"  tooltip-popup-delay="500">
-    <i class="fa fa-save"></i>
-   </md-button>
-   <md-button ng-click="designerCtrl.previewForm()" class="md-icon-button" aria-label="preview" tooltip-class="qf-tooltip-1"
-              tooltip-placement="bottom" uib-tooltip="Preview Form"  tooltip-popup-delay="500">
-    <i class="fa fa-eye"></i>
-   </md-button>
+ <div class="container">
+  <form class="col-lg-8 col-md-8 col-sm-7 col-xs-7">
+   <md-input-container class="md-block" md-no-float>
+    <input type="text" class="qf-form-name-input" ng-model="designerCtrl.formName"   placeholder="Form Name">
+   </md-input-container>
+  </form>
+  <div class="col-lg-4 col-md-4 col-sm-5 col-xs-5">
+   <div class="qf-action-btns pull-right">
+    <md-button ng-click="designerCtrl.saveForm()" class="md-icon-button" aria-label="save" tooltip-class="qf-tooltip-1"
+               tooltip-placement="bottom" uib-tooltip="Save Form"  tooltip-popup-delay="500">
+     <i class="fa fa-save"></i>
+    </md-button>
+    <md-button ng-click="designerCtrl.previewForm()" class="md-icon-button" aria-label="preview" tooltip-class="qf-tooltip-1"
+               tooltip-placement="bottom" uib-tooltip="Preview Form"  tooltip-popup-delay="500">
+     <i class="fa fa-eye"></i>
+    </md-button>
+   </div>
   </div>
  </div>
 </nav>
-<div class="qf-component-nav col-lg-2 col-md-3 col-sm-4 col-xs-4" role="navigation">
- <div qf-components template-url="qfretouch/common/views/templates/qf-components.tpl.html"></div>
-</div>
-<div class="qf-flex-container qf-designer-container col-lg-offset-2 col-md-offset-3 col-sm-offset-4 col-xs-offset-4 col-lg-10 col-md-9 col-sm-8 col-xs-8">
- <div class="qf-container qf-builder-container col-lg-5 col-md-6 col-sm-11 col-xs-11">
+<div id="qf-main-container" class="container">
+ <div class="qf-component-nav col-lg-1 col-md-2 col-sm-4 col-xs-4" role="navigation">
+  <div qf-components template-url="qfretouch/common/views/templates/qf-components.tpl.html"></div>
+ </div>
+ <div class="qf-designer-container qf-builder-container col-lg-7 col-md-6 col-sm-11 col-xs-11">
   <form class="row qf-form-properties">
    <md-input-container class="md-block" md-no-float>
     <input type="text" class="qf-title-input" ng-model="designerCtrl.formName"  placeholder="Form Name">
@@ -41,6 +43,9 @@
    </div>
    <pre ng-if="isShowScope">{{form}}</pre>
   </div>
+ </div>
+ <div class="qf-properties col-lg-4 col-md-4 col-sm-3 col-xs-4">
+
  </div>
 </div>
 <script type="text/ng-template" id="preview-form-modal.html">

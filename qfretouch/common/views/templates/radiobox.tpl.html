@@ -1,11 +1,22 @@
-<div class="row">
- <label for="{{formName + index}}"  class="col-lg-12 control-label" ng-class="{'qf-required':required}">
-  {{label}}
- </label>
- <input type='hidden' ng-model="inputText" validator-required="{{required}}" validator-group="{{formName}}"/>
- <md-radio-group ng-model="data.group1">
-  <md-radio-button ng-model="isChecked" aria-label="check" class="md-primary col-lg-12"
-                   ng-repeat="item in options track by $index">
-   {{item}}
-  </md-radio-button>
- </md-radio-group>
+<div class="row qf-component-use">
+ <div class="form-group">
+  <label for="{{formName + index}}" class="col-lg-12 col-md-12 col-sm-12 col-xs-12 control-label" ng-class="{'qf-required':required}">
+   {{label}}
+  </label>
+  <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+   <div class='radio' ng-repeat="item in options track by $index">
+    <label>
+     <input name='{{formName + index}}' ng-model="$parent.inputText" validator-group="{{formName}}" value='{{item}}' type='radio'/>
+     {{item}}
+    </label>
+   </div>
+   <p class='help-block'>
+    {{description}}
+   </p>
+  </div>
+ </div>
+</div>
+<div class="qf-component-display">
+ <img src="qfretouch/img/radiobox.png" alt="textbox" tooltip-class="qf-tooltip-1"
+      tooltip-placement="right" uib-tooltip="Radio Box"  tooltip-popup-delay="500"/>
+</div>

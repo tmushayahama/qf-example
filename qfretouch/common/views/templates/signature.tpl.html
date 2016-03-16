@@ -1,6 +1,6 @@
 
 
-<md-input-container class="md-block">
+<md-input-container class="qf-component-use md-block">
  <label for="{{formName + index}}" ng-class="{'qf-required':required}">{{label}}</label>
  <input type='hidden' ng-model="inputText = accept().dataUrl" validator-required="{{required}}" validator-group="{{formName}}"/>
 
@@ -11,3 +11,7 @@
  <md-button ng-click="clear()">Clear</md-button>
  <md-button ng-click="inputText = accept().dataUrl">Sign</md-button>
 </md-input-container>
+<div class="qf-component-display">
+ <img src="qfretouch/img/signature.png" alt="textbox" tooltip-class="qf-tooltip-1"
+      tooltip-placement="right" uib-tooltip="Signature"  tooltip-popup-delay="500"/>
+</div>

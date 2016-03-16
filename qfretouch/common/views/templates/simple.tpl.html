@@ -1,4 +1,4 @@
-<md-input-container class="md-block">
+<md-input-container class="qf-component-use md-block">
  <label for="{{formName + index}}" ng-class="{'qf-required':required}">{{label}}</label>
  <input type="text" ng-model="inputText" validator-required="{{required}}" validator-group="{{formName}}" id="{{formName + index}}" class=""/>
  <div class="hint">
@@ -8,3 +8,8 @@
   <div ng-message="required" class="my-message">required.</div>
  </div>
 </md-input-container>
+<div class="qf-component-display">
+ <img src="qfretouch/img/textbox.png" alt="textbox" tooltip-class="qf-tooltip-1"
+      tooltip-placement="right" uib-tooltip="Textbox"  tooltip-popup-delay="500"/>
+</div>
+

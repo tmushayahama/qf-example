@@ -123,16 +123,36 @@ body {
  box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
 }
 
+.qf-component-display {
+ img {
+  width: 100%;
+ }
+}
+
+.qf-draggable.dragging {
+ background-color: #FFF;
+ position: absolute;
+ z-index: 800;
+ min-height: 150px;
+ width: 300px!important;
+ box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
+ .qf-component-use {
+  display: block;
+ }
+ .qf-component-display {
+  display: none;
+ }
+}
 .qf-component-nav {
- @include position(fixed, 51px null 0 0);
- background-color: #F7F7F7;
+ //@include position(absolute, 51px null 0 0);
+ padding: 0px 10px 0 10px!important;
  border-right: #999 1px solid;
- overflow-x: hidden;
- overflow-y: auto;
+ overflow-y: hidden;
  -webkit-overflow-scrolling: touch;
 
  .qf-heading {
   padding: 10px 5px 10px 20px;
+  margin-bottom: 15px;
   text-transform: uppercase;
   font-size: 10px;
   background-color: #EEE;
@@ -143,11 +163,22 @@ body {
  }
 
  .qf-component {
-  padding: 15px 10px 15px 10px;
+  padding: 0;
+  background-color: #F9F9F9;
+  .qf-component-use {
+   display: none;
+  }
+  .qf-component-display {
+   display: block;
+  }
+ }
+ &:hover {
+  overflow-x: hidden;
+  overflow-y: scroll;
  }
 }
 .qf-designer-container {
- @include position(fixed, 61px 0 10px null);
+ ///@include position(absolute, 61px 0 10px null);
  background-color: #FFF;
  overflow-x: hidden;
  overflow-y: auto;
@@ -158,7 +189,9 @@ body {
  display: flex;
  flex-direction: column;
 }
-
+#qf-main-container {
+ margin-top: 60px;
+}
 
 .qf-container {
  display: inline-block;
@@ -179,11 +212,9 @@ body {
 }
 
 .qf-builder-container {
- @include position(absolute, 0 0 0 0);
  border: rgba($primary-color, 0.6) dashed 2px;
  background-color: #FFF;
- overflow-x: visible;
- overflow-y: auto;
+ overflow-y: hidden;
  -webkit-overflow-scrolling: touch;
  .qf-form-properties {
   background-color: #FCFCFC;
@@ -208,15 +239,25 @@ body {
    padding: 15px 10px 15px 10px;
    margin-bottom: 15px;
    box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
+   .qf-component-use {
+    display: block;
+   }
+   .qf-component-display {
+    display: none;
+   }
   }
+ }
+
+ &:hover {
+  overflow-x: hidden;
+  overflow-y: scroll;
  }
 }
 
 .qf-form-preview {
  padding: 15px 10px;
  height: 100%;
- overflow-x: hidden;
- overflow-y: auto;
+ overflow-y: hidden;
  -webkit-overflow-scrolling: touch;
  .qf-form-properties {
   padding: 10px 0px;
@@ -231,6 +272,17 @@ body {
   padding: 15px 10px 15px 10px;
   margin-bottom: 15px;
   box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
+  .qf-component-use {
+   display: block;
+  }
+  .qf-component-display {
+   display: none;
+  }
+ }
+
+ &:hover {
+  overflow-x: hidden;
+  overflow-y: scroll;
  }
 }
 
