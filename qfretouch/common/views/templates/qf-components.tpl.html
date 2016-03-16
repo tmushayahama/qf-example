@@ -1,10 +1,13 @@
-<ul ng-if="groups.length > 1" class="nav nav-tabs nav-justified">
- <li ng-repeat="group in groups" ng-class="{active:activeGroup == group}">
-  <a href='#' ng-click="selectGroup($event, group)">{{group}}</a>
- </li>
-</ul>
-<div class='form-horizontal'>
- <div class='qf-component' ng-repeat="component in components" qf-component="component">
 
+<div ng-repeat="group in groups" ng-class="{active:activeGroup == group}">
+ <div class="qf-heading">
+  <a ng-if="false" ng-click="selectGroup($event, group)"
+     class="col-lg-12">
+  </a>
+  {{group}}
+ </div>
+ <div class='form-horizontal'>
+  <div class='qf-component' ng-repeat="component in components" qf-component="component">
+  </div>
  </div>
 </div>
