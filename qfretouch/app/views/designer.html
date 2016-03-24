@@ -26,15 +26,15 @@
  </div>
  <div class="qf-designer-container dotted qf-builder-container col-lg-7 col-md-6 col-sm-11 col-xs-11">
   <form class="row qf-form-properties">
-   <md-input-container class="md-block" md-no-float>
-    <input type="text" class="qf-title-input" ng-model="designerCtrl.formName"  placeholder="Form Name">
-   </md-input-container>
+
    <md-input-container class="md-block" md-no-float>
     <input type="text" class="qf-description-input" ng-model="designerCtrl.formDescription"
            placeholder="Form Description">
    </md-input-container>
   </form>
+
   <div qf-builder="default" template-url="qfretouch/common/views/templates/qf-builder.tpl.html"></div>
+
   <div ng-if="false" class="panel-footer">
    <div class="checkbox">
     <label><input type="checkbox" ng-model="isShowScope" />
@@ -48,6 +48,7 @@
   <h3>
    Properties
   </h3>
+  <button ce-box-creator>Click Me!!!!!!!!!!</button>
   <p>
    select a component to change its properties
   </p>
@@ -79,7 +80,6 @@
     <label class='control-label'>Validation</label>
     <select ng-model="$parent.validation" class='form-control' ng-options="option.rule as option.label for option in validationOptions"></select>
    </div>
-
    <hr/>
    <div class='form-group'>
     <input type='submit' ng-click="popover.save($event)" class='btn btn-primary' value='Save'/>

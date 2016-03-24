@@ -68,6 +68,32 @@ var designerCtrl = function (
 
   */
 
+ $scope.dynamicSize = {
+  'width': 350,
+  'height': 250
+ }
+
+ $scope.flexbox = true;
+ $scope.size = {};
+ $scope.msg = 'Resize me.';
+
+ $scope.events = [];
+ $scope.$on("angular-resizable.resizeEnd", function (event, args) {
+  $scope.msg = 'Resize me again.';
+  $scope.events.unshift(event);
+  $scope.size = args;
+  if (args.width)
+   $scope.dynamicSize.width = args.width;
+  if (args.height)
+   $scope.dynamicSize.height = args.height;
+ });
+ $scope.$on("angular-resizable.resizeStart", function (event, args) {
+  $scope.msg = 'Woooohoooo!';
+  $scope.events.unshift(event);
+ });
+
+
+
  $scope.submit = function () {
   return $validator.validate($scope, 'default').success(function () {
    return console.log('success');

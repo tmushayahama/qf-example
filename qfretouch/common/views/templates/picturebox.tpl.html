@@ -1,17 +1,16 @@
 
 
-<md-input-container class="qf-component-use md-block">
- <label for="{{formName + index}}" ng-class="{'qf-required':required}">{{label}}</label>
- <input type='hidden' ng-model="inputText" validator-required="{{required}}" validator-group="{{formName}}"/>
+<label for="{{formName + index}}" ng-class="{'qf-required':required}">{{label}}</label>
+<input type='hidden' ng-model="inputText" validator-required="{{required}}" validator-group="{{formName}}"/>
 
- <picture-box id="{{formName + index}}" class="qf-signature" setfile="setFile" clear="clear">
- </picture-box>
- <div class="hint">
-  {{description}}
- </div>
- <md-button ng-click="setFile()">hhhClear</md-button>
- <md-button ng-click="inputText = accept().dataUrl">Sign</md-button>
-</md-input-container>
+<picture-box id="{{formName + index}}"
+             ce-drag ce-resize
+             class="qf-picture-box contentEditorBox" setfile="setFile" clear="clear">
+</picture-box>
+
+<div class="hint">
+ {{description}}
+</div>
 <div class="qf-component-display">
  <img src="qfretouch/img/picturebox.png" alt="image" tooltip-class="qf-tooltip-1"
       tooltip-placement="right" uib-tooltip="Picture Box"  tooltip-popup-delay="500"/>
