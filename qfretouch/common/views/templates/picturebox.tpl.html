@@ -1,15 +1,15 @@
 
+<div class="row qf-component-use">
+ <label for="{{formName + index}}" ng-class="{'qf-required':required}">{{label}}</label>
+ <input type='hidden' ng-model="inputText" validator-required="{{required}}" validator-group="{{formName}}"/>
 
-<label for="{{formName + index}}" ng-class="{'qf-required':required}">{{label}}</label>
-<input type='hidden' ng-model="inputText" validator-required="{{required}}" validator-group="{{formName}}"/>
-
-<picture-box id="{{formName + index}}"
-             ce-drag ce-resize
-             class="qf-picture-box contentEditorBox" setfile="setFile" clear="clear">
-</picture-box>
-
-<div class="hint">
- {{description}}
+ <picture-box id="{{formName + index}}"
+              ce-drag ce-resize
+              class="qf-picture-box contentEditorBox" setfile="setFile" clear="clear">
+ </picture-box>
+ <div class="hint">
+  {{description}}
+ </div>
 </div>
 <div class="qf-component-display">
  <img src="qfretouch/img/picturebox.png" alt="image" tooltip-class="qf-tooltip-1"

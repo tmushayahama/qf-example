@@ -10,7 +10,7 @@
 
 
 /* -DOC RECORD THEME - Change the variables in this file for a different theme */
-@import 'app-themes/theme_1';  
+@import 'app-themes/theme_1';
 @import 'app-variables';
 @import "../../../../bower_components/compass-breakpoint/stylesheets/breakpoint.scss";
 @import "../../bourbon/_bourbon.scss";
@@ -187,7 +187,8 @@ body {
  .qf-component {
   padding: 0;
   background-color: #F9F9F9;
-  .qf-component-use {
+  .qf-component-use,
+  .qf-grab-me{
    display: none;
   }
   .qf-component-display {
@@ -263,7 +264,34 @@ body {
    padding: 15px 10px 15px 10px;
    margin-bottom: 15px;
    box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
+   .qf-grab-me {
+    @include position(absolute, 0 0 null 0);
+    padding: 5px 0;
+    height: 30px;
+    background-color: #F2F2F2;
+    display: block;
+    color: #AAA;
+    cursor: move;
+    font-size: 18px;
+    &:hover {
+     color: #555;
+     background-color: #DDD;
+    }
+    .qf-actions {
+     @include position(absolute, 0 0 0 null);
+     width: 100px;
+     .md-button {
+      margin: 0;
+      min-width: 20px;
+      min-height: 10px;
+      line-height: 30px;
+     }
+    }
+   }
    .qf-component-use {
+    margin-top: 20px;
+    pointer-events: none;
+    position: relative;
     display: block;
    }
    .qf-component-display {
@@ -304,7 +332,8 @@ body {
   .qf-component-use {
    display: block;
   }
-  .qf-component-display {
+  .qf-component-display,
+  .qf-grab-me{
    display: none;
   }
  }

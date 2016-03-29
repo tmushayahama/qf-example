@@ -4,28 +4,33 @@
 
 .qf-component {
  padding: 10px;
+ /*
  cursor: move;
  input { cursor: move; }
  label { cursor: move; }
  select { cursor: move; }
  textarea { cursor: move; }
+ */
 }
 .qf-form-object-editable {
+ position: relative;
  padding: 10px;
 }
 .qf-form-object-editable.qf-draggable {
+ /*
  cursor: move;
  input { cursor: move; }
  label { cursor: pointer; }
  select { cursor: move; }
  textarea { cursor: move; }
+ */
 }
 .qf-form-object-editable.empty {
  cursor: default;
  margin: 6px;
- height: 80px;
+ height: 100px;
  border:dashed 1px #aaa;
- background-color: #eee;
+ background-color: #FFF;
 }
 
 .qf-draggable.dragging {
