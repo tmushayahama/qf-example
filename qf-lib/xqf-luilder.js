@@ -163,7 +163,8 @@ angular.module('builder.controller', ['builder.provider']).controller('qfFormObj
    return $scope.$parent.input.splice($scope.$index, 1, input);
   };
  }
-]);angular.module('builder.directive', ['builder.provider', 'builder.controller', 'builder.drag', 'validator']).directive('qfBuilder', [
+]);
+angular.module('builder.directive', ['builder.provider', 'builder.controller', 'builder.drag', 'validator']).directive('qfBuilder', [
  '$injector', function ($injector) {
   var $builder, $drag;
   $builder = $injector.get('$builder');
@@ -276,7 +277,6 @@ angular.module('builder.controller', ['builder.provider']).controller('qfFormObj
    },
    link: function (scope, element) {
     var popover;
-    var settingContainer = $('.qf-properties');
     scope.inputArray = [];
     scope.$component = $builder.components[scope.formObject.component];
     scope.setupScope(scope.formObject);
@@ -305,18 +305,13 @@ angular.module('builder.controller', ['builder.provider']).controller('qfFormObj
       return;
      }
      $(element).removeClass(popover.id);
-
      popover = {
       id: "qf-" + (Math.random().toString().substr(2)),
       isClickedSave: false,
       view: null,
       html: template
      };
-
-
-
      popover.html = $(popover.html).addClass(popover.id);
-     settingContainer.html($(popover.html));
      popover.view = $compile(popover.html)(scope);
      $(element).addClass(popover.id);
      return $(element).popover({
