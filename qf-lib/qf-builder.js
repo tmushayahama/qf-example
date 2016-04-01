@@ -288,9 +288,7 @@ angular.module('builder.controller', ['builder.provider']).controller('qfFormObj
      view = $compile(template)(scope);
      return $(element).html(view);
     });
-    $(element).on('click', function () {
-     return false;
-    });
+
     $drag.draggable($(element), {
      object: {
       formObject: scope.formObject
@@ -317,16 +315,33 @@ angular.module('builder.controller', ['builder.provider']).controller('qfFormObj
 
      popover.html = $(popover.html).addClass(popover.id);
      settingContainer.html($(popover.html));
-     popover.view = $compile(popover.html)(scope);
-     $(element).addClass(popover.id);
-     return $(element).popover({
+     $compile(settingContainer)(scope);
+     /*
+      popover.view = $compile(popover.html)(scope);
+      $(element).addClass(popover.id);
+      return $(element).popover({
       html: true,
       title: scope.$component.label,
       content: popover.view,
       container: 'body',
       placement: $builder.config.popoverPlacement
-     });
+      });
+      */
     });
+
+    $(element).on('click', function () {
+     var self = $(this);
+     settingContainer.html($(popover.html));
+     $(".qf-form-object-editable").removeClass("active");
+     self.addClass("active");
+     $compile(settingContainer)(scope);
+     return false;
+    });
+
+    scope.deleteObject = function ($event) {
+     $event.preventDefault();
+     $builder.removeFormObject(scope.$parent.formName, scope.$parent.$index);
+    }
     scope.popover = {
      save: function ($event) {
 
@@ -368,52 +383,54 @@ angular.module('builder.controller', ['builder.provider']).controller('qfFormObj
       }
      }
     };
-    $(element).on('show.bs.popover', function () {
+    /*
+     $(element).on('show.bs.popover', function () {
      var $popover, elementOrigin, popoverTop;
      if ($drag.isMouseMoved()) {
-      return false;
+     return false;
      }
      $("div.qf-form-object-editable:not(." + popover.id + ")").popover('hide');
      $popover = $("form." + popover.id).closest('.popover');
      if ($popover.length > 0) {
-      elementOrigin = $(element).offset().top + $(element).height() / 2;
-      popoverTop = elementOrigin - $popover.height() / 2;
-      $popover.css({
-       position: 'absolute',
-       top: popoverTop
-      });
-      $popover.show();
-      setTimeout(function () {
-       $popover.addClass('in');
-       return $(element).triggerHandler('shown.bs.popover');
-      }, 0);
-      return false;
+     elementOrigin = $(element).offset().top + $(element).height() / 2;
+     popoverTop = elementOrigin - $popover.height() / 2;
+     $popover.css({
+     position: 'absolute',
+     top: popoverTop
+     });
+     $popover.show();
+     setTimeout(function () {
+     $popover.addClass('in');
+     return $(element).triggerHandler('shown.bs.popover');
+     }, 0);
+     return false;
      }
-    });
-    $(element).on('shown.bs.popover', function () {
+     });
+     $(element).on('shown.bs.popover', function () {
      $(".popover ." + popover.id + " input:first").select();
      scope.$apply(function () {
-      return scope.popover.shown();
+     return scope.popover.shown();
      });
-    });
-    return $(element).on('hide.bs.popover', function () {
+     });
+     return $(element).on('hide.bs.popover', function () {
      var $popover;
      $popover = $("form." + popover.id).closest('.popover');
      if (!popover.isClickedSave) {
-      if (scope.$$phase || scope.$root.$$phase) {
-       scope.popover.cancel();
-      } else {
-       scope.$apply(function () {
-        return scope.popover.cancel();
-       });
-      }
+     if (scope.$$phase || scope.$root.$$phase) {
+     scope.popover.cancel();
+     } else {
+     scope.$apply(function () {
+     return scope.popover.cancel();
+     });
+     }
      }
      $popover.removeClass('in');
      setTimeout(function () {
-      return $popover.hide();
+     return $popover.hide();
      }, 300);
      return false;
-    });
+     });
+     */
    }
   };
  }

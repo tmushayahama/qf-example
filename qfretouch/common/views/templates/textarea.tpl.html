@@ -1,4 +1,17 @@
-
+<div class="qf-grab-me text-center row">
+ <i class="fa fa-th"></i>
+ <div class="qf-actions">
+  <md-button class="col-lg-4 col-md-4 col-sm-4 col-xs-4">
+   <i class="fa fa-cog"></i>
+  </md-button>
+  <md-button ng-click="duplicateObject($event)"class="col-lg-4 col-md-4 col-sm-4 col-xs-4">
+   <i class="fa fa-copy"></i>
+  </md-button>
+  <md-button ng-click="deleteObject($event)" class="col-lg-4 col-md-4 col-sm-4 col-xs-4">
+   <i class="fa fa-times"></i>
+  </md-button>
+ </div>
+</div>
 <div class="form-group qf-component-use">
  <label for="{{formName + index}}" class="col-lg-12 col-md-12 col-sm-12 col-xs-12 control-label"
         ng-class="{'qf-required':required}">

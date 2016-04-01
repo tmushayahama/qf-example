@@ -279,7 +279,7 @@ body {
     }
     .qf-actions {
      @include position(absolute, 0 0 0 null);
-     width: 100px;
+     width: 120px;
      .md-button {
       margin: 0;
       min-width: 20px;
@@ -296,6 +296,9 @@ body {
    }
    .qf-component-display {
     display: none;
+   }
+   &.active {
+    outline: #5cb85c solid 5px;
    }
   }
  }
