@@ -195,7 +195,9 @@ angular.module('builder.controller', ['builder.provider']).controller('qfFormObj
       $formObjects = $(element).find('.qf-form-object-editable:not(.empty,.dragging)');
       if ($formObjects.length === 0) {
        if ($(element).find('.qf-form-object-editable.empty').length === 0) {
-        $(element).find('>div:first').append($("<div class='qf-form-object-editable empty'></div>"));
+        $(element).find('>div:first')
+                .append(
+                        $("<div class='col-lg-6 qf-form-object-editable empty'></div>"));
        }
        return;
       }
@@ -211,7 +213,7 @@ angular.module('builder.controller', ['builder.provider']).controller('qfFormObj
       for (index = j = 1, ref1 = positions.length; j < ref1; index = j += 1) {
        if (e.pageY > positions[index - 1] && e.pageY <= positions[index]) {
         $(element).find('.empty').remove();
-        $empty = $("<div class='qf-form-object-editable empty'></div>");
+        $empty = $("<div class='col-lg-6 qf-form-object-editable empty'></div>");
         if (index - 1 < $formObjects.length) {
          $empty.insertBefore($($formObjects[index - 1]));
         } else {
