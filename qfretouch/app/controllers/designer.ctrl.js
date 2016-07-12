@@ -19,7 +19,7 @@ var designerCtrl = function (
  var vm = this;
 
  vm.gridsterOpts = {
-  rowHeight: 150,
+  rowHeight: 200,
   draggable: {
    enabled: true,
    handle: '.qf-grab-me',
