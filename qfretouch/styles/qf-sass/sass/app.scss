@@ -270,9 +270,10 @@ body {
 
   .qf-form-object-editable {
    background-color: #FFF;
-   padding: 15px 10px 15px 10px;
-   margin-bottom: 15px;
+   padding: 0;
+   //margin-bottom: 15px;
    box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
+   overflow: hidden;
    .qf-grab-me {
     @include position(absolute, 0 0 null 0);
     padding: 5px 0;
@@ -297,11 +298,38 @@ body {
      }
     }
    }
+   .qf-hidden-design-mode {
+    display: none;
+   }
+   input {
+    color: #AAA;
+    -webkit-box-shadow: inset 2px 2px 2px 0px #dddddd;
+    -moz-box-shadow: inset 2px 2px 2px 0px #dddddd;
+    box-shadow: inset 2px 2px 2px 0px #dddddd;
+    border: 1px solid #aaa;
+    border-radius: 0;
+    &.qf-label {
+     padding-left: 0;
+     padding-right: 0;
+     -webkit-box-shadow: none !important;
+     -moz-box-shadow: none !important;
+     box-shadow: none !important;
+     background-color: transparent;
+     color: #111;
+     outline: none;
+     border: none;
+    }
+    &.qf-help-block {
+     font-size: 10px;
+    }
+
+   }
    .qf-component-use {
-    margin-top: 20px;
-    pointer-events: none;
-    position: relative;
-    display: block;
+    @include position(absolute, 31px 0 0 0);
+    padding: 0 10px 0 10px;
+    // margin-top: 20px;
+    // position: relative;
+    //display: block;
    }
    .qf-component-display {
     display: none;

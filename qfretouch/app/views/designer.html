@@ -32,9 +32,11 @@
             placeholder="Form Description">
     </md-input-container>
    </form>
-   <div gridster>
-    <ul>
-     <li gridster-item="item" ng-repeat="item in standardItems">
+   <div gridster="designerCtrl.gridsterOpts">
+    <ul class="qf-builder">
+     <li gridster-item="item" ng-repeat="item in designerCtrl.standardItems"
+         class="qf-form-object-editable"
+         ng-include="item.templateUrl">
       <input type="text" integer ng-model="item.row" size="1" />,
       <input type="text" integer ng-model="item.col" size="1" />
       <br />

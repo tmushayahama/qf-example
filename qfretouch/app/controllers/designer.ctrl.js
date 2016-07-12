@@ -18,18 +18,44 @@ var designerCtrl = function (
         ) {
  var vm = this;
 
- $scope.standardItems = [
-  {sizeX: 2, sizeY: 1, row: 0, col: 0},
-  {sizeX: 2, sizeY: 2, row: 0, col: 2},
-  {sizeX: 1, sizeY: 1, row: 0, col: 4},
-  {sizeX: 1, sizeY: 1, row: 0, col: 5},
-  {sizeX: 2, sizeY: 1, row: 1, col: 0},
-  {sizeX: 1, sizeY: 1, row: 1, col: 4},
-  {sizeX: 1, sizeY: 2, row: 1, col: 5},
-  {sizeX: 1, sizeY: 1, row: 2, col: 0},
-  {sizeX: 2, sizeY: 1, row: 2, col: 1},
-  {sizeX: 1, sizeY: 1, row: 2, col: 3},
-  {sizeX: 1, sizeY: 1, row: 2, col: 4}
+ vm.gridsterOpts = {
+  rowHeight: 150,
+  draggable: {
+   enabled: true,
+   handle: '.qf-grab-me',
+   start: function (event, $element, widget) {}, // optional callback fired when drag is started,
+   drag: function (event, $element, widget) {}, // optional callback fired when item is moved,
+   stop: function (event, $element, widget) {} // optional callback fired when item is finished dragging
+  }
+ }
+ vm.standardItems = [
+  {sizeX: 3,
+   sizeY: 1,
+   row: 0,
+   col: 0,
+   templateUrl: "qfretouch/common/views/templates/simple.tpl.html"
+  },
+  {
+   sizeX: 3,
+   sizeY: 1,
+   row: 0,
+   col: 3,
+   templateUrl: "qfretouch/common/views/templates/jsignature.tpl.html"
+  },
+  {
+   sizeX: 3,
+   sizeY: 1,
+   row: 1,
+   col: 0,
+   templateUrl: "qfretouch/common/views/templates/checkbox.tpl.html"
+  },
+  {
+   sizeX: 3,
+   sizeY: 1,
+   row: 1,
+   col: 3,
+   templateUrl: "qfretouch/common/views/templates/textarea.tpl.html"
+  },
  ];
 
  vm.formName = "Untitled Form";
