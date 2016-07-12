@@ -56,6 +56,20 @@ var designerCtrl = function (
    col: 3,
    templateUrl: "qfretouch/common/views/templates/textarea.tpl.html"
   },
+  {
+   sizeX: 3,
+   sizeY: 1,
+   row: 2,
+   col: 0,
+   templateUrl: "qfretouch/common/views/templates/radiobox.tpl.html"
+  },
+  {
+   sizeX: 3,
+   sizeY: 1,
+   row: 2,
+   col: 3,
+   templateUrl: "qfretouch/common/views/templates/select.tpl.html"
+  },
  ];
 
  vm.formName = "Untitled Form";
