@@ -46,6 +46,192 @@
   background-color: rgba(0, 95, 177, 0.7);
 }
 
+/* line 1, ../sass/components/_qf-grid.scss */
+.gridster {
+  position: relative;
+  margin: auto;
+  height: 0;
+}
+
+/* line 7, ../sass/components/_qf-grid.scss */
+.gridster > ul {
+  margin: 0;
+  list-style: none;
+  padding: 0;
+}
+
+/* line 13, ../sass/components/_qf-grid.scss */
+.gridster-item {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  list-style: none;
+  z-index: 2;
+  position: absolute;
+  display: none;
+}
+
+/* line 23, ../sass/components/_qf-grid.scss */
+.gridster-loaded {
+  -webkit-transition: height .3s;
+  -moz-transition: height .3s;
+  -o-transition: height .3s;
+  transition: height 0.3s;
+}
+
+/* line 30, ../sass/components/_qf-grid.scss */
+.gridster-loaded .gridster-item {
+  display: block;
+  position: absolute;
+  -webkit-transition: opacity .3s, left .3s, top .3s, width .3s, height .3s;
+  -moz-transition: opacity .3s, left .3s, top .3s, width .3s, height .3s;
+  -o-transition: opacity .3s, left .3s, top .3s, width .3s, height .3s;
+  transition: opacity .3s, left .3s, top .3s, width .3s, height .3s;
+  -webkit-transition-delay: 50ms;
+  -moz-transition-delay: 50ms;
+  -o-transition-delay: 50ms;
+  transition-delay: 50ms;
+}
+
+/* line 43, ../sass/components/_qf-grid.scss */
+.gridster-loaded .gridster-preview-holder {
+  display: none;
+  z-index: 1;
+  position: absolute;
+  background-color: #BCD2EE;
+  border-color: #fff;
+  opacity: 0.2;
+}
+
+/* line 52, ../sass/components/_qf-grid.scss */
+.gridster-loaded .gridster-item.gridster-item-moving,
+.gridster-loaded .gridster-preview-holder {
+  -webkit-transition: none;
+  -moz-transition: none;
+  -o-transition: none;
+  transition: none;
+}
+
+/* line 60, ../sass/components/_qf-grid.scss */
+.gridster-mobile {
+  height: auto !important;
+}
+
+/* line 64, ../sass/components/_qf-grid.scss */
+.gridster-mobile .gridster-item {
+  height: auto;
+  position: static;
+  float: none;
+}
+
+/* line 70, ../sass/components/_qf-grid.scss */
+.gridster-item.ng-leave.ng-leave-active {
+  opacity: 0;
+}
+
+/* line 74, ../sass/components/_qf-grid.scss */
+.gridster-item.ng-enter {
+  opacity: 1;
+}
+
+/* line 78, ../sass/components/_qf-grid.scss */
+.gridster-item-moving {
+  z-index: 3;
+}
+
+/* line 82, ../sass/components/_qf-grid.scss */
+.gridster-item-resizable-handler {
+  position: absolute;
+  font-size: 1px;
+  display: block;
+  z-index: 5;
+}
+
+/* line 89, ../sass/components/_qf-grid.scss */
+.handle-se {
+  cursor: se-resize;
+  width: 0;
+  height: 0;
+  right: 1px;
+  bottom: 1px;
+  border-style: solid;
+  border-width: 0 0 12px 12px;
+  border-color: transparent;
+}
+
+/* line 100, ../sass/components/_qf-grid.scss */
+.handle-ne {
+  cursor: ne-resize;
+  width: 12px;
+  height: 12px;
+  right: 1px;
+  top: 1px;
+}
+
+/* line 108, ../sass/components/_qf-grid.scss */
+.handle-nw {
+  cursor: nw-resize;
+  width: 12px;
+  height: 12px;
+  left: 1px;
+  top: 1px;
+}
+
+/* line 116, ../sass/components/_qf-grid.scss */
+.handle-sw {
+  cursor: sw-resize;
+  width: 12px;
+  height: 12px;
+  left: 1px;
+  bottom: 1px;
+}
+
+/* line 124, ../sass/components/_qf-grid.scss */
+.handle-e {
+  cursor: e-resize;
+  width: 12px;
+  bottom: 0;
+  right: 1px;
+  top: 0;
+}
+
+/* line 132, ../sass/components/_qf-grid.scss */
+.handle-s {
+  cursor: s-resize;
+  height: 12px;
+  right: 0;
+  bottom: 1px;
+  left: 0;
+}
+
+/* line 140, ../sass/components/_qf-grid.scss */
+.handle-n {
+  cursor: n-resize;
+  height: 12px;
+  right: 0;
+  top: 1px;
+  left: 0;
+}
+
+/* line 148, ../sass/components/_qf-grid.scss */
+.handle-w {
+  cursor: w-resize;
+  width: 12px;
+  left: 1px;
+  top: 0;
+  bottom: 0;
+}
+
+/* line 156, ../sass/components/_qf-grid.scss */
+.gridster .gridster-item:hover .gridster-box {
+  border: 1.5px solid #B3B2B3;
+}
+
+/* line 160, ../sass/components/_qf-grid.scss */
+.gridster .gridster-item:hover .handle-se {
+  border-color: transparent transparent #ccc;
+}
+
 /*DR MODALS*/
 /* line 3, ../sass/components/_qf-modals.scss */
 .modal .modal-header {
@@ -1687,7 +1873,7 @@ a.editable-empty:focus {
                       qfretouch MIXINS 
 
 */
-/* line 29, ../sass/app.scss */
+/* line 30, ../sass/app.scss */
 [ng\:cloak],
 [ng-cloak],
 [data-ng-cloak],
@@ -1695,30 +1881,30 @@ a.editable-empty:focus {
   display: none !important;
 }
 
-/* line 37, ../sass/app.scss */
+/* line 38, ../sass/app.scss */
 md-input-container.md-input-focused .md-input {
   transition: border-color ease 0.28s;
   border-color: #005FB1 !important;
   border-bottom-width: 3px;
 }
 
-/* line 43, ../sass/app.scss */
+/* line 44, ../sass/app.scss */
 .md-button {
   min-height: 20px;
   min-width: 22px;
 }
 
-/* line 48, ../sass/app.scss */
+/* line 49, ../sass/app.scss */
 .md-default {
   background-color: #F2F2F2 !important;
 }
 
-/* line 52, ../sass/app.scss */
+/* line 53, ../sass/app.scss */
 .hint {
   color: #777;
 }
 
-/* line 56, ../sass/app.scss */
+/* line 57, ../sass/app.scss */
 .qf-signature {
   display: block;
   background-color: #FFF;
@@ -1726,13 +1912,13 @@ md-input-container.md-input-focused .md-input {
   width: 100% !important;
   border-bottom: #777 solid 3px;
 }
-/* line 62, ../sass/app.scss */
+/* line 63, ../sass/app.scss */
 .qf-signature canvas {
   height: 100px !important;
   width: 100% !important;
 }
 
-/* line 67, ../sass/app.scss */
+/* line 68, ../sass/app.scss */
 .qf-signature-placeholder {
   padding: 0px;
   height: 50px;
@@ -1747,24 +1933,24 @@ md-input-container.md-input-focused .md-input {
   line-height: 40px;
 }
 
-/* line 82, ../sass/app.scss */
+/* line 83, ../sass/app.scss */
 .qf-picture-box {
   position: relative;
   background-color: #FFF;
   height: 100px !important;
   width: 100% !important;
 }
-/* line 87, ../sass/app.scss */
+/* line 88, ../sass/app.scss */
 .qf-picture-box .qf-resizable-container {
   transition: all .3s ease-in-out;
   width: 100%;
   height: 100%;
 }
-/* line 91, ../sass/app.scss */
+/* line 92, ../sass/app.scss */
 .qf-picture-box .qf-resizable-container.active {
   left: 0;
 }
-/* line 92, ../sass/app.scss */
+/* line 93, ../sass/app.scss */
 .qf-picture-box .qf-resizable-container .resizable {
   margin: auto;
   top: 0;
@@ -1772,13 +1958,13 @@ md-input-container.md-input-focused .md-input {
   right: 0;
   bottom: 15%;
 }
-/* line 97, ../sass/app.scss */
+/* line 98, ../sass/app.scss */
 .qf-picture-box img {
   height: 100%;
   width: 100%;
 }
 
-/* line 103, ../sass/app.scss */
+/* line 104, ../sass/app.scss */
 .tooltip.qf-tooltip-1 .tooltip-inner {
   padding: 5px;
   background-color: #F2F2F2;
@@ -1788,79 +1974,79 @@ md-input-container.md-input-focused .md-input {
   z-index: 10000;
 }
 
-/* line 112, ../sass/app.scss */
+/* line 113, ../sass/app.scss */
 div[class*="col-"],
 li[class*="col-"] {
   padding: 0;
 }
 
-/* line 116, ../sass/app.scss */
+/* line 117, ../sass/app.scss */
 textarea {
   resize: none;
 }
 
-/* line 120, ../sass/app.scss */
+/* line 121, ../sass/app.scss */
 h1, h2, h3, h4, h5, h6, p {
   padding: 0;
 }
 
-/* line 124, ../sass/app.scss */
+/* line 125, ../sass/app.scss */
 .row {
   margin-right: 0;
   margin-left: 0;
 }
 
-/* line 129, ../sass/app.scss */
+/* line 130, ../sass/app.scss */
 .dr-fa-back-icon {
   color: #DDD;
 }
 
-/* line 133, ../sass/app.scss */
+/* line 134, ../sass/app.scss */
 .dr-fa-front-icon {
   color: rgba(0, 95, 177, 0.5);
 }
 
-/* line 137, ../sass/app.scss */
+/* line 138, ../sass/app.scss */
 .dr-fa-faded {
   color: #999;
 }
 
-/* line 141, ../sass/app.scss */
+/* line 142, ../sass/app.scss */
 body {
   padding: 10px;
 }
 
-/* line 144, ../sass/app.scss */
+/* line 145, ../sass/app.scss */
 .footer {
   height: 50px;
 }
 
-/* line 147, ../sass/app.scss */
+/* line 148, ../sass/app.scss */
 .qf-viewer-heading {
   margin-top: 10px;
   color: #555;
   font-size: 25px;
 }
 
-/* line 152, ../sass/app.scss */
+/* line 153, ../sass/app.scss */
 .qf-input-underline {
   border: none;
   border-bottom: #AAA solid 2px;
 }
 
-/* line 156, ../sass/app.scss */
+/* line 157, ../sass/app.scss */
 .qf-component {
   padding: 15px 10px 15px 10px;
   margin-bottom: 15px;
   box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
 }
 
-/* line 163, ../sass/app.scss */
+/* line 164, ../sass/app.scss */
 .qf-component-display img {
   width: 100%;
 }
 
-/* line 168, ../sass/app.scss */
+/* line 169, ../sass/app.scss */
 .qf-draggable.dragging {
   background-color: #FFF;
   position: absolute;
@@ -1869,17 +2055,17 @@ body {
   width: 300px !important;
   box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
 }
-/* line 176, ../sass/app.scss */
+/* line 177, ../sass/app.scss */
 .qf-draggable.dragging .qf-component-use {
   display: block;
 }
-/* line 179, ../sass/app.scss */
+/* line 180, ../sass/app.scss */
 .qf-draggable.dragging .qf-component-display,
 .qf-draggable.dragging .qf-grab-me {
   display: none;
 }
 
-/* line 184, ../sass/app.scss */
+/* line 185, ../sass/app.scss */
 .qf-component-nav {
   position: absolute;
   top: 51px;
@@ -1890,7 +2076,7 @@ body {
   -webkit-overflow-scrolling: touch;
   background-color: #FFF;
 }
-/* line 191, ../sass/app.scss */
+/* line 192, ../sass/app.scss */
 .qf-component-nav .qf-heading {
   padding: 10px 5px 10px 20px;
   margin-bottom: 15px;
@@ -1899,22 +2085,22 @@ body {
   background-color: #EEE;
   border-bottom: #DDD 1px solid;
 }
-/* line 203, ../sass/app.scss */
+/* line 204, ../sass/app.scss */
 .qf-component-nav .qf-component {
   padding: 0;
   background-color: #F9F9F9;
 }
-/* line 206, ../sass/app.scss */
+/* line 207, ../sass/app.scss */
 .qf-component-nav .qf-component .qf-component-use,
 .qf-component-nav .qf-component .qf-grab-me {
   display: none;
 }
-/* line 210, ../sass/app.scss */
+/* line 211, ../sass/app.scss */
 .qf-component-nav .qf-component .qf-component-display {
   display: block;
 }
 
-/* line 219, ../sass/app.scss */
+/* line 220, ../sass/app.scss */
 .qf-designer-container {
   position: absolute;
   top: 51px;
@@ -1925,18 +2111,18 @@ body {
   -webkit-overflow-scrolling: touch;
 }
 
-/* line 227, ../sass/app.scss */
+/* line 228, ../sass/app.scss */
 .qf-flex-container {
   display: flex;
   flex-direction: column;
 }
 
-/* line 231, ../sass/app.scss */
+/* line 232, ../sass/app.scss */
 #qf-main-container {
   margin-top: 60px;
 }
 
-/* line 235, ../sass/app.scss */
+/* line 236, ../sass/app.scss */
 .qf-container {
   display: inline-block;
   height: 100%;
@@ -1944,19 +2130,18 @@ body {
   padding-left: 15px;
   padding-right: 15px;
 }
-/* line 242, ../sass/app.scss */
+/* line 243, ../sass/app.scss */
 .qf-container:before, .qf-container:after {
   content: " ";
   display: table;
 }
-/* line 248, ../sass/app.scss */
+/* line 249, ../sass/app.scss */
 .qf-container:after {
   clear: both;
 }
 
-/* line 253, ../sass/app.scss */
+/* line 254, ../sass/app.scss */
 .qf-builder-container {
-  border: rgba(0, 95, 177, 0.6) dashed 2px;
   background-color: #FFF;
   overflow-y: hidden;
   -webkit-overflow-scrolling: touch;

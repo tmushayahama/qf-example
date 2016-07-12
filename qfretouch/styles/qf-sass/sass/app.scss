@@ -17,6 +17,7 @@
 
 /* DR COMPONENTS */
 @import "components/qf-buttons.scss";
+@import "components/qf-grid.scss";
 @import "components/qf-modals.scss";
 @import "components/qf-navs.scss";
 @import "components/dr-spinners.scss";
@@ -251,7 +252,6 @@ body {
 }
 
 .qf-builder-container {
- border: rgba($primary-color, 0.6) dashed 2px;
  background-color: #FFF;
  overflow-y: hidden;
  -webkit-overflow-scrolling: touch;
