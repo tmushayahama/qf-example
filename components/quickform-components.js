@@ -88,7 +88,7 @@ angular.module('builder.components', ['builder', 'validator.rules']).config([
    popoverTemplateUrl: 'qfretouch/common/views/templates/popover.tpl.html'
   });
 
-  $builderProvider.registerComponent('signature', {
+  $builderProvider.registerComponent('jsignature', {
    group: 'Default',
    label: 'Signature',
    description: 'please sign above',

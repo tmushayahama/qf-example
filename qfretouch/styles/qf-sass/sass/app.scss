@@ -168,7 +168,7 @@ body {
  }
 }
 .qf-component-nav {
- //@include position(absolute, 51px null 0 0);
+ @include position(absolute, 51px null 0 0);
  padding: 0px 10px 0 10px!important;
  overflow-y: hidden;
  -webkit-overflow-scrolling: touch;
@@ -203,8 +203,8 @@ body {
  }
 }
 .qf-designer-container {
- ///@include position(absolute, 61px 0 10px null);
- background-color: #FFF;
+ @include position(absolute, 51px null 10px null);
+ background-color: #F2F2F2;
  overflow-x: hidden;
  overflow-y: auto;
  -webkit-overflow-scrolling: touch;
@@ -241,6 +241,11 @@ body {
  background-color: #FFF;
  overflow-y: hidden;
  -webkit-overflow-scrolling: touch;
+
+ .gridster-item {
+  background-color: #FFC;
+  box-shadow: 0 2px 2px 0 rgba(0, 0, 0, .05), 0 1px 4px 0 rgba(0, 0, 0, .08), 0 3px 1px -2px rgba(0, 0, 0, .2);
+ }
  .qf-form-properties {
   background-color: #FCFCFC;
   height: 50px;
@@ -261,6 +266,8 @@ body {
  .qf-builder {
   padding: 10px 10px;
   min-height: 600px;
+
+
   .qf-form-object-editable {
    background-color: #FFF;
    padding: 15px 10px 15px 10px;
@@ -312,6 +319,7 @@ body {
 }
 
 .qf-properties {
+ @include position(absolute, 51px 0 10px null);
  background-color: #EEE;
  padding: 5px 10px 10px 10px!important;
 }

@@ -13,11 +13,16 @@
     </div>
 </div>
 <md-input-container class="qf-component-use md-block">
-    <label for="{{formName + index}}" ng-class="{'qf-required':required}">{{label}}</label>
-    <input type='hidden' ng-model="inputText = accept().dataUrl" validator-required="{{required}}" validator-group="{{formName}}" />
+    <label for="{{formName   + index}}" ng-class="{'qf-required':required}">{{label}}</label>
+    <input type='hidden'  validator-required="{{required}}" validator-group="{{formName}}" />
 
-    <signature-pad id="{{formName + index}}" class="qf-signature" accept="accept" clear="clear"></signature-pad>
-    <div class="hint">
+    <j-signature-directive signature-id="qf-{{formName + index}}"
+                           sig="customSignature"
+                           reset="documentSignatureModalCtrl.clear"
+                           get-data="documentSignatureModalCtrl.getData"
+                           class="qf-signature" height="200px" width="100%" save="testAction">
+   </j-signature-directive>    
+     <div class="hint">
         {{description}}
     </div>
     <md-button ng-click="clear()">Clear</md-button>

@@ -20,28 +20,39 @@
   </div>
  </div>
 </nav>
-<div id="qf-main-container" class="container">
+<div id="qf-main-container" class="row">
  <div class="qf-component-nav col-lg-1 col-md-2 col-sm-4 col-xs-4" role="navigation">
   <div qf-components template-url="qfretouch/common/views/templates/qf-components.tpl.html"></div>
  </div>
- <div class="qf-designer-container dotted qf-builder-container col-lg-7 col-md-6 col-sm-11 col-xs-11">
-  <form class="row qf-form-properties">
-
-   <md-input-container class="md-block" md-no-float>
-    <input type="text" class="qf-description-input" ng-model="designerCtrl.formDescription"
-           placeholder="Form Description">
-   </md-input-container>
-  </form>
-
-  <div qf-builder="default" template-url="qfretouch/common/views/templates/qf-builder.tpl.html"></div>
-
-  <div ng-if="false" class="panel-footer">
-   <div class="checkbox">
-    <label><input type="checkbox" ng-model="isShowScope" />
-     Show scope
-    </label>
+ <div class="qf-designer-container dotted col-lg-offset-1 col-md-offset-2 col-lg-7 col-md-6 col-sm-11 col-xs-11">
+  <div class="qf-builder-container">
+   <form class="row qf-form-properties">
+    <md-input-container class="md-block" md-no-float>
+     <input type="text" class="qf-description-input" ng-model="designerCtrl.formDescription"
+            placeholder="Form Description">
+    </md-input-container>
+   </form>
+   <div gridster>
+    <ul>
+     <li gridster-item="item" ng-repeat="item in standardItems">
+      <input type="text" integer ng-model="item.row" size="1" />,
+      <input type="text" integer ng-model="item.col" size="1" />
+      <br />
+      <input type="text" integer ng-model="item.sizeX" size="1" />x
+      <input type="text" integer ng-model="item.sizeY" size="1" />
+     </li>
+    </ul>
    </div>
-   <pre ng-if="isShowScope">{{form}}</pre>
+   <div ng-if="true" qf-builder="default" template-url="qfretouch/common/views/templates/qf-builder.tpl.html"></div>
+   <div ng-if="false" class="panel-footer">
+    <div class="checkbox">
+     <label>
+      <input type="checkbox" ng-model="isShowScope" />
+      Show scope
+     </label>
+    </div>
+    <pre ng-if="isShowScope">{{form}}</pre>
+   </div>
   </div>
  </div>
  <div class="qf-properties col-lg-4 col-md-4 col-sm-3 col-xs-4">
