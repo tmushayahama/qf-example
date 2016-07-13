@@ -185,9 +185,10 @@ body {
 .qf-component-nav {
  @include position(absolute, 51px null 0 0);
  padding: 0px 10px 0 10px!important;
- overflow-y: hidden;
+ //overflow-y: hidden;
  -webkit-overflow-scrolling: touch;
  background-color: #FFF;
+ z-index: 2;
 
  .qf-heading {
   padding: 10px 5px 10px 20px;
@@ -200,21 +201,52 @@ body {
 
   }
  }
-
  .qf-component {
+  background-color: #FFF;
   padding: 0;
-  background-color: #F9F9F9;
-  .qf-component-use,
-  .qf-grab-me{
+  margin-bottom: 15px;
+  box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
+  overflow: hidden;
+  .qf-hidden-component-mode {
    display: none;
   }
-  .qf-component-display {
-   display: block;
+  input, textarea {
+   color: #AAA;
+   -webkit-box-shadow: inset 2px 2px 2px 0px #dddddd;
+   -moz-box-shadow: inset 2px 2px 2px 0px #dddddd;
+   box-shadow: inset 2px 2px 2px 0px #dddddd;
+   border: 1px solid #aaa;
+   border-radius: 0;
+   &.qf-label {
+    padding-left: 0;
+    padding-right: 0;
+    -webkit-box-shadow: none !important;
+    -moz-box-shadow: none !important;
+    box-shadow: none !important;
+    background-color: transparent;
+    color: #111;
+    outline: none;
+    border: none;
+   }
+   &.qf-help-block {
+    font-size: 10px;
+   }
+
   }
- }
- &:hover {
-  //overflow-x: hidden;
-  //overflow-y: scroll;
+  .qf-required-checkbox {
+   margin: 0;
+   padding: 0;
+  }
+  .qf-component-use {
+   @include position(absolute, 31px 0 0 0);
+   padding: 0 10px 0 10px;
+   // margin-top: 20px;
+   // position: relative;
+   //display: block;
+  }
+  &.active {
+   outline: #5cb85c solid 5px;
+  }
  }
 }
 .qf-designer-container {
@@ -257,7 +289,6 @@ body {
  -webkit-overflow-scrolling: touch;
 
  .gridster-item {
-  background-color: #FFC;
   box-shadow: 0 2px 2px 0 rgba(0, 0, 0, .05), 0 1px 4px 0 rgba(0, 0, 0, .08), 0 3px 1px -2px rgba(0, 0, 0, .2);
  }
  .qf-form-properties {
@@ -282,7 +313,7 @@ body {
   min-height: 600px;
 
 
-  .qf-form-object-editable {
+  .qf-component {
    background-color: #FFF;
    padding: 0;
    //margin-bottom: 15px;
@@ -357,11 +388,6 @@ body {
    }
   }
  }
-
- &:hover {
-  overflow-x: hidden;
-  overflow-y: scroll;
- }
 }
 
 .qf-properties {
@@ -395,11 +421,6 @@ body {
   .qf-grab-me{
    display: none;
   }
- }
-
- &:hover {
-  overflow-x: hidden;
-  overflow-y: scroll;
  }
 }
 

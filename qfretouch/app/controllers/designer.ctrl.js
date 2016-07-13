@@ -28,6 +28,31 @@ var designerCtrl = function (
    stop: function (event, $element, widget) {} // optional callback fired when item is finished dragging
   }
  }
+
+ vm.components = [{
+   label: 'First Name',
+   description: 'enter your first name',
+   placeholder: 'ex Jamie Doe',
+   required: false,
+   templateUrl: "qfretouch/common/views/templates/simple.tpl.html",
+   validationOptions: [
+    {
+     label: 'none',
+     rule: '/.*/'
+    }, {
+     label: 'number',
+     rule: '[number]'
+    }, {
+     label: 'email',
+     rule: '[email]'
+    }, {
+     label: 'url',
+     rule: '[url]'
+    }
+   ]
+  }];
+
+
  vm.standardItems = [
   {sizeX: 3,
    sizeY: 1,

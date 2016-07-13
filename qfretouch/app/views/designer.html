@@ -21,7 +21,12 @@
  </div>
 </nav>
 <div class="qf-component-nav col-lg-1 col-md-2 col-sm-2 col-xs-12" role="navigation">
- <div qf-components template-url="qfretouch/common/views/templates/qf-components.tpl.html"></div>
+ <ul class="">
+  <li ng-repeat="item in designerCtrl.components"
+      class="qf-component">
+   <div qf-component template-url="{{item.templateUrl}}"></div>
+  </li>
+ </ul>
 </div>
 <div class="qf-designer-container dotted col-lg-offset-1 col-md-offset-2 col-lg-11 col-md-10 col-sm-10 col-xs-12">
  <div class="container">
@@ -35,13 +40,8 @@
    <div gridster="designerCtrl.gridsterOpts">
     <ul class="qf-builder">
      <li gridster-item="item" ng-repeat="item in designerCtrl.standardItems"
-         class="qf-form-object-editable"
-         ng-include="item.templateUrl">
-      <input type="text" integer ng-model="item.row" size="1" />,
-      <input type="text" integer ng-model="item.col" size="1" />
-      <br />
-      <input type="text" integer ng-model="item.sizeX" size="1" />x
-      <input type="text" integer ng-model="item.sizeY" size="1" />
+         class="qf-component">
+      <div qf-component template-url="{{item.templateUrl}}"></div>
      </li>
     </ul>
    </div>
