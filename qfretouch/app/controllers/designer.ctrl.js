@@ -17,7 +17,6 @@ var designerCtrl = function (
         //qfretouchAuth,
         ) {
  var vm = this;
-
  vm.gridsterOpts = {
   rowHeight: 200,
   draggable: {
@@ -29,76 +28,168 @@ var designerCtrl = function (
   }
  }
 
- vm.components = [{
-   label: 'First Name',
-   description: 'enter your first name',
-   placeholder: 'ex Jamie Doe',
-   required: false,
+ vm.components = [
+  {
    templateUrl: "qfretouch/common/views/templates/simple.tpl.html",
-   validationOptions: [
-    {
-     label: 'none',
-     rule: '/.*/'
-    }, {
-     label: 'number',
-     rule: '[number]'
-    }, {
-     label: 'email',
-     rule: '[email]'
-    }, {
-     label: 'url',
-     rule: '[url]'
-    }
-   ]
-  }];
-
-
- vm.standardItems = [
-  {sizeX: 3,
-   sizeY: 1,
-   row: 0,
-   col: 0,
-   templateUrl: "qfretouch/common/views/templates/simple.tpl.html"
+   component: {
+    label: 'First Name',
+    description: 'Enter your first name',
+    placeholder: 'ex. Jamie Doe',
+    required: false,
+    validationOptions: [
+     {
+      label: 'none',
+      rule: '/.*/'
+     }, {
+      label: 'number',
+      rule: '[number]'
+     }, {
+      label: 'email',
+      rule: '[email]'
+     }, {
+      label: 'url',
+      rule: '[url]'
+     }
+    ]
+   }
   },
   {
-   sizeX: 3,
-   sizeY: 1,
-   row: 0,
-   col: 3,
-   templateUrl: "qfretouch/common/views/templates/jsignature.tpl.html"
+   templateUrl: "qfretouch/common/views/templates/jsignature.tpl.html",
+   component: {
+    label: 'Signature',
+    description: 'please sign above',
+    placeholder: '',
+    required: false,
+    validationOptions: [
+     {
+      label: 'none',
+      rule: '/.*/'
+     }, {
+      label: 'number',
+      rule: '[number]'
+     }, {
+      label: 'email',
+      rule: '[email]'
+     }, {
+      label: 'url',
+      rule: '[url]'
+     }
+    ]
+   }
   },
   {
-   sizeX: 3,
-   sizeY: 1,
-   row: 1,
-   col: 0,
-   templateUrl: "qfretouch/common/views/templates/checkbox.tpl.html"
+   templateUrl: "qfretouch/common/views/templates/checkbox.tpl.html",
+   component: {
+    label: 'First Name',
+    description: 'Enter your first name',
+    placeholder: 'ex. Jamie Doe',
+    required: false,
+    validationOptions: [
+     {
+      label: 'none',
+      rule: '/.*/'
+     }, {
+      label: 'number',
+      rule: '[number]'
+     }, {
+      label: 'email',
+      rule: '[email]'
+     }, {
+      label: 'url',
+      rule: '[url]'
+     }
+    ]
+   }
   },
   {
-   sizeX: 3,
-   sizeY: 1,
-   row: 1,
-   col: 3,
-   templateUrl: "qfretouch/common/views/templates/textarea.tpl.html"
+   templateUrl: "qfretouch/common/views/templates/textarea.tpl.html",
+   component: {
+    label: 'First Name',
+    description: 'Enter your first name',
+    placeholder: 'ex. Jamie Doe',
+    required: false,
+    validationOptions: [
+     {
+      label: 'none',
+      rule: '/.*/'
+     }, {
+      label: 'number',
+      rule: '[number]'
+     }, {
+      label: 'email',
+      rule: '[email]'
+     }, {
+      label: 'url',
+      rule: '[url]'
+     }
+    ]
+   }
   },
   {
-   sizeX: 3,
-   sizeY: 1,
-   row: 2,
-   col: 0,
-   templateUrl: "qfretouch/common/views/templates/radiobox.tpl.html"
+   templateUrl: "qfretouch/common/views/templates/radiobox.tpl.html",
+   component: {
+    label: 'First Name',
+    description: 'Enter your first name',
+    placeholder: 'ex. Jamie Doe',
+    required: false,
+    validationOptions: [
+     {
+      label: 'none',
+      rule: '/.*/'
+     }, {
+      label: 'number',
+      rule: '[number]'
+     }, {
+      label: 'email',
+      rule: '[email]'
+     }, {
+      label: 'url',
+      rule: '[url]'
+     }
+    ]
+   }
   },
   {
-   sizeX: 3,
-   sizeY: 1,
-   row: 2,
-   col: 3,
-   templateUrl: "qfretouch/common/views/templates/select.tpl.html"
-  },
+   templateUrl: "qfretouch/common/views/templates/select.tpl.html",
+   component: {
+    label: 'First Name',
+    description: 'Enter your first name',
+    placeholder: 'ex. Jamie Doe',
+    required: false,
+    validationOptions: [
+     {
+      label: 'none',
+      rule: '/.*/'
+     }, {
+      label: 'number',
+      rule: '[number]'
+     }, {
+      label: 'email',
+      rule: '[email]'
+     }, {
+      label: 'url',
+      rule: '[url]'
+     }
+    ]
+   }
+  }
  ];
+ vm.standardItems = [];
+ for (var i = 0; i < vm.components.length; i++) {
+  vm.standardItems.push(
+          {
+           gridMap: {
+            sizeX: 3,
+            sizeY: 1,
+            row: i,
+            col: (i % 2 === 0) ? 0 : 3,
+           },
+           templateUrl: vm.components[i].templateUrl,
+           component: vm.components[i].component,
+          });
+ }
 
  vm.formName = "Untitled Form";
-
  vm.previewForm = function () {
   var modalInstance = $aside.open({
    templateUrl: 'preview-form-modal.html',
@@ -108,14 +199,12 @@ var designerCtrl = function (
    placement: 'right',
    //backdrop: 'static',
   });
-
   modalInstance.result.then(function (searchCriteria) {
 
   }, function () {
    $log.info('Modal dismissed at: ' + new Date());
   });
  };
-
  /*
 
   var checkbox, textbox;
@@ -155,7 +244,6 @@ var designerCtrl = function (
  $scope.flexbox = true;
  $scope.size = {};
  $scope.msg = 'Resize me.';
-
  $scope.events = [];
  $scope.$on("angular-resizable.resizeEnd", function (event, args) {
   $scope.msg = 'Resize me again.';
@@ -170,9 +258,6 @@ var designerCtrl = function (
   $scope.msg = 'Woooohoooo!';
   $scope.events.unshift(event);
  });
-
-
-
  $scope.submit = function () {
   return $validator.validate($scope, 'default').success(function () {
    return console.log('success');
@@ -181,8 +266,6 @@ var designerCtrl = function (
   });
  };
 };
-
-
 designerCtrl.$inject = [
  'config',
  //'$builder',
@@ -199,5 +282,4 @@ designerCtrl.$inject = [
  '$aside',
  'FormManager'
 ];
-
 angular.module("qfretouch").controller('DesignerCtrl', designerCtrl);

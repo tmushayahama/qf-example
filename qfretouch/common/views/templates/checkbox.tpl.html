@@ -1,4 +1,4 @@
-<div class="qf-grab-me text-center row">
+<div class="qf-grab-me qf-hidden-component-mode text-center row">
  <i class="fa fa-th"></i>
  <div class="qf-actions">
   <md-button class="col-lg-4 col-md-4 col-sm-4 col-xs-4">
@@ -12,7 +12,7 @@
   </md-button>
  </div>
 </div>
-<div class="form-group qf-component-use">
+<div class="form-group qf-component-use qf-hidden-component-mode">
  <label for="{{formName + index}}" class="qf-hidden-design-mode col-lg-12 col-md-12 col-sm-12 col-xs-12 control-label"
         ng-class="{'qf-required':required}">
   {{label}}
@@ -38,4 +38,8 @@
    </label>
   </div>
  </div>
+</div>
+<div class="qf-component-display qf-hidden-design-mode">
+ <img src="qfretouch/img/checkbox.png" alt="textbox" tooltip-class="qf-tooltip-1"
+      tooltip-placement="right" uib-tooltip="Checkbox"  tooltip-popup-delay="500"/>
 </div>

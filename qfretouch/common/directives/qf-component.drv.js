@@ -4,8 +4,10 @@ angular.module('qfretouch').directive('qfComponent', ['$window', '$timeout',
 
   return {
    restrict: 'EA',
+   replace: true,
    scope: {
-    templateUrl: '@'
+    templateUrl: '@',
+    component: '='
    },
    template: '<ng-include src="templateUrl"></ng-include>',
    controller: [
@@ -14,7 +16,6 @@ angular.module('qfretouch').directive('qfComponent', ['$window', '$timeout',
     }
    ],
    link: function (scope, element, attr, ctrl) {
-
    }
   };
  }
