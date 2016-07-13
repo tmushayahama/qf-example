@@ -80,9 +80,10 @@ var designerCtrl = function (
   {
    templateUrl: "qfretouch/common/views/templates/checkbox.tpl.html",
    component: {
-    label: 'First Name',
-    description: 'Enter your first name',
-    placeholder: 'ex. Jamie Doe',
+    label: 'Are you going?',
+    description: 'Select answer below',
+    placeholder: '',
+    options: ['yes', 'no'],
     required: false,
     validationOptions: [
      {
@@ -104,9 +105,9 @@ var designerCtrl = function (
   {
    templateUrl: "qfretouch/common/views/templates/textarea.tpl.html",
    component: {
-    label: 'First Name',
+    label: 'Biography',
     description: 'Enter your first name',
-    placeholder: 'ex. Jamie Doe',
+    placeholder: 'ex. Ex tritani equidem argumentum pro, eam ea amet veniam. Alii noster oportere te his, consul fierent accusamus ea per, sed ferri aeq',
     required: false,
     validationOptions: [
      {
@@ -128,9 +129,10 @@ var designerCtrl = function (
   {
    templateUrl: "qfretouch/common/views/templates/radiobox.tpl.html",
    component: {
-    label: 'First Name',
-    description: 'Enter your first name',
-    placeholder: 'ex. Jamie Doe',
+    label: 'Are you going?',
+    description: 'Select answer below',
+    placeholder: '',
+    options: ['yes', 'no'],
     required: false,
     validationOptions: [
      {
@@ -152,9 +154,10 @@ var designerCtrl = function (
   {
    templateUrl: "qfretouch/common/views/templates/select.tpl.html",
    component: {
-    label: 'First Name',
-    description: 'Enter your first name',
-    placeholder: 'ex. Jamie Doe',
+    label: 'Are you going?',
+    description: 'Select answer below',
+    placeholder: '',
+    options: ['yes', 'no'],
     required: false,
     validationOptions: [
      {

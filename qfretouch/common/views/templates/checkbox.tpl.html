@@ -1,5 +1,9 @@
-<div class="qf-grab-me qf-hidden-component-mode text-center row">
- <i class="fa fa-th"></i>
+<div class="qf-grab-me qf-hidden-component-mode row">
+ <div class="qf-handle-title">
+  <p class="qf-truncate">
+   Checkbox
+  </p>
+ </div>
  <div class="qf-actions">
   <md-button class="col-lg-4 col-md-4 col-sm-4 col-xs-4">
    <i class="fa fa-cog"></i>
@@ -8,32 +12,33 @@
    <i class="fa fa-copy"></i>
   </md-button>
   <md-button ng-click="deleteObject($event)" class="col-lg-4 col-md-4 col-sm-4 col-xs-4">
-   <i class="fa fa-times"></i>
+   <i class="text-danger fa fa-trash"></i>
   </md-button>
  </div>
 </div>
 <div class="form-group qf-component-use qf-hidden-component-mode">
- <label for="{{formName + index}}" class="qf-hidden-design-mode col-lg-12 col-md-12 col-sm-12 col-xs-12 control-label"
-        ng-class="{'qf-required':required}">
-  {{label}}
+ <label for="{{component.formName + index}}" class="qf-hidden-design-mode col-lg-12 col-md-12 col-sm-12 col-xs-12 control-label"
+        ng-class="{'qf-required':component.required}">
+  {{component.label}}
  </label>
  <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-  <input type="text" ng-model="label"
+  <input type="text" ng-model="component.label"
          class="form-control qf-label qf-hidden-entry-mode" placeholder="Label">
-  <input type='hidden' ng-model="inputText" validator-required="{{required}}" validator-group="{{formName}}" />
-  <div class='checkbox' ng-repeat="item in options track by $index">
+  <input type='hidden' ng-model="component.inputText" validator-required="{{component.required}}" validator-group="{{component.formName}}" />
+  <div class='checkbox' ng-repeat="option in component.options track by $index">
    <label>
-    <input type='checkbox' ng-model="$parent.inputArray[$index]" value='item' />                {{item}}
+    <input type='checkbox' ng-model="component.$parent.inputArray[$index]" value='option' />
+    {{option}}
    </label>
   </div>
   <p class='help-block qf-hidden-design-mode'>
-   {{description}}
+   {{component.description}}
   </p>
-  <input type="text" ng-model="description"
+  <input type="text" ng-model="component.description"
          class="form-control qf-help-block qf-label qf-hidden-entry-mode" placeholder="Help Block">
   <div class="checkbox qf-hidden-entry-mode qf-required-checkbox">
    <label>
-    <input type='checkbox' ng-model="required" />
+    <input type='checkbox' ng-model="component.required" />
     Required
    </label>
   </div>
