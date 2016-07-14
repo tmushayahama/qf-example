@@ -6,18 +6,22 @@ angular.module('qfretouch').directive('qfComponent', ['$window', '$timeout',
    restrict: 'EA',
    scope: {
     templateUrl: '@',
-    component: '='
+    index: '@',
+    item: '=',
+    removeComponent: '=',
+    duplicateComponent: '='
    },
    template: '<ng-include src="templateUrl"></ng-include>',
    controller: [
     '$scope',
     function ($scope) {
-     $scope.remove = function () {
-      // $scope.dashboard.widgets.splice($scope.dashboard.widgets.indexOf(widget), 1);
-     };
+     // $scope.remove = function () {
+     // $scope.dashboard.widgets.splice($scope.dashboard.widgets.indexOf(widget), 1);
+     //  };
     }
    ],
    link: function (scope, element, attr, ctrl) {
+    scope.component = scope.item.component;
    }
   };
  }

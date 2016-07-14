@@ -41,10 +41,13 @@
    </form>
    <div gridster="designerCtrl.gridsterOpts">
     <ul class="qf-builder">
-     <li gridster-item="item.gridMap" ng-repeat="item in designerCtrl.formItems"
+     <li gridster-item="item.gridMap" ng-repeat="item in designerCtrl.formItems track by $index"
          class="qf-component">
       <div qf-component template-url="{{item.templateUrl}}"
-           component="item.component"></div>
+           index="{{$index}}"
+           remove-component="designerCtrl.removeComponent"
+           duplicate-component="designerCtrl.duplicateComponent"
+           item="item"></div>
      </li>
     </ul>
    </div>

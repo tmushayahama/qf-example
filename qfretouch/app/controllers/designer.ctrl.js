@@ -24,8 +24,10 @@ var designerCtrl = function (
    enabled: true,
    handle: '.qf-grab-me',
    start: function (event, $element, widget) {}, // optional callback fired when drag is started,
-   drag: function (event, $element, widget) {}, // optional callback fired when item is moved,
-   stop: function (event, $element, widget) {} // optional callback fired when item is finished dragging
+   drag: function (event, $element, widget) {},
+   stop: function (event, $element, widget) {
+    //sortComponents();
+   }
   }
  };
 
@@ -45,6 +47,20 @@ var designerCtrl = function (
   vm.formItems.push(formItem);
  };
 
+ vm.duplicateComponent = function (component) {
+  var formItem = angular.copy(component);
+  formItem.gridMap = {};//clear the gridData for row and col
+  formItem.gridMap = {
+   sizeX: 3,
+   sizeY: 1
+  };
+  vm.formItems.push(formItem);
+ };
+
+ vm.removeComponent = function (component) {
+  //console.log(index, ' - ', vm.formItems.indexOf(component));
+  vm.formItems.splice(vm.formItems.indexOf(vm.formItems.indexOf(component), 1));
+ };
 
 
  for (var i = 0; i < vm.components.length; i++) {
