@@ -25,6 +25,7 @@
   <li ng-repeat="item in designerCtrl.components"
       class="qf-component">
    <div qf-component template-url="{{item.templateUrl}}"
+        ng-click="designerCtrl.addComponent(item)"
         component="item.component"></div>
   </li>
  </ul>
@@ -40,7 +41,7 @@
    </form>
    <div gridster="designerCtrl.gridsterOpts">
     <ul class="qf-builder">
-     <li gridster-item="item.gridMap" ng-repeat="item in designerCtrl.standardItems"
+     <li gridster-item="item.gridMap" ng-repeat="item in designerCtrl.formItems"
          class="qf-component">
       <div qf-component template-url="{{item.templateUrl}}"
            component="item.component"></div>

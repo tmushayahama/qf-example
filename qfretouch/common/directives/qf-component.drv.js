@@ -4,7 +4,6 @@ angular.module('qfretouch').directive('qfComponent', ['$window', '$timeout',
 
   return {
    restrict: 'EA',
-   replace: true,
    scope: {
     templateUrl: '@',
     component: '='
@@ -13,6 +12,9 @@ angular.module('qfretouch').directive('qfComponent', ['$window', '$timeout',
    controller: [
     '$scope',
     function ($scope) {
+     $scope.remove = function () {
+      // $scope.dashboard.widgets.splice($scope.dashboard.widgets.indexOf(widget), 1);
+     };
     }
    ],
    link: function (scope, element, attr, ctrl) {

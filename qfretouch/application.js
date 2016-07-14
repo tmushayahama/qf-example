@@ -140,5 +140,155 @@ define([
   apiModel: {
   },
  });
+
+ qfretouch.constant('components', [
+  {
+   templateUrl: "qfretouch/common/views/templates/simple.tpl.html",
+   component: {
+    label: 'First Name',
+    description: 'Enter your first name',
+    placeholder: 'ex. Jamie Doe',
+    required: false,
+    validationOptions: [
+     {
+      label: 'none',
+      rule: '/.*/'
+     }, {
+      label: 'number',
+      rule: '[number]'
+     }, {
+      label: 'email',
+      rule: '[email]'
+     }, {
+      label: 'url',
+      rule: '[url]'
+     }
+    ]
+   }
+  },
+  {
+   templateUrl: "qfretouch/common/views/templates/jsignature.tpl.html",
+   component: {
+    label: 'Signature',
+    description: 'please sign above',
+    placeholder: '',
+    required: false,
+    validationOptions: [
+     {
+      label: 'none',
+      rule: '/.*/'
+     }, {
+      label: 'number',
+      rule: '[number]'
+     }, {
+      label: 'email',
+      rule: '[email]'
+     }, {
+      label: 'url',
+      rule: '[url]'
+     }
+    ]
+   }
+  },
+  {
+   templateUrl: "qfretouch/common/views/templates/checkbox.tpl.html",
+   component: {
+    label: 'Are you going?',
+    description: 'Select answer below',
+    placeholder: '',
+    options: ['yes', 'no'],
+    required: false,
+    validationOptions: [
+     {
+      label: 'none',
+      rule: '/.*/'
+     }, {
+      label: 'number',
+      rule: '[number]'
+     }, {
+      label: 'email',
+      rule: '[email]'
+     }, {
+      label: 'url',
+      rule: '[url]'
+     }
+    ]
+   }
+  },
+  {
+   templateUrl: "qfretouch/common/views/templates/textarea.tpl.html",
+   component: {
+    label: 'Biography',
+    description: 'Enter your first name',
+    placeholder: 'ex. Ex tritani equidem argumentum pro, eam ea amet veniam. Alii noster oportere te his, consul fierent accusamus ea per, sed ferri aeq',
+    required: false,
+    validationOptions: [
+     {
+      label: 'none',
+      rule: '/.*/'
+     }, {
+      label: 'number',
+      rule: '[number]'
+     }, {
+      label: 'email',
+      rule: '[email]'
+     }, {
+      label: 'url',
+      rule: '[url]'
+     }
+    ]
+   }
+  },
+  {
+   templateUrl: "qfretouch/common/views/templates/radiobox.tpl.html",
+   component: {
+    label: 'Are you going?',
+    description: 'Select answer below',
+    placeholder: '',
+    options: ['yes', 'no'],
+    required: false,
+    validationOptions: [
+     {
+      label: 'none',
+      rule: '/.*/'
+     }, {
+      label: 'number',
+      rule: '[number]'
+     }, {
+      label: 'email',
+      rule: '[email]'
+     }, {
+      label: 'url',
+      rule: '[url]'
+     }
+    ]
+   }
+  },
+  {
+   templateUrl: "qfretouch/common/views/templates/select.tpl.html",
+   component: {
+    label: 'Are you going?',
+    description: 'Select answer below',
+    placeholder: '',
+    options: ['yes', 'no'],
+    required: false,
+    validationOptions: [
+     {
+      label: 'none',
+      rule: '/.*/'
+     }, {
+      label: 'number',
+      rule: '[number]'
+     }, {
+      label: 'email',
+      rule: '[email]'
+     }, {
+      label: 'url',
+      rule: '[url]'
+     }
+    ]
+   }
+  }]
+         );
  return qfretouch;
 });
