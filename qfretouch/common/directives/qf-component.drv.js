@@ -18,6 +18,8 @@ angular.module('qfretouch').directive('qfComponent', ['$window', '$timeout',
      // $scope.remove = function () {
      // $scope.dashboard.widgets.splice($scope.dashboard.widgets.indexOf(widget), 1);
      //  };
+     $scope.listData = {};
+     $scope.listData.newListItem = "";
 
      var tmpList = [];
 
@@ -50,6 +52,17 @@ angular.module('qfretouch').directive('qfComponent', ['$window', '$timeout',
       }
      };
 
+     $scope.addOption = function () {
+      if ($scope.listData.newListItem.length > 0) {
+       $scope.component.options.unshift($scope.listData.newListItem);
+       $scope.listData.newListItem = "";
+      }
+     };
+
+     $scope.removeOption = function (option) {
+      //console.log(index, ' - ', vm.formItems.indexOf(component));
+      $scope.component.options.splice($scope.component.options.indexOf($scope.component.options.indexOf(option), 1));
+     };
      /*
       $scope.optionsText = formObject.options.join('\n');
       $scope.$watch('optionsText', function (text) {

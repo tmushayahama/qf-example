@@ -8,10 +8,10 @@
   <md-button class="col-lg-4 col-md-4 col-sm-4 col-xs-4">
    <i class="fa fa-cog"></i>
   </md-button>
-  <md-button ng-click="duplicateObject($event)" class="col-lg-4 col-md-4 col-sm-4 col-xs-4">
+  <md-button ng-click="duplicateComponent(item)" class="col-lg-4 col-md-4 col-sm-4 col-xs-4">
    <i class="fa fa-copy"></i>
   </md-button>
-  <md-button ng-click="deleteObject($event)" class="col-lg-4 col-md-4 col-sm-4 col-xs-4">
+  <md-button ng-click="removeComponent(item)" class="col-lg-4 col-md-4 col-sm-4 col-xs-4">
    <i class="text-danger fa fa-trash"></i>
   </md-button>
  </div>
@@ -36,6 +36,9 @@
     </span>
    </label>
   </div>
+  <form class="qf-add-option-form qf-hidden-view-mode" ng-submit="addOption()">
+   <input class="form-control qf-hidden-view-mode" ng-model="listData.newListItem" type='text' placeholder="Add Option" />
+  </form>
   <ul ui-sortable="sortableOptions" ng-model="component.options"
       class="radio qf-option-sortable">
    <li ng-repeat="option in component.options track by $index">
@@ -49,8 +52,17 @@
     <div class="qf-sortable-drag-me qf-hidden-view-mode">
      <i class="fa fa-sort"></i>
     </div>
-    <input  class="qf-option-input form-control qf-hidden-view-mode" ng-model="option"
-            value='{{option}}' type='text' />
+    <div class="qf-option-input">
+     <input  class="form-control qf-hidden-view-mode" ng-model="option"
+             type='text' /> <div ng-click="removeOption(option)"
+             class="qf-sortable-delete qf-hidden-view-mode pull-right">
+      <i class="fa fa-trash"></i>
+     </div>
+    </div>
+    <div ng-click="removeOption(option)"
+         class="qf-sortable-delete qf-hidden-view-mode">
+     <i class="fa fa-trash"></i>
+    </div>
    </li>
   </ul>
   <p class='help-block qf-hidden-design-mode'>

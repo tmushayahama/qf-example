@@ -8,10 +8,10 @@
   <md-button class="col-lg-4 col-md-4 col-sm-4 col-xs-4">
    <i class="fa fa-cog"></i>
   </md-button>
-  <md-button ng-click="duplicateObject($event)" class="col-lg-4 col-md-4 col-sm-4 col-xs-4">
+  <md-button ng-click="duplicateComponent(item)" class="col-lg-4 col-md-4 col-sm-4 col-xs-4">
    <i class="fa fa-copy"></i>
   </md-button>
-  <md-button ng-click="deleteObject($event)" class="col-lg-4 col-md-4 col-sm-4 col-xs-4">
+  <md-button ng-click="removeComponent(item)" class="col-lg-4 col-md-4 col-sm-4 col-xs-4">
    <i class="text-danger fa fa-trash"></i>
   </md-button>
  </div>
@@ -25,12 +25,40 @@
   <input type="text" ng-model="component.label"
          class="form-control qf-label qf-hidden-view-mode" placeholder="Label">
   <input type='hidden' ng-model="component.inputText" validator-required="{{component.required}}" validator-group="{{component.formName}}" />
-  <div class='checkbox' ng-repeat="option in component.options track by $index">
+  <div ng-if="false" class='checkbox' ng-repeat="option in component.options track by $index">
    <label>
     <input type='checkbox' ng-model="component.$parent.inputArray[$index]" value='option' />
     {{option}}
    </label>
   </div>
+  <form class="qf-add-option-form qf-hidden-view-mode" ng-submit="addOption()">
+   <input class="form-control qf-hidden-view-mode" ng-model="listData.newListItem" type='text' placeholder="Add Option" />
+  </form>
+  <ul ui-sortable="sortableOptions" ng-model="component.options"
+      class="checkbox qf-option-sortable">
+   <li ng-repeat="option in component.options track by $index">
+    <label class="">
+     <input class="" ng-model="component.$parent.inputText" validator-group="{{component.formName}}" value='option' type='checkbox' />
+     <span class="qf-hidden-design-mode">
+      {{option}}
+     </span>
+    </label>
+    <div class="qf-sortable-drag-me qf-hidden-view-mode">
+     <i class="fa fa-sort"></i>
+    </div>
+    <div class="qf-option-input">
+     <input  class="form-control qf-hidden-view-mode" ng-model="option"
+             type='text' /> <div ng-click="removeOption(option)"
+             class="qf-sortable-delete qf-hidden-view-mode pull-right">
+      <i class="fa fa-trash"></i>
+     </div>
+    </div>
+    <div ng-click="removeOption(option)"
+         class="qf-sortable-delete qf-hidden-view-mode">
+     <i class="fa fa-trash"></i>
+    </div>
+   </li>
+  </ul>
   <p class='help-block qf-hidden-design-mode'>
    {{component.description}}
   </p>
