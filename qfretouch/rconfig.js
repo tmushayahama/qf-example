@@ -1,11 +1,13 @@
 requirejs.config({
  waitSeconds: 0,
  paths: {
-  'jquery': '../bower_components/jquery/dist/jquery',
-  'angular': '../bower_components/angular/angular',
+  'jquery': '../bower_components/jquery/dist/jquery.min',
+  'jquery-ui': '../bower_components/jquery-ui/jquery-ui.min',
+  'angular': '../bower_components/angular/angular.min',
   'bootstrap': '../bower_components/bootstrap/dist/js/bootstrap',
   'angular-bootstrap': '../bower_components/angular-bootstrap/ui-bootstrap-tpls',
   'angular-ui-router': '../bower_components/angular-ui-router/release/angular-ui-router',
+  'angular-ui-sortable': '../bower_components/angular-ui-sortable/sortable',
   'angular-resource': '../bower_components/angular-resource/angular-resource',
   'satellizer': '../bower_components/satellizer/satellizer',
   'oc-lazy-load': '../bower_components/ocLazyLoad/dist/ocLazyLoad',
@@ -34,6 +36,7 @@ requirejs.config({
  shim: {
   'angular': {'exports': 'angular', deps: ['jquery']},
   'jquery': {'exports': 'jquery'},
+  'jquery-ui': {deps: ['angular', 'jquery']},
   'angular-ui-router': {deps: ['angular']},
   'angular-resource': {deps: ['angular']},
   'angular-animate': {deps: ['angular']},
@@ -44,6 +47,7 @@ requirejs.config({
   'satellizer': {deps: ['angular']},
   'bootstrap': {'exports': 'bootstrap', deps: ['jquery']},
   'angular-bootstrap': {deps: ['angular']},
+  'angular-ui-sortable': {deps: ['angular', 'jquery-ui']},
   'xeditable': {deps: ['angular']},
   //'moment': { exports: 'moment' },
   'hammerjs': {deps: ['angular']},
@@ -65,7 +69,6 @@ requirejs.config({
   'angular',
  ],
 });
-
 requirejs([
  'angular',
  'application'

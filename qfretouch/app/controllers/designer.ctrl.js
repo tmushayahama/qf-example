@@ -19,6 +19,7 @@ var designerCtrl = function (
         ) {
  var vm = this;
  vm.gridsterOpts = {
+  mobileBreakPoint: 600,
   rowHeight: 200,
   draggable: {
    enabled: true,

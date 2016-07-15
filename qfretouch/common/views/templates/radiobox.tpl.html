@@ -24,12 +24,35 @@
  <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
   <input type="text" ng-model="component.label"
          class="form-control qf-label qf-hidden-view-mode" placeholder="Label">
-  <div class='radio' ng-repeat="option in component.options track by $index">
-   <label>
-    <input name='{{component.formName + index}}' ng-model="component.$parent.inputText" validator-group="{{component.formName}}" value='{{option}}' type='radio' />
-    {{option}}
+  <div ng-if="false" class='radio' ng-repeat="option in component.options track by $index">
+   <label class="">
+    <input name='{{component.formName + index}}'
+           class="" ng-model="component.$parent.inputText" validator-group="{{component.formName}}" value='{{option}}' type='radio' />
+    <input name='{{component.formName + index}}'
+           class="form-control" ng-model="option" validator-group="{{component.formName}}"
+           value='{{option}}' type='text' />
+    <span class="qf-hidden-design-mode">
+     {{option}}
+    </span>
    </label>
   </div>
+  <ul ui-sortable="sortableOptions" ng-model="component.options"
+      class="radio qf-option-sortable">
+   <li ng-repeat="option in component.options track by $index">
+    <label class="">
+     <input name='{{component.formName + index}}'
+            class="" ng-model="component.$parent.inputText" validator-group="{{component.formName}}" value='{{option}}' type='radio' />
+     <span class="qf-hidden-design-mode">
+      {{option}}
+     </span>
+    </label>
+    <div class="qf-sortable-drag-me qf-hidden-view-mode">
+     <i class="fa fa-sort"></i>
+    </div>
+    <input  class="qf-option-input form-control qf-hidden-view-mode" ng-model="option"
+            value='{{option}}' type='text' />
+   </li>
+  </ul>
   <p class='help-block qf-hidden-design-mode'>
    {{component.description}}
   </p>

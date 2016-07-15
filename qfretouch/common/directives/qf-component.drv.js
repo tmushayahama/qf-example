@@ -19,6 +19,55 @@ angular.module('qfretouch').directive('qfComponent', ['$window', '$timeout',
      // $scope.dashboard.widgets.splice($scope.dashboard.widgets.indexOf(widget), 1);
      //  };
 
+     var tmpList = [];
+
+     for (var i = 1; i <= 6; i++) {
+      tmpList.push({
+       text: 'Item ' + i,
+       value: i
+      });
+     }
+
+     $scope.list = tmpList;
+
+
+     $scope.sortingLog = [];
+
+     $scope.sortableOptions = {
+      handle: '.qf-sortable-drag-me',
+      update: function (e, ui) {
+       var logEntry = tmpList.map(function (i) {
+        return i.value;
+       }).join(', ');
+       $scope.sortingLog.push('Update: ' + logEntry);
+      },
+      stop: function (e, ui) {
+       // this callback has the changed model
+       var logEntry = tmpList.map(function (i) {
+        return i.value;
+       }).join(', ');
+       $scope.sortingLog.push('Stop: ' + logEntry);
+      }
+     };
+
+     /*
+      $scope.optionsText = formObject.options.join('\n');
+      $scope.$watch('optionsText', function (text) {
+      var x;
+      $scope.options = (function () {
+      var i, len, ref, results;
+      ref = text.split('\n');
+      results = [];
+      for (i = 0, len = ref.length; i < len; i++) {
+      x = ref[i];
+      if (x.length > 0) {
+      results.push(x);
+      }
+      }
+      return results;
+      })();
+      return $scope.inputText = $scope.options[0];
+      });*/
     }
    ],
    link: function (scope, element, attr, ctrl) {

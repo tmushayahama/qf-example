@@ -2,6 +2,7 @@
         'use strict';
 define([
  'angular',
+ 'jquery-ui',
  'angular-ui-router',
  'angular-resource',
  'oc-lazy-load',
@@ -11,6 +12,7 @@ define([
  'xeditable',
  'bootstrap',
  'angular-bootstrap',
+ 'angular-ui-sortable',
  'hammerjs',
  'angular-gestures',
  'angular-validator',
@@ -32,6 +34,7 @@ define([
   'ngAnimate',
   'LocalStorageModule',
   'ui.bootstrap',
+  'ui.sortable',
   'satellizer',
   'oc.lazyLoad',
   'xeditable',

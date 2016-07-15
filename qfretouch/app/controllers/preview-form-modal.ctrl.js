@@ -11,6 +11,7 @@ var previewFormCtrl = function (
  vm.portrait = true;
 
  vm.gridsterOpts = {
+  mobileBreakPoint: 600,
   rowHeight: 200,
   resizable: {
    enabled: false,
