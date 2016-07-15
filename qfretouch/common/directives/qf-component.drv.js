@@ -14,7 +14,8 @@ angular.module('qfretouch').directive('qfComponent', ['$window', '$timeout',
    template: '<ng-include src="templateUrl"></ng-include>',
    controller: [
     '$scope',
-    function ($scope) {
+    '$aside',
+    function ($scope, $aside) {
      // $scope.remove = function () {
      // $scope.dashboard.widgets.splice($scope.dashboard.widgets.indexOf(widget), 1);
      //  };
@@ -50,6 +51,27 @@ angular.module('qfretouch').directive('qfComponent', ['$window', '$timeout',
        }).join(', ');
        $scope.sortingLog.push('Stop: ' + logEntry);
       }
+     };
+
+     $scope.openComponentSettings = function (item) {
+      var modalInstance = $aside.open({
+       templateUrl: 'component-settings-modal.html',
+       controller: 'ComponentSettingsCtrl as componentSettingsCtrl',
+       scope: $scope,
+       size: 'component-settings',
+       placement: 'right',
+       //backdrop: 'static',
+       resolve: {
+        Item: function () {
+         return item;
+        }
+       }
+      });
+      modalInstance.result.then(function (result) {
+       // $scope.item = result;
+      }, function () {
+       //('Modal dismissed at: ' + new Date());
+      });
      };
 
      $scope.addOption = function () {

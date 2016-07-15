@@ -94,6 +94,7 @@ var designerCtrl = function (
    $log.info('Modal dismissed at: ' + new Date());
   });
  };
+
  /*
 
   var checkbox, textbox;

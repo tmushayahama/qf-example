@@ -1,5 +1,14 @@
 <div class="modal-header">
- <div class="qf-flex-container">
+ <div class="qf-title">
+  <p class="qf-truncate">
+   <i class="fa fa-eye pull-left"></i>
+   Viewer
+  </p>
+ </div>
+ <md-button class="qf-close" ng-click="previewFormCtrl.close()">
+  x
+ </md-button>
+ <div ng-if="false" class="qf-flex-container">
   <div class="toggle-preview-header qf-container col-lg-4 col-md-6 col-sm-12 col-xs-12">
    <div class="btn-group col-lg-5 col-md-6 col-sm-6 col-xs-5">
     <button type="button" class="btn pull-right btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -32,7 +41,7 @@
  <div class="qf-flex-container">
   <div class="qf-container qf-form-preview"
        ng-style="{
-             width: previewFormCtrl.portrait? previewFormCtrl.devices[previewFormCtrl.selectedDeviceIndex].width : previewFormCtrl.devices[previewFormCtrl.selectedDeviceIndex].height + 'px',
+             width:previewFormCtrl.portrait? previewFormCtrl.devices[previewFormCtrl.selectedDeviceIndex].width : previewFormCtrl.devices[previewFormCtrl.selectedDeviceIndex].height + 'px',
              height: previewFormCtrl.portrait? previewFormCtrl.devices[previewFormCtrl.selectedDeviceIndex].height : previewFormCtrl.devices[previewFormCtrl.selectedDeviceIndex].width + 'px' }">
    <form class="">
     <div gridster="previewFormCtrl.gridsterOpts">
@@ -48,16 +57,6 @@
      </ul>
     </div>
    </form>
-  </div>
- </div>
-</div>
-
-<div class="modal-footer">
- <div class="qf-flex-container">
-  <div layout="row" layout-align="center">
-   <md-button class="qf-full md-raised md-hue-1 md-primary" ng-click="previewFormCtrl.close()">
-    Close
-   </md-button>
   </div>
  </div>
 </div>

@@ -149,6 +149,7 @@ define([
  qfretouch.constant('components', [
   {
    templateUrl: "qfretouch/common/views/templates/simple.tpl.html",
+   name: 'Textbox',
    component: {
     label: 'First Name',
     description: 'Enter your first name',
@@ -173,6 +174,7 @@ define([
   },
   {
    templateUrl: "qfretouch/common/views/templates/jsignature.tpl.html",
+   name: 'Signature',
    component: {
     label: 'Signature',
     description: 'please sign above',
@@ -197,6 +199,7 @@ define([
   },
   {
    templateUrl: "qfretouch/common/views/templates/checkbox.tpl.html",
+   name: 'Checkbox',
    component: {
     label: 'Are you going?',
     description: 'Select answer below',
@@ -222,11 +225,13 @@ define([
   },
   {
    templateUrl: "qfretouch/common/views/templates/textarea.tpl.html",
+   name: 'Textarea',
    component: {
     label: 'Biography',
     description: 'Enter your first name',
     placeholder: 'ex. Ex tritani equidem argumentum pro, eam ea amet veniam. Alii noster oportere te his, consul fierent accusamus ea per, sed ferri aeq',
     required: false,
+    rows: 2,
     validationOptions: [
      {
       label: 'none',
@@ -246,6 +251,7 @@ define([
   },
   {
    templateUrl: "qfretouch/common/views/templates/radiobox.tpl.html",
+   name: 'Radiobox',
    component: {
     label: 'Are you going?',
     description: 'Select answer below',
@@ -271,6 +277,7 @@ define([
   },
   {
    templateUrl: "qfretouch/common/views/templates/select.tpl.html",
+   name: 'Dropdown',
    component: {
     label: 'Are you going?',
     description: 'Select answer below',

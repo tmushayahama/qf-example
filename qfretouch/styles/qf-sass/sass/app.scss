@@ -421,7 +421,6 @@ h1, h2, h3, h4, h5, h6, p {
     display: none;
    }
    input, textarea {
-    color: #AAA;
     -webkit-box-shadow: inset 2px 2px 2px 0px #dddddd;
     -moz-box-shadow: inset 2px 2px 2px 0px #dddddd;
     box-shadow: inset 2px 2px 2px 0px #dddddd;
@@ -437,6 +436,9 @@ h1, h2, h3, h4, h5, h6, p {
      color: #111;
      outline: none;
      border: none;
+    }
+    &.qf-placeholder-input {
+     color: #AAA;
     }
     &.qf-help-block {
      font-size: 10px;

@@ -1,0 +1,45 @@
+<div class="modal-header">
+ <div class="qf-title">
+  <p class="qf-truncate">
+   <i class="fa fa-list"></i>
+   {{componentSettingsCtrl.item.name}} - {{componentSettingsCtrl.item.component.label}}
+  </p>
+ </div>
+ <md-button class="qf-close" ng-click="componentSettingsCtrl.close()">
+  x
+ </md-button>
+</div>
+<div class="modal-body" hm-swipe-right="componentSettingsCtrl.close()">
+ <form class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+  <md-input-container class="md-block" md-no-float>
+   <input type="text" class="qf-form-name-input"
+          ng-model="componentSettingsCtrl.item.component.label"   placeholder="Label">
+  </md-input-container>
+  <div class="checkbox qf-hidden-view-mode qf-required-checkbox">
+   <label>
+    <input type='checkbox' ng-model="componentSettingsCtrl.item.component.required" />
+    Required
+   </label>
+  </div>
+  <md-input-container class="md-block" md-no-float>
+   <input type="number" class="qf-form-name-input"
+          ng-model="componentSettingsCtrl.item.component.rows"   placeholder="Rows">
+  </md-input-container>
+  <md-input-container class="md-block" md-no-float>
+   <input type="text" class="qf-form-name-input"
+          ng-model="componentSettingsCtrl.item.component.description"   placeholder="Description">
+  </md-input-container>
+ </form>
+</div>
+<div ng-if="false" class="modal-footer">
+ <div class="qf-flex-container">
+  <div layout="row" layout-align="center">
+   <md-button class="qf-full md-raised md-hue-1 md-primary" ng-click="componentSettingsCtrl.ok()">
+    Save
+   </md-button>
+   <md-button class="qf-full md-raised md-hue-1" ng-click="componentSettingsCtrl.close()">
+    Close
+   </md-button>
+  </div>
+ </div>
+</div>

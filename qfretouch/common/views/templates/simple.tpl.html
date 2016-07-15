@@ -5,7 +5,8 @@
   </p>
  </div>
  <div class="qf-actions">
-  <md-button class="col-lg-4 col-md-4 col-sm-4 col-xs-4">
+  <md-button ng-click="openComponentSettings(item)"
+             class="col-lg-4 col-md-4 col-sm-4 col-xs-4">
    <i class="fa fa-cog"></i>
   </md-button>
   <md-button ng-click="duplicateComponent(item)" class="col-lg-4 col-md-4 col-sm-4 col-xs-4">
@@ -26,7 +27,10 @@
          class="form-control qf-label qf-hidden-component-mode qf-hidden-view-mode" placeholder="Label">
   <input type="{{component.validation}}" ng-model="component.inputText" validator-required="{{component.required}}"
          validator-group="{{component.formName}}" id="{{component.formName + index}}"
-         class="form-control" placeholder="{{component.placeholder}}">
+         class="form-control qf-hidden-design-mode" placeholder="{{component.placeholder}}">
+  <input type="text" ng-model="component.placeholder" validator-required="{{component.required}}"
+         class="form-control qf-placeholder-input qf-hidden-view-mode" placeholder="Placeholder">
+
   <p class='help-block qf-hidden-design-mode'>
    {{component.description}}
   </p>

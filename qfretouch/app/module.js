@@ -22,6 +22,7 @@ define(['angular',
                  serie: true,
                  name: 'qfretouch.app',
                  files: [
+                  'qfretouch/app/controllers/component-settings-modal.ctrl.js',
                   'qfretouch/common/directives/qf-component.drv.js',
                   'qfretouch/common/directives/picturebox.drv.js',
                   'qfretouch/common/directives/jsignature.drv.js',
