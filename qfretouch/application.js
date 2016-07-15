@@ -112,7 +112,8 @@ define([
 
   }
  ]);
- qfretouch.run(function ($stateParams, $http, $rootScope, $state, localStorageService) {
+ qfretouch.run(function ($stateParams, $animate, $http, $rootScope, $state, localStorageService) {
+  $animate.enabled(false);
   //  $http.defaults.headers.common['Access-Control-Allow-Headers'] = 'origin, content-type, accept';
   // $http.defaults.headers.common['Access-Control-Allow-Origin'] = '*';
   // $http.defaults.headers.common['Access-Control-Allow-Methods'] = 'GET,POST,PUT,HEAD,DELETE,OPTIONS';
@@ -125,6 +126,7 @@ define([
   $rootScope.$on('$stateChangeStart', function (event, toState) {
 
   });
+  $animate.enabled(true);
 
  });
 

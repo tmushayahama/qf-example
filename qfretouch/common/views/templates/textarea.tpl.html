@@ -1,4 +1,4 @@
-﻿<div class="qf-grab-me qf-hidden-component-mode row">
+﻿<div class="qf-grab-me row qf-hidden-component-mode qf-hidden-view-mode">
  <div class="qf-handle-title">
   <p class="qf-truncate">
    Textarea
@@ -23,15 +23,15 @@
  </label>
  <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
   <input type="text" ng-model="component.label"
-         class="form-control qf-label qf-hidden-entry-mode" placeholder="Label">
+         class="form-control qf-label qf-hidden-view-mode" placeholder="Label">
   <textarea type="text" ng-model="component.inputText" validator-required="{{component.required}}" validator-group="{{component.formName}}" id="{{component.formName + index}}" class="form-control" rows='2' placeholder="{{component.placeholder}}"></textarea>
   <p class='help-block qf-hidden-design-mode'>
    {{component.description}}
   </p>
   <input type="text" ng-model="component.description"
-         class="form-control qf-help-block qf-label qf-hidden-entry-mode" placeholder="Help Block">
+         class="form-control qf-help-block qf-label qf-hidden-view-mode" placeholder="Help Block">
 
-  <div class="checkbox qf-hidden-entry-mode qf-required-checkbox">
+  <div class="checkbox qf-hidden-view-mode qf-required-checkbox">
    <label>
     <input type='checkbox' ng-model="component.required" />
     Required
@@ -39,7 +39,7 @@
   </div>
  </div>
 </div>
-<div class="qf-component-display qf-hidden-design-mode">
+<div class="qf-component-display qf-hidden-design-mode qf-hidden-view-mode">
  <img src="qfretouch/img/textarea.png" alt="textbox" tooltip-class="qf-tooltip-1"
       tooltip-placement="right" uib-tooltip="Text Area"  tooltip-popup-delay="500"/>
 </div>

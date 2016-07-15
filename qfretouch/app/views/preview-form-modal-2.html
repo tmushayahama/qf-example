@@ -1,0 +1,60 @@
+
+<div class="modal-header gb-modal-header row">
+ <div class="col-lg-1 col-md-2 col-sm-2 col-xs-2" ng-click="previewFormCtrl.close()">
+  <a class="btn btn-primary qf-close qf-left">
+   >>
+  </a>
+ </div>
+ <div class="qfs-title col-lg-11 col-md-10 col-sm-10 col-xs-10">
+  <p class="qf-ellipsis">
+   {{designerCtrl.formName}}
+  </p>
+ </div>
+</div>
+<div class="modal-body" hm-swipe-right="previewFormCtrl.close()">
+ <div class="qf-form-preview row">
+  <div class="qf-form-properties">
+   <p class="qf-description">
+    {{designerCtrl.formDescription}}
+   </p>
+  </div>
+  <form class="form-horizontal">
+   <div gridster="designerCtrl.gridsterOpts">
+    <ul class="qf-builder">
+     <li gridster-item="item.gridMap" ng-repeat="item in designerCtrl.formItems track by $index"
+         class="qf-component">
+      <div qf-component template-url="{{item.templateUrl}}"
+           index="{{$index}}"
+           remove-component="designerCtrl.removeComponent"
+           duplicate-component="designerCtrl.duplicateComponent"
+           item="item"></div>
+     </li>
+    </ul>
+   </div>
+  </form>
+  <div class="checkbox">
+   <label><input type="checkbox" ng-model="isShowScope" ng-init="isShowScope = true" />
+    Show scope
+   </label>
+  </div>
+  <pre ng-if="isShowScope">{{input| json}}</pre>
+
+ </div>
+</div>
+<div class="modal-footer">
+ <div class="qf-flex-container">
+  <div class="qf-container btn-group col-lg-8 col-md-8 col-sm-8 col-xs-8">
+   <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
+    <md-button class="qf-full" ng-click="previewFormCtrl.close()" >
+     Close
+    </md-button>
+   </div>
+   <div  class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
+    <md-button class="md-primary qf-full" ng-click="previewFormCtrl.close()" >
+     Test Submit
+    </md-button>
+   </div>
+  </div>
+ </div>
+</div>
+<!-- ------------------------------- MODALS --------------------------->

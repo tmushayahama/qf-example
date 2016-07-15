@@ -79,12 +79,12 @@ var designerCtrl = function (
 
  vm.formName = "Untitled Form";
  vm.previewForm = function () {
-  var modalInstance = $aside.open({
+  var modalInstance = $uibModal.open({
    templateUrl: 'preview-form-modal.html',
-   controller: 'PreviewFormModalCtrl as previewFormCtrl',
+   controller: 'PreviewFormCtrl as previewFormCtrl',
    scope: $scope,
    size: 'preview-form',
-   placement: 'right',
+   // placement: 'right',
    //backdrop: 'static',
   });
   modalInstance.result.then(function (searchCriteria) {

@@ -57,12 +57,16 @@ md-input-container.md-input-focused .md-input {
 .qf-signature {
  display: block;
  background-color: #FFF;
- height: 100px!important;
- width: 100%!important;
- border-bottom: #777 solid 3px;
- canvas {
-  height: 100px!important;
-  width: 100%!important;
+ height: 60px!important;
+ //width: 100%!important;
+ //width: calc(100% - 1px)!important;
+ //border-bottom: #777 solid 3px;
+ width: 200px;
+ canvas.jSignature {
+  display: block;
+  height: 60px!important;
+  //width: calc(100% - 1px)!important;
+  width: 200px;
  }
 }
 .qf-signature-placeholder {
@@ -209,6 +213,10 @@ body {
   overflow: hidden;
   .qf-hidden-component-mode {
    display: none;
+  }
+  &.qf-label {
+   padding-left: 0;
+   padding-right: 0;
   }
   input, textarea {
    color: #AAA;
@@ -403,9 +411,10 @@ body {
 }
 
 .qf-form-preview {
+ background-color: #FFF;
  padding: 15px 10px;
  height: 100%;
- overflow-y: hidden;
+ overflow-y: auto;
  -webkit-overflow-scrolling: touch;
  .qf-form-properties {
   padding: 10px 0px;
@@ -416,16 +425,84 @@ body {
    font-size: 18px;
   }
  }
- .qf-form-object {
-  padding: 15px 10px 15px 10px;
-  margin-bottom: 15px;
-  box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
-  .qf-component-use {
+
+ .qf-component {
+  border: none;
+  box-shadow: none;
+  background-color: #FFF;
+  padding: 0;
+  //margin-bottom: 15px;
+  //box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
+  overflow: hidden;
+  .qf-grab-me {
+   pointer-events: all;
+   @include position(absolute, 0 0 null 0);
+   padding: 5px 0;
+   height: 30px;
+   background-color: #F2F2F2;
    display: block;
+   color: #AAA;
+   cursor: move;
+   font-size: 18px;
+   &:hover {
+    color: #555;
+    background-color: #DDD;
+   }
+   .qf-handle-title {
+    text-align: left;
+    pointer-events: none;
+    @include position(absolute, 0 80px 0 0);
+   }
+   .qf-actions {
+    @include position(absolute, 0 0 0 null);
+    width: 80px;
+    .md-button {
+     margin: 0;
+     min-width: 20px;
+     min-height: 10px;
+     line-height: 30px;
+    }
+   }
   }
-  .qf-component-display,
-  .qf-grab-me{
+  .qf-hidden-view-mode {
    display: none;
+  }
+  .control-label {
+   padding-left: 0;
+  }
+  input, textarea {
+   color: #AAA;
+   -webkit-box-shadow: inset 2px 2px 2px 0px #dddddd;
+   -moz-box-shadow: inset 2px 2px 2px 0px #dddddd;
+   box-shadow: inset 2px 2px 2px 0px #dddddd;
+   border: 1px solid #aaa;
+   border-radius: 0;
+   &.qf-label {
+    padding-left: 0;
+    padding-right: 0;
+    -webkit-box-shadow: none !important;
+    -moz-box-shadow: none !important;
+    box-shadow: none !important;
+    background-color: transparent;
+    color: #111;
+    outline: none;
+    border: none;
+   }
+   &.qf-help-block {
+    font-size: 10px;
+   }
+
+  }
+  .qf-required-checkbox {
+   margin: 0;
+   padding: 0;
+  }
+  .qf-component-use {
+   @include position(absolute, 31px 0 0 0);
+   padding: 0 10px 0 10px;
+   // margin-top: 20px;
+   // position: relative;
+   //display: block;
   }
  }
 }

@@ -1,49 +1,63 @@
+<div class="modal-header">
+ <div class="qf-flex-container">
+  <div class="toggle-preview-header qf-container col-lg-4 col-md-6 col-sm-12 col-xs-12">
+   <div class="btn-group col-lg-5 col-md-6 col-sm-6 col-xs-5">
+    <button type="button" class="btn pull-right btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+     {{previewFormCtrl.devices[previewFormCtrl.selectedDeviceIndex].name}}
+     <span class="caret"></span>
+    </button>
+    <ul class="dropdown-menu">
+     <li ng-repeat="device in previewFormCtrl.devices">
+      <a href="" ng-click="previewFormCtrl.selectedDeviceIndex = $index">
+       {{device.name}}
+      </a>
+     </li>
+    </ul>
+   </div>
 
-<div class="modal-header gb-modal-header row">
- <div class="col-lg-1 col-md-2 col-sm-2 col-xs-2" ng-click="previewFormCtrl.close()">
-  <a class="btn btn-primary qf-close qf-left">
-   >>
-  </a>
- </div>
- <div class="qfs-title col-lg-11 col-md-10 col-sm-10 col-xs-10">
-  <p class="qf-ellipsis">
-   {{designerCtrl.formName}}
-  </p>
+   <div class="device-size col-lg-2 col-md-2 col-sm-2 col-xs-3">
+    {{previewFormCtrl.devices[previewFormCtrl.selectedDeviceIndex].width}} &times; {{previewFormCtrl.devices[previewFormCtrl.selectedDeviceIndex].height}}
+   </div>
+   <div class="device-rotate col-lg-4 col-md-4 col-sm-4 col-xs-4">
+    <md-button ng-click="previewFormCtrl.rotate()" class="md-icon-button" aria-label="rotate" tooltip-class="qf-tooltip-1"
+               tooltip-placement="bottom" uib-tooltip="Rotate Form" tooltip-popup-delay="500">
+     <i class="fa fa-mobile fa-2x fa-rotate-45"></i>
+    </md-button>
+   </div>
+  </div>
  </div>
 </div>
-<div class="modal-body" hm-swipe-right="previewFormCtrl.close()">
- <div class="qf-form-preview row">
-  <div class="qf-form-properties">
-   <p class="qf-description">
-    {{designerCtrl.formDescription}}
-   </p>
-  </div>
-  <form class="form-horizontal">
-   <div ng-model="input" qf-form="default" qf-default="defaultValue"></div>
-  </form>
-  <div class="checkbox">
-   <label><input type="checkbox" ng-model="isShowScope" ng-init="isShowScope = true" />
-    Show scope
-   </label>
-  </div>
-  <pre ng-if="isShowScope">{{input| json}}</pre>
 
+<div class="modal-body dotted" hm-swipe-right="previewFormCtrl.close()">
+ <div class="qf-flex-container">
+  <div class="qf-container qf-form-preview"
+       ng-style="{
+             width: previewFormCtrl.portrait? previewFormCtrl.devices[previewFormCtrl.selectedDeviceIndex].width : previewFormCtrl.devices[previewFormCtrl.selectedDeviceIndex].height + 'px',
+             height: previewFormCtrl.portrait? previewFormCtrl.devices[previewFormCtrl.selectedDeviceIndex].height : previewFormCtrl.devices[previewFormCtrl.selectedDeviceIndex].width + 'px' }">
+   <form class="">
+    <div gridster="previewFormCtrl.gridsterOpts">
+     <ul class="qf-builder">
+      <li gridster-item="item.gridMap" ng-repeat="item in designerCtrl.formItems track by $index"
+          class="qf-component">
+       <div qf-component template-url="{{item.templateUrl}}"
+            index="{{$index}}"
+            remove-component="designerCtrl.removeComponent"
+            duplicate-component="designerCtrl.duplicateComponent"
+            item="item"></div>
+      </li>
+     </ul>
+    </div>
+   </form>
+  </div>
  </div>
 </div>
+
 <div class="modal-footer">
  <div class="qf-flex-container">
-  <div class="qf-container btn-group col-lg-8 col-md-8 col-sm-8 col-xs-8">
-   <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
-    <md-button class="qf-full" ng-click="previewFormCtrl.close()" >
-     Close
-    </md-button>
-   </div>
-   <div  class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
-    <md-button class="md-primary qf-full" ng-click="previewFormCtrl.close()" >
-     Test Submit
-    </md-button>
-   </div>
+  <div layout="row" layout-align="center">
+   <md-button class="qf-full md-raised md-hue-1 md-primary" ng-click="previewFormCtrl.close()">
+    Close
+   </md-button>
   </div>
  </div>
 </div>
-<!-- ------------------------------- MODALS --------------------------->
