@@ -172,7 +172,7 @@ define([
     ]
    },
    gridMap: {
-    sizeX: 6,
+    sizeX: 12,
     sizeY: 4,
    },
   },
@@ -202,7 +202,7 @@ define([
     ]
    },
    gridMap: {
-    sizeX: 6,
+    sizeX: 12,
     sizeY: 7,
    },
   },
@@ -232,7 +232,7 @@ define([
    }
   },
   {
-   templateUrl: "qfretouch/common/views/templates/jsignature.tpl.html",
+   templateUrl: "qfretouch/common/views/templates/signature.tpl.html",
    name: 'Signature',
    component: {
     label: 'Signature',
@@ -335,7 +335,7 @@ define([
    }
   },
   {
-   templateUrl: "qfretouch/common/views/templates/select.tpl.html",
+   templateUrl: "qfretouch/common/views/templates/dropdown.tpl.html",
    name: 'Dropdown',
    component: {
     label: 'Are you going?',

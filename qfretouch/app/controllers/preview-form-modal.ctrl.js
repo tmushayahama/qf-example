@@ -11,9 +11,10 @@ var previewFormCtrl = function (
  vm.portrait = true;
 
  vm.gridsterOpts = {
+  columns: 12,
   mobileBreakPoint: 600,
   rowHeight: 30,
-  defaultSizeX: 3,
+  defaultSizeX: 6,
   defaultSizeY: 7,
   resizable: {
    enabled: false,

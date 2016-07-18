@@ -19,9 +19,10 @@ var designerCtrl = function (
         ) {
  var vm = this;
  vm.gridsterOpts = {
+  columns: 12,
   mobileBreakPoint: 600,
   rowHeight: 30,
-  defaultSizeX: 3,
+  defaultSizeX: 6,
   defaultSizeY: 7,
   draggable: {
    enabled: true,
@@ -44,8 +45,8 @@ var designerCtrl = function (
  vm.addComponent = function (component) {
   var formItem = angular.copy(component);
   formItem.gridMap = {
-   sizeX: 3,
-   sizeY: 1
+   sizeX: 6,
+   sizeY: 7
   };
   vm.formItems.push(formItem);
  };
@@ -53,10 +54,7 @@ var designerCtrl = function (
  vm.duplicateComponent = function (component) {
   var formItem = angular.copy(component);
   formItem.gridMap = {};//clear the gridData for row and col
-  formItem.gridMap = {
-   sizeX: 3,
-   sizeY: 1
-  };
+
   vm.formItems.push(formItem);
  };
 

@@ -1,25 +1,62 @@
-<div class="qf-grab-me text-center row">
- <i class="fa fa-th"></i>
+<div class="qf-grab-me row qf-hidden-component-mode qf-hidden-view-mode">
+ <div class="qf-handle-title">
+  <p class="qf-truncate">
+   Signature
+  </p>
+ </div>
  <div class="qf-actions">
-  <md-button class="col-lg-4 col-md-4 col-sm-4 col-xs-4">
+  <md-button ng-click="openComponentSettings(item)"
+             class="col-lg-4 col-md-4 col-sm-4 col-xs-4">
    <i class="fa fa-cog"></i>
   </md-button>
-  <md-button ng-click="duplicateObject($event)" class="col-lg-4 col-md-4 col-sm-4 col-xs-4">
+  <md-button ng-click="duplicateComponent(item)" class="col-lg-4 col-md-4 col-sm-4 col-xs-4">
    <i class="fa fa-copy"></i>
   </md-button>
-  <md-button ng-click="deleteObject($event)" class="col-lg-4 col-md-4 col-sm-4 col-xs-4">
-   <i class="fa fa-times"></i>
+  <md-button ng-click="removeComponent(item)" class="col-lg-4 col-md-4 col-sm-4 col-xs-4">
+   <i class="text-danger fa fa-trash"></i>
   </md-button>
  </div>
 </div>
-<md-input-container class="qf-component-use md-block">
- <label for="{{component.formName + index}}" ng-class="{'qf-required':required}">{{component.label}}</label>
- <input type='hidden' ng-model="component.inputText = accept().dataUrl" validator-required="{{component.required}}" validator-group="{{component.formName}}" />
-
- <signature-pad id="{{component.formName + index}}" class="qf-signature" accept="accept" clear="clear"></signature-pad>
- <div class="hint">
-  {{component.description}}
+<div class="form-group qf-component-use qf-hidden-component-mode">
+ <label for="{{component.formName + index}}" class="qf-hidden-design-mode col-lg-12 col-md-12 col-sm-12 col-xs-12 control-label"
+        ng-class="{
+           'qf-required':required}">
+  {{component.label}}
+ </label>
+ <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+  <input type="text" ng-model="component.label"
+         class="form-control qf-label qf-hidden-view-mode" placeholder="Label">
+  <input type='hidden'  validator-required="{{component.required}}" validator-group="{{component.formName}}" />
+  <j-signature-directive signature-id="qf-{{component.formName + index}}"
+                         sig="customSignature"
+                         ng-style="{ width: getComponentWidth()}"
+                         reset="documentSignatureModalCtrl.clear"
+                         get-data="documentSignatureModalCtrl.getData"
+                         class=" qf-hidden-design-mode qf-signature"
+                         save="testAction">
+  </j-signature-directive>
+  <div class="qf-signature-placeholder qf-hidden-view-mode">
+   Signature
+  </div>
+  <md-button class="qf-hidden-design-mode" ng-click="clear()">Clear</md-button>
+  <md-button class="qf-hidden-design-mode" ng-click="inputText = accept().dataUrl">Sign</md-button>
+  <p class='help-block qf-hidden-design-mode'>
+   {{component.description}}
+  </p>
+  <input type="text" ng-model="component.description"
+         class="form-control qf-help-block qf-label qf-hidden-view-mode" placeholder="Help Block">
+  <div class="checkbox qf-hidden-view-mode qf-required-checkbox">
+   <label>
+    <input type='checkbox' ng-model="component.required" />
+    Required
+   </label>
+  </div>
  </div>
- <md-button ng-click="clear()">Clear</md-button>
- <md-button ng-click="inputText = accept().dataUrl">Sign</md-button>
-</md-input-container>
+</div>
+<div class="qf-component-display qf-hidden-design-mode qf-hidden-view-mode">
+ <img src="qfretouch/img/signature.png" alt="signature" tooltip-class="qf-tooltip-1"
+      tooltip-placement="right" uib-tooltip="Signature"  tooltip-popup-delay="500"/>
+ <div class="qf-control-heading">
+  Signature
+ </div>
+</div>

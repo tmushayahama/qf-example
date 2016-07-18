@@ -10,7 +10,7 @@
    <i class="fa fa-cog"></i>
   </md-button>
   <md-button ng-click="duplicateComponent(item)" class="col-lg-4 col-md-4 col-sm-4 col-xs-4">
-   <i class="fa fa-copy"></i> 
+   <i class="fa fa-copy"></i>
   </md-button>
   <md-button ng-click="removeComponent(item)" class="col-lg-4 col-md-4 col-sm-4 col-xs-4">
    <i class="text-danger fa fa-trash"></i>
@@ -25,12 +25,15 @@
             id="{{component.formName + index}}"
             class="form-control qf-paragraph qf-hidden-view-mode" rows='{{component.rows}}'
             placeholder="Type your paragraph"></textarea>
-  <p class="qf-paragraph qf-hidden-design-mode">
+  <p class="qf-paragraph-text qf-hidden-design-mode">
    {{component.inputText}}
   </p>
  </div>
 </div>
 <div class="qf-component-display qf-hidden-design-mode qf-hidden-view-mode">
- <img src="qfretouch/img/textarea.png" alt="textbox" tooltip-class="qf-tooltip-1"
-      tooltip-placement="right" uib-tooltip="Text Area"  tooltip-popup-delay="500"/>
+ <img src="qfretouch/img/paragraph.png" alt="paragraph" tooltip-class="qf-tooltip-1"
+      tooltip-placement="right" uib-tooltip="Paragraph"  tooltip-popup-delay="500"/>
+ <div class="qf-control-heading">
+  Paragraph
+ </div>
 </div>
