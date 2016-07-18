@@ -148,7 +148,66 @@ define([
 
  qfretouch.constant('components', [
   {
-   templateUrl: "qfretouch/common/views/templates/simple.tpl.html",
+   templateUrl: "qfretouch/common/views/templates/heading.tpl.html",
+   name: 'Heading',
+   component: {
+    label: 'First Name',
+    description: 'Enter your first name',
+    placeholder: 'Introduction',
+    required: false,
+    validationOptions: [
+     {
+      label: 'none',
+      rule: '/.*/'
+     }, {
+      label: 'number',
+      rule: '[number]'
+     }, {
+      label: 'email',
+      rule: '[email]'
+     }, {
+      label: 'url',
+      rule: '[url]'
+     }
+    ]
+   },
+   gridMap: {
+    sizeX: 6,
+    sizeY: 4,
+   },
+  },
+  {
+   templateUrl: "qfretouch/common/views/templates/paragraph.tpl.html",
+   name: 'Paragraph',
+   component: {
+    label: 'First Name',
+    description: 'Enter your first name',
+    placeholder: 'Introduction',
+    required: false,
+    rows: 4,
+    validationOptions: [
+     {
+      label: 'none',
+      rule: '/.*/'
+     }, {
+      label: 'number',
+      rule: '[number]'
+     }, {
+      label: 'email',
+      rule: '[email]'
+     }, {
+      label: 'url',
+      rule: '[url]'
+     }
+    ]
+   },
+   gridMap: {
+    sizeX: 6,
+    sizeY: 7,
+   },
+  },
+  {
+   templateUrl: "qfretouch/common/views/templates/textbox.tpl.html",
    name: 'Textbox',
    component: {
     label: 'First Name',

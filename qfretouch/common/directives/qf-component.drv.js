@@ -85,28 +85,29 @@ angular.module('qfretouch').directive('qfComponent', ['$window', '$timeout',
       //console.log(index, ' - ', vm.formItems.indexOf(component));
       $scope.component.options.splice($scope.component.options.indexOf($scope.component.options.indexOf(option), 1));
      };
-     /*
-      $scope.optionsText = formObject.options.join('\n');
-      $scope.$watch('optionsText', function (text) {
+
+     $scope.$watch('component.optionsText', function (text) {
       var x;
-      $scope.options = (function () {
-      var i, len, ref, results;
-      ref = text.split('\n');
-      results = [];
-      for (i = 0, len = ref.length; i < len; i++) {
-      x = ref[i];
-      if (x.length > 0) {
-      results.push(x);
-      }
-      }
-      return results;
+      $scope.component.options = (function () {
+       var i, len, ref, results;
+       ref = text.split('\n');
+       results = [];
+       for (i = 0, len = ref.length; i < len; i++) {
+        x = ref[i];
+        if (x.length > 0) {
+         results.push(x);
+        }
+       }
+       return results;
       })();
       return $scope.inputText = $scope.options[0];
-      });*/
+     });
     }
    ],
    link: function (scope, element, attr, ctrl) {
     scope.component = scope.item.component;
+    scope.component.optionsText = scope.component.options.join('\n');
+
     scope.getComponentWidth = function () {
      var width = element.width();
      var canvas = element.find('canvas.jSignature')

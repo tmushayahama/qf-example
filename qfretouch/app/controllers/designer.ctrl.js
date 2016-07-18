@@ -20,7 +20,9 @@ var designerCtrl = function (
  var vm = this;
  vm.gridsterOpts = {
   mobileBreakPoint: 600,
-  rowHeight: 200,
+  rowHeight: 30,
+  defaultSizeX: 3,
+  defaultSizeY: 7,
   draggable: {
    enabled: true,
    handle: '.qf-grab-me',
@@ -63,19 +65,9 @@ var designerCtrl = function (
   vm.formItems.splice(vm.formItems.indexOf(vm.formItems.indexOf(component), 1));
  };
 
-
+//for testing
  for (var i = 0; i < vm.components.length; i++) {
-  vm.formItems.push(
-          {
-           gridMap: {
-            sizeX: 3,
-            sizeY: 1,
-            row: i,
-            col: (i % 2 === 0) ? 0 : 3,
-           },
-           templateUrl: vm.components[i].templateUrl,
-           component: vm.components[i].component,
-          });
+  vm.formItems.push(angular.copy(vm.components[i]));
  }
 
  vm.formName = "Untitled Form";

@@ -160,6 +160,26 @@ h1, h2, h3, h4, h5, h6, p {
  padding: 15px 10px 15px 10px;
  margin-bottom: 15px;
  box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
+ &.qf-heading, {
+  font-size: 20px;
+ }
+ input, textarea {
+  &.qf-heading, &.qf-paragraph {
+   padding-left: 0;
+   padding-right: 0;
+   -webkit-box-shadow: none !important;
+   -moz-box-shadow: none !important;
+   box-shadow: none !important;
+   background-color: transparent;
+   color: #111;
+   outline: none;
+   border: none!important;
+  }
+  &.qf-heading, {
+   font-size: 20px;
+   font-weight: bold;
+  }
+ }
  .qf-add-option-form {
   width: 100%;
   input {
@@ -284,7 +304,7 @@ h1, h2, h3, h4, h5, h6, p {
    box-shadow: inset 2px 2px 2px 0px #dddddd;
    border: 1px solid #aaa;
    border-radius: 0;
-   &.qf-label {
+   &.qf-heading {
     padding-left: 0;
     padding-right: 0;
     -webkit-box-shadow: none !important;
@@ -293,6 +313,17 @@ h1, h2, h3, h4, h5, h6, p {
     background-color: transparent;
     color: #111;
     outline: none;
+    border: none;
+   }
+   &.qf-label {
+    padding-left: 0;
+    padding-right: 0;
+    -webkit-box-shadow: none !important;
+    -moz-box-shadow: none !important;
+    box-shadow: none !important;
+    background-color: transparent;
+    color: #111;
+    outline: none!important;
     border: none;
    }
    &.qf-help-block {
@@ -420,6 +451,7 @@ h1, h2, h3, h4, h5, h6, p {
    .qf-hidden-design-mode {
     display: none;
    }
+
    input, textarea {
     -webkit-box-shadow: inset 2px 2px 2px 0px #dddddd;
     -moz-box-shadow: inset 2px 2px 2px 0px #dddddd;
