@@ -14,10 +14,12 @@ var designerCtrl = function (
         $timeout,
         $uibModal,
         $aside,
-        FormManager
+        FormSrv
         //qfretouchAuth,
         ) {
  var vm = this;
+ vm.formSrv = new FormSrv();
+
  vm.gridsterOpts = {
   columns: 12,
   mobileBreakPoint: 600,
@@ -69,6 +71,27 @@ var designerCtrl = function (
  }
 
  vm.formName = "Untitled Form";
+ vm.openFormSettings = function () {
+  var modalInstance = $aside.open({
+   templateUrl: 'form-settings-modal.html',
+   controller: 'FormSettingsCtrl as formSettingsCtrl',
+   scope: $scope,
+   size: 'form-settings',
+   placement: 'right',
+   //backdrop: 'static',
+   resolve: {
+    formSrv: function () {
+     return vm.formSrv;
+    }
+   }
+  });
+  modalInstance.result.then(function (result) {
+   // $scope.item = result;
+  }, function () {
+   //('Modal dismissed at: ' + new Date());
+  });
+ };
+
  vm.previewForm = function () {
   var modalInstance = $uibModal.open({
    templateUrl: 'preview-form-modal.html',
@@ -161,6 +184,6 @@ designerCtrl.$inject = [
  '$timeout',
  '$uibModal',
  '$aside',
- 'FormManager'
+ 'FormSrv'
 ];
 angular.module("qfretouch").controller('DesignerCtrl', designerCtrl);

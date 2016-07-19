@@ -1,26 +1,31 @@
 
 <nav class="qf-navbar" role="navigation">
- <div class="container">
+ <div class="row">
   <form class="col-lg-8 col-md-8 col-sm-7 col-xs-7">
    <md-input-container class="md-block" md-no-float>
-    <input type="text" class="qf-form-name-input" ng-model="designerCtrl.formName"   placeholder="Form Name">
+    <input type="text" class="qf-form-name-input" ng-model="designerCtrl.formSrv.formName"   placeholder="Form Name">
    </md-input-container>
   </form>
   <div class="col-lg-4 col-md-4 col-sm-5 col-xs-5">
    <div class="qf-action-btns pull-right">
+
+    <md-button ng-click="designerCtrl.previewForm()" class="md-icon-button" aria-label="preview" tooltip-class="qf-tooltip-1"
+               tooltip-placement="bottom" uib-tooltip="Preview Form"  tooltip-popup-delay="500">
+     <i class="fa fa-eye"></i>
+    </md-button>
     <md-button ng-click="designerCtrl.saveForm()" class="md-icon-button" aria-label="save" tooltip-class="qf-tooltip-1"
                tooltip-placement="bottom" uib-tooltip="Save Form"  tooltip-popup-delay="500">
      <i class="fa fa-save"></i>
     </md-button>
-    <md-button ng-click="designerCtrl.previewForm()" class="md-icon-button" aria-label="preview" tooltip-class="qf-tooltip-1"
-               tooltip-placement="bottom" uib-tooltip="Preview Form"  tooltip-popup-delay="500">
-     <i class="fa fa-eye"></i>
+    <md-button ng-click="designerCtrl.openFormSettings()" class="md-icon-button" aria-label="save" tooltip-class="qf-tooltip-1"
+               tooltip-placement="bottom" uib-tooltip="Save Form"  tooltip-popup-delay="500">
+     <i class="fa fa-cog"></i>
     </md-button>
    </div>
   </div>
  </div>
 </nav>
-<div class="qf-component-nav col-lg-1 col-md-2 col-sm-2 col-xs-12" role="navigation">
+<div class="qf-component-nav">
  <ul class="">
   <li ng-repeat="item in designerCtrl.components"
       class="qf-component">
@@ -30,10 +35,10 @@
   </li>
  </ul>
 </div>
-<div class="qf-designer-container dotted col-lg-offset-1 col-md-offset-2 col-lg-11 col-md-10 col-sm-10 col-xs-12">
+<div class="qf-designer-container dotted">
  <div class="container">
   <div class="qf-builder-container">
-   <form class="row qf-form-properties">
+   <form ng-if="false" class="row qf-form-properties">
     <md-input-container class="md-block" md-no-float>
      <input type="text" class="qf-description-input" ng-model="designerCtrl.formDescription"
             placeholder="Form Description">
@@ -113,4 +118,7 @@
 </script>
 <script type="text/ng-template" id="component-settings-modal.html">
  <div ng-include="'qfretouch/app/views/component-settings-modal.html'"></div>
+</script>
+<script type="text/ng-template" id="form-settings-modal.html">
+ <div ng-include="'qfretouch/app/views/form-settings-modal.html'"></div>
 </script>

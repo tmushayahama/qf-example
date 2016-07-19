@@ -1,5 +1,5 @@
 ﻿angular.module('qfretouch')
-        .service('FormManager', [
+        .service('FormSrv', [
          'config',
          '$q',
          '$http',
@@ -11,12 +11,13 @@
 
           $http.defaults.headers.common['X-Requested-With'] = 'XMLHttpRequest';
 
-          var FormManager = function () {
+          var FormSrv = function () {
+           this.formName = "Untitled Form";
+           this.description = "";
            this.Contents = [];
-           this.NonFertileFolders = [0, 2];
           };
 
-          FormManager.prototype.deferredHandler = function (data, deferred, defaultMsg) {
+          FormSrv.prototype.deferredHandler = function (data, deferred, defaultMsg) {
            if (!data || typeof data !== 'object') {
             this.error = 'Error';
            }
@@ -35,7 +36,7 @@
            return deferred.resolve(data);
           };
 
-          FormManager.prototype.buildForm = function (formData) {
+          FormSrv.prototype.buildForm = function (formData) {
            var self = this;
            var deferred = $q.defer();
            self.error = '';
@@ -47,7 +48,7 @@
            return deferred.promise;
           };
 
-          FormManager.prototype.getForm = function (formData) {
+          FormSrv.prototype.getForm = function (formData) {
            var self = this;
            var deferred = $q.defer();
            self.error = '';
@@ -59,7 +60,7 @@
            return deferred.promise;
           };
 
-          FormManager.prototype.submitForm = function (formData) {
+          FormSrv.prototype.submitForm = function (formData) {
            var self = this;
            var deferred = $q.defer();
            self.error = '';
@@ -71,6 +72,6 @@
            return deferred.promise;
           };
 
-          return FormManager;
+          return FormSrv;
          }
         ]);

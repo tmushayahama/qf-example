@@ -13,12 +13,12 @@ var viewerCtrl = function (
         $timeout,
         $uibModal,
         $aside,
-        FormManager
+        FormSrv
         //qfretouchAuth,
         ) {
  var vm = this;
 
- vm.formManager = new FormManager();
+ vm.FormSrv = new FormSrv();
  vm.formId = $stateParams.formId;
  vm.formContent;
 
@@ -29,7 +29,7 @@ var viewerCtrl = function (
           formDescription: "A sample Form"
          };
 
- vm.formManager.getForm(vm.formId).then(function (data) {
+ vm.FormSrv.getForm(vm.formId).then(function (data) {
   vm.formContent = data;
  });
 
@@ -64,7 +64,7 @@ viewerCtrl.$inject = [
  '$timeout',
  '$uibModal',
  '$aside',
- 'FormManager'
+ 'FormSrv'
 ];
 
 angular.module("qfretouch").controller('ViewerCtrl', viewerCtrl);
