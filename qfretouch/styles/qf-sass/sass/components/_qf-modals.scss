@@ -14,8 +14,12 @@
 
   .qf-title {
    @include position(absolute, 0 40px 0 0);
+   color: #555;
    padding: 7px 8px;
    font-size: 18px;
+   .qf-pre-icon {
+    margin-top: 7px;
+   }
   }
   .qf-close {
    @include position(absolute, 0 0 0 null);
@@ -31,20 +35,6 @@
 
    &:hover {
     color: #EEE;
-   }
-  }
-
-  .qf-title {
-   color: #FFF;
-   padding-left: 15px;
-   font-size: 1.0em;
-
-   a {
-    color: #EEE;
-
-    &:hover {
-     color: #FFF;
-    }
    }
   }
  }
@@ -285,8 +275,8 @@
 
   .qf-title {
    @include position(absolute, 0 40px 0 0);
-   padding: 7px 8px;
-   font-size: 18px;
+   padding: 9px 8px;
+   font-size: 22px;
   }
   .qf-close {
    @include position(absolute, 0 0 0 null);

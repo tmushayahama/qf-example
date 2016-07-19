@@ -108,6 +108,15 @@ var designerCtrl = function (
   });
  };
 
+ $scope.$watch(function () {
+  return vm.formSrv.formStylesMap;
+ }, function (styles) {
+  angular.forEach(styles, function (style) {
+   vm.formSrv.formStyles[style.name] = style.prepend + style.value + style.append;
+  });
+  console.log(vm.formSrv.formStyles, "");
+ }, true);
+
  /*
 
   var checkbox, textbox;

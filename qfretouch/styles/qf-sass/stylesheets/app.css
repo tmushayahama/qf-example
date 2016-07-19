@@ -257,10 +257,15 @@
   right: 40px;
   bottom: 0;
   left: 0;
+  color: #555;
   padding: 7px 8px;
   font-size: 18px;
 }
 /* line 20, ../sass/components/_qf-modals.scss */
+.modal .modal-header .qf-title .qf-pre-icon {
+  margin-top: 7px;
+}
+/* line 24, ../sass/components/_qf-modals.scss */
 .modal .modal-header .qf-close {
   position: absolute;
   top: 0;
@@ -272,30 +277,16 @@
   font-size: 22px;
   color: #777;
 }
-/* line 29, ../sass/components/_qf-modals.scss */
+/* line 33, ../sass/components/_qf-modals.scss */
 .modal .modal-header .qf-header-menu-icon {
   color: #DDD;
 }
-/* line 32, ../sass/components/_qf-modals.scss */
+/* line 36, ../sass/components/_qf-modals.scss */
 .modal .modal-header .qf-header-menu-icon:hover {
   color: #EEE;
 }
-/* line 37, ../sass/components/_qf-modals.scss */
-.modal .modal-header .qf-title {
-  color: #FFF;
-  padding-left: 15px;
-  font-size: 1.0em;
-}
-/* line 42, ../sass/components/_qf-modals.scss */
-.modal .modal-header .qf-title a {
-  color: #EEE;
-}
-/* line 45, ../sass/components/_qf-modals.scss */
-.modal .modal-header .qf-title a:hover {
-  color: #FFF;
-}
 
-/* line 54, ../sass/components/_qf-modals.scss */
+/* line 44, ../sass/components/_qf-modals.scss */
 .modal-document {
   position: absolute;
   top: 20px;
@@ -305,15 +296,15 @@
   width: auto;
   margin: 0;
 }
-/* line 60, ../sass/components/_qf-modals.scss */
+/* line 50, ../sass/components/_qf-modals.scss */
 .modal-document .qf-modal-menu-dropdown a {
   color: #555;
 }
-/* line 63, ../sass/components/_qf-modals.scss */
+/* line 53, ../sass/components/_qf-modals.scss */
 .modal-document .qf-modal-menu-dropdown a:hover {
   color: #222;
 }
-/* line 69, ../sass/components/_qf-modals.scss */
+/* line 59, ../sass/components/_qf-modals.scss */
 .modal-document .modal-content {
   position: absolute;
   top: 0;
@@ -328,7 +319,7 @@
   -o-box-shadow: inherit;
   box-shadow: inherit;
 }
-/* line 80, ../sass/components/_qf-modals.scss */
+/* line 70, ../sass/components/_qf-modals.scss */
 .modal-document .modal-subheader {
   position: absolute;
   top: 31px;
@@ -339,23 +330,23 @@
   background-color: #DDD;
   border-bottom: #BBB solid 1px;
 }
-/* line 87, ../sass/components/_qf-modals.scss */
+/* line 77, ../sass/components/_qf-modals.scss */
 .modal-document .modal-subheader .qf-icon-btn {
   padding: 3px 8px;
 }
-/* line 90, ../sass/components/_qf-modals.scss */
+/* line 80, ../sass/components/_qf-modals.scss */
 .modal-document .modal-subheader .qf-icon-btn:hover {
   background-color: rgba(13, 140, 165, 0.2);
 }
-/* line 94, ../sass/components/_qf-modals.scss */
+/* line 84, ../sass/components/_qf-modals.scss */
 .modal-document .modal-subheader .qf-icon-btn img {
   height: 20px;
 }
-/* line 99, ../sass/components/_qf-modals.scss */
+/* line 89, ../sass/components/_qf-modals.scss */
 .modal-document .modal-subheader .qf-icon-btn.qf-separator {
   border-right: #BBB solid 1px;
 }
-/* line 104, ../sass/components/_qf-modals.scss */
+/* line 94, ../sass/components/_qf-modals.scss */
 .modal-document .modal-body {
   position: absolute;
   top: 64px;
@@ -363,7 +354,7 @@
   bottom: 31px;
   left: 0;
 }
-/* line 108, ../sass/components/_qf-modals.scss */
+/* line 98, ../sass/components/_qf-modals.scss */
 .modal-document .modal-footer {
   position: absolute;
   right: 0;
@@ -374,16 +365,16 @@
   height: 30px;
   padding: 0;
 }
-/* line 115, ../sass/components/_qf-modals.scss */
+/* line 105, ../sass/components/_qf-modals.scss */
 .modal-document .modal-footer a {
   color: #EEE;
 }
-/* line 118, ../sass/components/_qf-modals.scss */
+/* line 108, ../sass/components/_qf-modals.scss */
 .modal-document .modal-footer a:hover {
   color: #FFF;
 }
 
-/* line 126, ../sass/components/_qf-modals.scss */
+/* line 116, ../sass/components/_qf-modals.scss */
 .modal-component-settings {
   position: absolute;
   top: 0;
@@ -393,7 +384,7 @@
   margin: 0;
   overflow: hidden;
 }
-/* line 131, ../sass/components/_qf-modals.scss */
+/* line 121, ../sass/components/_qf-modals.scss */
 .modal-component-settings .modal-content {
   position: absolute;
   top: 0;
@@ -408,7 +399,7 @@
   -o-box-shadow: inherit;
   box-shadow: inherit;
 }
-/* line 142, ../sass/components/_qf-modals.scss */
+/* line 132, ../sass/components/_qf-modals.scss */
 .modal-component-settings .modal-body {
   position: absolute;
   top: 41px;
@@ -418,7 +409,7 @@
   padding: 10px 5px !important;
 }
 
-/* line 149, ../sass/components/_qf-modals.scss */
+/* line 139, ../sass/components/_qf-modals.scss */
 .modal-form-settings {
   position: absolute;
   top: 0;
@@ -428,7 +419,7 @@
   margin: 0;
   overflow: hidden;
 }
-/* line 154, ../sass/components/_qf-modals.scss */
+/* line 144, ../sass/components/_qf-modals.scss */
 .modal-form-settings .modal-content {
   position: absolute;
   top: 0;
@@ -443,7 +434,7 @@
   -o-box-shadow: inherit;
   box-shadow: inherit;
 }
-/* line 165, ../sass/components/_qf-modals.scss */
+/* line 155, ../sass/components/_qf-modals.scss */
 .modal-form-settings .modal-body {
   position: absolute;
   top: 41px;
@@ -453,7 +444,7 @@
   padding: 10px 5px !important;
 }
 
-/* line 172, ../sass/components/_qf-modals.scss */
+/* line 162, ../sass/components/_qf-modals.scss */
 .modal-upload {
   position: absolute;
   top: 20px;
@@ -463,7 +454,7 @@
   width: auto;
   margin: 0;
 }
-/* line 177, ../sass/components/_qf-modals.scss */
+/* line 167, ../sass/components/_qf-modals.scss */
 .modal-upload .modal-content {
   position: absolute;
   top: 0;
@@ -478,11 +469,11 @@
   -o-box-shadow: inherit;
   box-shadow: inherit;
 }
-/* line 190, ../sass/components/_qf-modals.scss */
+/* line 180, ../sass/components/_qf-modals.scss */
 .modal-upload .modal-header .qf-title {
   margin-left: -10px;
 }
-/* line 195, ../sass/components/_qf-modals.scss */
+/* line 185, ../sass/components/_qf-modals.scss */
 .modal-upload .modal-subheader {
   position: absolute;
   top: 31px;
@@ -493,23 +484,23 @@
   background-color: #DDD;
   border-bottom: #BBB solid 1px;
 }
-/* line 202, ../sass/components/_qf-modals.scss */
+/* line 192, ../sass/components/_qf-modals.scss */
 .modal-upload .modal-subheader .qf-icon-btn {
   padding: 3px 8px;
 }
-/* line 205, ../sass/components/_qf-modals.scss */
+/* line 195, ../sass/components/_qf-modals.scss */
 .modal-upload .modal-subheader .qf-icon-btn:hover {
   background-color: rgba(13, 140, 165, 0.2);
 }
-/* line 209, ../sass/components/_qf-modals.scss */
+/* line 199, ../sass/components/_qf-modals.scss */
 .modal-upload .modal-subheader .qf-icon-btn img {
   height: 20px;
 }
-/* line 214, ../sass/components/_qf-modals.scss */
+/* line 204, ../sass/components/_qf-modals.scss */
 .modal-upload .modal-subheader .qf-icon-btn.qf-separator {
   border-right: #BBB solid 1px;
 }
-/* line 219, ../sass/components/_qf-modals.scss */
+/* line 209, ../sass/components/_qf-modals.scss */
 .modal-upload .modal-body {
   position: absolute;
   top: 64px;
@@ -517,11 +508,11 @@
   bottom: 31px;
   left: 0;
 }
-/* line 222, ../sass/components/_qf-modals.scss */
+/* line 212, ../sass/components/_qf-modals.scss */
 .modal-upload .modal-body input[type="file"] {
   display: none;
 }
-/* line 226, ../sass/components/_qf-modals.scss */
+/* line 216, ../sass/components/_qf-modals.scss */
 .modal-upload .modal-body .custom-file-upload {
   background-color: #FFF;
   border: 1px solid #ccc;
@@ -529,30 +520,30 @@
   padding: 6px 12px;
   cursor: pointer;
 }
-/* line 235, ../sass/components/_qf-modals.scss */
+/* line 225, ../sass/components/_qf-modals.scss */
 .modal-upload .modal-body .qf-select-file {
   margin-top: 20px;
   border: #CCC solid 1px;
   padding: 10px;
 }
-/* line 240, ../sass/components/_qf-modals.scss */
+/* line 230, ../sass/components/_qf-modals.scss */
 .modal-upload .modal-body .qf-select-file .qf-drop-zone {
   text-align: center;
   height: 200px;
   padding-top: 50px;
   border: #AAA dashed 4px;
 }
-/* line 246, ../sass/components/_qf-modals.scss */
+/* line 236, ../sass/components/_qf-modals.scss */
 .modal-upload .modal-body .qf-select-file .qf-drop-zone .qf-title {
   font-size: 2.5em;
   color: #999;
 }
-/* line 251, ../sass/components/_qf-modals.scss */
+/* line 241, ../sass/components/_qf-modals.scss */
 .modal-upload .modal-body .qf-select-file .qf-drop-zone .qf-description {
   font-size: 1.0em;
   color: #656565;
 }
-/* line 260, ../sass/components/_qf-modals.scss */
+/* line 250, ../sass/components/_qf-modals.scss */
 .modal-upload .modal-footer {
   position: absolute;
   right: 0;
@@ -563,16 +554,16 @@
   height: 30px;
   padding: 0;
 }
-/* line 267, ../sass/components/_qf-modals.scss */
+/* line 257, ../sass/components/_qf-modals.scss */
 .modal-upload .modal-footer a {
   color: #EEE;
 }
-/* line 270, ../sass/components/_qf-modals.scss */
+/* line 260, ../sass/components/_qf-modals.scss */
 .modal-upload .modal-footer a:hover {
   color: #FFF;
 }
 
-/* line 277, ../sass/components/_qf-modals.scss */
+/* line 267, ../sass/components/_qf-modals.scss */
 .modal-preview-form {
   position: absolute;
   top: 20px;
@@ -582,22 +573,22 @@
   width: auto;
   margin: 0;
 }
-/* line 282, ../sass/components/_qf-modals.scss */
+/* line 272, ../sass/components/_qf-modals.scss */
 .modal-preview-form .modal-header {
   height: 50px;
   z-index: 1000;
 }
-/* line 286, ../sass/components/_qf-modals.scss */
+/* line 276, ../sass/components/_qf-modals.scss */
 .modal-preview-form .modal-header .qf-title {
   position: absolute;
   top: 0;
   right: 40px;
   bottom: 0;
   left: 0;
-  padding: 7px 8px;
-  font-size: 18px;
+  padding: 9px 8px;
+  font-size: 22px;
 }
-/* line 291, ../sass/components/_qf-modals.scss */
+/* line 281, ../sass/components/_qf-modals.scss */
 .modal-preview-form .modal-header .qf-close {
   position: absolute;
   top: 0;
@@ -609,7 +600,7 @@
   font-size: 22px;
   color: #777;
 }
-/* line 301, ../sass/components/_qf-modals.scss */
+/* line 291, ../sass/components/_qf-modals.scss */
 .modal-preview-form .modal-content {
   position: absolute;
   top: 0;
@@ -624,7 +615,7 @@
   -o-box-shadow: inherit;
   box-shadow: inherit;
 }
-/* line 312, ../sass/components/_qf-modals.scss */
+/* line 302, ../sass/components/_qf-modals.scss */
 .modal-preview-form .modal-body {
   position: absolute;
   top: 51px;
@@ -633,7 +624,7 @@
   left: 0;
   overflow: auto;
 }
-/* line 317, ../sass/components/_qf-modals.scss */
+/* line 307, ../sass/components/_qf-modals.scss */
 .modal-preview-form .modal-footer {
   position: absolute;
   right: 0;
@@ -642,12 +633,12 @@
   height: 50px;
 }
 
-/* line 325, ../sass/components/_qf-modals.scss */
+/* line 315, ../sass/components/_qf-modals.scss */
 .modal-md .modal-body {
   margin-top: 31px;
   padding: 20px 10px !important;
 }
-/* line 331, ../sass/components/_qf-modals.scss */
+/* line 321, ../sass/components/_qf-modals.scss */
 .modal-md .modal-footer {
   padding: 5px 10px;
   background-color: #F2F2F2;
@@ -693,7 +684,7 @@ Copyright (c) 2014 Daniel Eden
     transform: none;
   }
 }
-/* line 383, ../sass/components/_qf-modals.scss */
+/* line 373, ../sass/components/_qf-modals.scss */
 .fadeInLeft {
   -webkit-animation-name: fadeInLeft;
   animation-name: fadeInLeft;
@@ -725,7 +716,7 @@ Copyright (c) 2014 Daniel Eden
     transform: none;
   }
 }
-/* line 418, ../sass/components/_qf-modals.scss */
+/* line 408, ../sass/components/_qf-modals.scss */
 .fadeInRight {
   -webkit-animation-name: fadeInRight;
   animation-name: fadeInRight;
@@ -757,7 +748,7 @@ Copyright (c) 2014 Daniel Eden
     transform: none;
   }
 }
-/* line 453, ../sass/components/_qf-modals.scss */
+/* line 443, ../sass/components/_qf-modals.scss */
 .fadeInTop {
   -webkit-animation-name: fadeInTop;
   animation-name: fadeInTop;
@@ -789,7 +780,7 @@ Copyright (c) 2014 Daniel Eden
     transform: none;
   }
 }
-/* line 488, ../sass/components/_qf-modals.scss */
+/* line 478, ../sass/components/_qf-modals.scss */
 .fadeInBottom {
   -webkit-animation-name: fadeInBottom;
   animation-name: fadeInBottom;
@@ -815,7 +806,7 @@ Copyright (c) 2014 Daniel Eden
     transform: translate3d(-100%, 0, 0);
   }
 }
-/* line 517, ../sass/components/_qf-modals.scss */
+/* line 507, ../sass/components/_qf-modals.scss */
 .fadeOutLeft {
   -webkit-animation-name: fadeOutLeft;
   animation-name: fadeOutLeft;
@@ -841,7 +832,7 @@ Copyright (c) 2014 Daniel Eden
     transform: translate3d(100%, 0, 0);
   }
 }
-/* line 546, ../sass/components/_qf-modals.scss */
+/* line 536, ../sass/components/_qf-modals.scss */
 .fadeOutRight {
   -webkit-animation-name: fadeOutRight;
   animation-name: fadeOutRight;
@@ -867,7 +858,7 @@ Copyright (c) 2014 Daniel Eden
     transform: translate3d(0, -100%, 0);
   }
 }
-/* line 575, ../sass/components/_qf-modals.scss */
+/* line 565, ../sass/components/_qf-modals.scss */
 .fadeOutUp {
   -webkit-animation-name: fadeOutUp;
   animation-name: fadeOutUp;
@@ -893,27 +884,27 @@ Copyright (c) 2014 Daniel Eden
     transform: translate3d(0, 100%, 0);
   }
 }
-/* line 605, ../sass/components/_qf-modals.scss */
+/* line 595, ../sass/components/_qf-modals.scss */
 .fadeOutDown {
   -webkit-animation-name: fadeOutDown;
   animation-name: fadeOutDown;
 }
 
 /* Common */
-/* line 611, ../sass/components/_qf-modals.scss */
+/* line 601, ../sass/components/_qf-modals.scss */
 .ng-aside {
   overflow-y: auto;
   overflow-x: hidden;
 }
 
-/* line 616, ../sass/components/_qf-modals.scss */
+/* line 606, ../sass/components/_qf-modals.scss */
 .ng-aside .modal-dialog {
   position: absolute;
   margin: 0;
   padding: 0;
 }
 
-/* line 622, ../sass/components/_qf-modals.scss */
+/* line 612, ../sass/components/_qf-modals.scss */
 .ng-aside.fade .modal-dialog {
   -o-transition: none;
   -moz-transition: none;
@@ -928,7 +919,7 @@ Copyright (c) 2014 Daniel Eden
   transform: none;
 }
 
-/* line 636, ../sass/components/_qf-modals.scss */
+/* line 626, ../sass/components/_qf-modals.scss */
 .ng-aside .modal-dialog .modal-content {
   overflow-y: auto;
   overflow-x: hidden;
@@ -937,24 +928,24 @@ Copyright (c) 2014 Daniel Eden
 }
 
 /* Horizontal */
-/* line 645, ../sass/components/_qf-modals.scss */
+/* line 635, ../sass/components/_qf-modals.scss */
 .ng-aside.horizontal {
   height: 100%;
 }
 
-/* line 649, ../sass/components/_qf-modals.scss */
+/* line 639, ../sass/components/_qf-modals.scss */
 .ng-aside.horizontal .modal-dialog .modal-content {
   height: 100%;
 }
 
-/* line 653, ../sass/components/_qf-modals.scss */
+/* line 643, ../sass/components/_qf-modals.scss */
 .ng-aside.horizontal .modal-dialog {
   position: absolute;
   top: 0;
   height: 100%;
 }
 
-/* line 659, ../sass/components/_qf-modals.scss */
+/* line 649, ../sass/components/_qf-modals.scss */
 .modal-open .ng-aside.horizontal.left .modal-dialog {
   animation: fadeOutLeft 250ms;
   -webkit-animation: fadeOutLeft 250ms;
@@ -963,7 +954,7 @@ Copyright (c) 2014 Daniel Eden
   -ms-animation: fadeOutLeft 250ms;
 }
 
-/* line 667, ../sass/components/_qf-modals.scss */
+/* line 657, ../sass/components/_qf-modals.scss */
 .ng-aside.horizontal.left.in .modal-dialog {
   animation: fadeInLeft 400ms;
   -webkit-animation: fadeInLeft 400ms;
@@ -972,12 +963,12 @@ Copyright (c) 2014 Daniel Eden
   -ms-animation: fadeInLeft 400ms;
 }
 
-/* line 675, ../sass/components/_qf-modals.scss */
+/* line 665, ../sass/components/_qf-modals.scss */
 .ng-aside.horizontal.left .modal-dialog {
   left: 0;
 }
 
-/* line 679, ../sass/components/_qf-modals.scss */
+/* line 669, ../sass/components/_qf-modals.scss */
 .ng-aside.horizontal.right .modal-dialog {
   animation: fadeOutRight 400ms;
   -webkit-animation: fadeOutRight 400ms;
@@ -986,37 +977,37 @@ Copyright (c) 2014 Daniel Eden
   -ms-animation: fadeOutRight 400ms;
 }
 
-/* line 687, ../sass/components/_qf-modals.scss */
+/* line 677, ../sass/components/_qf-modals.scss */
 .ng-aside.horizontal.right.in .modal-dialog {
   animation: fadeInRight 250ms;
   -webkit-animation: fadeInRight 250ms;
 }
 
-/* line 692, ../sass/components/_qf-modals.scss */
+/* line 682, ../sass/components/_qf-modals.scss */
 .ng-aside.horizontal.right .modal-dialog {
   right: 0;
 }
 
 /* Vertical */
-/* line 698, ../sass/components/_qf-modals.scss */
+/* line 688, ../sass/components/_qf-modals.scss */
 .ng-aside.vertical {
   width: 100% !important;
   overflow: hidden;
 }
 
-/* line 703, ../sass/components/_qf-modals.scss */
+/* line 693, ../sass/components/_qf-modals.scss */
 .ng-aside.vertical .modal-dialog {
   left: 0;
   right: 0;
   width: 100% !important;
 }
 
-/* line 709, ../sass/components/_qf-modals.scss */
+/* line 699, ../sass/components/_qf-modals.scss */
 .ng-aside.vertical .modal-dialog .modal-content {
   max-height: 400px;
 }
 
-/* line 713, ../sass/components/_qf-modals.scss */
+/* line 703, ../sass/components/_qf-modals.scss */
 .ng-aside.vertical.top .modal-dialog {
   animation: fadeOutUp 250ms;
   -webkit-animation: fadeOutUp 250ms;
@@ -1026,7 +1017,7 @@ Copyright (c) 2014 Daniel Eden
   -ms-animation: fadeOutUp 250ms;
 }
 
-/* line 722, ../sass/components/_qf-modals.scss */
+/* line 712, ../sass/components/_qf-modals.scss */
 .ng-aside.vertical.top.in .modal-dialog {
   animation: fadeInTop 250ms;
   -webkit-animation: fadeInTop 250ms;
@@ -1036,7 +1027,7 @@ Copyright (c) 2014 Daniel Eden
   -ms-animation: fadeInTop 250ms;
 }
 
-/* line 731, ../sass/components/_qf-modals.scss */
+/* line 721, ../sass/components/_qf-modals.scss */
 .ng-aside.vertical.bottom .modal-dialog {
   animation: fadeOutDown 250ms;
   -webkit-animation: fadeOutDown 250ms;
@@ -1046,7 +1037,7 @@ Copyright (c) 2014 Daniel Eden
   -ms-animation: fadeOutDown 250ms;
 }
 
-/* line 739, ../sass/components/_qf-modals.scss */
+/* line 729, ../sass/components/_qf-modals.scss */
 .ng-aside.vertical.bottom.in .modal-dialog {
   animation: fadeInBottom 250ms;
   -webkit-animation: fadeInBottom 250ms;
@@ -1056,17 +1047,17 @@ Copyright (c) 2014 Daniel Eden
   -ms-animation: fadeInBottom 250ms;
 }
 
-/* line 748, ../sass/components/_qf-modals.scss */
+/* line 738, ../sass/components/_qf-modals.scss */
 .ng-aside.vertical.bottom .modal-dialog {
   bottom: 0;
 }
 
-/* line 752, ../sass/components/_qf-modals.scss */
+/* line 742, ../sass/components/_qf-modals.scss */
 .ng-aside.vertical.top .modal-dialog {
   top: 0;
 }
 
-/* line 756, ../sass/components/_qf-modals.scss */
+/* line 746, ../sass/components/_qf-modals.scss */
 .ng-aside.vertical .modal-dialog .modal-content {
   width: 100%;
 }

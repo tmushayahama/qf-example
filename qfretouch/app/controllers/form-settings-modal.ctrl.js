@@ -13,6 +13,7 @@ var formSettingsCtrl = function (
  vm.close = function () {
   $uibModalInstance.dismiss("cancel");
  };
+
 };
 
 formSettingsCtrl.$inject = [

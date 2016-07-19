@@ -1,8 +1,8 @@
 <div class="modal-header">
  <div class="qf-title">
   <p class="qf-truncate">
-   <i class="fa fa-list"></i>
-   {{formSettingsCtrl.item.name}} - {{formSettingsCtrl.item.form.label}}
+   <i class="qf-pre-icon fa fa-file"></i>
+   {{formSettingsCtrl.formSrv.formName}}
   </p>
  </div>
  <md-button class="qf-close" ng-click="formSettingsCtrl.close()">
@@ -10,16 +10,41 @@
  </md-button>
 </div>
 <div class="modal-body" hm-swipe-right="formSettingsCtrl.close()">
- <form class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-  <md-input-container class="md-block">
-   <input type="text"
-          ng-model="formSettingsCtrl.formSrv.formName"   placeholder="Form Name">
-  </md-input-container>
-  <md-input-container class="md-block">
-   <input type="text"
-          ng-model="formSettingsCtrl.formSrv.formDescription"  placeholder="Form Description">
-  </md-input-container>
- </form>
+ <ul class="nav nav-tabs" role="tablist">
+  <li role="presentation" class="active">
+   <a href="#qf-form-properties-tab" aria-controls="properties" role="tab" data-toggle="tab">
+    Properties
+   </a>
+  </li>
+  <li role="presentation" class="">
+   <a href="#qf-form-design-tab" aria-controls="design" role="tab" data-toggle="tab">
+    Design
+   </a>
+  </li>
+ </ul>
+ <div class="tab-content">
+  <br>
+  <div role="tabpanel" class="tab-pane active" id="qf-form-properties-tab">
+   <form class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+    <md-input-container class="md-block">
+     <input type="text"
+            ng-model="formSettingsCtrl.formSrv.formName"   placeholder="Form Name">
+    </md-input-container>
+    <md-input-container class="md-block">
+     <input type="text"
+            ng-model="formSettingsCtrl.formSrv.formDescription"  placeholder="Form Description">
+    </md-input-container>
+   </form>
+  </div>
+  <div role="tabpanel" class="tab-pane" id="qf-form-design-tab">
+   <form class="row">
+    <md-input-container flex class="md-block" ng-repeat="styleMap in designerCtrl.formSrv.formStylesMap">
+     <input type="{{styleMap.type}}"
+            ng-model="styleMap.value" value="{{styleMap.value}}" placeholder="{{styleMap.label}}">
+    </md-input-container>
+   </form>
+  </div>
+ </div>
 </div>
 <div ng-if="false" class="modal-footer">
  <div class="qf-flex-container">

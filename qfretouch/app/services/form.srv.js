@@ -14,6 +14,25 @@
           var FormSrv = function () {
            this.formName = "Untitled Form";
            this.description = "";
+           this.formStyles = {};
+           this.formStylesMap = [
+            {
+             label: "Background Color",
+             name: "background-color",
+             value: "#FFFFFF",
+             type: "color",
+             prepend: "",
+             append: "",
+            },
+            {
+             label: "Padding (px)",
+             name: "padding",
+             value: "5",
+             type: "number",
+             prepend: "",
+             append: 'px',
+            }
+           ];
            this.Contents = [];
           };
 
