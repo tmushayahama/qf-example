@@ -21,6 +21,7 @@ define([
  'angular-aria',
  'angular-material',
  'angular-gridster',
+ 'angular-base64-upload',
  'jsignature',
  //'qf-builder',
  //'qf-components',
@@ -43,6 +44,7 @@ define([
   'ngAside',
   'ngMaterial',
   'gridster',
+  'naif.base64',
   //'builder',
   //'builder.components',
   'qfretouch.app',
@@ -359,7 +361,58 @@ define([
      }
     ]
    }
-  }]
+  },
+  {
+   templateUrl: "qfretouch/common/views/templates/datepicker.tpl.html",
+   name: 'Datepicker',
+   component: {
+    label: 'Date',
+    description: 'Pick a Date',
+    placeholder: 'date',
+    required: false,
+    validationOptions: [
+     {
+      label: 'none',
+      rule: '/.*/'
+     }, {
+      label: 'number',
+      rule: '[number]'
+     }, {
+      label: 'email',
+      rule: '[email]'
+     }, {
+      label: 'url',
+      rule: '[url]'
+     }
+    ]
+   }
+  },
+  {
+   templateUrl: "qfretouch/common/views/templates/picturebox.tpl.html",
+   name: 'Picture',
+   component: {
+    label: 'Date',
+    description: 'Pick a Date',
+    placeholder: 'date',
+    required: false,
+    validationOptions: [
+     {
+      label: 'none',
+      rule: '/.*/'
+     }, {
+      label: 'number',
+      rule: '[number]'
+     }, {
+      label: 'email',
+      rule: '[email]'
+     }, {
+      label: 'url',
+      rule: '[url]'
+     }
+    ]
+   }
+  },
+ ]
          );
  return qfretouch;
 });

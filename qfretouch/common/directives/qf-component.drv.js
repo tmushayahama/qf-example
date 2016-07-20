@@ -102,6 +102,20 @@ angular.module('qfretouch').directive('qfComponent', ['$window', '$timeout',
       })();
       return $scope.inputText = $scope.options[0];
      });
+
+     $scope.onChange = function (e, fileList) {
+      alert('this is on-change handler!');
+     };
+
+     $scope.pictureItem = {
+      file: {},
+      onLoad: function (e, reader, file, fileList, fileOjects, fileObj) {
+       //alert('this is handler for file reader onload event!');
+       console.log("file", $scope.pictureItem.file);
+      }
+     }
+
+
     }
    ],
    link: function (scope, element, attr, ctrl) {
