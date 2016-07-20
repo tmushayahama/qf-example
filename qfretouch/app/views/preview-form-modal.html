@@ -43,7 +43,7 @@
        ng-style="{
              width:previewFormCtrl.portrait? previewFormCtrl.devices[previewFormCtrl.selectedDeviceIndex].width : previewFormCtrl.devices[previewFormCtrl.selectedDeviceIndex].height + 'px',
              height: previewFormCtrl.portrait? previewFormCtrl.devices[previewFormCtrl.selectedDeviceIndex].height : previewFormCtrl.devices[previewFormCtrl.selectedDeviceIndex].width + 'px' }">
-   <form class="">
+   <form class="" ng-style="designerCtrl.formSrv.formStyles">
     <div gridster="previewFormCtrl.gridsterOpts">
      <ul class="qf-builder">
       <li gridster-item="item.gridMap" ng-repeat="item in designerCtrl.formItems track by $index"

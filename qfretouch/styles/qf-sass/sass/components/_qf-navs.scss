@@ -19,6 +19,10 @@
   .md-icon-button {
    font-size: 20px;
    line-height: 30px;
+   @include respond-to(qfretouch-xs) {
+    width: 30px;
+    margin: 0 5px;
+   }
   }
  }
  md-input-container {

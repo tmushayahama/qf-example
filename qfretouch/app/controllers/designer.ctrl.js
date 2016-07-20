@@ -28,6 +28,7 @@ var designerCtrl = function (
   defaultSizeY: 7,
   draggable: {
    enabled: true,
+   scroll: true,
    handle: '.qf-grab-me',
    start: function (event, $element, widget) {}, // optional callback fired when drag is started,
    drag: function (event, $element, widget) {},

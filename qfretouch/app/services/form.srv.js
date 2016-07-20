@@ -17,9 +17,33 @@
            this.formStyles = {};
            this.formStylesMap = [
             {
+             label: "Width (px)",
+             name: "width",
+             value: "960",
+             type: "number",
+             prepend: "",
+             append: "px",
+            },
+            {
+             label: "Height (px)",
+             name: "height",
+             value: "660",
+             type: "number",
+             prepend: "",
+             append: "px",
+            },
+            {
              label: "Background Color",
              name: "background-color",
              value: "#FFFFFF",
+             type: "color",
+             prepend: "",
+             append: "",
+            },
+            {
+             label: "Foreground Color",
+             name: "color",
+             value: "#111111",
              type: "color",
              prepend: "",
              append: "",
