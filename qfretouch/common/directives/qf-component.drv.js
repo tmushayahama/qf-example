@@ -82,7 +82,7 @@ angular.module('qfretouch').directive('qfComponent', ['$window', '$timeout',
      };
 
      $scope.removeOption = function (option) {
-      //console.log(index, ' - ', vm.formItems.indexOf(component));
+      //console.log(index, ' - ', vm.formSrv.formItems.indexOf(component));
       $scope.component.options.splice($scope.component.options.indexOf($scope.component.options.indexOf(option), 1));
      };
 

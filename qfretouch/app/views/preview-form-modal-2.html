@@ -21,7 +21,7 @@
   <form class="form-horizontal">
    <div gridster="designerCtrl.gridsterOpts">
     <ul class="qf-builder">
-     <li gridster-item="item.gridMap" ng-repeat="item in designerCtrl.formItems track by $index"
+     <li gridster-item="item.gridMap" ng-repeat="item in designerCtrl.formSrv.formItems track by $index"
          class="qf-component">
       <div qf-component template-url="{{item.templateUrl}}"
            index="{{$index}}"

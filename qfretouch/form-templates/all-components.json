@@ -1,0 +1,335 @@
+{
+ "formName" :"All Components Sample" ,
+ "description" :"" ,
+ "formStyles" :{
+  "width" :"960px" ,
+  "height" :"660px" ,
+  "background-color" :"#FFFFFF" ,
+  "color" :"#111111" ,
+  "padding" :"5px"
+ } ,
+ "formStylesMap" :[
+  {
+   "label" :"Width (px)" ,
+   "name" :"width" ,
+   "value" :"960" ,
+   "type" :"number" ,
+   "prepend" :"" ,
+   "append" :"px"
+  } ,
+  {
+   "label" :"Height (px)" ,
+   "name" :"height" ,
+   "value" :"660" ,
+   "type" :"number" ,
+   "prepend" :"" ,
+   "append" :"px"
+  } ,
+  {
+   "label" :"Background Color" ,
+   "name" :"background-color" ,
+   "value" :"#FFFFFF" ,
+   "type" :"color" ,
+   "prepend" :"" ,
+   "append" :""
+  } ,
+  {
+   "label" :"Foreground Color" ,
+   "name" :"color" ,
+   "value" :"#111111" ,
+   "type" :"color" ,
+   "prepend" :"" ,
+   "append" :""
+  } ,
+  {
+   "label" :"Padding (px)" ,
+   "name" :"padding" ,
+   "value" :"5" ,
+   "type" :"number" ,
+   "prepend" :"" ,
+   "append" :"px"
+  }
+ ] ,
+ "formItems" :[
+  {
+   "templateUrl" :"qfretouch/common/views/templates/heading.tpl.html" ,
+   "name" :"Heading" ,
+   "component" :{
+    "label" :"First Name" ,
+    "description" :"Enter your first name" ,
+    "placeholder" :"Introduction" ,
+    "required" :false ,
+    "validationOptions" :[
+     {
+      "label" :"none" ,
+      "rule" :"/.*/"
+     } ,
+     {
+      "label" :"number" ,
+      "rule" :"[number]"
+     } ,
+     {
+      "label" :"email" ,
+      "rule" :"[email]"
+     } ,
+     {
+      "label" :"url" ,
+      "rule" :"[url]"
+     }
+    ] ,
+    "inputText" :"This is a heading"
+   } ,
+   "gridMap" :{
+    "sizeX" :12 ,
+    "sizeY" :3 ,
+    "row" :0 ,
+    "col" :0
+   }
+  } ,
+  {
+   "templateUrl" :"qfretouch/common/views/templates/paragraph.tpl.html" ,
+   "name" :"Paragraph" ,
+   "component" :{
+    "label" :"First Name" ,
+    "description" :"Enter your first name" ,
+    "placeholder" :"Introduction" ,
+    "required" :false ,
+    "rows" :4 ,
+    "validationOptions" :[
+     {
+      "label" :"none" ,
+      "rule" :"/.*/"
+     } ,
+     {
+      "label" :"number" ,
+      "rule" :"[number]"
+     } ,
+     {
+      "label" :"email" ,
+      "rule" :"[email]"
+     } ,
+     {
+      "label" :"url" ,
+      "rule" :"[url]"
+     }
+    ] ,
+    "inputText" :"A parapgraph sgfsfsd"
+   } ,
+   "gridMap" :{
+    "sizeX" :12 ,
+    "sizeY" :3 ,
+    "row" :3 ,
+    "col" :0
+   }
+  } ,
+  {
+   "templateUrl" :"qfretouch/common/views/templates/textbox.tpl.html" ,
+   "name" :"Textbox" ,
+   "component" :{
+    "label" :"First Name" ,
+    "description" :"Enter your first name" ,
+    "placeholder" :"ex. Jamie Doe" ,
+    "required" :false ,
+    "validationOptions" :[
+     {
+      "label" :"none" ,
+      "rule" :"/.*/"
+     } ,
+     {
+      "label" :"number" ,
+      "rule" :"[number]"
+     } ,
+     {
+      "label" :"email" ,
+      "rule" :"[email]"
+     } ,
+     {
+      "label" :"url" ,
+      "rule" :"[url]"
+     }
+    ]
+   } ,
+   "gridMap" :{
+    "row" :6 ,
+    "col" :0
+   }
+  } ,
+  {
+   "templateUrl" :"qfretouch/common/views/templates/signature.tpl.html" ,
+   "name" :"Signature" ,
+   "component" :{
+    "label" :"Signature" ,
+    "description" :"please sign above" ,
+    "placeholder" :"" ,
+    "required" :false ,
+    "validationOptions" :[
+     {
+      "label" :"none" ,
+      "rule" :"/.*/"
+     } ,
+     {
+      "label" :"number" ,
+      "rule" :"[number]"
+     } ,
+     {
+      "label" :"email" ,
+      "rule" :"[email]"
+     } ,
+     {
+      "label" :"url" ,
+      "rule" :"[url]"
+     }
+    ]
+   } ,
+   "gridMap" :{
+    "row" :6 ,
+    "col" :6
+   }
+  } ,
+  {
+   "templateUrl" :"qfretouch/common/views/templates/checkbox.tpl.html" ,
+   "name" :"Checkbox" ,
+   "component" :{
+    "label" :"Are you going?" ,
+    "description" :"Select answer below" ,
+    "placeholder" :"" ,
+    "options" :[
+     "yes" ,
+     "no"
+    ] ,
+    "required" :false ,
+    "validationOptions" :[
+     {
+      "label" :"none" ,
+      "rule" :"/.*/"
+     } ,
+     {
+      "label" :"number" ,
+      "rule" :"[number]"
+     } ,
+     {
+      "label" :"email" ,
+      "rule" :"[email]"
+     } ,
+     {
+      "label" :"url" ,
+      "rule" :"[url]"
+     }
+    ] ,
+    "optionsText" :"yes\nno"
+   } ,
+   "gridMap" :{
+    "row" :13 ,
+    "col" :0
+   }
+  } ,
+  {
+   "templateUrl" :"qfretouch/common/views/templates/textarea.tpl.html" ,
+   "name" :"Textarea" ,
+   "component" :{
+    "label" :"Biography" ,
+    "description" :"Enter your first name" ,
+    "placeholder" :"ex. Ex tritani equidem argumentum pro, eam ea amet veniam. Alii noster oportere te his, consul fierent accusamus ea per, sed ferri aeq" ,
+    "required" :false ,
+    "rows" :2 ,
+    "validationOptions" :[
+     {
+      "label" :"none" ,
+      "rule" :"/.*/"
+     } ,
+     {
+      "label" :"number" ,
+      "rule" :"[number]"
+     } ,
+     {
+      "label" :"email" ,
+      "rule" :"[email]"
+     } ,
+     {
+      "label" :"url" ,
+      "rule" :"[url]"
+     }
+    ]
+   } ,
+   "gridMap" :{
+    "row" :13 ,
+    "col" :6
+   }
+  } ,
+  {
+   "templateUrl" :"qfretouch/common/views/templates/radiobox.tpl.html" ,
+   "name" :"Radiobox" ,
+   "component" :{
+    "label" :"Are you going?" ,
+    "description" :"Select answer below" ,
+    "placeholder" :"" ,
+    "options" :[
+     "yes" ,
+     "no"
+    ] ,
+    "required" :false ,
+    "validationOptions" :[
+     {
+      "label" :"none" ,
+      "rule" :"/.*/"
+     } ,
+     {
+      "label" :"number" ,
+      "rule" :"[number]"
+     } ,
+     {
+      "label" :"email" ,
+      "rule" :"[email]"
+     } ,
+     {
+      "label" :"url" ,
+      "rule" :"[url]"
+     }
+    ] ,
+    "optionsText" :"yes\nno"
+   } ,
+   "gridMap" :{
+    "row" :20 ,
+    "col" :0
+   }
+  } ,
+  {
+   "templateUrl" :"qfretouch/common/views/templates/dropdown.tpl.html" ,
+   "name" :"Dropdown" ,
+   "component" :{
+    "label" :"Are you going?" ,
+    "description" :"Select answer below" ,
+    "placeholder" :"" ,
+    "options" :[
+     "yes" ,
+     "no"
+    ] ,
+    "required" :false ,
+    "validationOptions" :[
+     {
+      "label" :"none" ,
+      "rule" :"/.*/"
+     } ,
+     {
+      "label" :"number" ,
+      "rule" :"[number]"
+     } ,
+     {
+      "label" :"email" ,
+      "rule" :"[email]"
+     } ,
+     {
+      "label" :"url" ,
+      "rule" :"[url]"
+     }
+    ] ,
+    "optionsText" :"yes\nno" ,
+    "inputText" :"yes"
+   } ,
+   "gridMap" :{
+    "row" :20 ,
+    "col" :6
+   }
+  }
+ ]
+}

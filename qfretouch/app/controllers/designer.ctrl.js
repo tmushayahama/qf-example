@@ -19,6 +19,7 @@ var designerCtrl = function (
         ) {
  var vm = this;
  vm.formSrv = new FormSrv();
+ vm.formSrv.getFormTemplates("qfretouch/form-templates/all-components.json");
 
  vm.gridsterOpts = {
   columns: 12,
@@ -39,7 +40,7 @@ var designerCtrl = function (
  };
 
  vm.components = components;
- vm.formItems = [];
+ vm.formSrv.formItems = [];
 
  vm.clearComponent = function () {
   vm.components = [];
@@ -51,24 +52,24 @@ var designerCtrl = function (
    sizeX: 6,
    sizeY: 7
   };
-  vm.formItems.push(formItem);
+  vm.formSrv.formItems.push(formItem);
  };
 
  vm.duplicateComponent = function (component) {
   var formItem = angular.copy(component);
   formItem.gridMap = {};//clear the gridData for row and col
 
-  vm.formItems.push(formItem);
+  vm.formSrv.formItems.push(formItem);
  };
 
  vm.removeComponent = function (component) {
-  //console.log(index, ' - ', vm.formItems.indexOf(component));
-  vm.formItems.splice(vm.formItems.indexOf(vm.formItems.indexOf(component), 1));
+  //console.log(index, ' - ', vm.formSrv.formItems.indexOf(component));
+  vm.formSrv.formItems.splice(vm.formSrv.formItems.indexOf(vm.formSrv.formItems.indexOf(component), 1));
  };
 
 //for testing
  for (var i = 0; i < vm.components.length; i++) {
-  vm.formItems.push(angular.copy(vm.components[i]));
+  vm.formSrv.formItems.push(angular.copy(vm.components[i]));
  }
 
  vm.formName = "Untitled Form";
@@ -94,6 +95,7 @@ var designerCtrl = function (
  };
 
  vm.previewForm = function () {
+  // console.log("form ", JSON.stringify(vm.formSrv));
   var modalInstance = $uibModal.open({
    templateUrl: 'preview-form-modal.html',
    controller: 'PreviewFormCtrl as previewFormCtrl',

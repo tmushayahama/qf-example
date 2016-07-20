@@ -15,6 +15,8 @@
            this.formName = "Untitled Form";
            this.description = "";
            this.formStyles = {};
+           this.formTemplates = [];
+           this.formItems = [];
            this.formStylesMap = [
             {
              label: "Width (px)",
@@ -77,6 +79,30 @@
             return deferred.reject(data);
            }
            return deferred.resolve(data);
+          };
+
+          FormSrv.prototype.getFormTemplates = function (url) {
+           var self = this;
+           var deferred = $q.defer();
+           self.error = '';
+           self.formTemplates = [];
+           $http.get(url).success(function (data) {
+            self.formTemplates.push(data);
+            self.deferredHandler(data, deferred);
+           }).error(function (data) {
+            self.deferredHandler(data, deferred, 'Unknown error');
+           });
+           return deferred.promise;
+          };
+
+          FormSrv.prototype.setFormTemplate = function (template) {
+           var self = this;
+           var deferred = $q.defer();
+           self.error = '';
+           self.formName = template.formName;
+           self.description = template.description;
+           self.formStylesMap = template.formStylesMap;
+           self.formItems = template.formItems;
           };
 
           FormSrv.prototype.buildForm = function (formData) {

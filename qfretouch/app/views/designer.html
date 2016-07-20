@@ -45,8 +45,14 @@
     </md-input-container>
    </form>
    <div gridster="designerCtrl.gridsterOpts">
-    <ul class="qf-builder">
-     <li gridster-item="item.gridMap" ng-repeat="item in designerCtrl.formItems track by $index"
+    <div ng-show="designerCtrl.formSrv.formItems.length === 0" class="qf-no-info">
+     <h2>
+      No fields on this form
+     </h2>
+     This is a design view of your form. To add a component, click on the desired component
+    </div>
+    <ul class="qf-builder" ng-hide="designerCtrl.formSrv.formItems.length === 0">
+     <li gridster-item="item.gridMap" ng-repeat="item in designerCtrl.formSrv.formItems track by $index"
          class="qf-component">
       <div qf-component template-url="{{item.templateUrl}}"
            index="{{$index}}"

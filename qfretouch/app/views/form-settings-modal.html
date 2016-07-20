@@ -21,6 +21,11 @@
     Design
    </a>
   </li>
+  <li role="presentation" class="">
+   <a href="#qf-form-templates-tab" aria-controls="templates" role="tab" data-toggle="tab">
+    Templates
+   </a>
+  </li>
  </ul>
  <div class="tab-content">
   <br>
@@ -42,6 +47,15 @@
      <input type="{{styleMap.type}}"
             ng-model="styleMap.value" value="{{styleMap.value}}" placeholder="{{styleMap.label}}">
     </md-input-container>
+   </form>
+  </div>
+  <div role="tabpanel" class="tab-pane" id="qf-form-templates-tab">
+   <form class="row">
+    <div ng-repeat="formTemplate in designerCtrl.formSrv.formTemplates">
+     <button type="button" ng-click="designerCtrl.formSrv.setFormTemplate(formTemplate)">
+      {{formTemplate.formName}}
+     </button>
+    </div>
    </form>
   </div>
  </div>
