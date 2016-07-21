@@ -120,6 +120,7 @@ var designerCtrl = function (
   console.log(vm.formSrv.formStyles, "");
  }, true);
 
+
  /*
 
   var checkbox, textbox;

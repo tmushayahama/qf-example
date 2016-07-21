@@ -410,8 +410,43 @@ define([
       rule: '[url]'
      }
     ]
-   }
-  },
+   },
+   componentStyles: {},
+   componentStylesMap: [
+    {
+     label: "Background Image",
+     name: "background-image",
+     value: "",
+     type: "text",
+     prepend: "",
+     append: "",
+    },
+    {
+     label: "Background Size",
+     name: "background-size",
+     value: "100%",
+     type: "text",
+     prepend: "",
+     append: "",
+    },
+    {
+     label: "Background Color",
+     name: "background-color",
+     value: "#FFFFFF",
+     type: "color",
+     prepend: "",
+     append: ""
+    },
+    {
+     label: "Foreground Color",
+     name: "color",
+     value: "#111111",
+     type: "color",
+     prepend: "",
+     append: ""
+    }
+   ]
+  }
  ]
          );
  return qfretouch;

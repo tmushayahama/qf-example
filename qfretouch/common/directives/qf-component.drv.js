@@ -13,9 +13,10 @@ angular.module('qfretouch').directive('qfComponent', ['$window', '$timeout',
    },
    template: '<ng-include src="templateUrl"></ng-include>',
    controller: [
+    '_',
     '$scope',
     '$aside',
-    function ($scope, $aside) {
+    function (_, $scope, $aside) {
      // $scope.remove = function () {
      // $scope.dashboard.widgets.splice($scope.dashboard.widgets.indexOf(widget), 1);
      //  };
@@ -103,6 +104,13 @@ angular.module('qfretouch').directive('qfComponent', ['$window', '$timeout',
       return $scope.inputText = $scope.options[0];
      });
 
+     $scope.$watch('item.componentStylesMap', function (styles) {
+      angular.forEach(styles, function (style) {
+       $scope.item.componentStyles[style.name] = style.prepend + style.value + style.append;
+      });
+      // console.log(vm.formSrv.formStyles, "");
+     }, true);
+
      $scope.onChange = function (e, fileList) {
       alert('this is on-change handler!');
      };
@@ -114,6 +122,14 @@ angular.module('qfretouch').directive('qfComponent', ['$window', '$timeout',
        console.log("file", $scope.pictureItem.file);
       }
      }
+
+     $scope.$watch('pictureItem.file', function (file) {
+      var background = _.find($scope.item.componentStylesMap, function (item) {
+       return item.name === "background-image";
+      });
+      background.value = "url(data:" + file.filetype + ";base64," + file.base64 + ')';
+      //console.log(background, "");
+     }, true);
 
 
     }

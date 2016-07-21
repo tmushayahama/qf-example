@@ -17,7 +17,8 @@
   </md-button>
  </div>
 </div>
-<div class="form-group qf-component-use qf-hidden-component-mode" ng-style="{'background-image': 'url(data:image/png;base64,'+pictureItem.file.base64+')'}">
+<div class="form-group qf-component-use qf-hidden-component-mode"
+     ng-style="item.componentStyles">
  <label for="{{component.formName + index}}" class="qf-hidden-design-mode col-lg-12 col-md-12 col-sm-12 col-xs-12 control-label"
         ng-class="{'qf-required':component.required}">
   {{component.label}}
