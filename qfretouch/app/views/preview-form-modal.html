@@ -2,7 +2,7 @@
  <div class="qf-title">
   <p class="qf-truncate">
    <i class="fa fa-eye pull-left"></i>
-   Viewer
+   Preview Form
   </p>
  </div>
  <md-button class="qf-close" ng-click="previewFormCtrl.close()">
@@ -43,15 +43,15 @@
        ng-style="{
              width:previewFormCtrl.portrait? previewFormCtrl.devices[previewFormCtrl.selectedDeviceIndex].width : previewFormCtrl.devices[previewFormCtrl.selectedDeviceIndex].height + 'px',
              height: previewFormCtrl.portrait? previewFormCtrl.devices[previewFormCtrl.selectedDeviceIndex].height : previewFormCtrl.devices[previewFormCtrl.selectedDeviceIndex].width + 'px' }">
-   <form class="" ng-style="designerCtrl.formSrv.formStyles">
+   <form class="" ng-style="previewFormCtrl.formSrv.formStyles">
     <div gridster="previewFormCtrl.gridsterOpts">
      <ul class="qf-builder">
-      <li gridster-item="item.gridMap" ng-repeat="item in designerCtrl.formSrv.formItems track by $index"
+      <li gridster-item="item.gridMap" ng-repeat="item in previewFormCtrl.formSrv.formItems track by $index"
           class="qf-component">
        <div qf-component template-url="{{item.templateUrl}}"
             index="{{$index}}"
-            remove-component="designerCtrl.removeComponent"
-            duplicate-component="designerCtrl.duplicateComponent"
+            remove-component="previewFormCtrl.removeComponent"
+            duplicate-component="previewFormCtrl.duplicateComponent"
             item="item"></div>
       </li>
      </ul>

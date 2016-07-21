@@ -104,9 +104,12 @@ angular.module('qfretouch').directive('qfComponent', ['$window', '$timeout',
       return $scope.inputText = $scope.options[0];
      });
 
-     $scope.$watch('item.componentStylesMap', function (styles) {
-      angular.forEach(styles, function (style) {
-       $scope.item.componentStyles[style.name] = style.prepend + style.value + style.append;
+     $scope.$watch('item.componentStylesMap', function (componentStyles) {
+      angular.forEach(componentStyles, function (componentStyle) {
+       $scope.item.componentStyles[componentStyle.controlName] = {};
+       angular.forEach(componentStyle.controlStyles, function (style) {
+        $scope.item.componentStyles[componentStyle.controlName][style.name] = style.prepend + style.value + style.append;
+       });
       });
       // console.log(vm.formSrv.formStyles, "");
      }, true);
@@ -117,6 +120,16 @@ angular.module('qfretouch').directive('qfComponent', ['$window', '$timeout',
 
      $scope.pictureItem = {
       file: {},
+      removeImage: function () {
+       $scope.pictureItem.file = {};
+       var mainControlStyles = _.find($scope.item.componentStylesMap, function (item) {
+        return item.controlName === "main";
+       });
+       var background = _.find(mainControlStyles.controlStyles, function (item) {
+        return item.name === "background-image";
+       });
+       background.value = "";
+      },
       onLoad: function (e, reader, file, fileList, fileOjects, fileObj) {
        //alert('this is handler for file reader onload event!');
        console.log("file", $scope.pictureItem.file);
@@ -124,14 +137,23 @@ angular.module('qfretouch').directive('qfComponent', ['$window', '$timeout',
      }
 
      $scope.$watch('pictureItem.file', function (file) {
-      var background = _.find($scope.item.componentStylesMap, function (item) {
+      if (!file.base64) {
+       return;
+      }
+      //var background = _.find($scope.item.componentStylesMap, function (item) {
+      // return item.name === "background-image";
+      //});
+      var mainControlStyles = _.find($scope.item.componentStylesMap, function (item) {
+       return item.controlName === "main";
+      });
+
+      var background = _.find(mainControlStyles.controlStyles, function (item) {
        return item.name === "background-image";
       });
+
       background.value = "url(data:" + file.filetype + ";base64," + file.base64 + ')';
       //console.log(background, "");
      }, true);
-
-
     }
    ],
    link: function (scope, element, attr, ctrl) {

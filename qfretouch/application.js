@@ -153,10 +153,26 @@ define([
    templateUrl: "qfretouch/common/views/templates/heading.tpl.html",
    name: 'Heading',
    component: {
-    label: 'First Name',
-    description: 'Enter your first name',
-    placeholder: 'Introduction',
-    required: false,
+    label: null,
+    description: null,
+    placeholder: 'Type your heading',
+    required: null,
+    componentStyles: {},
+    componentStylesMap: [
+     {
+      controlName: "component1",
+      controlStyles: [
+       {
+        label: "Color",
+        name: "color",
+        value: "0000FF",
+        type: "color",
+        prepend: "",
+        append: "",
+       }
+      ]
+     }
+    ],
     validationOptions: [
      {
       label: 'none',
@@ -185,8 +201,8 @@ define([
     label: 'First Name',
     description: 'Enter your first name',
     placeholder: 'Introduction',
-    required: false,
-    rows: 4,
+    required: null,
+    rows: null,
     validationOptions: [
      {
       label: 'none',
@@ -414,36 +430,41 @@ define([
    componentStyles: {},
    componentStylesMap: [
     {
-     label: "Background Image",
-     name: "background-image",
-     value: "",
-     type: "text",
-     prepend: "",
-     append: "",
-    },
-    {
-     label: "Background Size",
-     name: "background-size",
-     value: "100%",
-     type: "text",
-     prepend: "",
-     append: "",
-    },
-    {
-     label: "Background Color",
-     name: "background-color",
-     value: "#FFFFFF",
-     type: "color",
-     prepend: "",
-     append: ""
-    },
-    {
-     label: "Foreground Color",
-     name: "color",
-     value: "#111111",
-     type: "color",
-     prepend: "",
-     append: ""
+     controlName: "main",
+     controlStyles: [
+      {
+       label: "Background Image",
+       name: "background-image",
+       value: "",
+       type: "text",
+       prepend: "",
+       append: "",
+      },
+      {
+       label: "Background Size",
+       name: "background-size",
+       value: "100%",
+       type: "text",
+       prepend: "",
+       append: "",
+      },
+      {
+       label: "Background Color",
+       name: "background-color",
+       value: "#FFFFFF",
+       type: "color",
+       prepend: "",
+       append: ""
+      },
+      {
+       label: "Foreground Color",
+       name: "color",
+       value: "#111111",
+       type: "color",
+       prepend: "",
+       append: ""
+      }
+     ]
     }
    ]
   }

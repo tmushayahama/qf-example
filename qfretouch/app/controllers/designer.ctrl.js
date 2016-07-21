@@ -22,6 +22,7 @@ var designerCtrl = function (
  vm.formSrv.getFormTemplates("qfretouch/form-templates/all-components.json");
 
  vm.gridsterOpts = {
+  //floating: false,
   columns: 12,
   mobileBreakPoint: 600,
   rowHeight: 30,
@@ -103,6 +104,11 @@ var designerCtrl = function (
    size: 'preview-form',
    // placement: 'right',
    //backdrop: 'static',
+   resolve: {
+    formSrv: function () {
+     return vm.formSrv;
+    }
+   }
   });
   modalInstance.result.then(function (searchCriteria) {
 

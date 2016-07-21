@@ -2,9 +2,24 @@
 'use strict';
 var previewFormCtrl = function (
         config,
+        formSrv,
         $uibModalInstance
         ) {
  var vm = this;
+ vm.formSrv = angular.copy(formSrv);
+
+ //adjust the height to cater for the handle
+ vm.adjust = function () {
+  angular.forEach(vm.formSrv.formItems, function (formItem) {
+   if (formItem.gridMap.sizeY) {
+    formItem.gridMap.sizeY -= 1;
+   }
+   // formItem.gridMap.row = null;
+  });
+ };
+
+ vm.adjust();
+
 
  vm.selectedDeviceIndex = 0;
 
@@ -74,10 +89,12 @@ var previewFormCtrl = function (
  vm.close = function () {
   $uibModalInstance.dismiss("cancel");
  };
+ //vm.adjust();
 };
 
 previewFormCtrl.$inject = [
  'config',
+ 'formSrv',
  '$uibModalInstance'
 ];
 

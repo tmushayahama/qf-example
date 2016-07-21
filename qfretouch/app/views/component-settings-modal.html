@@ -10,29 +10,73 @@
  </md-button>
 </div>
 <div class="modal-body" hm-swipe-right="componentSettingsCtrl.close()">
- <form class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-  <md-input-container class="md-block" md-no-float>
-   <input type="text" class="qf-form-name-input"
-          ng-model="componentSettingsCtrl.item.component.label"   placeholder="Label">
-  </md-input-container>
-  <div class="checkbox qf-hidden-view-mode qf-required-checkbox">
-   <label>
-    <input type='checkbox' ng-model="componentSettingsCtrl.item.component.required" />
-    Required
-   </label>
+ <ul class="nav nav-tabs" role="tablist">
+  <li role="presentation" class="active">
+   <a href="#qf-component-properties-tab" aria-controls="properties" role="tab" data-toggle="tab">
+    Properties
+   </a>
+  </li>
+  <li role="presentation" class="">
+   <a href="#qf-component-design-tab" aria-controls="design" role="tab" data-toggle="tab">
+    Design
+   </a>
+  </li>
+  <li role="presentation" class="">
+   <a href="#qf-component-templates-tab" aria-controls="templates" role="tab" data-toggle="tab">
+    Templates
+   </a>
+  </li>
+ </ul>
+ <div class="tab-content">
+  <br>
+  <div role="tabpanel" class="tab-pane active" id="qf-component-properties-tab">
+
+
+   <form class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+    <md-input-container class="md-block" md-no-float>
+     <input type="text" class="qf-component-name-input"
+            ng-model="componentSettingsCtrl.item.component.label"   placeholder="Label">
+    </md-input-container>
+    <div class="checkbox qf-hidden-view-mode qf-required-checkbox">
+     <label>
+      <input type='checkbox' ng-model="componentSettingsCtrl.item.component.required" />
+      Required
+     </label>
+    </div>
+    <md-input-container class="md-block" md-no-float>
+     <input type="number" class=""
+            ng-model="componentSettingsCtrl.item.component.rows"   placeholder="Rows">
+    </md-input-container>
+    <md-input-container class="md-block" md-no-float>
+     <input type="text" class=""
+            ng-model="componentSettingsCtrl.item.component.description"   placeholder="Description">
+    </md-input-container>
+    <textarea ng-model="componentSettingsCtrl.item.component.optionsText"
+              class="form-control" rows='5'
+              placeholder="Options one per line"></textarea>
+   </form>
   </div>
-  <md-input-container class="md-block" md-no-float>
-   <input type="number" class="qf-form-name-input"
-          ng-model="componentSettingsCtrl.item.component.rows"   placeholder="Rows">
-  </md-input-container>
-  <md-input-container class="md-block" md-no-float>
-   <input type="text" class="qf-form-name-input"
-          ng-model="componentSettingsCtrl.item.component.description"   placeholder="Description">
-  </md-input-container>
-  <textarea ng-model="componentSettingsCtrl.item.component.optionsText"
-            class="form-control" rows='5'
-            placeholder="Options one per line"></textarea>
- </form>
+  <div role="tabpanel" class="tab-pane" id="qf-component-design-tab">
+   <form class="row" ng-repeat="styleMap in componentSettingsCtrl.item.component.componentStylesMap">
+    <h4>
+     {{styleMap.controlName}}
+    </h4>
+    <md-input-container flex class="md-block" ng-repeat="controlStyleMap in styleMap.controlStyles">
+     <input type="{{controlStyleMap.type}}"
+            ng-model="controlStyleMap.value" value="{{controlStyleMap.value}}" placeholder="{{controlStyleMap.label}}">
+    </md-input-container>
+   </form>
+  </div>
+  <div role="tabpanel" class="tab-pane" id="qf-component-templates-tab">
+   <form class="row">
+    <div ng-repeat="formTemplate in designerCtrl.formSrv.formTemplates">
+     <button type="button" ng-click="designerCtrl.formSrv.setFormTemplate(formTemplate)">
+      {{formTemplate.formName}}
+     </button>
+    </div>
+   </form>
+  </div>
+ </div>
 </div>
 <div ng-if="false" class="modal-footer">
  <div class="qf-flex-container">
