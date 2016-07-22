@@ -1,0 +1,526 @@
+{
+ "formName" :"Registration Form" ,
+ "description" :"" ,
+ "formStyles" :{
+  "width" :"700px" ,
+  "height" :"800px" ,
+  "background-color" :"#FFFFFF" ,
+  "color" :"#111111" ,
+  "padding" :"5px"
+ } ,
+ "formItems" :[
+  {
+   "templateUrl" :"qfretouch/common/views/templates/paragraph.tpl.html" ,
+   "name" :"Paragraph" ,
+   "component" :{
+    "label" :"First Name" ,
+    "description" :"Enter your first name" ,
+    "placeholder" :"Introduction" ,
+    "required" :null ,
+    "rows" :null ,
+    "componentStyles" :{
+     "component1" :{
+      "color" :"#408080" ,
+      "font-size" :"12px" ,
+      "text-align" :"right"
+     }
+    } ,
+    "componentStylesMap" :[{
+      "controlName" :"component1" ,
+      "controlStyles" :[{
+        "label" :"Color" ,
+        "name" :"color" ,
+        "value" :"#408080" ,
+        "type" :"color" ,
+        "prepend" :"" ,
+        "append" :"" ,
+        "$$hashKey" :"object:643"
+       } ,{
+        "label" :"Font Size" ,
+        "name" :"font-size" ,
+        "value" :12 ,
+        "type" :"number" ,
+        "prepend" :"" ,
+        "append" :"px" ,
+        "$$hashKey" :"object:644"
+       } ,{
+        "label" :"Text Align" ,
+        "name" :"text-align" ,
+        "value" :"right" ,
+        "type" :"text" ,
+        "prepend" :"" ,
+        "append" :"" ,
+        "$$hashKey" :"object:645"
+       }] ,
+      "$$hashKey" :"object:637"
+     }] ,
+    "validationOptions" :[{
+      "label" :"none" ,
+      "rule" :"/.*/"
+     } ,{
+      "label" :"number" ,
+      "rule" :"[number]"
+     } ,{
+      "label" :"email" ,
+      "rule" :"[email]"
+     } ,{
+      "label" :"url" ,
+      "rule" :"[url]"
+     }] ,
+    "inputText" :"Your Name"
+   } ,
+   "gridMap" :{
+    "sizeX" :2 ,
+    "sizeY" :8 ,
+    "row" :0 ,
+    "col" :0
+   }
+  } ,{
+   "templateUrl" :"qfretouch/common/views/templates/textbox.tpl.html" ,
+   "name" :"Textbox" ,
+   "component" :{
+    "label" :"" ,
+    "description" :"First Name" ,
+    "placeholder" :"ex. Jamie Doe" ,
+    "required" :false ,
+    "validationOptions" :[{
+      "label" :"none" ,
+      "rule" :"/.*/"
+     } ,{
+      "label" :"number" ,
+      "rule" :"[number]"
+     } ,{
+      "label" :"email" ,
+      "rule" :"[email]"
+     } ,{
+      "label" :"url" ,
+      "rule" :"[url]"
+     }]
+   } ,
+   "gridMap" :{
+    "sizeX" :4 ,
+    "sizeY" :8 ,
+    "row" :0 ,
+    "col" :2
+   }
+  } ,{
+   "templateUrl" :"qfretouch/common/views/templates/textbox.tpl.html" ,
+   "name" :"Textbox" ,
+   "component" :{
+    "label" :"" ,
+    "description" :"Last Name" ,
+    "placeholder" :"ex. Jamie Doe" ,
+    "required" :false ,
+    "validationOptions" :[{
+      "label" :"none" ,
+      "rule" :"/.*/"
+     } ,{
+      "label" :"number" ,
+      "rule" :"[number]"
+     } ,{
+      "label" :"email" ,
+      "rule" :"[email]"
+     } ,{
+      "label" :"url" ,
+      "rule" :"[url]"
+     }]
+   } ,
+   "gridMap" :{
+    "row" :0 ,
+    "col" :8 ,
+    "sizeY" :8 ,
+    "sizeX" :4
+   }
+  } ,{
+   "templateUrl" :"qfretouch/common/views/templates/textbox.tpl.html" ,
+   "name" :"Textbox" ,
+   "component" :{
+    "label" :"" ,
+    "description" :"M.I." ,
+    "placeholder" :"" ,
+    "required" :false ,
+    "validationOptions" :[{
+      "label" :"none" ,
+      "rule" :"/.*/"
+     } ,{
+      "label" :"number" ,
+      "rule" :"[number]"
+     } ,{
+      "label" :"email" ,
+      "rule" :"[email]"
+     } ,{
+      "label" :"url" ,
+      "rule" :"[url]"
+     }]
+   } ,
+   "gridMap" :{
+    "row" :0 ,
+    "col" :6 ,
+    "sizeX" :2 ,
+    "sizeY" :8
+   }
+  } ,{
+   "templateUrl" :"qfretouch/common/views/templates/paragraph.tpl.html" ,
+   "name" :"Paragraph" ,
+   "component" :{
+    "label" :"First Name" ,
+    "description" :"Enter your first name" ,
+    "placeholder" :"Introduction" ,
+    "required" :null ,
+    "rows" :null ,
+    "componentStyles" :{
+     "component1" :{
+      "color" :"#408080" ,
+      "font-size" :"12px" ,
+      "text-align" :"right"
+     }
+    } ,
+    "componentStylesMap" :[{
+      "controlName" :"component1" ,
+      "controlStyles" :[{
+        "label" :"Color" ,
+        "name" :"color" ,
+        "value" :"#408080" ,
+        "type" :"color" ,
+        "prepend" :"" ,
+        "append" :""
+       } ,{
+        "label" :"Font Size" ,
+        "name" :"font-size" ,
+        "value" :12 ,
+        "type" :"number" ,
+        "prepend" :"" ,
+        "append" :"px"
+       } ,{
+        "label" :"Text Align" ,
+        "name" :"text-align" ,
+        "value" :"right" ,
+        "type" :"text" ,
+        "prepend" :"" ,
+        "append" :""
+       }]
+     }] ,
+    "validationOptions" :[{
+      "label" :"none" ,
+      "rule" :"/.*/"
+     } ,{
+      "label" :"number" ,
+      "rule" :"[number]"
+     } ,{
+      "label" :"email" ,
+      "rule" :"[email]"
+     } ,{
+      "label" :"url" ,
+      "rule" :"[url]"
+     }] ,
+    "inputText" :"Address"
+   } ,
+   "gridMap" :{
+    "row" :16 ,
+    "col" :0 ,
+    "sizeX" :2 ,
+    "sizeY" :32
+   }
+  } ,{
+   "templateUrl" :"qfretouch/common/views/templates/textbox.tpl.html" ,
+   "name" :"Textbox" ,
+   "component" :{
+    "label" :"" ,
+    "description" :"Street Address" ,
+    "placeholder" :"" ,
+    "required" :false ,
+    "validationOptions" :[{
+      "label" :"none" ,
+      "rule" :"/.*/"
+     } ,{
+      "label" :"number" ,
+      "rule" :"[number]"
+     } ,{
+      "label" :"email" ,
+      "rule" :"[email]"
+     } ,{
+      "label" :"url" ,
+      "rule" :"[url]"
+     }]
+   } ,
+   "gridMap" :{
+    "row" :16 ,
+    "col" :2 ,
+    "sizeX" :10 ,
+    "sizeY" :8
+   }
+  } ,{
+   "templateUrl" :"qfretouch/common/views/templates/textbox.tpl.html" ,
+   "name" :"Textbox" ,
+   "component" :{
+    "label" :"" ,
+    "description" :"Street Address Line 2" ,
+    "placeholder" :"" ,
+    "required" :false ,
+    "validationOptions" :[{
+      "label" :"none" ,
+      "rule" :"/.*/"
+     } ,{
+      "label" :"number" ,
+      "rule" :"[number]"
+     } ,{
+      "label" :"email" ,
+      "rule" :"[email]"
+     } ,{
+      "label" :"url" ,
+      "rule" :"[url]"
+     }]
+   } ,
+   "gridMap" :{
+    "row" :24 ,
+    "col" :2 ,
+    "sizeY" :8 ,
+    "sizeX" :10
+   }
+  } ,{
+   "templateUrl" :"qfretouch/common/views/templates/textbox.tpl.html" ,
+   "name" :"Textbox" ,
+   "component" :{
+    "label" :"" ,
+    "description" :"City" ,
+    "placeholder" :"" ,
+    "required" :false ,
+    "validationOptions" :[{
+      "label" :"none" ,
+      "rule" :"/.*/"
+     } ,{
+      "label" :"number" ,
+      "rule" :"[number]"
+     } ,{
+      "label" :"email" ,
+      "rule" :"[email]"
+     } ,{
+      "label" :"url" ,
+      "rule" :"[url]"
+     }]
+   } ,
+   "gridMap" :{
+    "row" :40 ,
+    "col" :2 ,
+    "sizeX" :5 ,
+    "sizeY" :8
+   }
+  } ,{
+   "templateUrl" :"qfretouch/common/views/templates/textbox.tpl.html" ,
+   "name" :"Textbox" ,
+   "component" :{
+    "label" :"" ,
+    "description" :"Postal Zip Code" ,
+    "placeholder" :"" ,
+    "required" :false ,
+    "validationOptions" :[{
+      "label" :"none" ,
+      "rule" :"/.*/"
+     } ,{
+      "label" :"number" ,
+      "rule" :"[number]"
+     } ,{
+      "label" :"email" ,
+      "rule" :"[email]"
+     } ,{
+      "label" :"url" ,
+      "rule" :"[url]"
+     }]
+   } ,
+   "gridMap" :{
+    "row" :32 ,
+    "col" :2 ,
+    "sizeX" :5 ,
+    "sizeY" :8
+   }
+  } ,{
+   "templateUrl" :"qfretouch/common/views/templates/dropdown.tpl.html" ,
+   "name" :"Dropdown" ,
+   "component" :{
+    "label" :"" ,
+    "description" :"State" ,
+    "placeholder" :"" ,
+    "options" :["Alabama" ,"Alaska" ,"Arizona" ,"Arkansas" ,"California" ,"Colorado" ,"Connecticut" ,"Delaware" ,"Florida" ,"Georgia" ,"Hawaii" ,"Idaho" ,"Illinois" ,"Indiana" ,"Iowa" ,"Kansas" ,"Kentucky" ,"Louisiana" ,"Maine" ,"Maryland" ,"Massachusetts" ,"Michigan" ,"Minnesota" ,"Mississippi" ,"Missouri" ,"Montana" ,"Nebraska" ,"Nevada" ,"New Hampshire" ,"New Jersey" ,"New Mexico" ,"New York" ,"North Carolina" ,"North Dakota" ,"Ohio" ,"Oklahoma" ,"Oregon" ,"Pennsylvania" ,"Rhode Island" ,"South Carolina" ,"South Dakota" ,"Tennessee" ,"Texas" ,"Utah" ,"Vermont" ,"Virginia" ,"Washington" ,"West Virginia" ,"Wisconsin" ,"Wyoming"] ,
+    "required" :false ,
+    "validationOptions" :[{
+      "label" :"none" ,
+      "rule" :"/.*/"
+     } ,{
+      "label" :"number" ,
+      "rule" :"[number]"
+     } ,{
+      "label" :"email" ,
+      "rule" :"[email]"
+     } ,{
+      "label" :"url" ,
+      "rule" :"[url]"
+     }] ,
+    "optionsText" :"Alabama\nAlaska\nArizona\nArkansas\nCalifornia\nColorado\nConnecticut\nDelaware\nFlorida\nGeorgia\nHawaii\nIdaho\nIllinois\nIndiana\nIowa\nKansas\nKentucky\nLouisiana\nMaine\nMaryland\nMassachusetts\nMichigan\nMinnesota\nMississippi\nMissouri\nMontana\nNebraska\nNevada\nNew Hampshire\nNew Jersey\nNew Mexico\nNew York\nNorth Carolina\nNorth Dakota\nOhio\nOklahoma\nOregon\nPennsylvania\nRhode Island\nSouth Carolina\nSouth Dakota\nTennessee\nTexas\nUtah\nVermont\nVirginia\nWashington\nWest Virginia\nWisconsin\nWyoming" ,
+    "inputText" :null
+   } ,
+   "gridMap" :{
+    "sizeX" :5 ,
+    "sizeY" :8 ,
+    "row" :40 ,
+    "col" :7
+   }
+  } ,{
+   "templateUrl" :"qfretouch/common/views/templates/dropdown.tpl.html" ,
+   "name" :"Dropdown" ,
+   "component" :{
+    "label" :"" ,
+    "description" :"Country" ,
+    "placeholder" :"" ,
+    "options" :["Afghanistan" ,"Albania" ,"Algeria" ,"Andorra" ,"Angola" ,"Antigua & Deps" ,"Argentina" ,"Armenia" ,"Australia" ,"Austria" ,"Azerbaijan" ,"Bahamas" ,"Bahrain" ,"Bangladesh" ,"Barbados" ,"Belarus" ,"Belgium" ,"Belize" ,"Benin" ,"Bhutan" ,"Bolivia" ,"Bosnia Herzegovina" ,"Botswana" ,"Brazil" ,"Brunei" ,"Bulgaria" ,"Burkina" ,"Burundi" ,"Cambodia" ,"Cameroon" ,"Canada" ,"Cape Verde" ,"Central African Rep" ,"Chad" ,"Chile" ,"China" ,"Colombia" ,"Comoros" ,"Congo" ,"Congo {Democratic Rep}" ,"Costa Rica" ,"Croatia" ,"Cuba" ,"Cyprus" ,"Czech Republic" ,"Denmark" ,"Djibouti" ,"Dominica" ,"Dominican Republic" ,"East Timor" ,"Ecuador" ,"Egypt" ,"El Salvador" ,"Equatorial Guinea" ,"Eritrea" ,"Estonia" ,"Ethiopia" ,"Fiji" ,"Finland" ,"France" ,"Gabon" ,"Gambia" ,"Georgia" ,"Germany" ,"Ghana" ,"Greece" ,"Grenada" ,"Guatemala" ,"Guinea" ,"Guinea-Bissau" ,"Guyana" ,"Haiti" ,"Honduras" ,"Hungary" ,"Iceland" ,"India" ,"Indonesia" ,"Iran" ,"Iraq" ,"Ireland {Republic}" ,"Israel" ,"Italy" ,"Ivory Coast" ,"Jamaica" ,"Japan" ,"Jordan" ,"Kazakhstan" ,"Kenya" ,"Kiribati" ,"Korea North" ,"Korea South" ,"Kosovo" ,"Kuwait" ,"Kyrgyzstan" ,"Laos" ,"Latvia" ,"Lebanon" ,"Lesotho" ,"Liberia" ,"Libya" ,"Liechtenstein" ,"Lithuania" ,"Luxembourg" ,"Macedonia" ,"Madagascar" ,"Malawi" ,"Malaysia" ,"Maldives" ,"Mali" ,"Malta" ,"Marshall Islands" ,"Mauritania" ,"Mauritius" ,"Mexico" ,"Micronesia" ,"Moldova" ,"Monaco" ,"Mongolia" ,"Montenegro" ,"Morocco" ,"Mozambique" ,"Myanmar, {Burma}" ,"Namibia" ,"Nauru" ,"Nepal" ,"Netherlands" ,"New Zealand" ,"Nicaragua" ,"Niger" ,"Nigeria" ,"Norway" ,"Oman" ,"Pakistan" ,"Palau" ,"Panama" ,"Papua New Guinea" ,"Paraguay" ,"Peru" ,"Philippines" ,"Poland" ,"Portugal" ,"Qatar" ,"Romania" ,"Russian Federation" ,"Rwanda" ,"St Kitts & Nevis" ,"St Lucia" ,"Saint Vincent & the Grenadines" ,"Samoa" ,"San Marino" ,"Sao Tome & Principe" ,"Saudi Arabia" ,"Senegal" ,"Serbia" ,"Seychelles" ,"Sierra Leone" ,"Singapore" ,"Slovakia" ,"Slovenia" ,"Solomon Islands" ,"Somalia" ,"South Africa" ,"South Sudan" ,"Spain" ,"Sri Lanka" ,"Sudan" ,"Suriname" ,"Swaziland" ,"Sweden" ,"Switzerland" ,"Syria" ,"Taiwan" ,"Tajikistan" ,"Tanzania" ,"Thailand" ,"Togo" ,"Tonga" ,"Trinidad & Tobago" ,"Tunisia" ,"Turkey" ,"Turkmenistan" ,"Tuvalu" ,"Uganda" ,"Ukraine" ,"United Arab Emirates" ,"United Kingdom" ,"United States" ,"Uruguay" ,"Uzbekistan" ,"Vanuatu" ,"Vatican City" ,"Venezuela" ,"Vietnam" ,"Yemen" ,"Zambia" ,"Zimbabwe"] ,
+    "required" :false ,
+    "validationOptions" :[{
+      "label" :"none" ,
+      "rule" :"/.*/"
+     } ,{
+      "label" :"number" ,
+      "rule" :"[number]"
+     } ,{
+      "label" :"email" ,
+      "rule" :"[email]"
+     } ,{
+      "label" :"url" ,
+      "rule" :"[url]"
+     }] ,
+    "optionsText" :"Afghanistan\nAlbania\nAlgeria\nAndorra\nAngola\nAntigua & Deps\nArgentina\nArmenia\nAustralia\nAustria\nAzerbaijan\nBahamas\nBahrain\nBangladesh\nBarbados\nBelarus\nBelgium\nBelize\nBenin\nBhutan\nBolivia\nBosnia Herzegovina\nBotswana\nBrazil\nBrunei\nBulgaria\nBurkina\nBurundi\nCambodia\nCameroon\nCanada\nCape Verde\nCentral African Rep\nChad\nChile\nChina\nColombia\nComoros\nCongo\nCongo {Democratic Rep}\nCosta Rica\nCroatia\nCuba\nCyprus\nCzech Republic\nDenmark\nDjibouti\nDominica\nDominican Republic\nEast Timor\nEcuador\nEgypt\nEl Salvador\nEquatorial Guinea\nEritrea\nEstonia\nEthiopia\nFiji\nFinland\nFrance\nGabon\nGambia\nGeorgia\nGermany\nGhana\nGreece\nGrenada\nGuatemala\nGuinea\nGuinea-Bissau\nGuyana\nHaiti\nHonduras\nHungary\nIceland\nIndia\nIndonesia\nIran\nIraq\nIreland {Republic}\nIsrael\nItaly\nIvory Coast\nJamaica\nJapan\nJordan\nKazakhstan\nKenya\nKiribati\nKorea North\nKorea South\nKosovo\nKuwait\nKyrgyzstan\nLaos\nLatvia\nLebanon\nLesotho\nLiberia\nLibya\nLiechtenstein\nLithuania\nLuxembourg\nMacedonia\nMadagascar\nMalawi\nMalaysia\nMaldives\nMali\nMalta\nMarshall Islands\nMauritania\nMauritius\nMexico\nMicronesia\nMoldova\nMonaco\nMongolia\nMontenegro\nMorocco\nMozambique\nMyanmar, {Burma}\nNamibia\nNauru\nNepal\nNetherlands\nNew Zealand\nNicaragua\nNiger\nNigeria\nNorway\nOman\nPakistan\nPalau\nPanama\nPapua New Guinea\nParaguay\nPeru\nPhilippines\nPoland\nPortugal\nQatar\nRomania\nRussian Federation\nRwanda\nSt Kitts & Nevis\nSt Lucia\nSaint Vincent & the Grenadines\nSamoa\nSan Marino\nSao Tome & Principe\nSaudi Arabia\nSenegal\nSerbia\nSeychelles\nSierra Leone\nSingapore\nSlovakia\nSlovenia\nSolomon Islands\nSomalia\nSouth Africa\nSouth Sudan\nSpain\nSri Lanka\nSudan\nSuriname\nSwaziland\nSweden\nSwitzerland\nSyria\nTaiwan\nTajikistan\nTanzania\nThailand\nTogo\nTonga\nTrinidad & Tobago\nTunisia\nTurkey\nTurkmenistan\nTuvalu\nUganda\nUkraine\nUnited Arab Emirates\nUnited Kingdom\nUnited States\nUruguay\nUzbekistan\nVanuatu\nVatican City\nVenezuela\nVietnam\nYemen\nZambia\nZimbabwe" ,
+    "inputText" :null
+   } ,
+   "gridMap" :{
+    "row" :32 ,
+    "col" :7 ,
+    "sizeX" :5 ,
+    "sizeY" :8
+   }
+  } ,{
+   "templateUrl" :"qfretouch/common/views/templates/datepicker.tpl.html" ,
+   "name" :"Datepicker" ,
+   "component" :{
+    "label" :"" ,
+    "description" :"Pick a Date" ,
+    "placeholder" :"date" ,
+    "required" :false ,
+    "validationOptions" :[{
+      "label" :"none" ,
+      "rule" :"/.*/"
+     } ,{
+      "label" :"number" ,
+      "rule" :"[number]"
+     } ,{
+      "label" :"email" ,
+      "rule" :"[email]"
+     } ,{
+      "label" :"url" ,
+      "rule" :"[url]"
+     }]
+   } ,
+   "gridMap" :{
+    "sizeX" :10 ,
+    "sizeY" :8 ,
+    "row" :8 ,
+    "col" :2
+   }
+  } ,{
+   "templateUrl" :"qfretouch/common/views/templates/paragraph.tpl.html" ,
+   "name" :"Paragraph" ,
+   "component" :{
+    "label" :"First Name" ,
+    "description" :"Enter your first name" ,
+    "placeholder" :"Introduction" ,
+    "required" :null ,
+    "rows" :null ,
+    "componentStyles" :{
+     "component1" :{
+      "color" :"#408080" ,
+      "font-size" :"12px" ,
+      "text-align" :"right"
+     }
+    } ,
+    "componentStylesMap" :[{
+      "controlName" :"component1" ,
+      "controlStyles" :[{
+        "label" :"Color" ,
+        "name" :"color" ,
+        "value" :"#408080" ,
+        "type" :"color" ,
+        "prepend" :"" ,
+        "append" :""
+       } ,{
+        "label" :"Font Size" ,
+        "name" :"font-size" ,
+        "value" :12 ,
+        "type" :"number" ,
+        "prepend" :"" ,
+        "append" :"px"
+       } ,{
+        "label" :"Text Align" ,
+        "name" :"text-align" ,
+        "value" :"right" ,
+        "type" :"text" ,
+        "prepend" :"" ,
+        "append" :""
+       }]
+     }] ,
+    "validationOptions" :[{
+      "label" :"none" ,
+      "rule" :"/.*/"
+     } ,{
+      "label" :"number" ,
+      "rule" :"[number]"
+     } ,{
+      "label" :"email" ,
+      "rule" :"[email]"
+     } ,{
+      "label" :"url" ,
+      "rule" :"[url]"
+     }] ,
+    "inputText" :"D.O.B"
+   } ,
+   "gridMap" :{
+    "row" :8 ,
+    "col" :0 ,
+    "sizeX" :2 ,
+    "sizeY" :8
+   }
+  }] ,
+ "formStylesMap" :[
+  {
+   "label" :"Width (px)" ,
+   "name" :"width" ,
+   "value" :"700" ,
+   "type" :"number" ,
+   "prepend" :"" ,
+   "append" :"px"
+  } ,{
+   "label" :"Height (px)" ,
+   "name" :"height" ,
+   "value" :"800" ,
+   "type" :"number" ,
+   "prepend" :"" ,
+   "append" :"px"
+  } ,{
+   "label" :"Background Color" ,
+   "name" :"background-color" ,
+   "value" :"#FFFFFF" ,
+   "type" :"color" ,
+   "prepend" :"" ,
+   "append" :""
+  } ,{
+   "label" :"Foreground Color" ,
+   "name" :"color" ,
+   "value" :"#111111" ,
+   "type" :"color" ,
+   "prepend" :"" ,
+   "append" :""
+  } ,{
+   "label" :"Padding (px)" ,
+   "name" :"padding" ,
+   "value" :"5" ,
+   "type" :"number" ,
+   "prepend" :"" ,
+   "append" :"px"
+  }]
+}

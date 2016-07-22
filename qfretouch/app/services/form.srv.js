@@ -21,7 +21,7 @@
             {
              label: "Width (px)",
              name: "width",
-             value: "960",
+             value: "700",
              type: "number",
              prepend: "",
              append: "px",
@@ -29,7 +29,7 @@
             {
              label: "Height (px)",
              name: "height",
-             value: "660",
+             value: "800",
              type: "number",
              prepend: "",
              append: "px",

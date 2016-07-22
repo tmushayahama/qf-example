@@ -24,8 +24,10 @@
             validator-group="{{component.formName}}"
             id="{{component.formName + index}}"
             class="form-control qf-paragraph qf-hidden-view-mode" rows='{{component.rows}}'
+            ng-style="component.componentStyles.component1"
             placeholder="Type your paragraph"></textarea>
-  <p class="qf-paragraph-text qf-hidden-design-mode">{{component.inputText}}</p>
+  <p ng-style="component.componentStyles.component1"
+     class="qf-paragraph-text qf-hidden-design-mode">{{component.inputText}}</p>
  </div>
 </div>
 <div class="qf-component-display qf-hidden-design-mode qf-hidden-view-mode">

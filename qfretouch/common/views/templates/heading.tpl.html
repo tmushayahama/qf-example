@@ -21,11 +21,12 @@
  <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
   <textarea ng-model="component.inputText"
             id="{{component.formName + index}}"
-            class="form-control qf-heading qf-hidden-view-mode" rows='{{component.rows}}'
+            class="form-control qf-heading qf-hidden-view-mode"
+            rows='{{component.rows}}'
             placeholder="{{component.description}}"
-            ng-style="component.componentStyles.component1"></textarea>
+            ng-style="item.component.componentStyles.component1"></textarea>
   <p class="qf-heading-text qf-hidden-design-mode"
-     ng-style="component.componentStyles.component1">{{component.inputText}}</p>
+     ng-style="item.component.componentStyles.component1">{{component.inputText}}</p>
  </div>
 </div>
 <div class="qf-component-display qf-hidden-design-mode qf-hidden-view-mode">

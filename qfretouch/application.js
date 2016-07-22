@@ -156,6 +156,7 @@ define([
     label: null,
     description: null,
     placeholder: 'Type your heading',
+    rows: 2,
     required: null,
     componentStyles: {},
     componentStylesMap: [
@@ -165,11 +166,27 @@ define([
        {
         label: "Color",
         name: "color",
-        value: "0000FF",
+        value: "#0000FF",
         type: "color",
         prepend: "",
         append: "",
-       }
+       },
+       {
+        label: "Font Size",
+        name: "font-size",
+        value: "30",
+        type: "number",
+        prepend: "",
+        append: "px",
+       },
+       {
+        label: "Text Align",
+        name: "text-align",
+        value: "left",
+        type: "text",
+        prepend: "",
+        append: "",
+       },
       ]
      }
     ],
@@ -191,7 +208,7 @@ define([
    },
    gridMap: {
     sizeX: 12,
-    sizeY: 4,
+    sizeY: 6,
    },
   },
   {
@@ -203,6 +220,38 @@ define([
     placeholder: 'Introduction',
     required: null,
     rows: null,
+    componentStyles: {},
+    componentStylesMap: [
+     {
+      controlName: "component1",
+      controlStyles: [
+       {
+        label: "Color",
+        name: "color",
+        value: "#0000FF",
+        type: "color",
+        prepend: "",
+        append: "",
+       },
+       {
+        label: "Font Size",
+        name: "font-size",
+        value: "30",
+        type: "number",
+        prepend: "",
+        append: "px",
+       },
+       {
+        label: "Text Align",
+        name: "text-align",
+        value: "left",
+        type: "text",
+        prepend: "",
+        append: "",
+       }
+      ]
+     }
+    ],
     validationOptions: [
      {
       label: 'none',
@@ -411,6 +460,7 @@ define([
     description: 'Pick a Date',
     placeholder: 'date',
     required: false,
+    readonly: false,
     validationOptions: [
      {
       label: 'none',
@@ -437,6 +487,14 @@ define([
        name: "background-image",
        value: "",
        type: "text",
+       prepend: "",
+       append: "",
+      },
+      {
+       label: "Background Repeat",
+       name: "background-repeat",
+       value: "",
+       type: "no-repeat",
        prepend: "",
        append: "",
       },

@@ -19,15 +19,19 @@ var designerCtrl = function (
         ) {
  var vm = this;
  vm.formSrv = new FormSrv();
+ vm.formSrv.getFormTemplates("qfretouch/form-templates/contact-us.json");
  vm.formSrv.getFormTemplates("qfretouch/form-templates/all-components.json");
+ vm.formSrv.getFormTemplates("qfretouch/form-templates/registration.json");
+
 
  vm.gridsterOpts = {
   //floating: false,
   columns: 12,
   mobileBreakPoint: 600,
-  rowHeight: 30,
+  margins: [20, 20],
+  rowHeight: 20,
   defaultSizeX: 6,
-  defaultSizeY: 7,
+  defaultSizeY: 10,
   draggable: {
    enabled: true,
    scroll: true,
@@ -50,8 +54,8 @@ var designerCtrl = function (
  vm.addComponent = function (component) {
   var formItem = angular.copy(component);
   formItem.gridMap = {
-   sizeX: 6,
-   sizeY: 7
+   sizeX: 12,
+   sizeY: 10
   };
   vm.formSrv.formItems.push(formItem);
  };
@@ -69,9 +73,9 @@ var designerCtrl = function (
  };
 
 //for testing
- for (var i = 0; i < vm.components.length; i++) {
-  vm.formSrv.formItems.push(angular.copy(vm.components[i]));
- }
+// for (var i = 0; i < 3; i++) { //vm.components.length
+ // vm.formSrv.formItems.push(angular.copy(vm.components[i]));
+ //}
 
  vm.formName = "Untitled Form";
  vm.openFormSettings = function () {
@@ -96,7 +100,12 @@ var designerCtrl = function (
  };
 
  vm.previewForm = function () {
-  // console.log("form ", JSON.stringify(vm.formSrv));
+  console.log(
+          JSON.stringify(vm.formSrv.formName),
+          JSON.stringify(vm.formSrv.formDescription),
+          JSON.stringify(vm.formSrv.formStyles),
+          JSON.stringify(vm.formSrv.formItems),
+          JSON.stringify(vm.formSrv.formStylesMap));
   var modalInstance = $uibModal.open({
    templateUrl: 'preview-form-modal.html',
    controller: 'PreviewFormCtrl as previewFormCtrl',

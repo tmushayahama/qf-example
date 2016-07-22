@@ -81,7 +81,7 @@
    } ,
    "gridMap" :{
     "sizeX" :12 ,
-    "sizeY" :3 ,
+    "sizeY" :6 ,
     "row" :0 ,
     "col" :0
    }
@@ -117,7 +117,7 @@
    } ,
    "gridMap" :{
     "sizeX" :12 ,
-    "sizeY" :3 ,
+    "sizeY" :6 ,
     "row" :3 ,
     "col" :0
    }
@@ -183,7 +183,7 @@
    } ,
    "gridMap" :{
     "row" :6 ,
-    "col" :6
+    "col" :10
    }
   } ,
   {
@@ -253,7 +253,7 @@
    } ,
    "gridMap" :{
     "row" :13 ,
-    "col" :6
+    "col" :10
    }
   } ,
   {

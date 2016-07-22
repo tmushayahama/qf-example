@@ -12,7 +12,7 @@ var previewFormCtrl = function (
  vm.adjust = function () {
   angular.forEach(vm.formSrv.formItems, function (formItem) {
    if (formItem.gridMap.sizeY) {
-    formItem.gridMap.sizeY -= 1;
+    formItem.gridMap.sizeY -= 2;
    }
    // formItem.gridMap.row = null;
   });
@@ -20,17 +20,17 @@ var previewFormCtrl = function (
 
  vm.adjust();
 
-
  vm.selectedDeviceIndex = 0;
 
  vm.portrait = true;
 
  vm.gridsterOpts = {
   columns: 12,
+  margins: [5, 5],
   mobileBreakPoint: 600,
-  rowHeight: 30,
+  rowHeight: 20,
   defaultSizeX: 6,
-  defaultSizeY: 7,
+  defaultSizeY: 10,
   resizable: {
    enabled: false,
   },
