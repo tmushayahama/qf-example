@@ -19,10 +19,12 @@ var designerCtrl = function (
         ) {
  var vm = this;
  vm.formSrv = new FormSrv();
- vm.formSrv.getFormTemplates("qfretouch/form-templates/contact-us.json");
- vm.formSrv.getFormTemplates("qfretouch/form-templates/all-components.json");
+ vm.formSrv.getFormTemplates("qfretouch/form-templates/contact-us-transparent.json");
+ vm.formSrv.getFormTemplates("qfretouch/form-templates/contact-us-simple.json");
+// vm.formSrv.getFormTemplates("qfretouch/form-templates/contact-us.json");
+ //vm.formSrv.getFormTemplates("qfretouch/form-templates/all-components.json");
  vm.formSrv.getFormTemplates("qfretouch/form-templates/registration.json");
-
+ vm.formSrv.getFormTemplates("qfretouch/form-templates/feature-request.json");
 
  vm.gridsterOpts = {
   //floating: false,
@@ -30,6 +32,8 @@ var designerCtrl = function (
   mobileBreakPoint: 600,
   margins: [20, 20],
   rowHeight: 20,
+  minSizeX: 2,
+  minSizeY: 2,
   defaultSizeX: 6,
   defaultSizeY: 10,
   draggable: {
@@ -100,12 +104,9 @@ var designerCtrl = function (
  };
 
  vm.previewForm = function () {
-  console.log(
-          JSON.stringify(vm.formSrv.formName),
-          JSON.stringify(vm.formSrv.formDescription),
-          JSON.stringify(vm.formSrv.formStyles),
-          JSON.stringify(vm.formSrv.formItems),
-          JSON.stringify(vm.formSrv.formStylesMap));
+  // var formSrvCopy = angular.copy(vm.formSrv);
+  //formSrvCopy.formTemplates = {};
+  //$('body').html(JSON.stringify(formSrvCopy));
   var modalInstance = $uibModal.open({
    templateUrl: 'preview-form-modal.html',
    controller: 'PreviewFormCtrl as previewFormCtrl',

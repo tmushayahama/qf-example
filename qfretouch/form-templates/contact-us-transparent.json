@@ -1,0 +1,216 @@
+{
+ "formName" :"Contact Us - Dark" ,
+ "description" :"" ,
+ "formTemplateId" :"contact-us-transparent" ,
+ "formStyles" :{
+  "width" :"700px" ,
+  "height" :"500px" ,
+  "background-color" :"#548235" ,
+  "color" :"#FFFFFF" ,
+  "padding" :"5px"
+ } ,
+ "formItems" :[
+  {
+   "templateUrl" :"qfretouch/common/views/templates/heading.tpl.html" ,
+   "name" :"Heading" ,
+   "component" :{
+    "label" :null ,
+    "description" :null ,
+    "placeholder" :"Type your heading" ,
+    "rows" :2 ,
+    "required" :null ,
+    "componentStyles" :{
+     "component1" :{
+      "color" :"#DDDDDD" ,
+      "font-size" :"30px" ,
+      "text-align" :"center"
+     }
+    } ,
+    "componentStylesMap" :[{
+      "controlName" :"component1" ,
+      "controlStyles" :[{
+        "label" :"Color" ,
+        "name" :"color" ,
+        "value" :"#008040" ,
+        "type" :"color" ,
+        "prepend" :"" ,
+        "append" :"" ,
+        "$$hashKey" :"object:461"
+       } ,{
+        "label" :"Font Size" ,
+        "name" :"font-size" ,
+        "value" :"30" ,
+        "type" :"number" ,
+        "prepend" :"" ,
+        "append" :"px" ,
+        "$$hashKey" :"object:462"
+       } ,{
+        "label" :"Text Align" ,
+        "name" :"text-align" ,
+        "value" :"center" ,
+        "type" :"text" ,
+        "prepend" :"" ,
+        "append" :"" ,
+        "$$hashKey" :"object:463"
+       }] ,
+      "$$hashKey" :"object:456"
+     }] ,
+    "validationOptions" :[{
+      "label" :"none" ,
+      "rule" :"/.*/"
+     } ,{
+      "label" :"number" ,
+      "rule" :"[number]"
+     } ,{
+      "label" :"email" ,
+      "rule" :"[email]"
+     } ,{
+      "label" :"url" ,
+      "rule" :"[url]"
+     }] ,
+    "inputText" :"Contact Us"
+   } ,
+   "gridMap" :{
+    "sizeX" :12 ,
+    "sizeY" :5 ,
+    "row" :0 ,
+    "col" :0
+   }
+  }
+  ,{
+   "templateUrl" :"qfretouch/common/views/templates/textarea.tpl.html" ,
+   "name" :"Textarea" ,
+   "component" :{
+    "label" :"Message" ,
+    "description" :"" ,
+    "placeholder" :"" ,
+    "required" :false ,
+    "rows" :7 ,
+    "validationOptions" :[{
+      "label" :"none" ,
+      "rule" :"/.*/"
+     } ,{
+      "label" :"number" ,
+      "rule" :"[number]"
+     } ,{
+      "label" :"email" ,
+      "rule" :"[email]"
+     } ,{
+      "label" :"url" ,
+      "rule" :"[url]"
+     }]
+   } ,
+   "gridMap" :{
+    "sizeX" :7 ,
+    "sizeY" :14 ,
+    "row" :5 ,
+    "col" :5
+   }
+  }
+  ,{
+   "templateUrl" :"qfretouch/common/views/templates/textbox.tpl.html" ,
+   "name" :"Textbox" ,
+   "component" :{
+    "label" :"First Name" ,
+    "description" :"" ,
+    "placeholder" :"ex. Jamie Doe" ,
+    "required" :false ,
+    "validationOptions" :[{
+      "label" :"none" ,
+      "rule" :"/.*/"
+     } ,{
+      "label" :"number" ,
+      "rule" :"[number]"
+     } ,{
+      "label" :"email" ,
+      "rule" :"[email]"
+     } ,{
+      "label" :"url" ,
+      "rule" :"[url]"
+     }]
+   } ,
+   "gridMap" :{
+    "sizeX" :5 ,
+    "sizeY" :7 ,
+    "row" :5 ,
+    "col" :0
+   }
+  } ,{
+   "templateUrl" :"qfretouch/common/views/templates/textbox.tpl.html" ,
+   "name" :"Textbox" ,
+   "component" :{
+    "label" :"Email" ,
+    "description" :"" ,
+    "placeholder" :"ex. Jamie Doe" ,
+    "required" :false ,
+    "validationOptions" :[{
+      "label" :"none" ,
+      "rule" :"/.*/"
+     } ,{
+      "label" :"number" ,
+      "rule" :"[number]"
+     } ,{
+      "label" :"email" ,
+      "rule" :"[email]"
+     } ,{
+      "label" :"url" ,
+      "rule" :"[url]"
+     }]
+   } ,
+   "gridMap" :{
+    "sizeX" :5 ,
+    "sizeY" :7 ,
+    "row" :12 ,
+    "col" :0
+   }
+  }] ,
+ "formStylesMap" :[
+  {
+   "label" :"Width (px)" ,
+   "name" :"width" ,
+   "value" :"700" ,
+   "type" :"number" ,
+   "prepend" :"" ,
+   "append" :"px"
+  }
+  ,{
+   "label" :"Height (px)" ,
+   "name" :"height" ,
+   "value" :"500" ,
+   "type" :"number" ,
+   "prepend" :"" ,
+   "append" :"px"
+  }
+  ,{
+   "label" :"Background Color" ,
+   "name" :"background-color" ,
+   "value" :"#548235" ,
+   "type" :"color" ,
+   "prepend" :"" ,
+   "append" :""
+  }
+  ,{
+   "label" :"Foreground Color" ,
+   "name" :"color" ,
+   "value" :"#FFFFFF" ,
+   "type" :"color" ,
+   "prepend" :"" ,
+   "append" :""
+  }
+  ,{
+   "label" :"Padding (px)" ,
+   "name" :"padding" ,
+   "value" :"5" ,
+   "type" :"number" ,
+   "prepend" :"" ,
+   "append" :"px"
+  } ,
+  {
+   "label" :"Transparency" ,
+   "name" :"opacity" ,
+   "value" :"1" ,
+   "type" :"text" ,
+   "prepend" :"" ,
+   "append" :""
+  }]
+}

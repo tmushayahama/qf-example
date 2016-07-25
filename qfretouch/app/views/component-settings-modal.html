@@ -43,6 +43,12 @@
       Required
      </label>
     </div>
+    <div class="checkbox qf-hidden-view-mode qf-required-checkbox">
+     <label>
+      <input type='checkbox' ng-model="componentSettingsCtrl.item.component.readonly" />
+      Readonly
+     </label>
+    </div>
     <md-input-container ng-if="componentSettingsCtrl.item.component.rows"
                         class="md-block" md-no-float>
      <input type="number" class=""

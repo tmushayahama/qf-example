@@ -456,9 +456,9 @@ define([
    templateUrl: "qfretouch/common/views/templates/picturebox.tpl.html",
    name: 'Picture',
    component: {
-    label: 'Date',
-    description: 'Pick a Date',
-    placeholder: 'date',
+    label: 'Image',
+    description: 'Choose an Image',
+    placeholder: '',
     required: false,
     readonly: false,
     validationOptions: [

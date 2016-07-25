@@ -51,6 +51,14 @@
              append: "",
             },
             {
+             "label": "Transparency",
+             "name": "opacity",
+             "value": "1",
+             "type": "text",
+             "prepend": "",
+             "append": ""
+            },
+            {
              label: "Padding (px)",
              name: "padding",
              value: "5",
