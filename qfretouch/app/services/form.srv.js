@@ -17,6 +17,46 @@
            this.formStyles = {};
            this.formTemplates = [];
            this.formItems = [];
+           this.designGridSettings = {
+            //floating: false,
+            //floating: false,
+            columns: 12,
+            mobileBreakPoint: 600,
+            margins: [20, 20],
+            rowHeight: 20,
+            minSizeX: 4,
+            minSizeY: 2,
+            defaultSizeX: 6,
+            defaultSizeY: 10,
+            resizable: {
+             enabled: true,
+            },
+            draggable: {
+             enabled: true,
+             scroll: true,
+             handle: '.qf-grab-me',
+             start: function (event, $element, widget) {}, // optional callback fired when drag is started,
+             drag: function (event, $element, widget) {},
+             stop: function (event, $element, widget) {
+              //sortComponents();
+             }
+            }
+           };
+
+           this.viewerGridSettings = {
+            columns: 12,
+            margins: [5, 5],
+            mobileBreakPoint: 600,
+            rowHeight: 20,
+            defaultSizeX: 6,
+            defaultSizeY: 10,
+            resizable: {
+             enabled: false,
+            },
+            draggable: {
+             enabled: false,
+            }
+           };
            this.formStylesMap = [
             {
              label: "Width (px)",

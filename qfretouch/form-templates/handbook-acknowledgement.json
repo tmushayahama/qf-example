@@ -1,0 +1,383 @@
+{
+ "formName" :"Untitled Form" ,
+ "description" :"" ,
+ "formStyles" :{
+  "width" :"700px" ,
+  "height" :"800px" ,
+  "background-color" :"#FFFFFF" ,
+  "color" :"#111111" ,
+  "opacity" :"1" ,
+  "padding" :"5px"
+ } ,
+ "formItems" :[
+  {
+   "templateUrl" :"qfretouch\/common\/views\/templates\/textbox.tpl.html" ,
+   "name" :"Textbox" ,
+   "component" :{
+    "label" :"" ,
+    "description" :"" ,
+    "placeholder" :"Employee Name" ,
+    "required" :false ,
+    "validationOptions" :[
+     {
+      "label" :"none" ,
+      "rule" :"\/.*\/"
+     } ,
+     {
+      "label" :"number" ,
+      "rule" :"[number]"
+     } ,
+     {
+      "label" :"email" ,
+      "rule" :"[email]"
+     } ,
+     {
+      "label" :"url" ,
+      "rule" :"[url]"
+     }
+    ]
+   } ,
+   "gridMap" :{
+    "sizeX" :12 ,
+    "sizeY" :5 ,
+    "row" :7 ,
+    "col" :0
+   }
+  } ,
+  {
+   "templateUrl" :"qfretouch\/common\/views\/templates\/paragraph.tpl.html" ,
+   "name" :"Paragraph" ,
+   "component" :{
+    "label" :"First Name" ,
+    "description" :"Enter your first name" ,
+    "placeholder" :"Introduction" ,
+    "required" :null ,
+    "rows" :null ,
+    "componentStyles" :{
+    } ,
+    "componentStylesMap" :[
+     {
+      "controlName" :"component1" ,
+      "controlStyles" :[
+       {
+        "label" :"Color" ,
+        "name" :"color" ,
+        "value" :"#0000FF" ,
+        "type" :"color" ,
+        "prepend" :"" ,
+        "append" :""
+       } ,
+       {
+        "label" :"Font Size" ,
+        "name" :"font-size" ,
+        "value" :"30" ,
+        "type" :"number" ,
+        "prepend" :"" ,
+        "append" :"px"
+       } ,
+       {
+        "label" :"Text Align" ,
+        "name" :"text-align" ,
+        "value" :"left" ,
+        "type" :"text" ,
+        "prepend" :"" ,
+        "append" :""
+       }
+      ]
+     }
+    ] ,
+    "validationOptions" :[
+     {
+      "label" :"none" ,
+      "rule" :"\/.*\/"
+     } ,
+     {
+      "label" :"number" ,
+      "rule" :"[number]"
+     } ,
+     {
+      "label" :"email" ,
+      "rule" :"[email]"
+     } ,
+     {
+      "label" :"url" ,
+      "rule" :"[url]"
+     }
+    ] ,
+    "inputText" :"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam sit amet elit vitae augue ornare suscipit. Nulla facilisi. Sed quis sapien orci. Sed vitae gravida justo. Nulla vel ante vel massa malesuada tincidunt sed quis dolor. Proin sit amet tortor dapibus, interdum purus bibendum, rutrum felis. Nulla a posuere elit. Suspendisse molestie dictum turpis, id lacinia risus fermentum semper. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Etiam ultricies dictum enim, non bibendum diam tempor vitae. Etiam dignissim pharetra sodales."
+   } ,
+   "gridMap" :{
+    "sizeX" :12 ,
+    "sizeY" :10 ,
+    "row" :12 ,
+    "col" :0
+   }
+  } ,
+  {
+   "templateUrl" :"qfretouch\/common\/views\/templates\/heading.tpl.html" ,
+   "name" :"Heading" ,
+   "component" :{
+    "label" :null ,
+    "description" :null ,
+    "placeholder" :"Type your heading" ,
+    "rows" :2 ,
+    "required" :null ,
+    "componentStyles" :{
+     "component1" :{
+      "color" :"#000000" ,
+      "font-size" :"25px" ,
+      "text-align" :"center"
+     }
+    } ,
+    "componentStylesMap" :[
+     {
+      "controlName" :"component1" ,
+      "controlStyles" :[
+       {
+        "label" :"Color" ,
+        "name" :"color" ,
+        "value" :"#000000" ,
+        "type" :"color" ,
+        "prepend" :"" ,
+        "append" :""
+       } ,
+       {
+        "label" :"Font Size" ,
+        "name" :"font-size" ,
+        "value" :25 ,
+        "type" :"number" ,
+        "prepend" :"" ,
+        "append" :"px"
+       } ,
+       {
+        "label" :"Text Align" ,
+        "name" :"text-align" ,
+        "value" :"center" ,
+        "type" :"text" ,
+        "prepend" :"" ,
+        "append" :""
+       }
+      ]
+     }
+    ] ,
+    "validationOptions" :[
+     {
+      "label" :"none" ,
+      "rule" :"\/.*\/"
+     } ,
+     {
+      "label" :"number" ,
+      "rule" :"[number]"
+     } ,
+     {
+      "label" :"email" ,
+      "rule" :"[email]"
+     } ,
+     {
+      "label" :"url" ,
+      "rule" :"[url]"
+     }
+    ] ,
+    "inputText" :"Acknowledgement of Employee Handbook"
+   } ,
+   "gridMap" :{
+    "sizeX" :12 ,
+    "sizeY" :7 ,
+    "row" :0 ,
+    "col" :0
+   }
+  } ,
+  {
+   "templateUrl" :"qfretouch\/common\/views\/templates\/signature.tpl.html" ,
+   "name" :"Signature" ,
+   "component" :{
+    "label" :"Employee Signature" ,
+    "description" :"Please Sign Here" ,
+    "placeholder" :"" ,
+    "required" :false ,
+    "validationOptions" :[
+     {
+      "label" :"none" ,
+      "rule" :"\/.*\/"
+     } ,
+     {
+      "label" :"number" ,
+      "rule" :"[number]"
+     } ,
+     {
+      "label" :"email" ,
+      "rule" :"[email]"
+     } ,
+     {
+      "label" :"url" ,
+      "rule" :"[url]"
+     }
+    ]
+   } ,
+   "gridMap" :{
+    "sizeX" :12 ,
+    "sizeY" :12 ,
+    "row" :22 ,
+    "col" :0
+   }
+  } ,
+  {
+   "templateUrl" :"qfretouch\/common\/views\/templates\/datepicker.tpl.html" ,
+   "name" :"Datepicker" ,
+   "component" :{
+    "label" :"Date" ,
+    "description" :"" ,
+    "placeholder" :"date" ,
+    "required" :false ,
+    "validationOptions" :[
+     {
+      "label" :"none" ,
+      "rule" :"\/.*\/"
+     } ,
+     {
+      "label" :"number" ,
+      "rule" :"[number]"
+     } ,
+     {
+      "label" :"email" ,
+      "rule" :"[email]"
+     } ,
+     {
+      "label" :"url" ,
+      "rule" :"[url]"
+     }
+    ]
+   } ,
+   "gridMap" :{
+    "sizeX" :12 ,
+    "sizeY" :7 ,
+    "row" :34 ,
+    "col" :0
+   }
+  } ,
+  {
+   "templateUrl" :"qfretouch\/common\/views\/templates\/signature.tpl.html" ,
+   "name" :"Signature" ,
+   "component" :{
+    "label" :"Company Representative" ,
+    "description" :"Please Sign Here" ,
+    "placeholder" :"" ,
+    "required" :false ,
+    "validationOptions" :[
+     {
+      "label" :"none" ,
+      "rule" :"\/.*\/"
+     } ,
+     {
+      "label" :"number" ,
+      "rule" :"[number]"
+     } ,
+     {
+      "label" :"email" ,
+      "rule" :"[email]"
+     } ,
+     {
+      "label" :"url" ,
+      "rule" :"[url]"
+     }
+    ]
+   } ,
+   "gridMap" :{
+    "row" :41 ,
+    "col" :0 ,
+    "sizeX" :12
+   }
+  }
+ ] ,
+ "designGridSettings" :{
+  "columns" :12 ,
+  "mobileBreakPoint" :600 ,
+  "margins" :[
+   20 ,
+   20
+  ] ,
+  "rowHeight" :20 ,
+  "minSizeX" :4 ,
+  "minSizeY" :2 ,
+  "defaultSizeX" :6 ,
+  "defaultSizeY" :10 ,
+  "resizable" :{
+   "enabled" :true
+  } ,
+  "draggable" :{
+   "enabled" :true ,
+   "scroll" :true ,
+   "handle" :".qf-grab-me"
+  }
+ } ,
+ "viewerGridSettings" :{
+  "columns" :12 ,
+  "margins" :[
+   5 ,
+   5
+  ] ,
+  "mobileBreakPoint" :600 ,
+  "rowHeight" :20 ,
+  "defaultSizeX" :6 ,
+  "defaultSizeY" :10 ,
+  "resizable" :{
+   "enabled" :false
+  } ,
+  "draggable" :{
+   "enabled" :false
+  }
+ } ,
+ "formStylesMap" :[
+  {
+   "label" :"Width (px)" ,
+   "name" :"width" ,
+   "value" :"700" ,
+   "type" :"number" ,
+   "prepend" :"" ,
+   "append" :"px"
+  } ,
+  {
+   "label" :"Height (px)" ,
+   "name" :"height" ,
+   "value" :"800" ,
+   "type" :"number" ,
+   "prepend" :"" ,
+   "append" :"px"
+  } ,
+  {
+   "label" :"Background Color" ,
+   "name" :"background-color" ,
+   "value" :"#FFFFFF" ,
+   "type" :"color" ,
+   "prepend" :"" ,
+   "append" :""
+  } ,
+  {
+   "label" :"Foreground Color" ,
+   "name" :"color" ,
+   "value" :"#111111" ,
+   "type" :"color" ,
+   "prepend" :"" ,
+   "append" :""
+  } ,
+  {
+   "label" :"Transparency" ,
+   "name" :"opacity" ,
+   "value" :"1" ,
+   "type" :"text" ,
+   "prepend" :"" ,
+   "append" :""
+  } ,
+  {
+   "label" :"Padding (px)" ,
+   "name" :"padding" ,
+   "value" :"5" ,
+   "type" :"number" ,
+   "prepend" :"" ,
+   "append" :"px"
+  }
+ ] ,
+ "Contents" :[
+ ] ,
+ "error" :""
+}

@@ -47,6 +47,12 @@
      <input type="{{styleMap.type}}"
             ng-model="styleMap.value" value="{{styleMap.value}}" placeholder="{{styleMap.label}}">
     </md-input-container>
+    <div class="checkbox qf-hidden-view-mode qf-required-checkbox">
+     <label>
+      <input type='checkbox' ng-model="designerCtrl.formSrv.designGridSettings.resizable.enabled" />
+      Enable Resizing
+     </label>
+    </div>
    </form>
   </div>
   <div role="tabpanel" class="tab-pane" id="qf-form-templates-tab">

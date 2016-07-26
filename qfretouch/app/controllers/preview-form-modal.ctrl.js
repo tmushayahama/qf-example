@@ -24,21 +24,6 @@ var previewFormCtrl = function (
 
  vm.portrait = true;
 
- vm.gridsterOpts = {
-  columns: 12,
-  margins: [5, 5],
-  mobileBreakPoint: 600,
-  rowHeight: 20,
-  defaultSizeX: 6,
-  defaultSizeY: 10,
-  resizable: {
-   enabled: false,
-  },
-  draggable: {
-   enabled: false,
-  }
- };
-
  vm.devices = [
   {
    name: "Laptop 1024px",

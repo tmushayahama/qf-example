@@ -509,7 +509,7 @@ define([
       {
        label: "Background Color",
        name: "background-color",
-       value: "#FFFFFF",
+       value: "transparent",
        type: "color",
        prepend: "",
        append: ""

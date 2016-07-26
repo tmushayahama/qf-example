@@ -25,28 +25,10 @@ var designerCtrl = function (
  //vm.formSrv.getFormTemplates("qfretouch/form-templates/all-components.json");
  vm.formSrv.getFormTemplates("qfretouch/form-templates/registration.json");
  vm.formSrv.getFormTemplates("qfretouch/form-templates/feature-request.json");
+ vm.formSrv.getFormTemplates("qfretouch/form-templates/background-check-authorization.json");
+ vm.formSrv.getFormTemplates("qfretouch/form-templates/handbook-acknowledgement.json");
 
- vm.gridsterOpts = {
-  //floating: false,
-  columns: 12,
-  mobileBreakPoint: 600,
-  margins: [20, 20],
-  rowHeight: 20,
-  minSizeX: 2,
-  minSizeY: 2,
-  defaultSizeX: 6,
-  defaultSizeY: 10,
-  draggable: {
-   enabled: true,
-   scroll: true,
-   handle: '.qf-grab-me',
-   start: function (event, $element, widget) {}, // optional callback fired when drag is started,
-   drag: function (event, $element, widget) {},
-   stop: function (event, $element, widget) {
-    //sortComponents();
-   }
-  }
- };
+
 
  vm.components = components;
  vm.formSrv.formItems = [];
