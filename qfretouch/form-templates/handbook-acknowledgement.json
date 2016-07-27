@@ -1,6 +1,7 @@
 {
- "formName" :"Untitled Form" ,
+ "formName" :"Employee Handbook Acknowledgement" ,
  "description" :"" ,
+ "formTemplateId" :"employee-handbook-acknowledgement" ,
  "formStyles" :{
   "width" :"700px" ,
   "height" :"800px" ,

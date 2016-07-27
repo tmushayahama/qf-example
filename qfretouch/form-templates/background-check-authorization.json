@@ -1,6 +1,7 @@
 {
  "formName" :"Background Check Authorization" ,
  "description" :"background check authorization" ,
+ "formTemplateId" :"background-check" ,
  "formStyles" :{
   "width" :"700px" ,
   "height" :"800px" ,

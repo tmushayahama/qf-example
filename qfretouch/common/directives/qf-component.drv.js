@@ -87,6 +87,12 @@ angular.module('qfretouch').directive('qfComponent', ['$window', '$timeout',
       $scope.component.options.splice($scope.component.options.indexOf($scope.component.options.indexOf(option), 1));
      };
 
+
+     $scope.signature = {
+      value: '',
+     };
+
+
      $scope.$watch('component.optionsText', function (text) {
       var x;
       $scope.component.options = (function () {

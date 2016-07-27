@@ -2,12 +2,13 @@ angular.module('qfretouch').directive('jSignatureDirective', ['$window', '$timeo
  function ($window, $timeout) {
   return {
    restrict: 'EA',
-   replace: true,
+   //replace: true,
    scope: {
-    model: '=jSignature',
+    model: '=signature',
     penColor: '@',
     lineColor: '@',
-    readonly: '='
+    readonly: '=',
+    reset: '@'
    },
    link: function (scope, element, attrs, controller) {
     // Style undoButton
@@ -38,9 +39,13 @@ angular.module('qfretouch').directive('jSignatureDirective', ['$window', '$timeo
 
     //var signatureWidth = $(element).width();
 
+    scope.model.reset = function () {
+     console.log('reset!!!');
+     element.jSignature('reset');
+    };
     // element.resize();
     // Watch Model
-    scope.$watch('model', function (newValue, oldValue) {
+    scope.$watch('model.value', function (newValue, oldValue) {
      if (typeof newValue !== 'undefined') {
       var value = newValue.split(',');
       if (value[1] && value[1].length > 0) {

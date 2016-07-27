@@ -28,18 +28,23 @@
          class="form-control qf-label qf-hidden-view-mode" placeholder="Label">
   <input type='hidden'  validator-required="{{component.required}}" validator-group="{{component.formName}}" />
   <div class="qf-signature-parent qf-hidden-design-mode ">
-   <j-signature-directive sig="customSignature"
+   <j-signature-directive signature="signature"
                           reset="documentSignatureModalCtrl.clear"
                           get-data="documentSignatureModalCtrl.getData"
-                          class="qf-signature"
-                          save="testAction">
+                          class="qf-signature">
    </j-signature-directive>
+   <div class="qf-signature-actions">
+    <md-button class="qf-hidden-design-mode md-icon-button qf-default" ng-click="undo()">
+     <i class="fa fa-undo"></i>
+    </md-button>
+    <md-button class="qf-hidden-design-mode md-icon-button qf-danger" ng-click="signature.reset()">
+     <i class="fa fa-eraser"></i>
+    </md-button>
+   </div>
   </div>
   <div class="qf-signature-placeholder qf-hidden-view-mode">
    Signature
   </div>
-  <md-button class="qf-hidden-design-mode" ng-click="clear()">Clear</md-button>
-  <md-button class="qf-hidden-design-mode" ng-click="inputText = accept().dataUrl">Sign</md-button>
   <p class='help-block qf-hidden-design-mode'>
    {{component.description}}
   </p>

@@ -105,8 +105,8 @@ var designerCtrl = function (
   });
   modalInstance.rendered.then(function () {
    $(window).trigger('resize');
-
   });
+
   modalInstance.result.then(function (searchCriteria) {
 
   }, function () {
