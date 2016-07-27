@@ -2,6 +2,7 @@ angular.module('qfretouch').directive('jSignatureDirective', ['$window', '$timeo
  function ($window, $timeout) {
   return {
    restrict: 'EA',
+   replace: true,
    scope: {
     model: '=jSignature',
     penColor: '@',
@@ -21,7 +22,7 @@ angular.module('qfretouch').directive('jSignatureDirective', ['$window', '$timeo
 
     // Create Settings Object
     var settings = {
-     UndoButton: undoButton
+     // UndoButton: undoButton
     };
     if (scope.lineColor) {
      settings['decor-color'] = scope.lineColor;
@@ -29,7 +30,8 @@ angular.module('qfretouch').directive('jSignatureDirective', ['$window', '$timeo
     if (scope.penColor) {
      settings.color = scope.penColor;
     }
-    settings.width = 400;
+    //settings['decor-color'] = "transparent";
+    //settings.width = 400;
 
     // Build jSignature Element
     element.jSignature(settings);
@@ -68,7 +70,6 @@ angular.module('qfretouch').directive('jSignatureDirective', ['$window', '$timeo
       }
      }
     });
-
 
     // Bind to jSignature Event
     element.bind('change', function (e) {

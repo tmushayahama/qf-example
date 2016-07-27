@@ -75,6 +75,8 @@ var previewFormCtrl = function (
   $uibModalInstance.dismiss("cancel");
  };
  //vm.adjust();
+
+
 };
 
 previewFormCtrl.$inject = [

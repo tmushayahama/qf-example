@@ -56,19 +56,30 @@ md-input-container.md-input-focused .md-input {
  color: #777;
 }
 
-.qf-signature {
- display: block;
- //background-color: #FFF;
- height: 60px!important;
- //width: 100%!important;
- //width: calc(100% - 1px)!important;
- //border-bottom: #777 solid 3px;
- width: 200px;
- canvas.jSignature {
-  display: block;
-  height: 60px!important;
+.qf-signature-parent {
+ height: 100px;
+ width: 100%;
+ .qf-signature {
+  border-bottom: #BBB solid 3px;
+  //display: block;
+  //background-color: #FFF;
+  // height: 60px!important;
+  //width: 100%!important;
   //width: calc(100% - 1px)!important;
-  width: 200px;
+  //border-bottom: #777 solid 3px;
+  // width: 200px;
+  padding: 0 0 0 0;
+  margin: 0 0 0 0;
+  height: 100%!important;
+  width: 100%!important;
+  canvas.jSignature {
+   // display: block;
+   // height: 60px!important;
+   //width: calc(100% - 1px)!important;
+   // width: 200px;
+   height: 100%!important;
+   width: 100%!important;
+  }
  }
 }
 .qf-signature-placeholder {

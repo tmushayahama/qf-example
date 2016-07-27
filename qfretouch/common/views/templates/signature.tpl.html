@@ -27,14 +27,14 @@
   <input type="text" ng-model="component.label"
          class="form-control qf-label qf-hidden-view-mode" placeholder="Label">
   <input type='hidden'  validator-required="{{component.required}}" validator-group="{{component.formName}}" />
-  <j-signature-directive signature-id="qf-{{component.formName + index}}"
-                         sig="customSignature"
-                         ng-style="{ width: getComponentWidth()}"
-                         reset="documentSignatureModalCtrl.clear"
-                         get-data="documentSignatureModalCtrl.getData"
-                         class=" qf-hidden-design-mode qf-signature"
-                         save="testAction">
-  </j-signature-directive>
+  <div class="qf-signature-parent qf-hidden-design-mode ">
+   <j-signature-directive sig="customSignature"
+                          reset="documentSignatureModalCtrl.clear"
+                          get-data="documentSignatureModalCtrl.getData"
+                          class="qf-signature"
+                          save="testAction">
+   </j-signature-directive>
+  </div>
   <div class="qf-signature-placeholder qf-hidden-view-mode">
    Signature
   </div>

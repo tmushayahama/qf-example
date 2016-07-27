@@ -27,6 +27,7 @@ var designerCtrl = function (
  vm.formSrv.getFormTemplates("qfretouch/form-templates/feature-request.json");
  vm.formSrv.getFormTemplates("qfretouch/form-templates/background-check-authorization.json");
  vm.formSrv.getFormTemplates("qfretouch/form-templates/handbook-acknowledgement.json");
+ vm.formSrv.getFormTemplates("qfretouch/form-templates/parking-permit.json");
 
 
 
@@ -101,6 +102,10 @@ var designerCtrl = function (
      return vm.formSrv;
     }
    }
+  });
+  modalInstance.rendered.then(function () {
+   $(window).trigger('resize');
+
   });
   modalInstance.result.then(function (searchCriteria) {
 

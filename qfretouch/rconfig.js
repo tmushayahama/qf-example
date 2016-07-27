@@ -29,7 +29,7 @@ requirejs.config({
   'angular-gridster': '../bower_components/angular-gridster/dist/angular-gridster.min',
   'angular-resizer': '../bower_components/javascript-detect-element-resize/jquery.resize',
   'angular-base64-upload': '../bower_components/angular-base64-upload/dist/angular-base64-upload.min',
-  'jsignature': '../lib/js/jSignature.min',
+  'jsignature': '../lib/js/jSignature',
   //Quickform
   //'qf-builder': '../qf-lib/qf-builder',
   //'qf-components': '../components/quickform-components',
