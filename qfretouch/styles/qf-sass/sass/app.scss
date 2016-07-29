@@ -72,11 +72,11 @@ md-input-container.md-input-focused .md-input {
   -webkit-gradient(linear, 0 100%, 100% 0, color-stop(.75, transparent), color-stop(.75, #EEE)),
   -webkit-gradient(linear, 0 0, 100% 100%, color-stop(.75, transparent), color-stop(.75, #EEE));
 
- -moz-background-size:10px 10px;
- background-size:10px 10px;
+ -moz-background-size:20px 20px;
+ background-size:20px 20px;
  -webkit-background-size:10px 10px;
 
- background-position:0 0, 5px 0, 5x -5px, 0px 5px;
+ background-position:0 0, 10px 0, 10x -10px, 0px 10px;
  .qf-signature {
   border-bottom: #BBB solid 3px;
   background-color: transparent!important;
@@ -189,9 +189,9 @@ md-input-container.md-input-focused .md-input {
  }
 
  .qf-name {
-  @include position(absolute, null 5px 0 5px);
+  @include position(absolute, null 0 0 0);
   //border-top: #CCC solid 1px;
-  padding: 10px 30px 0 30px;
+  padding: 10px 5px 0 5px;
   height: 40px;
 
   .qf-icon-btn {
@@ -467,7 +467,7 @@ ul {
  }
 }
 .qf-component-nav {
- @include position(absolute, 51px null 0 0);
+ @include position(absolute, 50px null 0 0);
  width: 100px;
  padding: 10px 10px 10px 10px!important;
  overflow-y: auto;
@@ -571,7 +571,7 @@ ul {
 }
 
 .qf-designer-container {
- @include position(absolute, 51px 0 10px 100px);
+ @include position(absolute, 50px 0 10px 100px);
  background-color: #F2F2F2;
  overflow-x: hidden;
  overflow-y: auto;
@@ -639,8 +639,9 @@ ul {
   }
  }
 
- .qf-builder {
+ #qf-builder {
   padding: 10px 10px;
+  height: 100%;
 
 
   .handle-se{
@@ -658,7 +659,7 @@ ul {
   .handle-se,
   .handle-sw{
    &:hover {
-    background-color: rgba(#99CC99, 0.8);
+    background-color: rgba(#99CC99, 0.5);
     border: #BBB solid 1px;
    }
   }
@@ -817,7 +818,7 @@ ul {
    padding-left: 0;
   }
   input, textarea {
-   color: #AAA;
+   color: #222;
    -webkit-box-shadow: inset 2px 2px 2px 0px #dddddd;
    -moz-box-shadow: inset 2px 2px 2px 0px #dddddd;
    box-shadow: inset 2px 2px 2px 0px #dddddd;
@@ -835,9 +836,14 @@ ul {
     border: none;
    }
    &.qf-help-block {
-    font-size: 10px;
+    font-size: 10px; 
    }
 
+  }
+  textarea {
+   &.qf-textarea-resizable {
+    resize: vertical;
+   }
   }
   .qf-required-checkbox {
    margin: 0;

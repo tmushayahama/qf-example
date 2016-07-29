@@ -47,6 +47,7 @@
             columns: 12,
             margins: [5, 5],
             mobileBreakPoint: 600,
+            mobileModeEnabled: false,
             rowHeight: 20,
             defaultSizeX: 6,
             defaultSizeY: 10,

@@ -1,10 +1,21 @@
 <div class="modal-header">
  <div class="qf-title">
   <p class="qf-truncate">
-   <i class="fa fa-eye pull-left"></i>
-   Preview Form
+
   </p>
  </div>
+ <div class="qf-device-nav">
+  <ul class="nav nav-tabs">
+   <li ng-repeat="device in previewFormCtrl.devices">
+   <md-button ng-click="previewFormCtrl.selectDevice($index)"
+              ng-class="{'active': previewFormCtrl.selectedDeviceIndex === $index}">
+    <i class="fa {{::device.icon}}"></i>
+    <p class="qf-truncate">{{device.name}}</p>
+   </md-button>
+   </li>
+  </ul>
+ </div>
+
  <md-button class="qf-close" ng-click="previewFormCtrl.close()">
   x
  </md-button>

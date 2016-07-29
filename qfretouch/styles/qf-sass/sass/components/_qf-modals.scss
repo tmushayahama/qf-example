@@ -265,25 +265,61 @@
 }
 
 .modal-preview-form {
- @include position(absolute, 20px 20px 30px 20px);
+ @include position(absolute, 5px 5px 5px 5px);
  width: auto;
  margin: 0;
 
  .modal-header {
-  height: 50px;
+  height: 65px;
   z-index: 1000;
+  border-bottom: none;
 
   .qf-title {
-   @include position(absolute, 0 40px 0 0);
+   @include position(absolute, 0 null 0 0);
    padding: 9px 8px;
    font-size: 22px;
+   width: 100px;
+  }
+  .qf-device-nav {
+   @include position(absolute, 0 101px 0 101px);
+   padding: 0x;
+   font-size: 22px;
+   ul {
+    margin: auto;
+    width: 280px;
+    //border: 3px solid green;
+    padding: 0px;
+   }
+   .md-button {
+    padding: 10px 6px 0 6px;
+    margin: 0;
+    text-align: center;
+    width: 80px;
+    height: 65px;
+    line-height: 20px;
+    color: #555;
+    border-bottom: 3px solid transparent;
+
+    i {
+     color: #999;
+     font-size: 30px;
+    }
+    font-size: 8px;
+    &.active {
+     color: #555;
+     border-bottom: 3px solid rgba($primary-color, 0.6);
+     i {
+      color: #444;
+     }
+    }
+   }
   }
   .qf-close {
    @include position(absolute, 0 0 0 null);
    width: 40px;
    margin: 0;
    padding: 2px;
-   font-size: 22px;
+   font-size: 30px;
    color: #777;
   }
  }
@@ -300,8 +336,10 @@
  }
 
  .modal-body {
-  @include position(absolute, 51px 0 0 0);
+  @include position(absolute, 66px 0 0 0);
+  padding: 10px 5px!important;
   overflow: auto;
+  -webkit-overflow-scrolling: touch;
  }
 
  .modal-footer {

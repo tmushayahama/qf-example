@@ -45,6 +45,11 @@ var designerCtrl = function (
    sizeY: 10
   };
   vm.formSrv.formItems.push(formItem);
+
+  $timeout(function () {
+   var scroller = document.getElementById("qf-builder");
+   scroller.scrollTop = scroller.scrollHeight;
+  }, 0, false);
  };
 
  vm.duplicateComponent = function (component) {
