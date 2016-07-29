@@ -1,7 +1,7 @@
 <div class="qf-grab-me row qf-hidden-component-mode qf-hidden-view-mode">
  <div class="qf-handle-title">
   <p class="qf-truncate">
-   Text Input
+   Image Upload
   </p>
  </div>
  <div class="qf-actions">
@@ -25,19 +25,26 @@
  <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
   <input type="text" ng-model="component.label"
          class="form-control qf-label qf-hidden-component-mode qf-hidden-view-mode" placeholder="Label">
-  <input type="{{component.type}}" ng-model="component.inputText"
-         id="{{component.formName + index}}"
-         value="{{::component.inputText}}"
-         class="form-control qf-hidden-design-mode"
-         placeholder="{{component.placeholder}}">
-  <input type="text" ng-model="component.placeholder" validator-required="{{component.required}}"
-         class="form-control qf-placeholder-input qf-hidden-view-mode" placeholder="Placeholder">
-
-  <p class='help-block qf-hidden-design-mode'>
-   {{component.description}}
-  </p>
-  <input type="text" ng-model="component.description"
-         class="form-control qf-hidden-component-mode qf-help-block qf-label qf-hidden-view-mode" placeholder="Help Block">
+  <label class="qf-file-upload-1 qf-ghost-btn-1 qf-hidden-view-mode">
+   <i class="fa fa-cloud-upload"></i> Choose Image
+   <input type="file" ng-model="uploadImageItem.file"
+          class="form-control " name="file" base-sixty-four-input required onload="uploadImageItem.onLoad" maxsize="500" accept="image/*">
+  </label>
+  <button ng-show="uploadImageItem.file.base64" ng-click="uploadImageItem.removeImage()" type="button"
+          class="qf-file-upload-1 qf-ghost-btn-danger qf-hidden-view-mode">
+   Remove
+  </button>
+  <label class="qf-file-upload-1 qf-ghost-btn-1 qf-hidden-design-mode"
+         ng-hide="component.readonly">
+   <i class="fa fa-cloud-upload"></i> Choose Image
+   <input type="file" ng-model="uploadImageItem.file"
+          class="form-control " name="file" base-sixty-four-input required onload="uploadImageItem.onLoad" maxsize="500" accept="image/*">
+  </label>
+  <button ng-show="uploadImageItem.file.base64" ng-click="uploadImageItem.removeImage()" type="button"
+          class="qf-file-upload-1 qf-ghost-btn-danger qf-hidden-design-mode"
+          ng-hide="component.readonly">
+   Remove
+  </button>
  </div>
 </div>
 <div class="qf-component-display qf-hidden-design-mode qf-hidden-view-mode">

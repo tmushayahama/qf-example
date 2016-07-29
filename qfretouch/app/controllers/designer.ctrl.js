@@ -3,7 +3,6 @@ var designerCtrl = function (
         config,
         //$builder,
         // $validator,
-        components,
         $scope,
         $q,
         $rootScope,
@@ -32,7 +31,6 @@ var designerCtrl = function (
 
 
 
- vm.components = components;
  vm.formSrv.formItems = [];
 
  vm.adjustMedia = function (mediaType) {
@@ -198,6 +196,10 @@ var designerCtrl = function (
   $scope.events.unshift(event);
   });
   */
+
+ vm.formSrv.getFormControls("qfretouch/qf-settings/form-controls/form-controls.json");
+
+
  $scope.submit = function () {
   return $validator.validate($scope, 'default').success(function () {
    return console.log('success');
@@ -247,7 +249,6 @@ designerCtrl.$inject = [
  'config',
  //'$builder',
  //'$validator',
- 'components',
  '$scope',
  '$q',
  '$rootScope',

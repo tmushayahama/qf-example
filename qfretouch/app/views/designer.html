@@ -44,7 +44,7 @@
 </nav>
 <div class="qf-component-nav">
  <ul class="">
-  <li ng-repeat="item in designerCtrl.components"
+  <li ng-repeat="item in designerCtrl.formSrv.formControls"
       class="qf-component">
    <div qf-component template-url="{{item.templateUrl}}"
         ng-click="designerCtrl.addComponent(item)"

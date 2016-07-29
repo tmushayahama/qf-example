@@ -158,8 +158,26 @@ angular.module('qfretouch').directive('qfComponent', ['$window', '$timeout',
       });
 
       background.value = "url(data:" + file.filetype + ";base64," + file.base64 + ')';
-      //console.log(background, "");
+      //console.log(background, "");]
+      $scope.component.inputText = background.value;
      }, true);
+
+
+     $scope.uploadImageItem = {
+      file: {},
+      removeImage: function () {
+       $scope.component.inputText = '';
+      }
+     };
+
+     $scope.$watch('uploadImageItem.file', function (file) {
+      if (!file.base64) {
+       return;
+      }
+      $scope.component.inputText = "url(data:" + file.filetype + ";base64," + file.base64 + ')';
+     }, true);
+
+
     }
    ],
    link: function (scope, element, attr, ctrl) {

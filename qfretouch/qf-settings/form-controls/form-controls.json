@@ -1,0 +1,421 @@
+[
+ {
+  "templateUrl" :"qfretouch/common/views/templates/heading.tpl.html" ,
+  "name" :"Heading" ,
+  "component" :{
+   "label" :null ,
+   "description" :null ,
+   "placeholder" :"Type your heading" ,
+   "rows" :2 ,
+   "required" :null ,
+   "componentStyles" :{} ,
+   "componentStylesMap" :[
+    {
+     "controlName" :"component1" ,
+     "controlStyles" :[
+      {
+       "label" :"Color" ,
+       "name" :"color" ,
+       "value" :"#0000FF" ,
+       "type" :"color" ,
+       "prepend" :"" ,
+       "append" :""
+      } ,
+      {
+       "label" :"Font Size" ,
+       "name" :"font-size" ,
+       "value" :"30" ,
+       "type" :"number" ,
+       "prepend" :"" ,
+       "append" :"px"
+      } ,
+      {
+       "label" :"Text Align" ,
+       "name" :"text-align" ,
+       "value" :"left" ,
+       "type" :"text" ,
+       "prepend" :"" ,
+       "append" :""
+      }
+     ]
+    }
+   ]
+  } ,
+  "gridMap" :{
+   "sizeX" :12 ,
+   "sizeX" :6 ,
+   "lg" :{
+    "sizeX" :12 ,
+    "sizeX" :6
+   } ,
+   "md" :{
+    "sizeX" :12 ,
+    "sizeX" :6
+   } ,
+   "sm" :{
+    "sizeX" :12 ,
+    "sizeX" :6
+   } ,
+   "xs" :{
+    "sizeX" :12 ,
+    "sizeX" :6
+   }
+  }
+ } ,
+ {
+  "templateUrl" :"qfretouch/common/views/templates/paragraph.tpl.html" ,
+  "name" :"Paragraph" ,
+  "component" :{
+   "label" :"First Name" ,
+   "description" :"Enter your first name" ,
+   "placeholder" :"Introduction" ,
+   "required" :null ,
+   "rows" :null ,
+   "componentStyles" :{} ,
+   "componentStylesMap" :[
+    {
+     "controlName" :"component1" ,
+     "controlStyles" :[
+      {
+       "label" :"Color" ,
+       "name" :"color" ,
+       "value" :"#0000FF" ,
+       "type" :"color" ,
+       "prepend" :"" ,
+       "append" :""
+      } ,
+      {
+       "label" :"Font Size" ,
+       "name" :"font-size" ,
+       "value" :"30" ,
+       "type" :"number" ,
+       "prepend" :"" ,
+       "append" :"px"
+      } ,
+      {
+       "label" :"Text Align" ,
+       "name" :"text-align" ,
+       "value" :"left" ,
+       "type" :"text" ,
+       "prepend" :"" ,
+       "append" :""
+      }
+     ]
+    }
+   ]
+  } ,
+  "gridMap" :{
+   "sizeX" :12 ,
+   "sizeX" :7 ,
+   "lg" :{
+    "sizeX" :12 ,
+    "sizeX" :6
+   } ,
+   "md" :{
+    "sizeX" :12 ,
+    "sizeX" :6
+   } ,
+   "sm" :{
+    "sizeX" :12 ,
+    "sizeX" :6
+   } ,
+   "xs" :{
+    "sizeX" :12 ,
+    "sizeX" :6
+   }
+  }
+ } ,
+ {
+  "templateUrl" :"qfretouch/common/views/templates/textbox.tpl.html" ,
+  "name" :"Textbox" ,
+  "component" :{
+   "label" :"First Name" ,
+   "description" :"Enter your first name" ,
+   "placeholder" :"ex. Jamie Doe" ,
+   "required" :false
+  } ,
+  "gridMap" :{
+   "sizeX" :12 ,
+   "sizeX" :7 ,
+   "lg" :{
+    "sizeX" :12 ,
+    "sizeX" :7
+   } ,
+   "md" :{
+    "sizeX" :12 ,
+    "sizeX" :7
+   } ,
+   "sm" :{
+    "sizeX" :12 ,
+    "sizeX" :7
+   } ,
+   "xs" :{
+    "sizeX" :12 ,
+    "sizeX" :7
+   }
+  }
+ } ,
+ {
+  "templateUrl" :"qfretouch/common/views/templates/textarea.tpl.html" ,
+  "name" :"Textarea" ,
+  "component" :{
+   "label" :"Biography" ,
+   "description" :"Enter your first name" ,
+   "placeholder" :"ex. Ex tritani equidem argumentum pro ,eam ea amet veniam. Alii noster oportere te his ,consul fierent accusamus ea per ,sed ferri aeq" ,
+   "required" :false ,
+   "rows" :2
+  } ,
+  "gridMap" :{
+   "sizeX" :12 ,
+   "sizeX" :7 ,
+   "lg" :{
+    "sizeX" :12 ,
+    "sizeX" :7
+   } ,
+   "md" :{
+    "sizeX" :12 ,
+    "sizeX" :7
+   } ,
+   "sm" :{
+    "sizeX" :12 ,
+    "sizeX" :7
+   } ,
+   "xs" :{
+    "sizeX" :12 ,
+    "sizeX" :7
+   }
+  }
+ } ,
+ {
+  "templateUrl" :"qfretouch/common/views/templates/signature.tpl.html" ,
+  "name" :"Signature" ,
+  "component" :{
+   "label" :"Signature" ,
+   "description" :"please sign above" ,
+   "placeholder" :"" ,
+   "required" :false
+  } ,
+  "gridMap" :{
+   "sizeX" :12 ,
+   "sizeX" :7 ,
+   "lg" :{
+    "sizeX" :12 ,
+    "sizeX" :7
+   } ,
+   "md" :{
+    "sizeX" :12 ,
+    "sizeX" :7
+   } ,
+   "sm" :{
+    "sizeX" :12 ,
+    "sizeX" :7
+   } ,
+   "xs" :{
+    "sizeX" :12 ,
+    "sizeX" :7
+   }
+  }
+ } ,
+ {
+  "templateUrl" :"qfretouch/common/views/templates/checkbox.tpl.html" ,
+  "name" :"Checkbox" ,
+  "component" :{
+   "label" :"Are you going?" ,
+   "description" :"Select answer below" ,
+   "placeholder" :"" ,
+   "options" :["yes" ,"no"] ,
+   "required" :false
+  } ,
+  "gridMap" :{
+   "sizeX" :12 ,
+   "sizeX" :7 ,
+   "lg" :{
+    "sizeX" :12 ,
+    "sizeX" :7
+   } ,
+   "md" :{
+    "sizeX" :12 ,
+    "sizeX" :7
+   } ,
+   "sm" :{
+    "sizeX" :12 ,
+    "sizeX" :7
+   } ,
+   "xs" :{
+    "sizeX" :12 ,
+    "sizeX" :7
+   }
+  }
+ } ,
+ {
+  "templateUrl" :"qfretouch/common/views/templates/radiobox.tpl.html" ,
+  "name" :"Radiobox" ,
+  "component" :{
+   "label" :"Are you going?" ,
+   "description" :"Select answer below" ,
+   "placeholder" :"" ,
+   "options" :["yes" ,"no"] ,
+   "required" :false
+  } ,
+  "gridMap" :{
+   "sizeX" :12 ,
+   "sizeX" :7 ,
+   "lg" :{
+    "sizeX" :12 ,
+    "sizeX" :7
+   } ,
+   "md" :{
+    "sizeX" :12 ,
+    "sizeX" :7
+   } ,
+   "sm" :{
+    "sizeX" :12 ,
+    "sizeX" :7
+   } ,
+   "xs" :{
+    "sizeX" :12 ,
+    "sizeX" :7
+   }
+  }
+ } ,
+ {
+  "templateUrl" :"qfretouch/common/views/templates/dropdown.tpl.html" ,
+  "name" :"Dropdown" ,
+  "component" :{
+   "label" :"Are you going?" ,
+   "description" :"Select answer below" ,
+   "placeholder" :"" ,
+   "options" :["yes" ,"no"] ,
+   "required" :false
+  } ,
+  "gridMap" :{
+   "sizeX" :12 ,
+   "sizeX" :7 ,
+   "lg" :{
+    "sizeX" :12 ,
+    "sizeX" :7
+   } ,
+   "md" :{
+    "sizeX" :12 ,
+    "sizeX" :7
+   } ,
+   "sm" :{
+    "sizeX" :12 ,
+    "sizeX" :7
+   } ,
+   "xs" :{
+    "sizeX" :12 ,
+    "sizeX" :7
+   }
+  }
+ } ,
+ {
+  "templateUrl" :"qfretouch/common/views/templates/datepicker.tpl.html" ,
+  "name" :"Datepicker" ,
+  "component" :{
+   "label" :"Date" ,
+   "description" :"Pick a Date" ,
+   "placeholder" :"date" ,
+   "required" :false
+  } ,
+  "gridMap" :{
+   "sizeX" :12 ,
+   "sizeX" :7 ,
+   "lg" :{
+    "sizeX" :12 ,
+    "sizeX" :7
+   } ,
+   "md" :{
+    "sizeX" :12 ,
+    "sizeX" :7
+   } ,
+   "sm" :{
+    "sizeX" :12 ,
+    "sizeX" :7
+   } ,
+   "xs" :{
+    "sizeX" :12 ,
+    "sizeX" :7
+   }
+  }
+ } ,
+ {
+  "templateUrl" :"qfretouch/common/views/templates/picturebox.tpl.html" ,
+  "name" :"Picture" ,
+  "component" :{
+   "label" :"Image" ,
+   "description" :"Choose an Image" ,
+   "placeholder" :"" ,
+   "required" :false ,
+   "readonly" :false
+  } ,
+  "gridMap" :{
+   "sizeX" :12 ,
+   "sizeX" :7 ,
+   "lg" :{
+    "sizeX" :12 ,
+    "sizeX" :7
+   } ,
+   "md" :{
+    "sizeX" :12 ,
+    "sizeX" :7
+   } ,
+   "sm" :{
+    "sizeX" :12 ,
+    "sizeX" :7
+   } ,
+   "xs" :{
+    "sizeX" :12 ,
+    "sizeX" :7
+   }
+  } ,
+  "componentStyles" :{} ,
+  "componentStylesMap" :[
+   {
+    "controlName" :"main" ,
+    "controlStyles" :[
+     {
+      "label" :"Background Image" ,
+      "name" :"background-image" ,
+      "value" :"" ,
+      "type" :"text" ,
+      "prepend" :"" ,
+      "append" :""
+     } ,
+     {
+      "label" :"Background Repeat" ,
+      "name" :"background-repeat" ,
+      "value" :"" ,
+      "type" :"no-repeat" ,
+      "prepend" :"" ,
+      "append" :""
+     } ,
+     {
+      "label" :"Background Size" ,
+      "name" :"background-size" ,
+      "value" :"100%" ,
+      "type" :"text" ,
+      "prepend" :"" ,
+      "append" :""
+     } ,
+     {
+      "label" :"Background Color" ,
+      "name" :"background-color" ,
+      "value" :"transparent" ,
+      "type" :"color" ,
+      "prepend" :"" ,
+      "append" :""
+     } ,
+     {
+      "label" :"Foreground Color" ,
+      "name" :"color" ,
+      "value" :"#111111" ,
+      "type" :"color" ,
+      "prepend" :"" ,
+      "append" :""
+     }
+    ]
+   }
+  ]
+ }
+]

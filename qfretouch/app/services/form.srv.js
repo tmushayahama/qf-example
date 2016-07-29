@@ -12,6 +12,7 @@
           $http.defaults.headers.common['X-Requested-With'] = 'XMLHttpRequest';
 
           var FormSrv = function () {
+           this.formControls = [];
            this.formName = "Untitled Form";
            this.description = "";
            this.formStyles = {};
@@ -132,6 +133,19 @@
             return deferred.reject(data);
            }
            return deferred.resolve(data);
+          };
+
+          FormSrv.prototype.getFormControls = function (url) {
+           var self = this;
+           var deferred = $q.defer();
+           self.error = '';
+           $http.get(url).success(function (data) {
+            self.formControls = data;
+            self.deferredHandler(data, deferred);
+           }).error(function (data) {
+            self.deferredHandler(data, deferred, 'Unknown error');
+           });
+           return deferred.promise;
           };
 
           FormSrv.prototype.getFormStyle = function (url) {
