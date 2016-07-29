@@ -17,6 +17,8 @@
            this.formStyles = {};
            this.formTemplates = [];
            this.formItems = [];
+
+           this.getFormStyle("qfretouch/qf-settings/qf-form-styles/default-form-styles.json");
            this.designGridSettings = {
             //floating: false,
             //floating: false,
@@ -58,56 +60,58 @@
              enabled: false,
             }
            };
-           this.formStylesMap = [
+           /*
+            this.formStylesMap = [
             {
-             label: "Width (px)",
-             name: "width",
-             value: "700",
-             type: "number",
-             prepend: "",
-             append: "px",
+            label: "Width (px)",
+            name: "width",
+            value: "700",
+            type: "number",
+            prepend: "",
+            append: "px",
             },
             {
-             label: "Height (px)",
-             name: "height",
-             value: "800",
-             type: "number",
-             prepend: "",
-             append: "px",
+            label: "Height (px)",
+            name: "height",
+            value: "800",
+            type: "number",
+            prepend: "",
+            append: "px",
             },
             {
-             label: "Background Color",
-             name: "background-color",
-             value: "#FFFFFF",
-             type: "color",
-             prepend: "",
-             append: "",
+            label: "Background Color",
+            name: "background-color",
+            value: "#FFFFFF",
+            type: "color",
+            prepend: "",
+            append: "",
             },
             {
-             label: "Foreground Color",
-             name: "color",
-             value: "#111111",
-             type: "color",
-             prepend: "",
-             append: "",
+            label: "Foreground Color",
+            name: "color",
+            value: "#111111",
+            type: "color",
+            prepend: "",
+            append: "",
             },
             {
-             "label": "Transparency",
-             "name": "opacity",
-             "value": "1",
-             "type": "text",
-             "prepend": "",
-             "append": ""
+            "label": "Transparency",
+            "name": "opacity",
+            "value": "1",
+            "type": "text",
+            "prepend": "",
+            "append": ""
             },
             {
-             label: "Padding (px)",
-             name: "padding",
-             value: "5",
-             type: "number",
-             prepend: "",
-             append: 'px',
+            label: "Padding (px)",
+            name: "padding",
+            value: "5",
+            type: "number",
+            prepend: "",
+            append: 'px',
             }
-           ];
+            ];
+            */
            this.Contents = [];
           };
 
@@ -128,6 +132,19 @@
             return deferred.reject(data);
            }
            return deferred.resolve(data);
+          };
+
+          FormSrv.prototype.getFormStyle = function (url) {
+           var self = this;
+           var deferred = $q.defer();
+           self.error = '';
+           $http.get(url).success(function (data) {
+            self.formStylesMap = data;
+            self.deferredHandler(data, deferred);
+           }).error(function (data) {
+            self.deferredHandler(data, deferred, 'Unknown error');
+           });
+           return deferred.promise;
           };
 
           FormSrv.prototype.getFormTemplates = function (url) {

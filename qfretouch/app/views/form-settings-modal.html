@@ -42,7 +42,19 @@
    </form>
   </div>
   <div role="tabpanel" class="tab-pane" id="qf-form-design-tab">
-   <form class="row">
+   <div class="qf-form-preview" gridster="designerCtrl.formSrv.viewerGridSettings">
+    <ul class="">
+     <li gridster-item="item.gridMap" ng-repeat="item in formSettingsCtrl.formSrv.formStylesMap.formItems track by $index"
+         class="qf-component">
+      <div qf-component template-url="{{item.templateUrl}}"
+           index="{{$index}}"
+           remove-component="designerCtrl.removeComponent"
+           duplicate-component="designerCtrl.duplicateComponent"
+           item="item"></div>
+     </li>
+    </ul>
+   </div>
+   <form ng-if="false" class="row">
     <md-input-container flex class="md-block" ng-repeat="styleMap in designerCtrl.formSrv.formStylesMap">
      <input type="{{styleMap.type}}"
             ng-model="styleMap.value" value="{{styleMap.value}}" placeholder="{{styleMap.label}}">

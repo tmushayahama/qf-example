@@ -55,12 +55,6 @@
 <div class="qf-designer-container dotted">
  <div class="container">
   <div class="qf-builder-container" ng-style="designerCtrl.formSrv.formStyles">
-   <form ng-if="false" class="row qf-form-properties">
-    <md-input-container class="md-block" md-no-float>
-     <input type="text" class="qf-description-input" ng-model="designerCtrl.formDescription"
-            placeholder="Form Description">
-    </md-input-container>
-   </form>
    <div gridster="designerCtrl.formSrv.designGridSettings">
     <div ng-show="designerCtrl.formSrv.formItems.length === 0">
      <div class="qf-no-info">
@@ -75,7 +69,6 @@
        <div ng-click="designerCtrl.formSrv.setFormTemplate(formTemplate)"
             class="qf-img-container">
         <img ng-src="qfretouch/img/form-templates/{{formTemplate.formTemplateId}}.png" alt="{{formTemplate.formName}}">
-
        </div>
        <div class="qf-name">
         <div class="qf-truncate">

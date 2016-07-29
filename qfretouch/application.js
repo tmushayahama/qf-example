@@ -22,6 +22,8 @@ define([
  'angular-material',
  'angular-gridster',
  'angular-base64-upload',
+ 'matchmedia',
+ 'matchmedia-ng',
  'jsignature',
  //'qf-builder',
  //'qf-components',
@@ -45,6 +47,7 @@ define([
   'ngMaterial',
   'gridster',
   'naif.base64',
+  'matchmedia-ng',
   //'builder',
   //'builder.components',
   'qfretouch.app',
@@ -209,6 +212,22 @@ define([
    gridMap: {
     sizeX: 12,
     sizeY: 6,
+    lg: {
+     sizeX: 12,
+     sizeY: 6,
+    },
+    md: {
+     sizeX: 12,
+     sizeY: 6,
+    },
+    sm: {
+     sizeX: 12,
+     sizeY: 6,
+    },
+    xs: {
+     sizeX: 12,
+     sizeY: 6,
+    }
    },
   },
   {
@@ -271,7 +290,23 @@ define([
    gridMap: {
     sizeX: 12,
     sizeY: 7,
-   },
+    lg: {
+     sizeX: 12,
+     sizeY: 6,
+    },
+    md: {
+     sizeX: 12,
+     sizeY: 6,
+    },
+    sm: {
+     sizeX: 12,
+     sizeY: 6,
+    },
+    xs: {
+     sizeX: 12,
+     sizeY: 6,
+    }
+   }
   },
   {
    templateUrl: "qfretouch/common/views/templates/textbox.tpl.html",
@@ -296,57 +331,26 @@ define([
       rule: '[url]'
      }
     ]
-   }
-  },
-  {
-   templateUrl: "qfretouch/common/views/templates/signature.tpl.html",
-   name: 'Signature',
-   component: {
-    label: 'Signature',
-    description: 'please sign above',
-    placeholder: '',
-    required: false,
-    validationOptions: [
-     {
-      label: 'none',
-      rule: '/.*/'
-     }, {
-      label: 'number',
-      rule: '[number]'
-     }, {
-      label: 'email',
-      rule: '[email]'
-     }, {
-      label: 'url',
-      rule: '[url]'
-     }
-    ]
-   }
-  },
-  {
-   templateUrl: "qfretouch/common/views/templates/checkbox.tpl.html",
-   name: 'Checkbox',
-   component: {
-    label: 'Are you going?',
-    description: 'Select answer below',
-    placeholder: '',
-    options: ['yes', 'no'],
-    required: false,
-    validationOptions: [
-     {
-      label: 'none',
-      rule: '/.*/'
-     }, {
-      label: 'number',
-      rule: '[number]'
-     }, {
-      label: 'email',
-      rule: '[email]'
-     }, {
-      label: 'url',
-      rule: '[url]'
-     }
-    ]
+   },
+   gridMap: {
+    sizeX: 12,
+    sizeY: 7,
+    lg: {
+     sizeX: 12,
+     sizeY: 7,
+    },
+    md: {
+     sizeX: 12,
+     sizeY: 7,
+    },
+    sm: {
+     sizeX: 12,
+     sizeY: 7,
+    },
+    xs: {
+     sizeX: 12,
+     sizeY: 7,
+    }
    }
   },
   {
@@ -373,6 +377,117 @@ define([
       rule: '[url]'
      }
     ]
+   },
+   gridMap: {
+    sizeX: 12,
+    sizeY: 7,
+    lg: {
+     sizeX: 12,
+     sizeY: 7,
+    },
+    md: {
+     sizeX: 12,
+     sizeY: 7,
+    },
+    sm: {
+     sizeX: 12,
+     sizeY: 7,
+    },
+    xs: {
+     sizeX: 12,
+     sizeY: 7,
+    }
+   }
+  },
+  {
+   templateUrl: "qfretouch/common/views/templates/signature.tpl.html",
+   name: 'Signature',
+   component: {
+    label: 'Signature',
+    description: 'please sign above',
+    placeholder: '',
+    required: false,
+    validationOptions: [
+     {
+      label: 'none',
+      rule: '/.*/'
+     }, {
+      label: 'number',
+      rule: '[number]'
+     }, {
+      label: 'email',
+      rule: '[email]'
+     }, {
+      label: 'url',
+      rule: '[url]'
+     }
+    ]
+   },
+   gridMap: {
+    sizeX: 12,
+    sizeY: 7,
+    lg: {
+     sizeX: 12,
+     sizeY: 7,
+    },
+    md: {
+     sizeX: 12,
+     sizeY: 7,
+    },
+    sm: {
+     sizeX: 12,
+     sizeY: 7,
+    },
+    xs: {
+     sizeX: 12,
+     sizeY: 7,
+    }
+   }
+  },
+  {
+   templateUrl: "qfretouch/common/views/templates/checkbox.tpl.html",
+   name: 'Checkbox',
+   component: {
+    label: 'Are you going?',
+    description: 'Select answer below',
+    placeholder: '',
+    options: ['yes', 'no'],
+    required: false,
+    validationOptions: [
+     {
+      label: 'none',
+      rule: '/.*/'
+     }, {
+      label: 'number',
+      rule: '[number]'
+     }, {
+      label: 'email',
+      rule: '[email]'
+     }, {
+      label: 'url',
+      rule: '[url]'
+     }
+    ]
+   },
+   gridMap: {
+    sizeX: 12,
+    sizeY: 7,
+    lg: {
+     sizeX: 12,
+     sizeY: 7,
+    },
+    md: {
+     sizeX: 12,
+     sizeY: 7,
+    },
+    sm: {
+     sizeX: 12,
+     sizeY: 7,
+    },
+    xs: {
+     sizeX: 12,
+     sizeY: 7,
+    }
    }
   },
   {
@@ -399,6 +514,26 @@ define([
       rule: '[url]'
      }
     ]
+   },
+   gridMap: {
+    sizeX: 12,
+    sizeY: 7,
+    lg: {
+     sizeX: 12,
+     sizeY: 7,
+    },
+    md: {
+     sizeX: 12,
+     sizeY: 7,
+    },
+    sm: {
+     sizeX: 12,
+     sizeY: 7,
+    },
+    xs: {
+     sizeX: 12,
+     sizeY: 7,
+    }
    }
   },
   {
@@ -425,6 +560,26 @@ define([
       rule: '[url]'
      }
     ]
+   },
+   gridMap: {
+    sizeX: 12,
+    sizeY: 7,
+    lg: {
+     sizeX: 12,
+     sizeY: 7,
+    },
+    md: {
+     sizeX: 12,
+     sizeY: 7,
+    },
+    sm: {
+     sizeX: 12,
+     sizeY: 7,
+    },
+    xs: {
+     sizeX: 12,
+     sizeY: 7,
+    }
    }
   },
   {
@@ -450,6 +605,26 @@ define([
       rule: '[url]'
      }
     ]
+   },
+   gridMap: {
+    sizeX: 12,
+    sizeY: 7,
+    lg: {
+     sizeX: 12,
+     sizeY: 7,
+    },
+    md: {
+     sizeX: 12,
+     sizeY: 7,
+    },
+    sm: {
+     sizeX: 12,
+     sizeY: 7,
+    },
+    xs: {
+     sizeX: 12,
+     sizeY: 7,
+    }
    }
   },
   {
@@ -476,6 +651,26 @@ define([
       rule: '[url]'
      }
     ]
+   },
+   gridMap: {
+    sizeX: 12,
+    sizeY: 7,
+    lg: {
+     sizeX: 12,
+     sizeY: 7,
+    },
+    md: {
+     sizeX: 12,
+     sizeY: 7,
+    },
+    sm: {
+     sizeX: 12,
+     sizeY: 7,
+    },
+    xs: {
+     sizeX: 12,
+     sizeY: 7,
+    }
    },
    componentStyles: {},
    componentStylesMap: [

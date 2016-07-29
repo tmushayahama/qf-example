@@ -612,6 +612,8 @@ ul {
 }
 
 .qf-builder-container {
+ background-repeat: no-repeat;
+ background-size: 100%;
  padding-bottom: 200px;
  margin: 20px auto;
  width: 960px;
@@ -763,6 +765,21 @@ ul {
  height: 100%;
  overflow-y: auto;
  -webkit-overflow-scrolling: touch;
+
+ transition-property:width;
+ -moz-transition-property: width; /* Firefox 4 */
+ -webkit-transition-property:width; /* Safari and Chrome */
+ -o-transition-property:width; /* Opera */
+
+ transition-duration: 0.5s;
+ -moz-transition-duration: 0.5s; /* Firefox 4 */
+ -webkit-transition-duration: 0.5s; /* Safari and Chrome */
+ -o-transition-duration: 0.5s; /* Opera */
+
+ transition-timing-function: ease;
+ -moz-transition-timing-function: ease; /* Firefox 4 */
+ -webkit-transition-timing-function: ease; /* Safari and Chrome */
+ -o-transition-timing-function: ease; /* Opera */
  .qf-form-properties {
   padding: 10px 0px;
   .qf-title {
@@ -836,7 +853,7 @@ ul {
     border: none;
    }
    &.qf-help-block {
-    font-size: 10px; 
+    font-size: 10px;
    }
 
   }

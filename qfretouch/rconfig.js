@@ -29,6 +29,8 @@ requirejs.config({
   'angular-gridster': '../bower_components/angular-gridster/dist/angular-gridster.min',
   'angular-resizer': '../bower_components/javascript-detect-element-resize/jquery.resize',
   'angular-base64-upload': '../bower_components/angular-base64-upload/dist/angular-base64-upload.min',
+  'matchmedia': '../bower_components/matchmedia/matchMedia',
+  'matchmedia-ng': '../bower_components/matchmedia-ng/matchmedia-ng',
   'jsignature': '../lib/js/jSignature',
   //Quickform
   //'qf-builder': '../qf-lib/qf-builder',
@@ -61,6 +63,8 @@ requirejs.config({
   'angular-resizer': {deps: ['angular', 'jquery']},
   'angular-gridster': {deps: ['angular', 'angular-resizer']},
   'angular-base64-upload': {deps: ['angular']},
+  'matchmedia': {deps: ['angular']},
+  'matchmedia-ng': {deps: ['angular', 'matchmedia']},
   'jsignature': {deps: ['angular', 'jquery']},
   // 'qf-builder': {deps: ['angular', 'angular-validator', 'angular-validator-rules']},
   //'qf-components': {deps: ['angular', ]},

@@ -30,14 +30,14 @@
    Remove
   </button>
   <label class="qf-file-upload-1 qf-ghost-btn-1 qf-hidden-design-mode"
-         ng-show="component.readonly">
+         ng-hide="component.readonly">
    <i class="fa fa-cloud-upload"></i> Choose Image
    <input type="file" ng-model="pictureItem.file"
           class="form-control " name="file" base-sixty-four-input required onload="pictureItem.onLoad" maxsize="500" accept="image/*">
   </label>
   <button ng-show="pictureItem.file.base64" ng-click="pictureItem.removeImage()" type="button"
           class="qf-file-upload-1 qf-ghost-btn-danger qf-hidden-design-mode"
-          ng-show="component.readonly">
+          ng-hide="component.readonly">
    Remove
   </button>
  </div>

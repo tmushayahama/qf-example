@@ -14,6 +14,7 @@ var designerCtrl = function (
         $timeout,
         $uibModal,
         $aside,
+        matchmedia,
         FormSrv
         //qfretouchAuth,
         ) {
@@ -33,6 +34,17 @@ var designerCtrl = function (
 
  vm.components = components;
  vm.formSrv.formItems = [];
+
+ vm.adjustMedia = function (mediaType) {
+  angular.forEach(vm.formSrv.formItems, function (formItem) {
+
+   if (formItem.gridMap[mediaType]) {
+    // formItem.gridMap.sizeX = formItem.gridMap[mediaType].sizeY;
+    //formItem.gridMap.sizeY = formItem.gridMap[mediaType].sizeY;
+   }
+   // formItem.gridMap.row = null;
+  });
+ };
 
  vm.clearComponent = function () {
   vm.components = [];
@@ -120,12 +132,15 @@ var designerCtrl = function (
  };
 
  $scope.$watch(function () {
-  return vm.formSrv.formStylesMap;
+  return vm.formSrv.formStylesMap.formItems;
  }, function (styles) {
   angular.forEach(styles, function (style) {
-   vm.formSrv.formStyles[style.name] = style.prepend + style.value + style.append;
+   vm.formSrv.formStyles[style.name] =
+           style.component.prepend +
+           style.component.inputText +
+           style.component.append;
   });
-  console.log(vm.formSrv.formStyles, "");
+  // console.log(vm.formSrv.formStyles, "");
  }, true);
 
 
@@ -158,30 +173,31 @@ var designerCtrl = function (
   $scope.defaultValue[textbox.id] = 'default value';
   $scope.defaultValue[checkbox.id] = [true, true];
 
-  */
 
- $scope.dynamicSize = {
+
+  $scope.dynamicSize = {
   'width': 350,
   'height': 250
- }
+  }
 
- $scope.flexbox = true;
- $scope.size = {};
- $scope.msg = 'Resize me.';
- $scope.events = [];
- $scope.$on("angular-resizable.resizeEnd", function (event, args) {
+  $scope.flexbox = true;
+  $scope.size = {};
+  $scope.msg = 'Resize me.';
+  $scope.events = [];
+  $scope.$on("angular-resizable.resizeEnd", function (event, args) {
   $scope.msg = 'Resize me again.';
   $scope.events.unshift(event);
   $scope.size = args;
   if (args.width)
-   $scope.dynamicSize.width = args.width;
+  $scope.dynamicSize.width = args.width;
   if (args.height)
-   $scope.dynamicSize.height = args.height;
- });
- $scope.$on("angular-resizable.resizeStart", function (event, args) {
+  $scope.dynamicSize.height = args.height;
+  });
+  $scope.$on("angular-resizable.resizeStart", function (event, args) {
   $scope.msg = 'Woooohoooo!';
   $scope.events.unshift(event);
- });
+  });
+  */
  $scope.submit = function () {
   return $validator.validate($scope, 'default').success(function () {
    return console.log('success');
@@ -189,6 +205,43 @@ var designerCtrl = function (
    return console.log('error');
   });
  };
+
+ var unsub = {};
+ unsub['print'] = matchmedia.onPrint(function (mediaQueryList) {
+  $scope.isPrint = mediaQueryList.matches;
+ }, $scope);
+ unsub['screen'] = matchmedia.onScreen(function (mediaQueryList) {
+  $scope.isScreen = mediaQueryList.matches;
+ }, $scope);
+ unsub['phone'] = matchmedia.onPhone(function (mediaQueryList) {
+  $scope.isPhone = mediaQueryList.matches;
+ });
+ unsub['tablet'] = matchmedia.onTablet(function (mediaQueryList) {
+  $scope.isTablet = mediaQueryList.matches;
+
+ });
+ unsub['desktop'] = matchmedia.onDesktop(function (mediaQueryList) {
+  $scope.isDesktop = mediaQueryList.matches;
+ });
+ unsub['portrait'] = matchmedia.onPortrait(function (mediaQueryList) {
+  $scope.isPortrait = mediaQueryList.matches;
+ });
+ unsub['landscape'] = matchmedia.onLandscape(function (mediaQueryList) {
+  $scope.isLandscape = mediaQueryList.matches;
+ });
+
+
+ $scope.$on('$destroy', function iVeBeenDismissed() {
+  // say goodbye to your listeners here
+  unsub['print']();
+  unsub['screen']();
+  unsub['phone']();
+  unsub['tablet']();
+  unsub['desktop']();
+  unsub['portrait']();
+  unsub['landscape']();
+ })
+
 };
 designerCtrl.$inject = [
  'config',
@@ -205,6 +258,7 @@ designerCtrl.$inject = [
  '$timeout',
  '$uibModal',
  '$aside',
+ 'matchmedia',
  'FormSrv'
 ];
 angular.module("qfretouch").controller('DesignerCtrl', designerCtrl);
