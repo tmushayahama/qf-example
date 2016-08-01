@@ -158,15 +158,22 @@ md-input-container.md-input-focused .md-input {
  background-color: #FFFFFF;
  opacity: 0.7;
  position: relative;
- height: 160px;
+ height: 200px;
  width: 100%;
  border: #CCC solid 1px;
+
+ @include respond-to(qfretouch-sm) {
+  height: 160px;
+ }
 
  .qf-img-container {
   @include position(absolute, 0 0 null 0);
   //padding: 0 30px;
-  height: 110px;
+  height: 160px;
   overflow: hidden;
+  @include respond-to(qfretouch-sm) {
+   height: 110px;
+  }
   //background-color: #
   img {
    // @include position(absolute, 0 null 0 50%);
@@ -584,6 +591,9 @@ ul {
   overflow-x: auto;
   padding: 5px!important;
  }
+ .container {
+  height: 100%;
+ }
 }
 
 .qf-flex-container {
@@ -617,10 +627,15 @@ ul {
  background-size: 100%;
  padding-bottom: 200px;
  margin: 20px auto;
+ height: 100%;
  width: 960px;
  background-color: #FFF;
  overflow: auto;
  -webkit-overflow-scrolling: touch;
+
+ @include respond-to(qfretouch-sm) {
+  width: 100%;
+ }
 
  .gridster-item {
   box-shadow: 0 2px 2px 0 rgba(0, 0, 0, .05), 0 1px 4px 0 rgba(0, 0, 0, .08), 0 3px 1px -2px rgba(0, 0, 0, .2);

@@ -84,6 +84,7 @@
     "sizeY" :5
    }
   }
+
   ,{
    "templateUrl" :"qfretouch/common/views/templates/dropdown.tpl.html" ,
    "name" :"text-align" ,
@@ -98,6 +99,27 @@
     "options" :["left" ,"center" ,"right"] ,
     "required" :false ,
     "optionsText" :"left\ncenter\nright" ,
+    "inputText" :null
+   } ,
+   "gridMap" :{
+    "sizeX" :12 ,
+    "sizeY" :4
+   }
+  }
+  ,{
+   "templateUrl" :"qfretouch/common/views/templates/dropdown.tpl.html" ,
+   "name" :"width" ,
+   "component" :{
+    "label" :"Widddddd" ,
+    "description" :"" ,
+    "placeholder" :"Text Align" ,
+    "inputText" :"left" ,
+    "type" :"text" ,
+    "prepend" :"" ,
+    "append" :"px" ,
+    "options" :["900" ,"700" ,"right"] ,
+    "required" :false ,
+    "optionsText" :"900\n700\nright" ,
     "inputText" :null
    } ,
    "gridMap" :{

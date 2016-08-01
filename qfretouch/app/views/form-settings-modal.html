@@ -75,6 +75,12 @@
      </button>
     </div>
    </form>
+   <form class="row">
+    <textarea rows="5" ng-model="formSettingsCtrl.googleFormControls"></textarea>
+    <md-button type="button" ng-click="formSettingsCtrl.formSrv.convertGoogleFormControls(formSettingsCtrl.googleFormControls)">
+     Get Form
+    </md-button>
+   </form>
   </div>
  </div>
 </div>

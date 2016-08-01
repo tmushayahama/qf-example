@@ -29,7 +29,7 @@
             rowHeight: 20,
             minSizeX: 4,
             minSizeY: 2,
-            defaultSizeX: 6,
+            defaultSizeX: 12,
             defaultSizeY: 10,
             resizable: {
              enabled: true,
@@ -52,7 +52,7 @@
             mobileBreakPoint: 600,
             mobileModeEnabled: false,
             rowHeight: 20,
-            defaultSizeX: 6,
+            defaultSizeX: 12,
             defaultSizeY: 10,
             resizable: {
              enabled: false,
@@ -219,6 +219,48 @@
             self.deferredHandler(data, deferred, 'Unknown error');
            });
            return deferred.promise;
+          };
+
+          FormSrv.prototype.convertGoogleFormControls = function (controls) {
+           var self = this;
+           //var deferred = $q.defer();
+           //  self.error = '';
+           //$http.get(url).success(function (data) {
+           self.formItems = [];
+           var controlsJSON = JSON.parse(controls);
+
+           angular.forEach(controlsJSON, function (control) {
+            self.formItems.push({
+             "templateUrl": "qfretouch/common/views/templates/textbox.tpl.html",
+             "name": "Text",
+             "component": {
+              "label": control.label,
+              "description": null,
+              "placeholder": "Type your heading",
+              "rows": 2,
+              "required": null,
+              "componentStyles": {
+               "component1": {
+                "color": "#008040",
+                "font-size": "30px",
+                "text-align": "center"
+               }
+              }
+             },
+             "gridMap": {
+              "sizeX": 12,
+              //"sizeY": 5,
+              // "row": 0,
+              // "col": 0
+             }
+            }
+            );
+           });
+           //self.deferredHandler(data, deferred);
+           //}).error(function (data) {
+           //  self.deferredHandler(data, deferred, 'Unknown error');
+           //  });
+           // return deferred.promise;
           };
 
           return FormSrv;
