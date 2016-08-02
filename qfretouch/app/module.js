@@ -31,6 +31,7 @@ define(['angular',
                   'qfretouch/common/directives/datepicker.drv.js',
                   'qfretouch/app/services/form.srv.js',
                   'qfretouch/app/controllers/preview-form-modal.ctrl.js',
+                  'qfretouch/app/controllers/preview-data-modal.ctrl.js',
                   'qfretouch/app/controllers/designer.ctrl.js',
                  ]
                 });

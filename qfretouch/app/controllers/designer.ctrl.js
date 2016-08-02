@@ -20,7 +20,11 @@ var designerCtrl = function (
  var vm = this;
  vm.formSrv = new FormSrv();
 
- vm.formSrv.getFormTemplates("qfretouch/form-templates/contact-us-transparent.json");
+ $rootScope.deSpacify = function (str) {
+  return str.replace(/\s/g, '').toLowerCase();
+ }
+
+ //vm.formSrv.getFormTemplates("qfretouch/form-templates/contact-us-transparent.json");
  //vm.formSrv.getFormTemplates("https://script.google.com/macros/s/AKfycbxK_tpdGUXB5pSxDDP5Zb_M3q3AViHn7laC-g4UN6rs/dev?prefix=alert");
  vm.formSrv.getFormTemplates("qfretouch/form-templates/contact-us-simple.json");
  vm.formSrv.getFormTemplates("qfretouch/form-templates/contact-us.json");

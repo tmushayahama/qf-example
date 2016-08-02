@@ -13194,418 +13194,6 @@ Copyright (c) 2014 Daniel Eden
   color: #005FB1;
 }
 
-/* line 1, ../sass/components/_dr-spinners.scss */
-.dr-main-loading-progress.progress-container {
-  position: absolute;
-  top: 47px;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  transform: translate(0%, 100%);
-}
-/* line 6, ../sass/components/_dr-spinners.scss */
-.dr-main-loading-progress.progress-container .progress {
-  background-color: #e5e9eb;
-  height: 0.25em;
-  position: relative;
-  width: 100%;
-}
-/* line 13, ../sass/components/_dr-spinners.scss */
-.dr-main-loading-progress.progress-container .progress-bar {
-  background-size: 100% 0.25em;
-  height: 100%;
-  position: relative;
-  background-color: #FFF;
-  background-image: linear-gradient(to right, rgba(13, 140, 165, 0.1), rgba(13, 140, 165, 0.4), rgba(13, 140, 165, 0.5), rgba(13, 140, 165, 0.6), #0d8ca5);
-  background-image: -o-linear-gradient(to right, rgba(13, 140, 165, 0.1), rgba(13, 140, 165, 0.4), rgba(13, 140, 165, 0.5), rgba(13, 140, 165, 0.6), #0d8ca5);
-  background-image: -ms-linear-gradient(to right, rgba(13, 140, 165, 0.1), rgba(13, 140, 165, 0.4), rgba(13, 140, 165, 0.5), rgba(13, 140, 165, 0.6), #0d8ca5);
-  background-image: -webkit-linear-gradient(to right, rgba(13, 140, 165, 0.1), rgba(13, 140, 165, 0.4), rgba(13, 140, 165, 0.5), rgba(13, 140, 165, 0.6), #0d8ca5);
-  background-image: -moz-linear-gradient(to right, rgba(13, 140, 165, 0.1), rgba(13, 140, 165, 0.4), rgba(13, 140, 165, 0.5), rgba(13, 140, 165, 0.6), #0d8ca5);
-  animation: cssload-width 2.25s cubic-bezier(0.45, 0, 1, 1) infinite;
-  -o-animation: cssload-width 2.25s cubic-bezier(0.45, 0, 1, 1) infinite;
-  -ms-animation: cssload-width 2.25s cubic-bezier(0.45, 0, 1, 1) infinite;
-  -webkit-animation: cssload-width 2.25s cubic-bezier(0.45, 0, 1, 1) infinite;
-  -moz-animation: cssload-width 2.25s cubic-bezier(0.45, 0, 1, 1) infinite;
-}
-/* line 30, ../sass/components/_dr-spinners.scss */
-.dr-main-loading-progress.progress-container .progress-shadow {
-  height: 12em;
-  position: absolute;
-  top: 100%;
-  width: 100%;
-  transform: skew(45deg);
-  -o-transform: skew(45deg);
-  -ms-transform: skew(45deg);
-  -webkit-transform: skew(45deg);
-  -moz-transform: skew(45deg);
-  transform-origin: 0 0;
-  -o-transform-origin: 0 0;
-  -ms-transform-origin: 0 0;
-  -webkit-transform-origin: 0 0;
-  -moz-transform-origin: 0 0;
-  background-image: linear-gradient(to bottom, #eaecee, transparent);
-  background-image: -o-linear-gradient(to bottom, #eaecee, transparent);
-  background-image: -ms-linear-gradient(to bottom, #eaecee, transparent);
-  background-image: -webkit-linear-gradient(to bottom, #eaecee, transparent);
-  background-image: -moz-linear-gradient(to bottom, #eaecee, transparent);
-}
-@keyframes cssload-width {
-  0%, 100% {
-    transition-timing-function: cubic-bezier(1, 0, 0.65, 0.85);
-  }
-  0% {
-    width: 0;
-  }
-  100% {
-    width: 100%;
-  }
-}
-@-o-keyframes cssload-width {
-  0%, 100% {
-    -o-transition-timing-function: cubic-bezier(1, 0, 0.65, 0.85);
-  }
-  0% {
-    width: 0;
-  }
-  100% {
-    width: 100%;
-  }
-}
-@-ms-keyframes cssload-width {
-  0%, 100% {
-    -ms-transition-timing-function: cubic-bezier(1, 0, 0.65, 0.85);
-  }
-  0% {
-    width: 0;
-  }
-  100% {
-    width: 100%;
-  }
-}
-@-webkit-keyframes cssload-width {
-  0%, 100% {
-    -webkit-transition-timing-function: cubic-bezier(1, 0, 0.65, 0.85);
-  }
-  0% {
-    width: 0;
-  }
-  100% {
-    width: 100%;
-  }
-}
-@-moz-keyframes cssload-width {
-  0%, 100% {
-    -moz-transition-timing-function: cubic-bezier(1, 0, 0.65, 0.85);
-  }
-  0% {
-    width: 0;
-  }
-  100% {
-    width: 100%;
-  }
-}
-/* line 1, ../sass/components/_qf-resizable.scss */
-.contentEditorBox {
-  border: 1px solid black;
-  background-color: white;
-  width: 50px;
-  height: 50px;
-}
-
-/* line 8, ../sass/components/_qf-resizable.scss */
-.draggable {
-  position: absolute;
-  top: 2px;
-  left: 2px;
-  width: calc(100% - 4px);
-  height: calc(100% - 4px);
-  cursor: pointer;
-}
-
-/* line 17, ../sass/components/_qf-resizable.scss */
-.n-resize {
-  position: absolute;
-  top: -3px;
-  left: 0px;
-  width: 100%;
-  height: 5px;
-  cursor: n-resize;
-}
-
-/* line 26, ../sass/components/_qf-resizable.scss */
-.e-resize {
-  position: absolute;
-  top: 0px;
-  left: calc(100% - 2px);
-  width: 5px;
-  height: 100%;
-  cursor: w-resize;
-}
-
-/* line 35, ../sass/components/_qf-resizable.scss */
-.s-resize {
-  position: absolute;
-  top: calc(100% - 2px);
-  left: 0px;
-  width: 100%;
-  height: 5px;
-  cursor: s-resize;
-}
-
-/* line 44, ../sass/components/_qf-resizable.scss */
-.w-resize {
-  position: absolute;
-  top: 0px;
-  left: -3px;
-  width: 5px;
-  height: 100%;
-  cursor: e-resize;
-}
-
-/* line 53, ../sass/components/_qf-resizable.scss */
-.nw-resize {
-  position: absolute;
-  top: -3px;
-  left: -3px;
-  width: 7px;
-  height: 7px;
-  cursor: nw-resize;
-}
-
-/* line 62, ../sass/components/_qf-resizable.scss */
-.ne-resize {
-  position: absolute;
-  top: -3px;
-  left: calc(100% - 4px);
-  width: 7px;
-  height: 7px;
-  cursor: ne-resize;
-}
-
-/* line 71, ../sass/components/_qf-resizable.scss */
-.se-resize {
-  position: absolute;
-  top: calc(100% - 4px);
-  left: calc(100% - 4px);
-  width: 7px;
-  height: 7px;
-  cursor: se-resize;
-}
-
-/* line 80, ../sass/components/_qf-resizable.scss */
-.sw-resize {
-  position: absolute;
-  top: calc(100% - 4px);
-  left: -3px;
-  width: 7px;
-  height: 7px;
-  cursor: sw-resize;
-}
-
-/* line 108, ../sass/components/_qf-resizable.scss */
-a {
-  color: #19b785;
-}
-/* line 110, ../sass/components/_qf-resizable.scss */
-a:hover {
-  color: #343e3d;
-}
-
-/* line 112, ../sass/components/_qf-resizable.scss */
-.subtle {
-  color: #ccc;
-}
-
-/* line 113, ../sass/components/_qf-resizable.scss */
-.container1, .container2 {
-  transition: all .3s ease-in-out;
-  width: 100%;
-  height: 100%;
-  position: absolute;
-}
-
-/* line 119, ../sass/components/_qf-resizable.scss */
-.container1 {
-  left: -100%;
-}
-/* line 121, ../sass/components/_qf-resizable.scss */
-.container1.active {
-  left: 0;
-}
-/* line 122, ../sass/components/_qf-resizable.scss */
-.container1 .resizable {
-  margin: auto;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 15%;
-}
-
-/* line 127, ../sass/components/_qf-resizable.scss */
-.container2 {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  left: 100%;
-}
-/* line 132, ../sass/components/_qf-resizable.scss */
-.container2.active {
-  left: 0;
-}
-/* line 133, ../sass/components/_qf-resizable.scss */
-.container2 .resizable {
-  position: relative;
-  margin-top: -10%;
-}
-
-/* line 138, ../sass/components/_qf-resizable.scss */
-.resizable {
-  text-align: center;
-  box-sizing: border-box;
-  height: 100%;
-  width: 100%;
-  background-color: #AAFFAA;
-  border-radius: 10px;
-}
-
-/* line 146, ../sass/components/_qf-resizable.scss */
-.inner {
-  box-sizing: border-box;
-  overflow: hidden;
-  padding: 1em;
-  height: 100%;
-  width: 100%;
-}
-
-/* line 153, ../sass/components/_qf-resizable.scss */
-.toggle {
-  position: absolute;
-  z-index: 1;
-  top: 1em;
-  right: 1em;
-  color: #aaa;
-  text-decoration: none;
-}
-/* line 160, ../sass/components/_qf-resizable.scss */
-.toggle:hover {
-  color: #aaa;
-}
-/* line 161, ../sass/components/_qf-resizable.scss */
-.toggle .active {
-  color: #19b785;
-}
-
-/* line 163, ../sass/components/_qf-resizable.scss */
-.info1 {
-  position: absolute;
-  z-index: 1;
-  bottom: 0;
-  left: 0;
-  padding: 1em 2em;
-}
-
-/* line 169, ../sass/components/_qf-resizable.scss */
-.info2 {
-  position: absolute;
-  z-index: 1;
-  bottom: 0;
-  right: 0;
-  padding: 1em 2em;
-}
-/* line 174, ../sass/components/_qf-resizable.scss */
-.info2 ul {
-  height: 100px;
-  overflow-y: scroll;
-  overflow-x: hidden;
-}
-
-/* line 185, ../sass/components/_qf-resizable.scss */
-.resizable {
-  position: absolute;
-}
-/* line 187, ../sass/components/_qf-resizable.scss */
-.resizable.no-transition {
-  transition: none !important;
-  background-color: #7bd389;
-}
-
-/* line 192, ../sass/components/_qf-resizable.scss */
-.rg-right, .rg-left, .rg-top, .rg-bottom {
-  display: block;
-  width: 14px;
-  height: 14px;
-  line-height: 14px;
-  position: absolute;
-  z-index: 1;
-  -moz-user-select: -moz-none;
-  -ms-user-select: none;
-  -webkit-user-select: none;
-  user-select: none;
-  background: transparent;
-}
-/* line 199, ../sass/components/_qf-resizable.scss */
-.rg-right span, .rg-left span, .rg-top span, .rg-bottom span {
-  position: absolute;
-  box-sizing: border-box;
-  display: block;
-  border: 1px solid #ccc;
-}
-
-/* line 207, ../sass/components/_qf-resizable.scss */
-.rg-right span, .rg-left span {
-  border-width: 0 1px;
-  top: 50%;
-  margin-top: -10px;
-  margin: -10px 0 0 3.5px;
-  height: 20px;
-  width: 7px;
-}
-
-/* line 216, ../sass/components/_qf-resizable.scss */
-.rg-top span, .rg-bottom span {
-  border-width: 1px 0;
-  left: 50%;
-  margin: 3.5px 0 0 -10px;
-  width: 20px;
-  height: 7px;
-}
-
-/* line 224, ../sass/components/_qf-resizable.scss */
-.rg-top {
-  cursor: row-resize;
-  width: 100%;
-  top: 0;
-  left: 0;
-  margin-top: -14px;
-}
-
-/* line 231, ../sass/components/_qf-resizable.scss */
-.rg-right {
-  cursor: col-resize;
-  height: 100%;
-  right: 0;
-  top: 0;
-  margin-right: -14px;
-}
-
-/* line 238, ../sass/components/_qf-resizable.scss */
-.rg-bottom {
-  cursor: row-resize;
-  width: 100%;
-  bottom: 0;
-  left: 0;
-  margin-bottom: -14px;
-}
-
-/* line 245, ../sass/components/_qf-resizable.scss */
-.rg-left {
-  cursor: col-resize;
-  height: 100%;
-  left: 0;
-  top: 0;
-  margin-left: -14px;
-}
-
 /* line 5, ../sass/components/_qf-defaults.scss */
 .qf-component {
   padding: 10px;
@@ -13674,364 +13262,638 @@ a:hover {
   width: 240px;
 }
 
-/*!
-angular-xeditable - 0.1.9
-Edit-in-place for angular.js
-Build date: 2015-03-26 
-*/
-/* line 7, ../sass/components/_custom-xeditable.scss */
-.editable-wrap {
-  display: inline-block;
-  white-space: nowrap;
-  margin: 0;
+/* line 1, ../sass/components/_qf-tables.scss */
+.qf-document-table {
+  margin: 2px;
+  font-family: Verdana, Helvetica, Arial, sans-serif;
+  font-size: 12px;
+  border: none;
 }
-
-/* line 12, ../sass/components/_custom-xeditable.scss */
-.editable-wrap .editable-controls,
-.editable-wrap .editable-error {
-  margin-bottom: 0;
+/* line 7, ../sass/components/_qf-tables.scss */
+.qf-document-table .ui-grid-viewport {
+  width: auto !important;
+  overflow: auto !important;
 }
-
-/* line 16, ../sass/components/_custom-xeditable.scss */
-.editable-wrap .editable-controls > input,
-.editable-wrap .editable-controls > select,
-.editable-wrap .editable-controls > textarea {
-  margin-bottom: 0;
+/* line 12, ../sass/components/_qf-tables.scss */
+.qf-document-table .qf-pinned-col {
+  background-color: #F2F2F2;
+  border-right: #777 solid 1px;
 }
-
-/* line 21, ../sass/components/_custom-xeditable.scss */
-.editable-wrap .editable-input {
-  display: inline-block;
+/* line 17, ../sass/components/_qf-tables.scss */
+.qf-document-table .ui-grid-top-panel {
+  background: none;
 }
-
-/* line 24, ../sass/components/_custom-xeditable.scss */
-.editable-buttons {
-  display: inline-block;
-  vertical-align: top;
+/* line 22, ../sass/components/_qf-tables.scss */
+.qf-document-table .ui-grid-header {
+  height: 40px;
+  line-height: 28px;
+  background-color: #F2F2F2;
+  color: #000;
 }
-
-/* line 28, ../sass/components/_custom-xeditable.scss */
-.editable-buttons button {
-  margin-left: 5px;
+/* line 30, ../sass/components/_qf-tables.scss */
+.qf-document-table .ui-grid-cell-contents {
+  padding: 4px 5px 4px 10px;
 }
-
-/* line 31, ../sass/components/_custom-xeditable.scss */
-.editable-input.editable-has-buttons {
-  width: auto;
+/* line 33, ../sass/components/_qf-tables.scss */
+.qf-document-table .ui-grid-cell-contents .qf-file-icon {
+  font-size: 22px;
+  color: #777;
 }
-
-/* line 34, ../sass/components/_custom-xeditable.scss */
-.editable-bstime .editable-input input[type=text] {
-  width: 46px;
+/* line 38, ../sass/components/_qf-tables.scss */
+.qf-document-table .ui-grid-cell-contents .qf-file-image-icon {
+  height: 20px;
 }
-
-/* line 37, ../sass/components/_custom-xeditable.scss */
-.editable-bstime .well-small {
-  margin-bottom: 0;
+/* line 43, ../sass/components/_qf-tables.scss */
+.qf-document-table .ui-grid-menu-button {
+  background-color: #DDD;
+  color: #444;
+  padding: 3px 0px 3px 5px;
+}
+/* line 49, ../sass/components/_qf-tables.scss */
+.qf-document-table .ui-grid-menu-button:hover {
+  background-color: white;
+}
+/* line 53, ../sass/components/_qf-tables.scss */
+.qf-document-table .ui-grid-column-menu-button {
+  top: 6px;
+  font-size: 19px;
+  color: #888;
+}
+/* line 60, ../sass/components/_qf-tables.scss */
+.qf-document-table .ui-grid-menu .ui-grid-menu-inner ul li button {
+  color: #000;
+}
+/* line 64, ../sass/components/_qf-tables.scss */
+.qf-document-table .ui-grid-menu .ui-grid-menu-inner ul li button.ui-grid-menu-item-active {
+  border-left: #096476 solid 3px;
+  background-color: #DDD;
+}
+/* line 69, ../sass/components/_qf-tables.scss */
+.qf-document-table .ui-grid-menu .ui-grid-menu-inner ul li button:hover,
+.qf-document-table .ui-grid-menu .ui-grid-menu-inner ul li button:focus {
+  border-left: #0D8CA5 solid 3px;
+  background-color: #EEE;
+}
+/* line 76, ../sass/components/_qf-tables.scss */
+.qf-document-table .ui-grid-row.ui-grid-row-selected > [ui-grid-row] > .ui-grid-cell {
+  background-color: rgba(0, 95, 177, 0.15);
+}
+/* line 81, ../sass/components/_qf-tables.scss */
+.qf-document-table div.ui-grid-cell input {
+  padding: 5px 5px;
+}
+/* line 85, ../sass/components/_qf-tables.scss */
+.qf-document-table div.ui-grid-cell input:focus {
+  border-color: rgba(13, 140, 165, 0.8);
+  -webkit-box-shadow: inset 0 0 6px rgba(13, 140, 165, 0.4);
+  -moz-box-shadow: inset 0 0 6px rgba(13, 140, 165, 0.4);
+  box-shadow: inset 0 0 6px rgba(13, 140, 165, 0.4);
+  outline: 0 none;
+}
+/* line 92, ../sass/components/_qf-tables.scss */
+.qf-document-table .ui-grid-pager-panel {
+  background-color: #F2F2F2;
   padding: 10px;
 }
-
-/* line 41, ../sass/components/_custom-xeditable.scss */
-.editable-range output {
-  display: inline-block;
-  min-width: 30px;
-  vertical-align: top;
-  text-align: center;
+/* line 97, ../sass/components/_qf-tables.scss */
+.qf-document-table .ui-grid-pager-container {
+  float: left;
+}
+/* line 102, ../sass/components/_qf-tables.scss */
+.qf-document-table .ui-grid-pager-control .ui-grid-pager-max-pages-number {
+  vertical-align: middle;
+}
+/* line 106, ../sass/components/_qf-tables.scss */
+.qf-document-table .ui-grid-pager-control .ui-grid-pager-max-pages-number > * {
+  vertical-align: initial;
+}
+/* line 110, ../sass/components/_qf-tables.scss */
+.qf-document-table .ui-grid-pager-panel {
+  background-color: #F2F2F2;
+  padding: 10px 0 10px 0;
+}
+/* line 115, ../sass/components/_qf-tables.scss */
+.qf-document-table .ui-grid-pager-container {
+  float: left;
+}
+/* line 120, ../sass/components/_qf-tables.scss */
+.qf-document-table .ui-grid-pager-control .ui-grid-pager-max-pages-number {
+  vertical-align: middle;
+}
+/* line 124, ../sass/components/_qf-tables.scss */
+.qf-document-table .ui-grid-pager-control .ui-grid-pager-max-pages-number > * {
+  vertical-align: initial;
 }
 
-/* line 47, ../sass/components/_custom-xeditable.scss */
-.editable-color input[type=color] {
-  width: 50px;
+/* line 130, ../sass/components/_qf-tables.scss */
+.qf-file-browser {
+  /*---some classes should be there because of the library*/
 }
-
-/* line 50, ../sass/components/_custom-xeditable.scss */
-.editable-checkbox label span,
-.editable-checklist label span,
-.editable-radiolist label span {
-  margin-left: 7px;
-  margin-right: 10px;
+/* line 131, ../sass/components/_qf-tables.scss */
+.qf-file-browser .qf-pinned-col {
+  background-color: #F2F2F2;
+  border-right: #777 solid 1px;
 }
-
-/* line 56, ../sass/components/_custom-xeditable.scss */
-.editable-hide {
-  display: none !important;
+/* line 136, ../sass/components/_qf-tables.scss */
+.qf-file-browser .ag-root {
+  border: 1px solid #808080;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
-
-/* line 59, ../sass/components/_custom-xeditable.scss */
-.editable-click,
-a.editable-click {
-  text-decoration: none;
-  color: #428bca;
-  border-bottom: dashed 1px #428bca;
+/* line 141, ../sass/components/_qf-tables.scss */
+.qf-file-browser .ag-cell {
+  padding: 10px 2px;
 }
-
-/* line 65, ../sass/components/_custom-xeditable.scss */
-.editable-click:hover,
-a.editable-click:hover {
-  text-decoration: none;
-  color: #2a6496;
-  border-bottom-color: #2a6496;
+/* line 145, ../sass/components/_qf-tables.scss */
+.qf-file-browser .ag-cell-focus {
+  border: 1px solid #a9a9a9;
 }
-
-/* line 71, ../sass/components/_custom-xeditable.scss */
-.editable-empty,
-.editable-empty:hover,
-.editable-empty:focus,
-a.editable-empty,
-a.editable-empty:hover,
-a.editable-empty:focus {
+/* line 149, ../sass/components/_qf-tables.scss */
+.qf-file-browser .ag-cell-no-focus {
+  border-right: 1px dotted #808080;
+  border-top: 1px solid transparent;
+  border-left: 1px solid transparent;
+  border-bottom: 1px solid transparent;
+}
+/* line 156, ../sass/components/_qf-tables.scss */
+.qf-file-browser .ag-pinned-header {
+  background-color: #FFF;
+  background-image: -webkit-linear-gradient(#FFF, rgba(13, 140, 165, 0.4));
+  background-image: linear-gradient(#FFF, rgba(13, 140, 165, 0.4));
+  border-bottom: 1px solid #0D8CA5;
+}
+/* line 161, ../sass/components/_qf-tables.scss */
+.qf-file-browser .ag-header-container {
+  background-color: #FFF;
+  background-image: -webkit-linear-gradient(#FFF, rgba(13, 140, 165, 0.4));
+  background-image: linear-gradient(#FFF, rgba(13, 140, 165, 0.4));
+  border-bottom: 1px solid #0D8CA5;
+}
+/* line 166, ../sass/components/_qf-tables.scss */
+.qf-file-browser .ag-header-cell {
+  border-right: 1px solid #808080;
+}
+/* line 170, ../sass/components/_qf-tables.scss */
+.qf-file-browser .ag-header-group-cell {
+  border-right: 1px solid #808080;
+}
+/* line 174, ../sass/components/_qf-tables.scss */
+.qf-file-browser .ag-header-group-cell-with-group {
+  border-bottom: 1px solid #808080;
+}
+/* line 178, ../sass/components/_qf-tables.scss */
+.qf-file-browser .ag-header-cell-label {
+  padding: 4px 2px 4px 2px;
+}
+/* line 182, ../sass/components/_qf-tables.scss */
+.qf-file-browser .ag-header-cell-text {
+  padding-left: 2px;
+}
+/* line 186, ../sass/components/_qf-tables.scss */
+.qf-file-browser .ag-header-group-cell-label {
+  padding: 4px;
+  font-weight: bold;
+}
+/* line 191, ../sass/components/_qf-tables.scss */
+.qf-file-browser .ag-header-group-text {
+  margin-right: 2px;
+}
+/* line 195, ../sass/components/_qf-tables.scss */
+.qf-file-browser .ag-header-cell-menu-button {
+  padding: 2px;
+  margin-top: 4px;
+  border: 1px solid transparent;
+  -webkit-border-radius: 3px;
+  border-radius: 3px;
+  -webkit-box-sizing: content-box;
+  -moz-box-sizing: content-box;
+  box-sizing: content-box;
+  /* When using bootstrap, box-sizing was set to 'border-box' */
+}
+/* line 206, ../sass/components/_qf-tables.scss */
+.qf-file-browser .ag-header-cell-menu-button:hover {
+  border: 1px solid #000;
+}
+/* line 210, ../sass/components/_qf-tables.scss */
+.qf-file-browser .ag-header-icon {
+  color: #800000;
+}
+/* line 214, ../sass/components/_qf-tables.scss */
+.qf-file-browser .ag-row-selected {
+  background-color: rgba(0, 95, 177, 0.2) !important;
+}
+/* line 218, ../sass/components/_qf-tables.scss */
+.qf-file-browser .ag-body .ag-row-odd {
+  background-color: #f6f6f6;
+}
+/* line 222, ../sass/components/_qf-tables.scss */
+.qf-file-browser .ag-body .ag-row-even {
+  background-color: #fff;
+}
+/* line 226, ../sass/components/_qf-tables.scss */
+.qf-file-browser .ag-floating-top .ag-row {
+  background-color: #f0f0f0;
+}
+/* line 230, ../sass/components/_qf-tables.scss */
+.qf-file-browser .ag-floating-bottom .ag-row {
+  background-color: #f0f0f0;
+}
+/* line 234, ../sass/components/_qf-tables.scss */
+.qf-file-browser .ag-overlay-loading-wrapper {
+  background-color: rgba(255, 255, 255, 0.5);
+}
+/* line 238, ../sass/components/_qf-tables.scss */
+.qf-file-browser .ag-overlay-loading-center {
+  background-color: #fff;
+  border: 1px solid #a9a9a9;
+  -webkit-border-radius: 10px;
+  border-radius: 10px;
+  padding: 10px;
+}
+/* line 246, ../sass/components/_qf-tables.scss */
+.qf-file-browser .ag-overlay-no-rows-center {
+  background-color: #fff;
+  border: 1px solid #a9a9a9;
+  -webkit-border-radius: 10px;
+  border-radius: 10px;
+  padding: 10px;
+}
+/* line 254, ../sass/components/_qf-tables.scss */
+.qf-file-browser .ag-body {
+  background-color: #FFF;
+}
+/* line 258, ../sass/components/_qf-tables.scss */
+.qf-file-browser .ag-group-cell-entire-row {
+  background-color: #aaa;
+  padding: 4px;
+}
+/* line 263, ../sass/components/_qf-tables.scss */
+.qf-file-browser .ag-footer-cell-entire-row {
+  background-color: #aaa;
+  padding: 4px;
+}
+/* line 268, ../sass/components/_qf-tables.scss */
+.qf-file-browser .ag-group-cell {
   font-style: italic;
-  color: #D14;
-  text-decoration: none;
 }
-
-/* line 2, ../sass/components/_dr-slider.scss */
-.dr-zoom-option {
-  background-color: transparent;
+/* line 272, ../sass/components/_qf-tables.scss */
+.qf-file-browser .ag-group-expand {
+  padding-right: 2px;
 }
-/* line 5, ../sass/components/_dr-slider.scss */
-.dr-zoom-option.active {
-  background-color: transparent;
-  border: #888 solid 2px;
+/* line 276, ../sass/components/_qf-tables.scss */
+.qf-file-browser .ag-footer-cell {
+  font-style: italic;
 }
-
-/* line 12, ../sass/components/_dr-slider.scss */
-.dr-slider rzslider {
-  opacity: 0.5;
+/* line 280, ../sass/components/_qf-tables.scss */
+.qf-file-browser .ag-filter-checkbox {
   position: relative;
+  top: 2px;
+  left: 2px;
+}
+/* line 286, ../sass/components/_qf-tables.scss */
+.qf-file-browser .ag-filter-header-container {
+  border-bottom: 1px solid #d3d3d3;
+}
+/* line 290, ../sass/components/_qf-tables.scss */
+.qf-file-browser .ag-filter-apply-panel {
+  border-top: 1px solid #d3d3d3;
+  padding: 2px;
+}
+/* line 295, ../sass/components/_qf-tables.scss */
+.qf-file-browser .ag-filter {
+  border: 1px solid #999;
+  background-color: #F2F2F2;
+}
+/* line 300, ../sass/components/_qf-tables.scss */
+.qf-file-browser .ag-filter-value {
+  margin-left: 4px;
+}
+/* line 304, ../sass/components/_qf-tables.scss */
+.qf-file-browser .ag-selection-checkbox {
+  margin-left: 4px;
+}
+/* line 308, ../sass/components/_qf-tables.scss */
+.qf-file-browser .ag-paging-panel {
+  padding: 4px;
+}
+/* line 312, ../sass/components/_qf-tables.scss */
+.qf-file-browser .ag-paging-button {
+  margin-left: 4px;
+  margin-right: 4px;
+}
+/* line 317, ../sass/components/_qf-tables.scss */
+.qf-file-browser .ag-paging-row-summary-panel {
   display: inline-block;
-  height: 4px;
-  margin: 8px 0 5px 0;
-  vertical-align: middle;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
+  width: 300px;
 }
-/* line 14, ../sass/components/_dr-slider.scss */
-.dr-slider rzslider .rz-pointer {
-  top: -4px;
-  z-index: 3;
-  width: 12px;
-  height: 12px;
+/* line 322, ../sass/components/_qf-tables.scss */
+.qf-file-browser .ag-column-not-visible {
+  opacity: 0.75;
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=75)";
+  filter: alpha(opacity=75);
 }
-/* line 21, ../sass/components/_dr-slider.scss */
-.dr-slider rzslider .rz-bubble {
-  display: none;
+/* line 328, ../sass/components/_qf-tables.scss */
+.qf-file-browser .ag-not-dragging {
+  border: 1px solid transparent;
 }
-/* line 37, ../sass/components/_dr-slider.scss */
-.dr-slider rzslider.active, .dr-slider rzslider:hover {
-  opacity: 1;
+/* line 332, ../sass/components/_qf-tables.scss */
+.qf-file-browser .ag-drop-target-above {
+  border-top: 5px solid #a9a9a9;
 }
-/* line 42, ../sass/components/_dr-slider.scss */
-.dr-slider rzslider[disabled] {
-  cursor: not-allowed;
+/* line 336, ../sass/components/_qf-tables.scss */
+.qf-file-browser .ag-drop-target-below {
+  border-bottom: 5px solid #a9a9a9;
 }
-/* line 46, ../sass/components/_dr-slider.scss */
-.dr-slider rzslider[disabled] .rz-pointer {
-  cursor: not-allowed;
-  background-color: rgba(0, 95, 177, 0.3);
+/* line 340, ../sass/components/_qf-tables.scss */
+.qf-file-browser .ag-dragging {
+  border: 1px dotted #a9a9a9;
 }
-/* line 52, ../sass/components/_dr-slider.scss */
-.dr-slider rzslider span {
-  position: absolute;
-  display: inline-block;
-  white-space: nowrap;
+/* line 344, ../sass/components/_qf-tables.scss */
+.qf-file-browser .ag-list-item-selected {
+  color: #f0f0f0;
 }
-/* line 58, ../sass/components/_dr-slider.scss */
-.dr-slider rzslider .rz-base {
-  width: 100%;
-  height: 100%;
-  padding: 0;
+/* line 348, ../sass/components/_qf-tables.scss */
+.qf-file-browser .ag-list-item-not-selected {
+  font-style: italic;
+  color: #a0a0a0;
 }
-/* line 64, ../sass/components/_dr-slider.scss */
-.dr-slider rzslider .rz-bar-wrapper {
-  left: 0;
-  z-index: 1;
-  width: 100%;
-  height: 32px;
-  padding-top: 16px;
-  margin-top: -16px;
+/* line 353, ../sass/components/_qf-tables.scss */
+.qf-file-browser .ag-tool-panel-container {
+  background-color: #eee;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  border: 1px solid #a9a9a9;
+  padding: 4px;
+}
+/* line 362, ../sass/components/_qf-tables.scss */
+.qf-file-browser .ag-list-selection {
+  background-color: #fff;
+  border: 1px solid #a9a9a9;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
   box-sizing: border-box;
 }
-/* line 73, ../sass/components/_dr-slider.scss */
-.dr-slider rzslider .rz-bar-wrapper.rz-draggable {
-  cursor: move;
+/* line 370, ../sass/components/_qf-tables.scss */
+.qf-file-browser .ag-popup-list .ag-list-item:hover {
+  background-color: #add8e6;
 }
-/* line 78, ../sass/components/_dr-slider.scss */
-.dr-slider rzslider .rz-bar {
-  left: 0;
-  z-index: 1;
-  width: 100%;
-  height: 4px;
-  background: rgba(0, 95, 177, 0.3);
-  -webkit-border-radius: 2px;
-  -moz-border-radius: 2px;
-  border-radius: 2px;
+/* line 374, ../sass/components/_qf-tables.scss */
+.qf-file-browser .ag-visible-icons {
+  padding-left: 2px;
+  padding-right: 2px;
 }
-/* line 89, ../sass/components/_dr-slider.scss */
-.dr-slider rzslider .rz-bar.rz-selection {
-  z-index: 2;
-  background: rgba(0, 95, 177, 0.7);
-  -webkit-border-radius: 2px;
-  -moz-border-radius: 2px;
-  border-radius: 2px;
+
+/* line 381, ../sass/components/_qf-tables.scss */
+.qf-file-browser-2 .ag-root {
+  border: 1px solid #808080;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
-/* line 98, ../sass/components/_dr-slider.scss */
-.dr-slider rzslider .rz-pointer {
-  top: -4px;
-  z-index: 3;
-  width: 12px;
-  height: 12px;
-  cursor: pointer;
-  background-color: rgba(0, 95, 177, 0.7);
-  -webkit-border-radius: 16px;
-  -moz-border-radius: 16px;
-  border-radius: 16px;
+/* line 386, ../sass/components/_qf-tables.scss */
+.qf-file-browser-2 .ag-cell {
+  padding: 2px;
 }
-/* line 109, ../sass/components/_dr-slider.scss */
-.dr-slider rzslider .rz-pointer:after {
-  position: absolute;
-  top: 12px;
-  left: 12px;
-  width: 8px;
-  height: 8px;
-  background: transparent;
-  -webkit-border-radius: 4px;
-  -moz-border-radius: 4px;
-  border-radius: 4px;
-  content: '';
+/* line 390, ../sass/components/_qf-tables.scss */
+.qf-file-browser-2 .ag-cell-focus {
+  border: 1px solid #a9a9a9;
 }
-/* line 122, ../sass/components/_dr-slider.scss */
-.dr-slider rzslider .rz-pointer:hover:after {
-  background-color: transparent;
+/* line 394, ../sass/components/_qf-tables.scss */
+.qf-file-browser-2 .ag-cell-no-focus {
+  border-right: 1px dotted #808080;
+  border-top: 1px solid transparent;
+  border-left: 1px solid transparent;
+  border-bottom: 1px solid transparent;
 }
-/* line 126, ../sass/components/_dr-slider.scss */
-.dr-slider rzslider .rz-pointer.rz-active:after {
-  background-color: rgba(0, 95, 177, 0.8);
+/* line 401, ../sass/components/_qf-tables.scss */
+.qf-file-browser-2 .ag-pinned-header {
+  background: -webkit-linear-gradient(#fff, #d3d3d3);
+  background: -moz-linear-gradient(#fff, #d3d3d3);
+  background: -o-linear-gradient(#fff, #d3d3d3);
+  background: -ms-linear-gradient(#fff, #d3d3d3);
+  background: linear-gradient(#ffffff, #d3d3d3);
+  border-bottom: 1px solid #808080;
 }
-/* line 131, ../sass/components/_dr-slider.scss */
-.dr-slider rzslider .rz-bubble {
-  bottom: 16px;
-  padding: 1px 3px;
-  color: #55637d;
-  cursor: default;
+/* line 410, ../sass/components/_qf-tables.scss */
+.qf-file-browser-2 .ag-header-container {
+  background: -webkit-linear-gradient(#fff, #d3d3d3);
+  background: -moz-linear-gradient(#fff, #d3d3d3);
+  background: -o-linear-gradient(#fff, #d3d3d3);
+  background: -ms-linear-gradient(#fff, #d3d3d3);
+  background: linear-gradient(#ffffff, #d3d3d3);
+  border-bottom: 1px solid #808080;
 }
-/* line 137, ../sass/components/_dr-slider.scss */
-.dr-slider rzslider .rz-bubble.rz-selection {
-  top: 16px;
+/* line 419, ../sass/components/_qf-tables.scss */
+.qf-file-browser-2 .ag-header-cell {
+  border-right: 1px solid #808080;
 }
-/* line 141, ../sass/components/_dr-slider.scss */
-.dr-slider rzslider .rz-bubble.rz-limit {
-  color: #55637d;
+/* line 423, ../sass/components/_qf-tables.scss */
+.qf-file-browser-2 .ag-header-group-cell {
+  border-right: 1px solid #808080;
 }
-/* line 146, ../sass/components/_dr-slider.scss */
-.dr-slider rzslider .rz-ticks {
-  position: absolute;
-  top: -3px;
-  left: 0;
-  z-index: 1;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  width: 100%;
-  height: 0;
-  padding: 0 11px;
-  margin: 0;
-  list-style: none;
-  box-sizing: border-box;
-  -webkit-justify-content: space-between;
-  -ms-flex-pack: justify;
-  justify-content: space-between;
+/* line 427, ../sass/components/_qf-tables.scss */
+.qf-file-browser-2 .ag-header-group-cell-with-group {
+  border-bottom: 1px solid #808080;
 }
-/* line 165, ../sass/components/_dr-slider.scss */
-.dr-slider rzslider .tick {
-  width: 10px;
-  height: 10px;
-  text-align: center;
-  cursor: pointer;
-  background: #d8e0f3;
-  border-radius: 50%;
+/* line 431, ../sass/components/_qf-tables.scss */
+.qf-file-browser-2 .ag-header-cell-label {
+  padding: 4px 2px 4px 2px;
 }
-/* line 174, ../sass/components/_dr-slider.scss */
-.dr-slider rzslider .tick.selected {
-  background: rgba(0, 95, 177, 0.7);
+/* line 435, ../sass/components/_qf-tables.scss */
+.qf-file-browser-2 .ag-header-cell-text {
+  padding-left: 2px;
 }
-/* line 177, ../sass/components/_dr-slider.scss */
-.dr-slider rzslider .tick.selected .tick-value {
-  position: absolute;
-  top: -30px;
-  transform: translate(-50%, 0);
+/* line 439, ../sass/components/_qf-tables.scss */
+.qf-file-browser-2 .ag-header-group-cell-label {
+  padding: 4px;
+  font-weight: bold;
 }
-/* line 184, ../sass/components/_dr-slider.scss */
-.dr-slider rzslider.vertical {
+/* line 444, ../sass/components/_qf-tables.scss */
+.qf-file-browser-2 .ag-header-group-text {
+  margin-right: 2px;
+}
+/* line 448, ../sass/components/_qf-tables.scss */
+.qf-file-browser-2 .ag-header-cell-menu-button {
+  padding: 2px;
+  margin-top: 4px;
+  border: 1px solid transparent;
+  -webkit-border-radius: 3px;
+  border-radius: 3px;
+  -webkit-box-sizing: content-box;
+  -moz-box-sizing: content-box;
+  box-sizing: content-box;
+  /* When using bootstrap, box-sizing was set to 'border-box' */
+}
+/* line 459, ../sass/components/_qf-tables.scss */
+.qf-file-browser-2 .ag-header-cell-menu-button:hover {
+  border: 1px solid #000;
+}
+/* line 463, ../sass/components/_qf-tables.scss */
+.qf-file-browser-2 .ag-header-icon {
+  color: #800000;
+}
+/* line 467, ../sass/components/_qf-tables.scss */
+.qf-file-browser-2 .ag-row-selected {
+  background-color: #b0e0e6 !important;
+}
+/* line 471, ../sass/components/_qf-tables.scss */
+.qf-file-browser-2 .ag-body .ag-row-odd {
+  background-color: #f6f6f6;
+}
+/* line 475, ../sass/components/_qf-tables.scss */
+.qf-file-browser-2 .ag-body .ag-row-even {
+  background-color: #fff;
+}
+/* line 479, ../sass/components/_qf-tables.scss */
+.qf-file-browser-2 .ag-floating-top .ag-row {
+  background-color: #f0f0f0;
+}
+/* line 483, ../sass/components/_qf-tables.scss */
+.qf-file-browser-2 .ag-floating-bottom .ag-row {
+  background-color: #f0f0f0;
+}
+/* line 487, ../sass/components/_qf-tables.scss */
+.qf-file-browser-2 .ag-overlay-loading-wrapper {
+  background-color: rgba(255, 255, 255, 0.5);
+}
+/* line 491, ../sass/components/_qf-tables.scss */
+.qf-file-browser-2 .ag-overlay-loading-center {
+  background-color: #fff;
+  border: 1px solid #a9a9a9;
+  -webkit-border-radius: 10px;
+  border-radius: 10px;
+  padding: 10px;
+}
+/* line 499, ../sass/components/_qf-tables.scss */
+.qf-file-browser-2 .ag-overlay-no-rows-center {
+  background-color: #fff;
+  border: 1px solid #a9a9a9;
+  -webkit-border-radius: 10px;
+  border-radius: 10px;
+  padding: 10px;
+}
+/* line 507, ../sass/components/_qf-tables.scss */
+.qf-file-browser-2 .ag-body {
+  background-color: #fafafa;
+}
+/* line 511, ../sass/components/_qf-tables.scss */
+.qf-file-browser-2 .ag-group-cell-entire-row {
+  background-color: #aaa;
+  padding: 4px;
+}
+/* line 516, ../sass/components/_qf-tables.scss */
+.qf-file-browser-2 .ag-footer-cell-entire-row {
+  background-color: #aaa;
+  padding: 4px;
+}
+/* line 521, ../sass/components/_qf-tables.scss */
+.qf-file-browser-2 .ag-group-cell {
+  font-style: italic;
+}
+/* line 525, ../sass/components/_qf-tables.scss */
+.qf-file-browser-2 .ag-group-expand {
+  padding-right: 2px;
+}
+/* line 529, ../sass/components/_qf-tables.scss */
+.qf-file-browser-2 .ag-footer-cell {
+  font-style: italic;
+}
+/* line 533, ../sass/components/_qf-tables.scss */
+.qf-file-browser-2 .ag-filter-checkbox {
   position: relative;
-  width: 4px;
-  height: 100%;
-  padding: 0;
-  margin: 0 20px;
-  vertical-align: baseline;
+  top: 2px;
+  left: 2px;
 }
-/* line 192, ../sass/components/_dr-slider.scss */
-.dr-slider rzslider.vertical .rz-base {
-  width: 100%;
-  height: 100%;
-  padding: 0;
+/* line 539, ../sass/components/_qf-tables.scss */
+.qf-file-browser-2 .ag-filter-header-container {
+  border-bottom: 1px solid #d3d3d3;
 }
-/* line 198, ../sass/components/_dr-slider.scss */
-.dr-slider rzslider.vertical .rz-bar-wrapper {
-  top: auto;
-  left: 0;
-  width: 32px;
-  height: 100%;
-  padding: 0 0 0 16px;
-  margin: 0 0 0 -16px;
+/* line 543, ../sass/components/_qf-tables.scss */
+.qf-file-browser-2 .ag-filter-apply-panel {
+  border-top: 1px solid #d3d3d3;
+  padding: 2px;
 }
-/* line 207, ../sass/components/_dr-slider.scss */
-.dr-slider rzslider.vertical .rz-bar {
-  bottom: 0;
-  left: auto;
-  width: 4px;
-  height: 100%;
+/* line 548, ../sass/components/_qf-tables.scss */
+.qf-file-browser-2 .ag-filter {
+  border: 1px solid #000;
+  background-color: #f0f0f0;
 }
-/* line 214, ../sass/components/_dr-slider.scss */
-.dr-slider rzslider.vertical .rz-pointer {
-  top: auto;
-  bottom: 0;
-  left: -14px !important;
+/* line 553, ../sass/components/_qf-tables.scss */
+.qf-file-browser-2 .ag-filter-value {
+  margin-left: 4px;
 }
-/* line 220, ../sass/components/_dr-slider.scss */
-.dr-slider rzslider.vertical .rz-bubble {
-  bottom: 0;
-  left: 16px !important;
-  margin-left: 3px;
+/* line 557, ../sass/components/_qf-tables.scss */
+.qf-file-browser-2 .ag-selection-checkbox {
+  margin-left: 4px;
 }
-/* line 226, ../sass/components/_dr-slider.scss */
-.dr-slider rzslider.vertical .rz-bubble.rz-selection {
-  top: auto;
-  left: 16px !important;
+/* line 561, ../sass/components/_qf-tables.scss */
+.qf-file-browser-2 .ag-paging-panel {
+  padding: 4px;
 }
-/* line 231, ../sass/components/_dr-slider.scss */
-.dr-slider rzslider.vertical .rz-ticks {
-  top: 0;
-  left: -3px;
-  z-index: 1;
-  width: 0;
-  height: 100%;
-  padding: 11px 0;
-  -webkit-flex-direction: column-reverse;
-  -ms-flex-direction: column-reverse;
-  flex-direction: column-reverse;
+/* line 565, ../sass/components/_qf-tables.scss */
+.qf-file-browser-2 .ag-paging-button {
+  margin-left: 4px;
+  margin-right: 4px;
 }
-/* line 243, ../sass/components/_dr-slider.scss */
-.dr-slider rzslider.vertical .rz-ticks .tick {
-  vertical-align: middle;
+/* line 570, ../sass/components/_qf-tables.scss */
+.qf-file-browser-2 .ag-paging-row-summary-panel {
+  display: inline-block;
+  width: 300px;
 }
-/* line 247, ../sass/components/_dr-slider.scss */
-.dr-slider rzslider.vertical .rz-ticks .tick .tick-value {
-  top: auto;
-  right: -30px;
-  transform: translate(0, -28%);
+/* line 575, ../sass/components/_qf-tables.scss */
+.qf-file-browser-2 .ag-column-not-visible {
+  opacity: 0.75;
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=75)";
+  filter: alpha(opacity=75);
+}
+/* line 581, ../sass/components/_qf-tables.scss */
+.qf-file-browser-2 .ag-not-dragging {
+  border: 1px solid transparent;
+}
+/* line 585, ../sass/components/_qf-tables.scss */
+.qf-file-browser-2 .ag-drop-target-above {
+  border-top: 5px solid #a9a9a9;
+}
+/* line 589, ../sass/components/_qf-tables.scss */
+.qf-file-browser-2 .ag-drop-target-below {
+  border-bottom: 5px solid #a9a9a9;
+}
+/* line 593, ../sass/components/_qf-tables.scss */
+.qf-file-browser-2 .ag-dragging {
+  border: 1px dotted #a9a9a9;
+}
+/* line 597, ../sass/components/_qf-tables.scss */
+.qf-file-browser-2 .ag-list-item-selected {
+  color: #f0f0f0;
+}
+/* line 601, ../sass/components/_qf-tables.scss */
+.qf-file-browser-2 .ag-list-item-not-selected {
+  font-style: italic;
+  color: #a0a0a0;
+}
+/* line 606, ../sass/components/_qf-tables.scss */
+.qf-file-browser-2 .ag-tool-panel-container {
+  background-color: #eee;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  border: 1px solid #a9a9a9;
+  padding: 4px;
+}
+/* line 615, ../sass/components/_qf-tables.scss */
+.qf-file-browser-2 .ag-list-selection {
+  background-color: #fff;
+  border: 1px solid #a9a9a9;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+/* line 623, ../sass/components/_qf-tables.scss */
+.qf-file-browser-2 .ag-popup-list .ag-list-item:hover {
+  background-color: #add8e6;
+}
+/* line 627, ../sass/components/_qf-tables.scss */
+.qf-file-browser-2 .ag-visible-icons {
+  padding-left: 2px;
+  padding-right: 2px;
 }
 
 /* 

@@ -26,6 +26,11 @@
     Templates
    </a>
   </li>
+  <li role="presentation" class="">
+   <a href="#qf-form-import-tab" aria-controls="import" role="tab" data-toggle="tab">
+    Import
+   </a>
+  </li>
  </ul>
  <div class="tab-content">
   <br>
@@ -75,14 +80,16 @@
      </button>
     </div>
    </form>
-   <div>
-    <script src="https://script.google.com/macros/s/AKfycbxK_tpdGUXB5pSxDDP5Zb_M3q3AViHn7laC-g4UN6rs/dev?prefix=alert">
-    </script>
-   </div>
+  </div>
+  <div role="tabpanel" class="tab-pane" id="qf-form-import-tab">
    <form class="row">
-    <textarea rows="5" ng-model="formSettingsCtrl.googleFormControls"></textarea>
-    <md-button type="button" ng-click="formSettingsCtrl.formSrv.getGoogleForm('https://script.google.com/macros/s/AKfycbxK_tpdGUXB5pSxDDP5Zb_M3q3AViHn7laC-g4UN6rs/dev?callback=JSON_CALLBACK')">
+    <input type="url" ng-model="formSettingsCtrl.googleFormUrl"
+           class="form-control">
+    <md-button type="button" ng-click="formSettingsCtrl.formSrv.getGoogleForm(formSettingsCtrl.googleFormUrl)">
      Get Form
+    </md-button>
+    <md-button type="button" ng-click="formSettingsCtrl.previewData()">
+     Get Form Responses
     </md-button>
    </form>
   </div>

@@ -222,12 +222,34 @@
           };
 
 
-          FormSrv.prototype.getGoogleForm = function (url) {
+          FormSrv.prototype.getGoogleForm = function (formUrl) {
            var self = this;
            var deferred = $q.defer();
            self.error = '';
-           $http.jsonp(url).success(function (data) {
+           var url = "https://script.google.com/macros/s/AKfycbxK_tpdGUXB5pSxDDP5Zb_M3q3AViHn7laC-g4UN6rs/dev";
+           var params = {
+            callback: "JSON_CALLBACK",
+            formurl: formUrl
+           };
+           $http.jsonp(url, {params: params}).success(function (data) {
             self.convertGoogleForm(data);
+            self.deferredHandler(data, deferred);
+           }).error(function (data) {
+            self.deferredHandler(data, deferred, 'Unknown error');
+           });
+           return deferred.promise;
+          };
+
+          FormSrv.prototype.getGoogleFormResponses = function (formUrl) {
+           var self = this;
+           var deferred = $q.defer();
+           self.error = '';
+           var url = "https://script.google.com/macros/s/AKfycbx9KMf-kJP862ju9jsglOf7GUI5xs7PG4TPRPNaxn1B89Eb49zd/exec";
+           var params = {
+            callback: "JSON_CALLBACK",
+            formurl: formUrl
+           };
+           $http.jsonp(url, {params: params}).success(function (data) {
             self.deferredHandler(data, deferred);
            }).error(function (data) {
             self.deferredHandler(data, deferred, 'Unknown error');
