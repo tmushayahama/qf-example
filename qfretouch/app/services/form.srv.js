@@ -221,20 +221,35 @@
            return deferred.promise;
           };
 
-          FormSrv.prototype.convertGoogleFormControls = function (controls) {
+
+          FormSrv.prototype.getGoogleForm = function (url) {
+           var self = this;
+           var deferred = $q.defer();
+           self.error = '';
+           $http.jsonp(url).success(function (data) {
+            self.convertGoogleForm(data);
+            self.deferredHandler(data, deferred);
+           }).error(function (data) {
+            self.deferredHandler(data, deferred, 'Unknown error');
+           });
+           return deferred.promise;
+          };
+
+
+          FormSrv.prototype.convertGoogleForm = function (form) {
            var self = this;
            //var deferred = $q.defer();
            //  self.error = '';
            //$http.get(url).success(function (data) {
            self.formItems = [];
-           var controlsJSON = JSON.parse(controls);
+           //var formJSON = JSON.parse(form);
 
-           angular.forEach(controlsJSON, function (control) {
+           angular.forEach(form.formItems, function (formItem) {
             self.formItems.push({
              "templateUrl": "qfretouch/common/views/templates/textbox.tpl.html",
              "name": "Text",
              "component": {
-              "label": control.label,
+              "label": formItem.component.label,
               "description": null,
               "placeholder": "Type your heading",
               "rows": 2,

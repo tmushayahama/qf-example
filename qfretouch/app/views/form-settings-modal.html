@@ -75,9 +75,13 @@
      </button>
     </div>
    </form>
+   <div>
+    <script src="https://script.google.com/macros/s/AKfycbxK_tpdGUXB5pSxDDP5Zb_M3q3AViHn7laC-g4UN6rs/dev?prefix=alert">
+    </script>
+   </div>
    <form class="row">
     <textarea rows="5" ng-model="formSettingsCtrl.googleFormControls"></textarea>
-    <md-button type="button" ng-click="formSettingsCtrl.formSrv.convertGoogleFormControls(formSettingsCtrl.googleFormControls)">
+    <md-button type="button" ng-click="formSettingsCtrl.formSrv.getGoogleForm('https://script.google.com/macros/s/AKfycbxK_tpdGUXB5pSxDDP5Zb_M3q3AViHn7laC-g4UN6rs/dev?callback=JSON_CALLBACK')">
      Get Form
     </md-button>
    </form>

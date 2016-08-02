@@ -19,16 +19,17 @@ var designerCtrl = function (
         ) {
  var vm = this;
  vm.formSrv = new FormSrv();
+
  vm.formSrv.getFormTemplates("qfretouch/form-templates/contact-us-transparent.json");
+ //vm.formSrv.getFormTemplates("https://script.google.com/macros/s/AKfycbxK_tpdGUXB5pSxDDP5Zb_M3q3AViHn7laC-g4UN6rs/dev?prefix=alert");
  vm.formSrv.getFormTemplates("qfretouch/form-templates/contact-us-simple.json");
-// vm.formSrv.getFormTemplates("qfretouch/form-templates/contact-us.json");
+ vm.formSrv.getFormTemplates("qfretouch/form-templates/contact-us.json");
  //vm.formSrv.getFormTemplates("qfretouch/form-templates/all-components.json");
  vm.formSrv.getFormTemplates("qfretouch/form-templates/registration.json");
  vm.formSrv.getFormTemplates("qfretouch/form-templates/feature-request.json");
  vm.formSrv.getFormTemplates("qfretouch/form-templates/background-check-authorization.json");
  vm.formSrv.getFormTemplates("qfretouch/form-templates/handbook-acknowledgement.json");
  vm.formSrv.getFormTemplates("qfretouch/form-templates/parking-permit.json");
-
 
 
  vm.formSrv.formItems = [];
