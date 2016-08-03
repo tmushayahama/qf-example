@@ -268,14 +268,16 @@
 
            angular.forEach(form.formItems, function (formItem) {
             self.formItems.push({
-             "templateUrl": "qfretouch/common/views/templates/textbox.tpl.html",
+             "templateUrl": "qfretouch/common/views/templates/" + formItem.template + ".tpl.html",
              "name": "Text",
              "component": {
               "label": formItem.component.label,
-              "description": null,
+              "description": formItem.component.description,
               "placeholder": "Type your heading",
+              "optionsText": "",
+              "options": formItem.component.options,
               "rows": 2,
-              "required": null,
+              "required": formItem.component.required,
               "componentStyles": {
                "component1": {
                 "color": "#008040",

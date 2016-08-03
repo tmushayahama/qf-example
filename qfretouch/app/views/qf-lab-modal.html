@@ -1,0 +1,64 @@
+<div class="modal-header">
+ <div class="qf-title">
+  <p class="qf-truncate">
+
+  </p>
+ </div>
+ <div class="qf-device-nav">
+  <ul class="nav nav-tabs">
+   <li ng-repeat="device in previewFormCtrl.devices">
+   <md-button ng-click="previewFormCtrl.selectDevice($index)"
+              ng-class="{'active': previewFormCtrl.selectedDeviceIndex === $index}">
+    <i class="fa {{::device.icon}}"></i>
+    <p class="qf-truncate">{{device.name}}</p>
+   </md-button>
+   </li>
+  </ul>
+ </div>
+
+ <md-button class="qf-close" ng-click="previewDataCtrl.close()">
+  x
+ </md-button>
+ <div ng-if="false" class="qf-flex-container">
+  <div class="toggle-preview-header qf-container col-lg-4 col-md-6 col-sm-12 col-xs-12">
+   <div class="btn-group col-lg-5 col-md-6 col-sm-6 col-xs-5">
+    <button type="button" class="btn pull-right btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+     {{previewFormCtrl.devices[previewFormCtrl.selectedDeviceIndex].name}}
+     <span class="caret"></span>
+    </button>
+    <ul class="dropdown-menu">
+     <li ng-repeat="device in previewFormCtrl.devices">
+      <a href="" ng-click="previewFormCtrl.selectedDeviceIndex = $index">
+       {{device.name}}
+      </a>
+     </li>
+    </ul>
+   </div>
+
+   <div class="device-size col-lg-2 col-md-2 col-sm-2 col-xs-3">
+    {{previewFormCtrl.devices[previewFormCtrl.selectedDeviceIndex].width}} &times; {{previewFormCtrl.devices[previewFormCtrl.selectedDeviceIndex].height}}
+   </div>
+   <div class="device-rotate col-lg-4 col-md-4 col-sm-4 col-xs-4">
+    <md-button ng-click="previewFormCtrl.rotate()" class="md-icon-button" aria-label="rotate" tooltip-class="qf-tooltip-1"
+               tooltip-placement="bottom" uib-tooltip="Rotate Form" tooltip-popup-delay="500">
+     <i class="fa fa-mobile fa-2x fa-rotate-45"></i>
+    </md-button>
+   </div>
+  </div>
+ </div>
+</div>
+
+<div class="modal-body dotted">
+ <div class="qf-flex-container">
+  <div class="container">
+   <div ui-grid="previewDataCtrl.gridOptions" class="grid qf-document-table" style="height: 100%;"
+        ui-grid-selection
+        ui-grid-pagination
+        ui-grid-auto-resize
+        ui-grid-pinning
+        ui-grid-resize-columns
+        ui-grid-move-columns>
+   </div>
+  </div>
+ </div>
+</div>
