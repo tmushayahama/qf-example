@@ -134,6 +134,27 @@ var designerCtrl = function (
   });
  };
 
+ vm.openQFLab = function () {
+  var modalInstance = $aside.open({
+   templateUrl: 'qf-lab-modal.html',
+   controller: 'QFLabCtrl as qfLabCtrl',
+   scope: $scope,
+   size: 'qf-lab',
+   placement: 'right',
+   //backdrop: 'static',
+   resolve: {
+    formSrv: function () {
+     return vm.formSrv;
+    }
+   }
+  });
+  modalInstance.result.then(function (result) {
+   // $scope.item = result;
+  }, function () {
+   //('Modal dismissed at: ' + new Date());
+  });
+ };
+
  $scope.$watch(function () {
   return vm.formSrv.formStylesMap.formItems;
  }, function (styles) {
