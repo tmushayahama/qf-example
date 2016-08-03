@@ -49,7 +49,7 @@ var previewDataCtrl = function (
 
  //vm.gridOptions.data = vm.formResponses.formData;
 
- angular.forEach(vm.formResponses.formData, function (formDatum) {
+ angular.forEach(vm.formResponses.formData[0], function (formDatum) {
   vm.columnDefs.push({
    name: formDatum.title,
    field: $rootScope.deSpacify(formDatum.title),
@@ -69,12 +69,14 @@ var previewDataCtrl = function (
 
  angular.forEach(vm.formResponses.formData, function (formDataRow, key) {
   var row = {};
-  row[$rootScope.deSpacify(formDataRow.title)] = formDataRow.value;
+
+  angular.forEach(formDataRow, function (formDataRowItem) {
+   row[$rootScope.deSpacify(formDataRowItem.title)] = formDataRowItem.value;
+
+   //vm.gridData[key] = [];
+   // vm.gridData[key][$rootScope.deSpacify(multipopulateItem.title)] = multipopulateItem.value;
+  });
   vm.gridData.push(row);
-  //vm.gridData[key] = [];
-  //angular.forEach(formDataRow, function (multipopulateItem) {
-  //vm.gridData[key][$rootScope.deSpacify(multipopulateItem.title)] = multipopulateItem.value;
-  //});
  });
 
 

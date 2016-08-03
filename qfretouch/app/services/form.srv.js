@@ -244,7 +244,7 @@
            var self = this;
            var deferred = $q.defer();
            self.error = '';
-           var url = "https://script.google.com/macros/s/AKfycbx9KMf-kJP862ju9jsglOf7GUI5xs7PG4TPRPNaxn1B89Eb49zd/exec";
+           var url = "https://script.google.com/macros/s/AKfycbxhvL6Hk0ffQt9UCLUOTD9Ob7MIe1x3VwA7UJQktICw/dev";
            var params = {
             callback: "JSON_CALLBACK",
             formurl: formUrl

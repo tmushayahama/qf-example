@@ -21,7 +21,10 @@ var designerCtrl = function (
  vm.formSrv = new FormSrv();
 
  $rootScope.deSpacify = function (str) {
-  return str.replace(/\s/g, '').toLowerCase();
+  if (str) {
+   return str.replace(/\s/g, '').toLowerCase();
+  }
+  return str;
  }
 
  //vm.formSrv.getFormTemplates("qfretouch/form-templates/contact-us-transparent.json");
