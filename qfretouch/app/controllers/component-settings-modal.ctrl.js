@@ -10,7 +10,15 @@ var componentSettingsCtrl = function (
  var vm = this;
  vm.item = Item;
 
- vm.openComponentRule = function (item) {
+ vm.openComponentRule = function (componentRule) {
+  if (!componentRule) {
+   componentRule = {
+    summary: "",
+    active: true,
+    criteria: [],
+    action: []
+   };
+  }
   var modalInstance = $uibModal.open({
    templateUrl: 'component-rule-modal.html',
    controller: 'ComponentRuleCtrl as componentRuleCtrl',
@@ -21,11 +29,14 @@ var componentSettingsCtrl = function (
    resolve: {
     Item: function () {
      return vm.item;
+    },
+    ComponentRule: function () {
+     return componentRule;
     }
    }
   });
-  modalInstance.result.then(function (result) {
-   // $scope.item = result;
+  modalInstance.result.then(function (componentRule) {
+   vm.item.rules.componentRules.push(componentRule);
   }, function () {
    //('Modal dismissed at: ' + new Date());
   });

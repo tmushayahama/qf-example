@@ -9,9 +9,70 @@
  </md-button>
 </div>
 
-<div class="modal-body dotted">
- <div class="qf-flex-container">
-  <div class="qf-container">
+<div class="modal-body">
+ <div class="container">
+  <md-input-container class="md-block">
+   <input type="text"
+          ng-model="componentRuleCtrl.componentRule.summary" placeholder="Rule Summary">
+  </md-input-container>
+  <section class="qf-box-1 row">
+   <div class="qf-inline-title-action">
+    <div class="qf-title">Criteria</div>
+   </div>
+   <div class="qf-section-body">
+    <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12 qf-criteria-form">
+     <md-input-container class="md-block">
+      <input type="text"
+             ng-model="componentRuleCtrl.criterion.description" placeholder="Criterion Description">
+     </md-input-container>
+     <select ng-options="value.label for value in componentRuleCtrl.booleanOperators" class="form-control"
+             ng-model="component.inputText" ng-init="component.inputText = component.options[0]" />
+     </select>
+    </div>
+    <div class="col-lg-8 col-md-8 col-sm-12 col-xs-12">
+     <ul class="list-group">
+      <li class="list-group-item"  ng-repeat="criterion in componentRuleCtrl.componentRule.criteria"
+          ng-click="componentSettingsCtrl.openComponentRule(componentRule)">
+       <span class="tag tag-default tag-pill pull-xs-right" ng-show="componentRule.active">Active</span>
+       <span class="tag tag-default tag-pill pull-xs-right" ng-show="componentRule.active">Inactive</span>
+       <p class="qf-truncate">
+        {{componentRule.summary}}
+       </p>
+      </li>
+     </ul>
+    </div>
+   </div>
+  </section>
+  <section class="qf-box-1 row">
+   <div class="qf-inline-title-action">
+    <div class="qf-title">Actions</div>
+    <md-button type="button" class="qf-action"
+               ng-click="componentSettingsCtrl.openComponentRule()">
+     <i class="fa fa-plus"></i>
+    </md-button>
+   </div>
+   <div class="qf-section-body">
+    <ul class="list-group">
+     <li class="list-group-item"  ng-repeat="componentRule in componentRuleCtrl.componentRule.actions"
+         ng-click="componentSettingsCtrl.openComponentRule(componentRule)">
+      <span class="tag tag-default tag-pill pull-xs-right" ng-show="componentRule.active">Active</span>
+      <span class="tag tag-default tag-pill pull-xs-right" ng-show="componentRule.active">Inactive</span>
+      <p class="qf-truncate">
+       {{componentRule.summary}}
+      </p>
+     </li>
+    </ul>
+   </div>
+  </section>
+  <div class="checkbox">
+   <label>
+    <input type='checkbox' ng-model="componentRuleCtrl.componentRule.active" />
+    Readonly
+   </label>
   </div>
+  <md-button type="button" class="md-primary md-raised"
+             ng-click="componentRuleCtrl.ok()">
+   Add
+  </md-button>
  </div>
 </div>

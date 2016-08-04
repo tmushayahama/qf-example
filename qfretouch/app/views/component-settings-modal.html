@@ -82,38 +82,47 @@
    </form>
   </div>
   <div role="tabpanel" class="tab-pane" id="qf-component-rules-tab">
-   <form class="row">
-    Initial Condition
-    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+   <section class="qf-box-1 row">
+    <div class="qf-inline-title-action">
+     <div class="qf-title">Initial Condition</div>
+    </div>
+    <div class="qf-section-body">
      <div class='checkbox' ng-repeat="option in componentSettingsCtrl.item.rules.initialConditionOptions">
       <label>
        <input type="checkbox" checklist-model="componentSettingsCtrl.item.rules.selectedInitialConditionOptions" checklist-value="option"> {{option.label}}
       </label>
      </div>
     </div>
-   </form>
-   <div class="">
-    Logical Rules
-    <md-button type="button" class="pull-right md-primary md-raised"
-               ng-click="componentSettingsCtrl.openComponentRule()">
-     Add
-    </md-button>
+   </section>
+   <section class="qf-box-1 row">
+    <div class="qf-inline-title-action">
+     <div class="qf-title">Logical Rules</div>
+     <md-button type="button" class="qf-action"
+                ng-click="componentSettingsCtrl.openComponentRule()">
+      <i class="fa fa-plus"></i>
+     </md-button>
+    </div>
+    <div class="qf-section-body">
+     <ul class="list-group">
+      <li class="list-group-item"  ng-repeat="componentRule in componentSettingsCtrl.item.rules.componentRules"
+          ng-click="componentSettingsCtrl.openComponentRule(componentRule)">
+       <span class="tag tag-default text-success tag-pill pull-xs-right" ng-show="componentRule.active">Active</span>
+       <span class="tag tag-default text-danger tag-pill pull-xs-right" ng-show="!componentRule.active">Inactive</span>
+       <p class="qf-truncate">
+        {{componentRule.summary}}
+       </p>
+      </li>
+     </ul>
+    </div>
+   </section>
+   <div role="tabpanel" class="tab-pane" id="qf-component-templates-tab">
+    <form class="row">
+     <div ng-repeat="formTemplate in designerCtrl.formSrv.formTemplates">
+      <button type="button" ng-click="designerCtrl.formSrv.setFormTemplate(formTemplate)">
+       {{formTemplate.formName}}
+      </button>
+     </div>
+    </form>
    </div>
-   <form class="row">
-
-
-    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-    </div>
-   </form>
-  </div>
-  <div role="tabpanel" class="tab-pane" id="qf-component-templates-tab">
-   <form class="row">
-    <div ng-repeat="formTemplate in designerCtrl.formSrv.formTemplates">
-     <button type="button" ng-click="designerCtrl.formSrv.setFormTemplate(formTemplate)">
-      {{formTemplate.formName}}
-     </button>
-    </div>
-   </form>
   </div>
  </div>
-</div>

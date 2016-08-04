@@ -147,7 +147,8 @@
      "action" :"disable"
     }
    ] ,
-   "selectedInitialConditionOptions" :[]
+   "selectedInitialConditionOptions" :[] ,
+   "componentRules" :[]
   } ,
   "component" :{
    "label" :"First Name" ,
