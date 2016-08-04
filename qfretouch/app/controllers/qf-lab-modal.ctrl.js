@@ -11,10 +11,11 @@ var qfLabCtrl = function (
  var vm = this;
  vm.formSrv = formSrv;
 
- vm.googleFormUrl = "https://docs.google.com/forms/u/0/d/1bypRIbC1w2w_VxCKZHldBOQAVv9Uw4yW6f9YOw3IrlA/edit"
-
+ vm.googleFormUrl = "https://docs.google.com/forms/u/0/d/1bypRIbC1w2w_VxCKZHldBOQAVv9Uw4yW6f9YOw3IrlA/edit";
+ vm.googleFormUrl_Responses = "https://docs.google.com/forms/u/0/d/1bypRIbC1w2w_VxCKZHldBOQAVv9Uw4yW6f9YOw3IrlA/edit";
+ vm.formScrapUrl = "https://www.konicaminolta.eu/en/business-solutions/support/printer-faq-support/contact-form.html";
  vm.previewData = function () {
-  vm.formSrv.getGoogleFormResponses(vm.googleFormUrl).then(function (data) {
+  vm.formSrv.getGoogleFormResponses(vm.googleFormUrl_Responses).then(function (data) {
    var modalInstance = $uibModal.open({
     templateUrl: 'preview-data-modal.html',
     controller: 'PreviewDataCtrl as previewDataCtrl',

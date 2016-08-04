@@ -21,6 +21,11 @@
     Design
    </a>
   </li>
+  <li ng-show="$root.labs.enableComponentRules" role="presentation" class="">
+   <a href="#qf-component-rules-tab" aria-controls="rules" role="tab" data-toggle="tab">
+    Rules
+   </a>
+  </li>
   <li role="presentation" class="">
    <a href="#qf-component-templates-tab" aria-controls="templates" role="tab" data-toggle="tab">
     Templates
@@ -76,6 +81,20 @@
     </md-input-container>
    </form>
   </div>
+  <div role="tabpanel" class="tab-pane" id="qf-component-rules-tab">
+   <form class="row">
+    Initial Condition
+    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+     <div class='checkbox' ng-repeat="option in componentSettingsCtrl.item.rules.initialConditionOptions">
+      <label>
+       <input type="checkbox" checklist-model="componentSettingsCtrl.item.rules.selectedInitialConditionOptions" checklist-value="option"> {{option.label}}
+      </label>
+     </div>
+     <pre> {{componentSettingsCtrl.item.rules.selectedInitialConditionOptions|json}}</pre>
+
+    </div>
+   </form>
+  </div>
   <div role="tabpanel" class="tab-pane" id="qf-component-templates-tab">
    <form class="row">
     <div ng-repeat="formTemplate in designerCtrl.formSrv.formTemplates">
@@ -84,18 +103,6 @@
      </button>
     </div>
    </form>
-  </div>
- </div>
-</div>
-<div ng-if="false" class="modal-footer">
- <div class="qf-flex-container">
-  <div layout="row" layout-align="center">
-   <md-button class="qf-full md-raised md-hue-1 md-primary" ng-click="componentSettingsCtrl.ok()">
-    Save
-   </md-button>
-   <md-button class="qf-full md-raised md-hue-1" ng-click="componentSettingsCtrl.close()">
-    Close
-   </md-button>
   </div>
  </div>
 </div>

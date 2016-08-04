@@ -27,6 +27,10 @@ var designerCtrl = function (
   return str;
  }
 
+ $rootScope.labs = {
+  enableComponentRules: true,
+ }
+
  //vm.formSrv.getFormTemplates("qfretouch/form-templates/contact-us-transparent.json");
  //vm.formSrv.getFormTemplates("https://script.google.com/macros/s/AKfycbxK_tpdGUXB5pSxDDP5Zb_M3q3AViHn7laC-g4UN6rs/dev?prefix=alert");
  vm.formSrv.getFormTemplates("qfretouch/form-templates/contact-us-simple.json");

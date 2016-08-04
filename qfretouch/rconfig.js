@@ -32,6 +32,7 @@ requirejs.config({
   'angular-ui-grid': '../bower_components/angular-ui-grid/ui-grid',
   'matchmedia': '../bower_components/matchmedia/matchMedia',
   'matchmedia-ng': '../bower_components/matchmedia-ng/matchmedia-ng',
+  'checklist-model': '../bower_components/checklist-model/checklist-model',
   'jsignature': '../lib/js/jSignature',
   //Quickform
   //'qf-builder': '../qf-lib/qf-builder',
@@ -66,6 +67,7 @@ requirejs.config({
   'angular-base64-upload': {deps: ['angular']},
   'matchmedia': {deps: ['angular']},
   'matchmedia-ng': {deps: ['angular', 'matchmedia']},
+  'checklist-model': {deps: ['angular']},
   'angular-ui-grid': {deps: ['angular']},
   'jsignature': {deps: ['angular', 'jquery']},
   // 'qf-builder': {deps: ['angular', 'angular-validator', 'angular-validator-rules']},

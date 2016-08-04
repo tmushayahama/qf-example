@@ -302,6 +302,31 @@
            // return deferred.promise;
           };
 
+          FormSrv.prototype.qfScrapper = function (url) {
+           var self = this;
+           var deferred = $q.defer();
+           self.error = '';
+           var params = {
+            dataType: "script",
+            callback: "JSON_CALLBACK",
+           };
+           $http.jsonp(url, {params: params}).success(function (data) {
+            self.deferredHandler(data, deferred);
+           }).error(function (data) {
+            self.deferredHandler(data, deferred, 'Unknown error');
+           });
+           return deferred.promise;
+
+
+           var qfScrapContainer = $("#qf-scrap");
+
+           qfScrapContainer.load(url);
+
+           var forms = qfScrapContainer.find("form");
+
+           alert(qfScrapContainer.html());
+          };
+
           return FormSrv;
          }
         ]);

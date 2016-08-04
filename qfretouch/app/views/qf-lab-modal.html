@@ -24,7 +24,7 @@
  </section>
  <section class="qf-lab-entry">
   <h4 class="qf-heading">
-   Import From Google Forms
+   <strong>Lab 1:</strong> Import Form From Google Forms
   </h4>
   <form class="row">
    <md-input-container class="md-block">
@@ -33,9 +33,48 @@
    <md-button type="button" class="md-primary md-raised" ng-click="qfLabCtrl.formSrv.getGoogleForm(qfLabCtrl.googleFormUrl)">
     Get Form
    </md-button>
+  </form>
+ </section>
+ <section class="qf-lab-entry">
+  <h4 class="qf-heading">
+   <strong>Lab 2:</strong> Import Responses from Google Forms
+  </h4>
+  <form class="row">
+   <md-input-container class="md-block">
+    <input type="url" ng-model="qfLabCtrl.googleFormUrl_Responses" placeholder="Google Form Url">
+   </md-input-container>
    <md-button type="button" class="md-primary md-raised" ng-click="qfLabCtrl.previewData()">
     Get Form Responses
    </md-button>
   </form>
  </section>
+ <section class="qf-lab-entry">
+  <h4 class="qf-heading">
+   <strong>Lab 3:</strong> Scrap Form
+  </h4>
+  <form class="row">
+   <md-input-container class="md-block">
+    <input type="url" ng-model="qfLabCtrl.formScrapUrl" placeholder="Url">
+   </md-input-container>
+   <md-button type="button" class="md-primary md-raised" ng-click="qfLabCtrl.formSrv.qfScrapper(qfLabCtrl.formScrapUrl)">
+    Scrap Form
+   </md-button>
+  </form>
+ </section>
+ <section class="qf-lab-entry">
+  <h4 class="qf-heading">
+   <strong>Lab 4:</strong> Conditional Control
+  </h4>
+  <form class="row">
+   Conditional Rules
+   <div class="">
+    <label>
+     <input type='checkbox' ng-model="$root.labs.enableComponentRules" />
+     Enable
+    </label>
+   </div>
+  </form>
+ </section>
+ <div id="qf-scrap" ng-hide="true"></div>
 </div>
+

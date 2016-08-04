@@ -23,6 +23,8 @@ angular.module('qfretouch').directive('qfComponent', ['$window', '$timeout',
      $scope.listData = {};
      $scope.listData.newListItem = "";
 
+     $scope.colors = {Blue: true, Orange: true};
+
      var tmpList = [];
 
      for (var i = 1; i <= 6; i++) {

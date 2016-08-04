@@ -11,7 +11,7 @@ var previewDataCtrl = function (
  vm.formResponses = formResponses;
 
  vm.columnDefs = [
-  {
+  /*{
    name: "Value",
    field: "value",
    width: 300,
@@ -24,7 +24,7 @@ var previewDataCtrl = function (
    enableHiding: false,
    //cellTemplate: 'docrecord/modules/folder/views/templates/name-image-cell.tpl.html',
    // headerCellTemplate: 'docrecord/modules/folder/views/templates/grid-header.tpl.html',
-  },
+   },*/
  ];
 
  vm.gridData = [];
@@ -58,8 +58,8 @@ var previewDataCtrl = function (
    maxWidth: 400,
    //cellClass: 'dr-pinned-col',
    pinnedLeft: false,
-   showColumnMenu: true,
-   enableCellEdit: false,
+   showColumnMenu: false,
+   enableCellEdit: true,
    enableHiding: false,
    // cellTemplate: 'docrecord/modules/folder/views/templates/name-image-cell.tpl.html',
    //  headerCellTemplate: 'docrecord/modules/folder/views/templates/grid-header.tpl.html',
@@ -86,7 +86,6 @@ var previewDataCtrl = function (
 
  vm.gridOptions.onRegisterApi = function (gridApi) {
   vm.gridApi = gridApi;
-
   gridApi.selection.on.rowSelectionChanged($scope, function (row) {
    // vm.previewDocument(row.entity);
   });
