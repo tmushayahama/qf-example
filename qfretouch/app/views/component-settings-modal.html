@@ -90,8 +90,19 @@
        <input type="checkbox" checklist-model="componentSettingsCtrl.item.rules.selectedInitialConditionOptions" checklist-value="option"> {{option.label}}
       </label>
      </div>
-     <pre> {{componentSettingsCtrl.item.rules.selectedInitialConditionOptions|json}}</pre>
+    </div>
+   </form>
+   <div class="">
+    Logical Rules
+    <md-button type="button" class="pull-right md-primary md-raised"
+               ng-click="componentSettingsCtrl.openComponentRule()">
+     Add
+    </md-button>
+   </div>
+   <form class="row">
 
+
+    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
     </div>
    </form>
   </div>

@@ -34,6 +34,7 @@ define(['angular',
                   'qfretouch/app/controllers/preview-data-modal.ctrl.js',
                   'qfretouch/app/controllers/qf-lab-modal.ctrl.js',
                   'qfretouch/app/controllers/designer.ctrl.js',
+                  'qfretouch/app/controllers/component-rule-modal.ctrl.js',
                  ]
                 });
                }

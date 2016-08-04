@@ -23,7 +23,8 @@ angular.module('qfretouch').directive('qfComponent', ['$window', '$timeout',
      $scope.listData = {};
      $scope.listData.newListItem = "";
 
-     $scope.colors = {Blue: true, Orange: true};
+
+     // }
 
      var tmpList = [];
 
@@ -179,12 +180,29 @@ angular.module('qfretouch').directive('qfComponent', ['$window', '$timeout',
       $scope.component.inputText = "url(data:" + file.filetype + ";base64," + file.base64 + ')';
      }, true);
 
-
     }
    ],
    link: function (scope, element, attr, ctrl) {
     scope.component = scope.item.component;
+
+    scope.applyRule = function (action) {
+     switch (action) {
+      case "hide":
+       element.parent().css('display', 'none');
+       break;
+      case "disable":
+       element.parent().css("pointer-events", "none")
+               .css("opacity", 0.3);
+     }
+    };
+    //if($scope.item.rules.selectedInitialConditionOptions) {
+    for (var i in scope.item.rules.selectedInitialConditionOptions) {
+     scope.applyRule(scope.item.rules.selectedInitialConditionOptions[i].action);
+    }
+
     scope.component.optionsText = scope.component.options.join('\n');
+
+
 
     scope.getComponentWidth = function () {
      var width = element.width();

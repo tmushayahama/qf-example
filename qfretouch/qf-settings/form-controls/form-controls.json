@@ -144,7 +144,7 @@
     } ,
     {
      "label" :"Disable" ,
-     "action" :"Disable"
+     "action" :"disable"
     }
    ] ,
    "selectedInitialConditionOptions" :[]
