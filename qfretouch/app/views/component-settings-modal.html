@@ -42,30 +42,28 @@
             ng-model="componentSettingsCtrl.item.component.label"   placeholder="Label">
     </md-input-container>
     <div ng-if="componentSettingsCtrl.item.component.required"
-         class="checkbox qf-hidden-view-mode qf-required-checkbox">
-     <label>
-      <input type='checkbox' ng-model="componentSettingsCtrl.item.component.required" />
+         class="row">
+     <md-checkbox class="qf-primary" ng-model="componentSettingsCtrl.item.component.required" aria-label="Required">
       Required
-     </label>
+     </md-checkbox>
     </div>
-    <div class="checkbox qf-hidden-view-mode qf-required-checkbox">
-     <label>
-      <input type='checkbox' ng-model="componentSettingsCtrl.item.component.readonly" />
+    <div class="row">
+     <md-checkbox class="qf-primary" ng-model="componentSettingsCtrl.item.component.readonly" aria-label="Readonly">
       Readonly
-     </label>
+     </md-checkbox>
     </div>
     <md-input-container ng-if="componentSettingsCtrl.item.component.id"
-                        class="md-block" md-no-float>
+                        class="md-block">
      <input type="text" class=""
             ng-model="componentSettingsCtrl.item.component.id"   placeholder="Key">
     </md-input-container>
     <md-input-container ng-if="componentSettingsCtrl.item.component.rows"
-                        class="md-block" md-no-float>
+                        class="md-block">
      <input type="number" class=""
             ng-model="componentSettingsCtrl.item.component.rows"   placeholder="Rows">
     </md-input-container>
     <md-input-container ng-if="componentSettingsCtrl.item.component.description"
-                        class="md-block" md-no-float>
+                        class="md-block">
      <input type="text" class=""
             ng-model="componentSettingsCtrl.item.component.description"   placeholder="Description">
     </md-input-container>
@@ -131,3 +129,4 @@
    </div>
   </div>
  </div>
+</div>

@@ -5,7 +5,7 @@
    Form Settings
   </p>
  </div>
- <md-button class="qf-close" ng-click="formSettingsCtrl.close()">
+ <md-button class="qf-close" ng-click="formSettingsCtrl.ok()">
   x
  </md-button>
 </div>
@@ -24,6 +24,11 @@
   <li role="presentation" class="">
    <a href="#qf-form-templates-tab" aria-controls="templates" role="tab" data-toggle="tab">
     Templates
+   </a>
+  </li>
+  <li ng-show="$root.labs.enableComponentRules" role="presentation" class="">
+   <a href="#qf-form-rules-tab" aria-controls="rules" role="tab" data-toggle="tab">
+    Rules
    </a>
   </li>
   <li ng-if="false" role="presentation" class="">
@@ -80,6 +85,41 @@
      </button>
     </div>
    </form>
+  </div>
+  <div role="tabpanel" class="tab-pane" id="qf-form-rules-tab">
+   <section class="qf-box-1 row">
+    <div class="qf-inline-title-action">
+     <div class="qf-title">Initial Condition</div>
+    </div>
+    <div class="qf-section-body">
+     <div class='checkbox' ng-repeat="option in formSettingsCtrl.item.rules.initialConditionOptions">
+      <label>
+       <input type="checkbox" checklist-model="formSettingsCtrl.item.rules.selectedInitialConditionOptions" checklist-value="option"> {{option.label}}
+      </label>
+     </div>
+    </div>
+   </section>
+   <section class="qf-box-1 row">
+    <div class="qf-inline-title-action">
+     <div class="qf-title">Logical Rules</div>
+     <md-button type="button" class="qf-action"
+                ng-click="formSettingsCtrl.openComponentRule()">
+      <i class="fa fa-plus"></i>
+     </md-button>
+    </div>
+    <div class="qf-section-body">
+     <ul class="list-group">
+      <li class="list-group-item"  ng-repeat="componentRule in formSettingsCtrl.formSrv.rules.componentRules"
+          ng-click="formSettingsCtrl.openComponentRule(componentRule)">
+       <span class="tag tag-default text-success tag-pill pull-xs-right" ng-show="componentRule.active">Active</span>
+       <span class="tag tag-default text-danger tag-pill pull-xs-right" ng-show="!componentRule.active">Inactive</span>
+       <p class="qf-truncate">
+        {{componentRule.summary}}
+       </p>
+      </li>
+     </ul>
+    </div>
+   </section>
   </div>
   <div role="tabpanel" class="tab-pane" id="qf-form-import-tab">
    <form class="row">

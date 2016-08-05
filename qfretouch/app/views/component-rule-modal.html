@@ -19,22 +19,98 @@
    <div class="qf-inline-title-action">
     <div class="qf-title">Criteria</div>
    </div>
-   <div class="qf-section-body">
+   <div class="qf-section-body row qf-padding-none">
     <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12 qf-criteria-form">
-     <md-input-container class="md-block">
-      <input type="text"
-             ng-model="componentRuleCtrl.criterion.description" placeholder="Criterion Description">
-     </md-input-container>
-     <select ng-options="formItem.component.id for formItem in componentRuleCtrl.formSrv.formItems" class="form-control"
-             ng-model="component.inputText" ng-init="component.inputText = component.options[0]" />
-     </select>
-     <select ng-options="value.label for value in componentRuleCtrl.booleanOperators" class="form-control"
-             ng-model="component.inputText" ng-init="component.inputText = component.options[0]" />
-     </select>
+     <form class="row">
+      <div class="form-group row">
+       <label class="control-label">
+        Criterion Description
+       </label>
+       <input type="text" class="form-control"
+              ng-model="componentRuleCtrl.criterion.description" placeholder="Criterion Description">
+      </div>
+      <div class="form-group row">
+       <label class="control-label">
+        Control
+       </label>
+       <select ng-options="formItem.component.id for formItem in componentRuleCtrl.formSrv.formItems" class="form-control"
+               ng-model="componentRuleCtrl.criterion.control" />
+       </select>
+      </div>
+      <div class="form-group row">
+       <label class="control-label">
+        Operator
+       </label>
+       <select ng-options="value.label for value in componentRuleCtrl.booleanOperators.options" class="form-control"
+               ng-model="componentRuleCtrl.criterion.control" ng-init="componentRuleCtrl.criterion.control = componentRuleCtrl.booleanOperators.options[0]" />
+       </select>
+      </div>
+      <md-button type="button" class="md-primary"
+                 ng-click="componentRuleCtrl.addCriterion()">
+       Add Criterion
+      </md-button>
+     </form>
+    </div>
+    <div class="col-lg-8 col-md-8 col-sm-12 col-xs-12">
+     <ul ui-sortable="sortableOptions" ng-model="componentRuleCtrl.componentRule.criteria"
+         class="list-group">
+      <li ng-repeat="criterion in componentRuleCtrl.componentRule.criteria track by $index"
+          class="list-group-item">
+       <div class="qf-sortable-drag-me qf-hidden-view-mode">
+        <i class="fa fa-sort"></i>
+       </div>
+       <span class="tag tag-default tag-pill pull-xs-right" ng-show="criterion.active">Active</span>
+       <span class="tag tag-default tag-pill pull-xs-right" ng-show="!criterion.active">Inactive</span>
+       <p class="qf-truncate">
+        {{criterion.description}}
+       </p>
+       <div ng-click="removeOption(option)"
+            class="qf-sortable-delete qf-hidden-view-mode">
+        <i class="fa fa-trash"></i>
+       </div>
+      </li>
+     </ul>
+    </div>
+   </div>
+  </section>
+
+  <section class="qf-box-1 row">
+   <div class="qf-inline-title-action">
+    <div class="qf-title">Actions</div>
+   </div>
+   <div class="qf-section-body row qf-padding-none">
+    <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12 qf-action-form">
+     <form class="form-horizontal">
+      <div class="form-group row">
+       <label class="control-label">
+        Action Description
+       </label>
+       <input type="text" class="form-control"
+              ng-model="componentRuleCtrl.action.description" placeholder="Action Description">
+      </div>
+      <div class="form-group row">
+       <label class="control-label">
+        Control
+       </label>
+       <select ng-options="formItem.component.id for formItem in componentRuleCtrl.formSrv.formItems" class="form-control"
+               ng-model="component.inputText" ng-init="component.inputText = component.options[0]" />
+       </select>
+      </div>
+      <div class="form-group row">
+       <label class="control-label">
+        Action
+       </label>
+       <select ng-options="value.label for value in componentRuleCtrl.actionInstructions.options"
+               class="form-control"
+               ng-model="componentRuleCtrl.actionInstructions.selected"
+               ng-init="componentRuleCtrl.actionInstructions.selected = componentRuleCtrl.actionInstructions.options[0]" />
+       </select>
+      </div>
+     </form>
     </div>
     <div class="col-lg-8 col-md-8 col-sm-12 col-xs-12">
      <ul class="list-group">
-      <li class="list-group-item"  ng-repeat="criterion in componentRuleCtrl.componentRule.criteria"
+      <li class="list-group-item"  ng-repeat="action in componentRuleCtrl.componentRule.actions"
           ng-click="componentSettingsCtrl.openComponentRule(componentRule)">
        <span class="tag tag-default tag-pill pull-xs-right" ng-show="componentRule.active">Active</span>
        <span class="tag tag-default tag-pill pull-xs-right" ng-show="componentRule.active">Inactive</span>
@@ -46,33 +122,12 @@
     </div>
    </div>
   </section>
+
   <section class="qf-box-1 row">
-   <div class="qf-inline-title-action">
-    <div class="qf-title">Actions</div>
-    <md-button type="button" class="qf-action"
-               ng-click="componentSettingsCtrl.openComponentRule()">
-     <i class="fa fa-plus"></i>
-    </md-button>
-   </div>
-   <div class="qf-section-body">
-    <ul class="list-group">
-     <li class="list-group-item"  ng-repeat="componentRule in componentRuleCtrl.componentRule.actions"
-         ng-click="componentSettingsCtrl.openComponentRule(componentRule)">
-      <span class="tag tag-default tag-pill pull-xs-right" ng-show="componentRule.active">Active</span>
-      <span class="tag tag-default tag-pill pull-xs-right" ng-show="componentRule.active">Inactive</span>
-      <p class="qf-truncate">
-       {{componentRule.summary}}
-      </p>
-     </li>
-    </ul>
-   </div>
+   <md-checkbox class="qf-primary" ng-model="componentRuleCtrl.componentRule.active" aria-label="Active">
+    Active
+   </md-checkbox>
   </section>
-  <div class="checkbox">
-   <label>
-    <input type='checkbox' ng-model="componentRuleCtrl.componentRule.active" />
-    Readonly
-   </label>
-  </div>
   <md-button type="button" class="md-primary md-raised"
              ng-click="componentRuleCtrl.ok()">
    Add

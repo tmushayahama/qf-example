@@ -95,6 +95,7 @@ var designerCtrl = function (
  //}
 
  vm.formName = "Untitled Form";
+
  vm.openFormSettings = function () {
   var modalInstance = $aside.open({
    templateUrl: 'form-settings-modal.html',
@@ -110,7 +111,7 @@ var designerCtrl = function (
    }
   });
   modalInstance.result.then(function (result) {
-   // $scope.item = result;
+   vm.formSrv = result;
   }, function () {
    //('Modal dismissed at: ' + new Date());
   });

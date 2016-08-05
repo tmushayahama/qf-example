@@ -115,9 +115,11 @@
             }
             ];
             */
-           this.Contents = [];
-          };
+           this.rules = {
+            componentRules: []
+           };
 
+          };
           FormSrv.prototype.deferredHandler = function (data, deferred, defaultMsg) {
            if (!data || typeof data !== 'object') {
             this.error = 'Error';
