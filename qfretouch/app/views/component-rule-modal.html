@@ -42,8 +42,25 @@
         Operator
        </label>
        <select ng-options="value.label for value in componentRuleCtrl.booleanOperators.options" class="form-control"
-               ng-model="componentRuleCtrl.criterion.control" ng-init="componentRuleCtrl.criterion.control = componentRuleCtrl.booleanOperators.options[0]" />
+               ng-model="componentRuleCtrl.criterion.operator" ng-init="componentRuleCtrl.criterion.operator = componentRuleCtrl.booleanOperators.options[0]" />
        </select>
+       <div class="form-group row">
+        <label class="control-label">
+         Value
+        </label>
+        <input ng-show="componentRuleCtrl.criterion.control.name !== 'Dropdown'"
+               type="text" class="form-control"
+               ng-model="componentRuleCtrl.criterion.value" placeholder="Value">
+        <select ng-show="componentRuleCtrl.criterion.control.name === 'Dropdown'"
+                ng-options="value for value in componentRuleCtrl.criterion.control.component.options" class="form-control"
+                ng-model="componentRuleCtrl.criterion.value" ng-init="componentRuleCtrl.criterion.value = componentRuleCtrl.criterion.control.component.options[0]" />
+        </select>
+       </div>
+      </div>
+      <div class="form-group row">
+       <md-checkbox class="qf-primary" ng-model="componentRuleCtrl.criterion.active" aria-label="Criterion Active">
+        Criterion Active
+       </md-checkbox>
       </div>
       <md-button type="button" class="md-primary"
                  ng-click="componentRuleCtrl.addCriterion()">
@@ -52,21 +69,27 @@
      </form>
     </div>
     <div class="col-lg-8 col-md-8 col-sm-12 col-xs-12">
-     <ul ui-sortable="sortableOptions" ng-model="componentRuleCtrl.componentRule.criteria"
-         class="list-group">
+     <ul ui-sortable="componentRuleCtrl.sortableOptions" ng-model="componentRuleCtrl.componentRule.criteria"
+         class="list-group qf-list-group-1">
       <li ng-repeat="criterion in componentRuleCtrl.componentRule.criteria track by $index"
           class="list-group-item">
-       <div class="qf-sortable-drag-me qf-hidden-view-mode">
+       <div class="qf-sortable-drag-me">
         <i class="fa fa-sort"></i>
        </div>
-       <span class="tag tag-default tag-pill pull-xs-right" ng-show="criterion.active">Active</span>
-       <span class="tag tag-default tag-pill pull-xs-right" ng-show="!criterion.active">Inactive</span>
-       <p class="qf-truncate">
-        {{criterion.description}}
-       </p>
-       <div ng-click="removeOption(option)"
-            class="qf-sortable-delete qf-hidden-view-mode">
-        <i class="fa fa-trash"></i>
+       <div class="qf-list-item-content">
+        <p class="qf-truncate">
+         {{criterion.description}}
+        </p>
+        <i class="text-success" ng-show="criterion.active">Active</i>
+        <i class="text-danger" ng-show="!criterion.active">Inactive</i>
+       </div>
+       <div class="qf-list-item-actions">
+        <md-button class="" ng-click="componentRuleCtrl.editCriterion(criterion)">
+         <i class="fa fa-pencil"></i>
+        </md-button>
+        <md-button class="" ng-click="componentRuleCtrl.removeCriterion(criterion)">
+         <i class="fa fa-trash"></i>
+        </md-button>
        </div>
       </li>
      </ul>
@@ -93,30 +116,53 @@
         Control
        </label>
        <select ng-options="formItem.component.id for formItem in componentRuleCtrl.formSrv.formItems" class="form-control"
-               ng-model="component.inputText" ng-init="component.inputText = component.options[0]" />
+               ng-model="componentRuleCtrl.action.control" />
        </select>
       </div>
       <div class="form-group row">
        <label class="control-label">
-        Action
+        Instruction
        </label>
-       <select ng-options="value.label for value in componentRuleCtrl.actionInstructions.options"
+       <select ng-options="instruction.label for instruction in componentRuleCtrl.actionInstructions.options"
                class="form-control"
-               ng-model="componentRuleCtrl.actionInstructions.selected"
-               ng-init="componentRuleCtrl.actionInstructions.selected = componentRuleCtrl.actionInstructions.options[0]" />
+               ng-model="componentRuleCtrl.action.instruction"
+               ng-init="componentRuleCtrl.action.instruction = componentRuleCtrl.actionInstructions.options[0]" />
        </select>
       </div>
+      <div class="form-group row">
+       <md-checkbox class="qf-primary" ng-model="componentRuleCtrl.action.active" aria-label="Action Active">
+        Action Active
+       </md-checkbox>
+      </div>
+      <md-button type="button" class="md-primary"
+                 ng-click="componentRuleCtrl.addAction()">
+       Add Action
+      </md-button>
      </form>
     </div>
     <div class="col-lg-8 col-md-8 col-sm-12 col-xs-12">
-     <ul class="list-group">
-      <li class="list-group-item"  ng-repeat="action in componentRuleCtrl.componentRule.actions"
-          ng-click="componentSettingsCtrl.openComponentRule(componentRule)">
-       <span class="tag tag-default tag-pill pull-xs-right" ng-show="componentRule.active">Active</span>
-       <span class="tag tag-default tag-pill pull-xs-right" ng-show="componentRule.active">Inactive</span>
-       <p class="qf-truncate">
-        {{componentRule.summary}}
-       </p>
+     <ul ui-sortable="componentRuleCtrl.sortableOptions" ng-model="componentRuleCtrl.componentRule.actions"
+         class="list-group qf-list-group-1">
+      <li ng-repeat="action in componentRuleCtrl.componentRule.actions track by $index"
+          class="list-group-item">
+       <div class="qf-sortable-drag-me">
+        <i class="fa fa-sort"></i>
+       </div>
+       <div class="qf-list-item-content">
+        <p class="qf-truncate">
+         {{action.description}}
+        </p>
+        <i class="text-success" ng-show="action.active">Active</i>
+        <i class="text-danger" ng-show="!action.active">Inactive</i>
+       </div>
+       <div class="qf-list-item-actions">
+        <md-button class="" ng-click="componentRuleCtrl.editAction(action)">
+         <i class="fa fa-pencil"></i>
+        </md-button>
+        <md-button class="" ng-click="componentRuleCtrl.removeAction(action)">
+         <i class="fa fa-trash"></i>
+        </md-button>
+       </div>
       </li>
      </ul>
     </div>

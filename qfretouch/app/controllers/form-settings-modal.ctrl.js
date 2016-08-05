@@ -10,13 +10,17 @@ var formSettingsCtrl = function (
  var vm = this;
  vm.formSrv = formSrv;
 
+ vm.sortableOptions = {
+  handle: '.qf-sortable-drag-me'
+ };
+
  vm.openComponentRule = function (componentRule) {
   if (!componentRule) {
    componentRule = {
     summary: "",
     active: true,
     criteria: [],
-    action: []
+    actions: []
    };
   }
   var modalInstance = $uibModal.open({

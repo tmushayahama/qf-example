@@ -12,14 +12,32 @@ var componentRuleCtrl = function (
  //vm.item = Item;
  vm.componentRule = ComponentRule;
  vm.criterion = {};
+ vm.action = {};
+
+ vm.sortableOptions = {
+  handle: '.qf-sortable-drag-me'
+ };
 
  vm.resetCriterion = function () {
   vm.criterion = {
    description: "",
    control: {},
    operator: {},
+   valueOptions: [],
+   value: "",
+   active: true
   };
  };
+
+ vm.resetAction = function () {
+  vm.action = {
+   description: "",
+   control: {},
+   instruction: {},
+   active: true
+  };
+ };
+
 
  vm.booleanOperators = {
   // selected: {},
@@ -29,7 +47,7 @@ var componentRuleCtrl = function (
     operator: "="
    },
    {
-    label: "NotEqual",
+    label: "Not Equal",
     operator: "="
    },
    {
@@ -78,6 +96,11 @@ var componentRuleCtrl = function (
   vm.resetCriterion();
  };
 
+ vm.addAction = function () {
+  vm.componentRule.actions.push(angular.copy(vm.action));
+  vm.resetAction();
+ };
+
 
  vm.close = function () {
   $uibModalInstance.dismiss("cancel");
@@ -88,6 +111,7 @@ var componentRuleCtrl = function (
  };
 
  vm.resetCriterion();
+ vm.resetAction();
 
 };
 

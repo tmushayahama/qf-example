@@ -44,8 +44,8 @@ md-input-container.md-input-focused .md-input {
 }
 
 .md-button {
- min-height: 20px;
- min-width: 22px;
+ min-height: 20px!important;
+ min-width: 22px!important;
 }
 
 .md-default {
@@ -68,7 +68,7 @@ md-radio-button.gb-primary .md-on {
  background-color: $primary-color;
 }
 
-md-backdrop.md-select-backdrop { 
+md-backdrop.md-select-backdrop {
  z-index:1030;
 }
 
@@ -78,6 +78,34 @@ md-backdrop.md-select-backdrop {
 
 .hint {
  color: #777;
+}
+
+.qf-list-group-1 {
+ li{
+  height: 50px;
+  .qf-sortable-drag-me {
+   @include position(absolute, 0 null 0 0);
+   width: 40px;
+   padding-top: 13px;
+   text-align: center;
+   font-size: 15px;
+   background-color: #DDD;
+  }
+  .qf-list-item-content {
+   padding: 3px 8px;
+   @include position(absolute, 0 60px 0 40px);
+  }
+  .qf-list-item-actions {
+   @include position(absolute, 0 0 0 null);
+   width: 100px;
+   .md-button {
+    float: left;
+    margin: 0;
+    width: 50px;
+    height: 50px;
+   }
+  }
+ }
 }
 
 .qf-signature-parent {

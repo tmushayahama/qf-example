@@ -89,18 +89,6 @@
   <div role="tabpanel" class="tab-pane" id="qf-form-rules-tab">
    <section class="qf-box-1 row">
     <div class="qf-inline-title-action">
-     <div class="qf-title">Initial Condition</div>
-    </div>
-    <div class="qf-section-body">
-     <div class='checkbox' ng-repeat="option in formSettingsCtrl.item.rules.initialConditionOptions">
-      <label>
-       <input type="checkbox" checklist-model="formSettingsCtrl.item.rules.selectedInitialConditionOptions" checklist-value="option"> {{option.label}}
-      </label>
-     </div>
-    </div>
-   </section>
-   <section class="qf-box-1 row">
-    <div class="qf-inline-title-action">
      <div class="qf-title">Logical Rules</div>
      <md-button type="button" class="qf-action"
                 ng-click="formSettingsCtrl.openComponentRule()">
@@ -108,14 +96,29 @@
      </md-button>
     </div>
     <div class="qf-section-body">
-     <ul class="list-group">
-      <li class="list-group-item"  ng-repeat="componentRule in formSettingsCtrl.formSrv.rules.componentRules"
+     <ul ui-sortable="componentRuleCtrl.sortableOptions" ng-model="formSettingsCtrl.formSrv.rules.componentRules"
+         class="list-group qf-list-group-1">
+      <li ng-repeat="componentRule in formSettingsCtrl.formSrv.rules.componentRules track by $index"
+          class="list-group-item"
           ng-click="formSettingsCtrl.openComponentRule(componentRule)">
-       <span class="tag tag-default text-success tag-pill pull-xs-right" ng-show="componentRule.active">Active</span>
-       <span class="tag tag-default text-danger tag-pill pull-xs-right" ng-show="!componentRule.active">Inactive</span>
-       <p class="qf-truncate">
-        {{componentRule.summary}}
-       </p>
+       <div class="qf-sortable-drag-me">
+        <i class="fa fa-sort"></i>
+       </div>
+       <div class="qf-list-item-content">
+        <p class="qf-truncate">
+         {{componentRule.summary}}
+        </p>
+        <i class="text-success" ng-show="componentRule.active">Active</i>
+        <i class="text-danger" ng-show="!componentRule.active">Inactive</i>
+       </div>
+       <div class="qf-list-item-actions">
+        <md-button class="" ng-click="componentRuleCtrl.editCriterion(criterion)">
+         <i class="fa fa-pencil"></i>
+        </md-button>
+        <md-button class="" ng-click="componentRuleCtrl.removeCriterion(criterion)">
+         <i class="fa fa-trash"></i>
+        </md-button>
+       </div>
       </li>
      </ul>
     </div>
