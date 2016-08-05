@@ -8,6 +8,7 @@ angular.module('qfretouch').directive('qfComponent', ['$window', '$timeout',
     templateUrl: '@',
     index: '@',
     item: '=',
+    formSrv: '=',
     removeComponent: '=',
     duplicateComponent: '='
    },
@@ -68,6 +69,9 @@ angular.module('qfretouch').directive('qfComponent', ['$window', '$timeout',
        resolve: {
         Item: function () {
          return item;
+        },
+        formSrv: function () {
+         return $scope.formSrv;
         }
        }
       });

@@ -2,11 +2,13 @@
 'use strict';
 var componentRuleCtrl = function (
         config,
+        formSrv,
         Item,
         ComponentRule,
         $uibModalInstance
         ) {
  var vm = this;
+ vm.formSrv = formSrv;
  vm.item = Item;
  vm.componentRule = ComponentRule;
 
@@ -47,6 +49,7 @@ var componentRuleCtrl = function (
 
 componentRuleCtrl.$inject = [
  'config',
+ 'formSrv',
  'Item',
  'ComponentRule',
  '$uibModalInstance'

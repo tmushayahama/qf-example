@@ -29,7 +29,7 @@ var designerCtrl = function (
 
  $rootScope.labs = {
   enableComponentRules: true,
- }
+ };
 
  //vm.formSrv.getFormTemplates("qfretouch/form-templates/contact-us-transparent.json");
  //vm.formSrv.getFormTemplates("https://script.google.com/macros/s/AKfycbxK_tpdGUXB5pSxDDP5Zb_M3q3AViHn7laC-g4UN6rs/dev?prefix=alert");
@@ -66,6 +66,7 @@ var designerCtrl = function (
    sizeX: 12,
    sizeY: 10
   };
+  formItem.component.id = $rootScope.deSpacify(formItem.name) + new Date().getTime();
   vm.formSrv.formItems.push(formItem);
 
   $timeout(function () {
@@ -77,6 +78,8 @@ var designerCtrl = function (
  vm.duplicateComponent = function (component) {
   var formItem = angular.copy(component);
   formItem.gridMap = {};//clear the gridData for row and col
+  formItem.component.id = $rootScope.deSpacify(formItem.name) + new Date().getTime();
+
 
   vm.formSrv.formItems.push(formItem);
  };
@@ -173,62 +176,6 @@ var designerCtrl = function (
   });
   // console.log(vm.formSrv.formStyles, "");
  }, true);
-
-
- /*
-
-  var checkbox, textbox;
-  textbox = $builder.addFormObject('default', {
-  id: 'textbox',
-  component: 'textInput',
-  label: 'Name',
-  description: 'Your name',
-  placeholder: 'Your name',
-  required: true,
-  editable: false
-  });
-
-  checkbox = $builder.addFormObject('default', {
-  id: 'checkbox',
-  component: 'checkbox',
-  label: 'Pets',
-  description: 'Do you have any pets?',
-  options: ['Dog', 'Cat']
-  });
-  $builder.addFormObject('default', {
-  component: 'textInput'
-  });
-  $scope.form = $builder.forms['default'];
-  $scope.input = [];
-  $scope.defaultValue = {};
-  $scope.defaultValue[textbox.id] = 'default value';
-  $scope.defaultValue[checkbox.id] = [true, true];
-
-
-
-  $scope.dynamicSize = {
-  'width': 350,
-  'height': 250
-  }
-
-  $scope.flexbox = true;
-  $scope.size = {};
-  $scope.msg = 'Resize me.';
-  $scope.events = [];
-  $scope.$on("angular-resizable.resizeEnd", function (event, args) {
-  $scope.msg = 'Resize me again.';
-  $scope.events.unshift(event);
-  $scope.size = args;
-  if (args.width)
-  $scope.dynamicSize.width = args.width;
-  if (args.height)
-  $scope.dynamicSize.height = args.height;
-  });
-  $scope.$on("angular-resizable.resizeStart", function (event, args) {
-  $scope.msg = 'Woooohoooo!';
-  $scope.events.unshift(event);
-  });
-  */
 
  vm.formSrv.getFormControls("qfretouch/qf-settings/form-controls/form-controls.json");
 

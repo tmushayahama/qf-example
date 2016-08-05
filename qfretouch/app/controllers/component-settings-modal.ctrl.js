@@ -2,12 +2,14 @@
 'use strict';
 var componentSettingsCtrl = function (
         config,
+        formSrv,
         $scope,
         $uibModal,
         Item,
         $uibModalInstance
         ) {
  var vm = this;
+ vm.formSrv = formSrv;
  vm.item = Item;
 
  vm.openComponentRule = function (componentRule) {
@@ -29,6 +31,9 @@ var componentSettingsCtrl = function (
    resolve: {
     Item: function () {
      return vm.item;
+    },
+    formSrv: function () {
+     return vm.formSrv;
     },
     ComponentRule: function () {
      return componentRule;
@@ -64,6 +69,7 @@ var componentSettingsCtrl = function (
 
 componentSettingsCtrl.$inject = [
  'config',
+ 'formSrv',
  '$scope',
  '$uibModal',
  'Item',

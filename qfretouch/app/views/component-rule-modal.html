@@ -25,6 +25,9 @@
       <input type="text"
              ng-model="componentRuleCtrl.criterion.description" placeholder="Criterion Description">
      </md-input-container>
+     <select ng-options="formItem.component.id for formItem in componentRuleCtrl.formSrv.formItems" class="form-control"
+             ng-model="component.inputText" ng-init="component.inputText = component.options[0]" />
+     </select>
      <select ng-options="value.label for value in componentRuleCtrl.booleanOperators" class="form-control"
              ng-model="component.inputText" ng-init="component.inputText = component.options[0]" />
      </select>

@@ -1,10 +1,12 @@
 ﻿angular.module('qfretouch')
         .service('FormSrv', [
+         '_',
          'config',
          '$q',
          '$http',
          '$filter',
-         function (config,
+         function (_,
+                 config,
                  $q,
                  $http,
                  $filter) {
@@ -325,6 +327,16 @@
            var forms = qfScrapContainer.find("form");
 
            alert(qfScrapContainer.html());
+          };
+
+          FormSrv.prototype.getComponentById = function (id) {
+           var self = this;
+           var deferred = $q.defer();
+
+           var component = _.find(self.formItems, function (item) {
+            return item.component.id === id;
+           });
+
           };
 
           return FormSrv;

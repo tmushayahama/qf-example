@@ -54,6 +54,11 @@
       Readonly
      </label>
     </div>
+    <md-input-container ng-if="componentSettingsCtrl.item.component.id"
+                        class="md-block" md-no-float>
+     <input type="text" class=""
+            ng-model="componentSettingsCtrl.item.component.id"   placeholder="Key">
+    </md-input-container>
     <md-input-container ng-if="componentSettingsCtrl.item.component.rows"
                         class="md-block" md-no-float>
      <input type="number" class=""
