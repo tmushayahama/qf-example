@@ -101,6 +101,9 @@ angular.module('qfretouch').directive('qfComponent', ['$window', '$timeout',
 
 
      $scope.$watch('component.optionsText', function (text) {
+      if (!text) {
+       return;
+      }
       var x;
       $scope.component.options = (function () {
        var i, len, ref, results;

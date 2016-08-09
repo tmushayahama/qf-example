@@ -439,5 +439,58 @@
     ]
    }
   ]
+ } ,
+ {
+  "templateUrl" :"qfretouch/common/views/templates/video.tpl.html" ,
+  "name" :"Video" ,
+  "rules" :{
+   "initialConditionOptions" :[
+    {
+     "label" :"Show" ,
+     "action" :"show"
+    } ,
+    {
+     "label" :"Hide" ,
+     "action" :"hide"
+    } ,
+    {
+     "label" :"Enable" ,
+     "action" :"enable"
+    } ,
+    {
+     "label" :"Disable" ,
+     "action" :"disable"
+    }
+   ] ,
+   "selectedInitialConditionOptions" :[] ,
+   "componentRules" :[]
+  } ,
+  "component" :{
+   "label" :"Video" ,
+   "type" :"text" ,
+   "description" :"Video Url" ,
+   "placeholder" :"Video Url" ,
+   "required" :false
+  } ,
+  "gridMap" :{
+   "sizeX" :12 ,
+   "sizeX" :7 ,
+   "lg" :{
+    "sizeX" :12 ,
+    "sizeX" :7
+   } ,
+   "md" :{
+    "sizeX" :12 ,
+    "sizeX" :7
+   } ,
+   "sm" :{
+    "sizeX" :12 ,
+    "sizeX" :7
+   } ,
+   "xs" :{
+    "sizeX" :12 ,
+    "sizeX" :7
+   }
+  }
  }
 ]

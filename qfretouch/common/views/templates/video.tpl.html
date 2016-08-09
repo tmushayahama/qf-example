@@ -1,0 +1,39 @@
+<div class="qf-grab-me row qf-hidden-component-mode qf-hidden-view-mode">
+ <div class="qf-handle-title">
+  <p class="qf-truncate">
+   Video
+  </p>
+ </div>
+ <div class="qf-actions">
+  <md-button ng-click="openComponentSettings(item)"
+             class="col-lg-4 col-md-4 col-sm-4 col-xs-4">
+   <i class="fa fa-cog"></i>
+  </md-button>
+  <md-button ng-click="duplicateComponent(item)" class="col-lg-4 col-md-4 col-sm-4 col-xs-4">
+   <i class="fa fa-copy"></i>
+  </md-button>
+  <md-button ng-click="removeComponent(item)" class="col-lg-4 col-md-4 col-sm-4 col-xs-4">
+   <i class="text-danger fa fa-trash"></i>
+  </md-button>
+ </div>
+</div>
+<div class="form-group qf-component-use qf-hidden-component-mode">
+ <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+  <input type="{{component.type}}" ng-model="component.inputText"
+         id="{{component.formName + index}}"
+         value="{{::component.inputText}}"
+         class="form-control qf-hidden-view-mode"
+         placeholder="{{component.placeholder}}">
+ </div>
+ <object class="qf-hidden-design-mode" width="100%" data="{{component.inputText}}" >
+  <embed src="{{component.inputText}}" class="col-lg-12 col-md-12 col-sm-12 col-xs-12"> </embed>
+  Error: Embedded data could not be displayed.
+ </object>
+</div>
+<div class="qf-component-display qf-hidden-design-mode qf-hidden-view-mode">
+ <img src="qfretouch/img/video.png" alt="video" tooltip-class="qf-tooltip-1"
+      tooltip-placement="right" uib-tooltip="Video" tooltip-popup-delay="500"/>
+ <div class="qf-control-heading">
+  Video
+ </div>
+</div>
