@@ -51,6 +51,15 @@
       Readonly
      </md-checkbox>
     </div>
+    <div class="form-group row">
+     <label class="control-label">
+      Change Control
+     </label>
+     <select ng-options="componentsTemplate.name for componentsTemplate in componentSettingsCtrl.componentsTemplates" class="form-control"
+             ng-model="componentSettingsCtrl.selectedTemplate"
+             ng-change="componentSettingsCtrl.updateTemplate(componentSettingsCtrl.selectedTemplate)"/>
+     </select>
+    </div>
     <md-input-container class="md-block">
      <input type="text" class=""
             ng-model="componentSettingsCtrl.item.component.id"   placeholder="Key">

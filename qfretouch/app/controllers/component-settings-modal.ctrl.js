@@ -47,6 +47,63 @@ var componentSettingsCtrl = function (
   });
  };
 
+
+
+
+
+ vm.componentsTemplates = [
+  {
+   "templateUrl": "qfretouch/common/views/templates/heading.tpl.html",
+   "name": "Heading"
+  },
+  {
+   "templateUrl": "qfretouch/common/views/templates/paragraph.tpl.html",
+   "name": "Paragraph",
+  },
+  {
+   "templateUrl": "qfretouch/common/views/templates/textbox.tpl.html",
+   "name": "Textbox"
+  },
+  {
+   "templateUrl": "qfretouch/common/views/templates/textarea.tpl.html",
+   "name": "Textarea"
+  },
+  {
+   "templateUrl": "qfretouch/common/views/templates/signature.tpl.html",
+   "name": "Signature"
+  },
+  {
+   "templateUrl": "qfretouch/common/views/templates/checkbox.tpl.html",
+   "name": "Checkbox"
+  },
+  {
+   "templateUrl": "qfretouch/common/views/templates/radiobox.tpl.html",
+   "name": "Radiobox"
+  },
+  {
+   "templateUrl": "qfretouch/common/views/templates/dropdown.tpl.html",
+   "name": "Dropdown"
+  },
+  {
+   "templateUrl": "qfretouch/common/views/templates/datepicker.tpl.html",
+   "name": "Datepicker"
+  },
+  {
+   "templateUrl": "qfretouch/common/views/templates/picturebox.tpl.html",
+   "name": "Picture"
+  },
+  {
+   "templateUrl": "qfretouch/common/views/templates/video.tpl.html",
+   "name": "Video"
+  }
+ ];
+
+ vm.updateTemplate = function (template) {
+  vm.item.templateUrl = template.templateUrl;
+ };
+
+
+
  vm.ok = function () {
   $uibModalInstance.close(vm.component);
  };
