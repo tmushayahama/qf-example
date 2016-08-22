@@ -34,6 +34,7 @@ requirejs.config({
   'matchmedia-ng': '../bower_components/matchmedia-ng/matchmedia-ng',
   'checklist-model': '../bower_components/checklist-model/checklist-model',
   'jsignature': '../lib/js/jSignature',
+  'canvas-painter': '../lib/js/canvas-painter',
   //Quickform
   //'qf-builder': '../qf-lib/qf-builder',
   //'qf-components': '../components/quickform-components',
@@ -70,6 +71,7 @@ requirejs.config({
   'checklist-model': {deps: ['angular']},
   'angular-ui-grid': {deps: ['angular']},
   'jsignature': {deps: ['angular', 'jquery']},
+  'canvas-painter': {deps: ['angular']},
   // 'qf-builder': {deps: ['angular', 'angular-validator', 'angular-validator-rules']},
   //'qf-components': {deps: ['angular', ]},
  },

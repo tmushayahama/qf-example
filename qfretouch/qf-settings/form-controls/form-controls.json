@@ -441,6 +441,36 @@
   ]
  } ,
  {
+  "templateUrl" :"qfretouch/common/views/templates/drawing.tpl.html" ,
+  "name" :"Drawing" ,
+  "component" :{
+   "label" :"Freestyle" ,
+   "description" :"please freestyle above" ,
+   "placeholder" :"" ,
+   "required" :false
+  } ,
+  "gridMap" :{
+   "sizeX" :12 ,
+   "sizeX" :7 ,
+   "lg" :{
+    "sizeX" :12 ,
+    "sizeX" :7
+   } ,
+   "md" :{
+    "sizeX" :12 ,
+    "sizeX" :7
+   } ,
+   "sm" :{
+    "sizeX" :12 ,
+    "sizeX" :7
+   } ,
+   "xs" :{
+    "sizeX" :12 ,
+    "sizeX" :7
+   }
+  }
+ } ,
+ {
   "templateUrl" :"qfretouch/common/views/templates/video.tpl.html" ,
   "name" :"Video" ,
   "rules" :{
